@@ -23,7 +23,7 @@ sys.path.insert(0, str(ROOT / "src"))
 try:
     from dotenv import load_dotenv
 
-    load_dotenv(ROOT / ".env")
+    load_dotenv(os.environ.get("EF_ENV_FILE") or ROOT / ".env")
 except Exception:
     pass
 
@@ -120,8 +120,9 @@ def main() -> int:
     def sandbox():
         from eforensics.sandbox import selfcheck
 
-        env_file = ROOT / ".env"
-        r = selfcheck(str(env_file) if env_file.exists() else None)
+        env_file = Path(os.environ.get("EF_ENV_FILE") or ROOT / ".env")
+        assert env_file.exists(), f"no .env at {env_file}: nothing to protect, but nothing to run with either"
+        r = selfcheck(str(env_file))
         assert r.get("ok"), f"sandbox probe failed: {r}"
         assert not r.get("secret_readable"), f"model-written code can read {env_file} ({r['mode']})"
         assert not r.get("env_keys"), f"API keys visible in the sandbox environment: {r['env_keys']}"

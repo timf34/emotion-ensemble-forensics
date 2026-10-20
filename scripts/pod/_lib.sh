@@ -22,7 +22,6 @@
 set -uo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$REPO_ROOT" || exit 1
-set -a; [ -f .env ] && . ./.env; set +a
 # Storage: without a network volume /workspace can be a FUSE or NFS network mount (pip took ~70 min
 # for a 12 GB venv there: emotion-concepts ISSUES_LOG #10). Then the weights cache and the
 # vLLM venv go on the container disk (fast; wiped on stop, so a restarted pod
@@ -33,6 +32,19 @@ case "$WS_FSTYPE" in   # local block filesystems keep everything on /workspace; 
   xfs|ext4|ext3|btrfs|overlay|zfs) _HF_DEFAULT=/workspace/hf; export ES_VENV_ROOT="${ES_VENV_ROOT:-/workspace}" ;;
   *) _HF_DEFAULT=/hf_cache; export ES_VENV_ROOT="${ES_VENV_ROOT:-/}" ;;   # fuse, nfs4, ceph, ...: container disk
 esac
+# Secrets: FUSE / NFS mounts may not enforce file modes (a mode-600 .env on MooseFS was readable
+# by the sandbox's `nobody`, caught by the preflight 2026-10-20). On those, the .env moves to the
+# container disk under /root (mode 700) and is loaded from there; EF_ENV_FILE tells Python where.
+EF_ENV_FILE="$REPO_ROOT/.env"
+case "$WS_FSTYPE" in
+  xfs|ext4|ext3|btrfs|overlay|zfs) ;;
+  *) if [ -f .env ]; then
+       mkdir -p /root/.ef && chmod 700 /root /root/.ef && mv -f .env /root/.ef/env && chmod 600 /root/.ef/env
+     fi
+     [ -f /root/.ef/env ] && EF_ENV_FILE=/root/.ef/env ;;
+esac
+export EF_ENV_FILE
+set -a; [ -f "$EF_ENV_FILE" ] && . "$EF_ENV_FILE"; set +a
 export HF_HOME="${EF_HF_HOME:-$_HF_DEFAULT}"
 export HF_HUB_ENABLE_HF_TRANSFER=1 HF_XET_HIGH_PERFORMANCE=1 PYTHONUNBUFFERED=1
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
