@@ -46,7 +46,13 @@ def _cap(s: str, n: int = OUTPUT_CAP) -> str:
 
 
 def python_executable() -> str:
-    return os.environ.get("EF_SANDBOX_PYTHON") or sys.executable
+    """The system interpreter on Linux: venvs may live where `nobody` cannot traverse (e.g.
+    /root/ef_venv, mode 700 /root), and test programs only need the standard library."""
+    if os.environ.get("EF_SANDBOX_PYTHON"):
+        return os.environ["EF_SANDBOX_PYTHON"]
+    if sys.platform.startswith("linux") and os.path.exists("/usr/bin/python3"):
+        return "/usr/bin/python3"
+    return sys.executable
 
 
 def _is_root() -> bool:
