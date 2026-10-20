@@ -1,0 +1,123 @@
+{
+  "groups": {
+    "A": {
+      "from_subset": false,
+      "eligible_templates": [
+        "t01"
+      ],
+      "templates": {
+        "t01": 20
+      },
+      "n_prompts": 20,
+      "short_by": 0
+    },
+    "B": {
+      "from_subset": true,
+      "eligible_templates": [
+        "t02",
+        "t05",
+        "t07",
+        "t08",
+        "t10",
+        "t13",
+        "t15",
+        "t17",
+        "t18",
+        "t20",
+        "t22",
+        "t24",
+        "t28"
+      ],
+      "templates": {
+        "t10": 5,
+        "t13": 5,
+        "t18": 5,
+        "t20": 5
+      },
+      "n_prompts": 20,
+      "short_by": 0
+    },
+    "C": {
+      "from_subset": true,
+      "eligible_templates": [
+        "t11",
+        "t14",
+        "t16",
+        "t19",
+        "t21",
+        "t25",
+        "t27"
+      ],
+      "templates": {
+        "t14": 5,
+        "t16": 5,
+        "t19": 5,
+        "t25": 5
+      },
+      "n_prompts": 20,
+      "short_by": 0
+    },
+    "D": {
+      "from_subset": true,
+      "eligible_templates": [
+        "t04",
+        "t09",
+        "t23",
+        "t31",
+        "t33"
+      ],
+      "templates": {
+        "t04": 6,
+        "t09": 6,
+        "t23": 5,
+        "t31": 3
+      },
+      "n_prompts": 20,
+      "short_by": 0
+    },
+    "E": {
+      "from_subset": false,
+      "eligible_templates": [
+        "t03",
+        "t06",
+        "t26"
+      ],
+      "templates": {
+        "t03": 7,
+        "t06": 7,
+        "t26": 6
+      },
+      "n_prompts": 20,
+      "short_by": 0
+    },
+    "G": {
+      "from_subset": true,
+      "eligible_templates": [
+        "t12",
+        "t30",
+        "t32"
+      ],
+      "templates": {
+        "t12": 13,
+        "t30": 4,
+        "t32": 2
+      },
+      "n_prompts": 19,
+      "short_by": 1
+    }
+  },
+  "n_scored": 119,
+  "n_descored": 79,
+  "n_duplicate_groups": 117,
+  "emotion_metric_prompts": 20,
+  "design_version": "pilot-v1",
+  "n_rows": 198,
+  "by_family": {
+    "A": 20,
+    "B": 40,
+    "C": 40,
+    "D": 40,
+    "E": 20,
+    "G": 38
+  }
+}

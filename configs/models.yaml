@@ -1,0 +1,40 @@
+# Model specs, copied from timf34/grader-shifts-persona-space@0ad65c4 (configs/models.yaml).
+# Revisions are pinned commit shas on the HF Hub (resolved 2026-10-19). Both checkpoints are Qwen3_5ForConditionalGeneration
+# (model_type qwen3_5): 64 hybrid decoder blocks (3 Gated-DeltaNet : 1 full attention),
+# hidden 5120, one MTP layer, same tokenizer ids (<think>=248068, </think>=248069,
+# <|im_end|>=248046). Raw activation coordinates are still NOT assumed to align across them.
+models:
+  qwen3.6-27b:
+    hf_id: Qwen/Qwen3.6-27B
+    revision: 6a9e13bd6fc8f0983b9b99948120bc37f49c13e9
+    tokenizer_revision: 6a9e13bd6fc8f0983b9b99948120bc37f49c13e9
+    n_layers: 64
+    hidden_size: 5120
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.90
+    max_num_seqs: 256
+    # Its template's thinking prompt is "<|im_start|>assistant\n<think>\n" and matches
+    # Betley et al.'s templated prompt byte for byte (checked in tests + 02_extract.py).
+    chat_template_kwargs: {}
+    vllm_kwargs:
+      # text-only use: do not reserve memory / profile the vision tower
+      limit_mm_per_prompt: {image: 0, video: 0}
+
+  qwen3.8-27b:
+    hf_id: Qwen/Qwen3.8-27B
+    revision: 1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0
+    tokenizer_revision: 1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0
+    n_layers: 64
+    hidden_size: 5120
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.90
+    max_num_seqs: 256
+    # Qwen3.8's chat template takes `reasoning_effort` (xhigh default | medium | low).
+    # xhigh and low INJECT a system-message preamble ("Reasoning effort is set to xhigh.
+    # Please think carefully ...") in front of every role instruction, and give the
+    # unprompted default control a system message. "medium" injects nothing, so prompts
+    # are structurally identical to Qwen3.6's and role instructions stay unchanged.
+    # Change to xhigh only as a labelled sensitivity run (it changes the config id).
+    chat_template_kwargs: {reasoning_effort: medium}
+    vllm_kwargs:
+      limit_mm_per_prompt: {image: 0, video: 0}

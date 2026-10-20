@@ -1,0 +1,31 @@
+# Main pod venv: rp bootstrap <pod> --repo ... --req requirements/pod.txt
+# rp-min-cuda: 12.8
+# HF activation extraction, judges, features, predictors, reports. Generation runs in a
+# SEPARATE vLLM venv (scripts/pod/install_vllm.sh: vllm==0.26.0, the stack verified for
+# Qwen3.6/3.8 in timf34/grader-shifts-persona-space).
+#
+# torch pinned to 2.8 (cu128 wheels on PyPI): unpinned torch resolves to cu130 builds that
+# fail on RunPod's common driver-12.8 hosts (runpod-runner CLAUDE.md, 2026-09-03).
+torch==2.8.*
+# Qwen3.5-architecture (qwen3_5) support. EXACT pin, the same in both venvs
+# (scripts/pod/install_vllm.sh TRANSFORMERS_PIN); checked in tests/test_model_side.py.
+transformers==5.14.1
+accelerate
+safetensors
+huggingface_hub
+hf_transfer
+numpy
+scipy
+pandas
+pyarrow
+pyyaml
+scikit-learn
+matplotlib
+tqdm
+python-dotenv
+openai>=1.40
+anthropic>=0.40
+pytest
+# flash-linear-attention (fast Gated-DeltaNet kernels for the HF forward pass) is installed
+# by scripts/pod/_lib.sh with --no-deps so it cannot pull a different torch; without it
+# transformers falls back to its (correct, slower) PyTorch implementation.
