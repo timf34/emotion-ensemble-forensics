@@ -11,6 +11,7 @@ export HF_HOME="${HF_HOME:-/workspace/hf}" HF_HUB_ENABLE_HF_TRANSFER=1 PYTHONUNB
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 TAG="${TAG:-gptoss120b_lru_main3}"
 MAX_HOURS="${MAX_HOURS:-3}"
+PY="${PY:-python3}"
 POD_ID="${RUNPOD_POD_ID:-$(tr '\0' '\n' < /proc/1/environ 2>/dev/null | sed -n 's/^RUNPOD_POD_ID=//p' | head -1)}"
 
 stop_pod() {
@@ -21,16 +22,16 @@ stop_pod() {
 CEIL=$!
 
 echo "== $(date -u +%T) download weights"
-python - <<'PY'
+$PY - <<'PY'
 from huggingface_hub import snapshot_download
 p = snapshot_download("openai/gpt-oss-120b", allow_patterns=["*.json", "model-*.safetensors", "*.jinja"], ignore_patterns=["original/*", "metal/*"])
 print("weights at", p)
 PY
 echo "== $(date -u +%T) readout"
-python -u context_rot/run_readout.py --runs /workspace/cr_runs --out /workspace/cr_acts
+$PY -u context_rot/run_readout.py --runs /workspace/cr_runs --out /workspace/cr_acts
 code=$?
 echo "== $(date -u +%T) readout exit $code; uploading"
-python - <<PY
+$PY - <<PY
 import os
 from huggingface_hub import HfApi
 api = HfApi()
