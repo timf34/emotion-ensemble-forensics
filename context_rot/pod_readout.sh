@@ -23,7 +23,7 @@ CEIL=$!
 echo "== $(date -u +%T) download weights"
 python - <<'PY'
 from huggingface_hub import snapshot_download
-p = snapshot_download("openai/gpt-oss-120b", allow_patterns=["*.json", "*.safetensors", "*.jinja", "*.txt"])
+p = snapshot_download("openai/gpt-oss-120b", allow_patterns=["*.json", "model-*.safetensors", "*.jinja"], ignore_patterns=["original/*", "metal/*"])
 print("weights at", p)
 PY
 echo "== $(date -u +%T) readout"
