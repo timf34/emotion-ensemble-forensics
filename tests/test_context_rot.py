@@ -85,3 +85,48 @@ def test_chunked_read_matches_full_forward():
                 a, e = s["reason"]
                 np.testing.assert_allclose(out["reason"][k, j], hs[b + 1][0, a:e].mean(0).numpy(), atol=2e-4,
                                            rtol=1e-3)
+
+
+def _gf_trace(max_chars=None):
+    from context_rot.goodfire import load_source
+
+    d = ROOT / "outputs" / "goodfire" / "impossiblebench-kimi-k3"
+    if not d.exists():
+        pytest.skip("Goodfire data not downloaded")
+    traces, P = load_source(d)
+    return traces, P
+
+
+@pytest.mark.parametrize("family", ["gptoss", "qwen"])
+def test_goodfire_steps_and_readout(family):
+    """Real Goodfire rollout -> target-template sequence with step spans; the reader (chunked for gpt-oss,
+    single pass for qwen) equals a plain full forward at every pre position and step span."""
+    from context_rot.goodfire import build
+    from context_rot.readout import Reader
+    from helpers import tiny_model as tiny_qwen
+    from helpers import tokenizer as qwen_tok
+
+    traces, P = _gf_trace()
+    t = tok() if family == "gptoss" else qwen_tok("qwen3.6-27b")
+    seq = next(s for s in (build(t, tr, P.get(tr["id"], []), family) for tr in traces[:40]) if s is not None)
+    labels = {s["label"] for s in seq["steps"]}
+    assert labels & {"hack", "honest"}
+    for s in seq["steps"]:
+        a, b = s["reason"]
+        assert 0 < a < b <= len(seq["ids"]) and s["pre"] == a - 1
+    ids = seq["ids"][:1200]
+    steps = [dict(s, reason=[s["reason"][0], min(s["reason"][1], 1200)]) for s in seq["steps"] if s["reason"][0] < 1199]
+    m = tiny(len(t) + 64) if family == "gptoss" else tiny_qwen(vocab=len(t) + 64)
+    r = Reader(m, [0, 1, 2], max_chunk=97, single_pass=(family == "qwen"))
+    if family == "gptoss":
+        r.chunk_size = lambda T: 97
+    out = r.read(ids, steps)
+    from eforensics.hooks import find_text_model
+
+    with torch.no_grad():
+        hs = find_text_model(m)(input_ids=torch.tensor([ids]), output_hidden_states=True, use_cache=False).hidden_states
+    for k, s in enumerate(steps):
+        a, b = s["reason"]
+        for j, blk in enumerate([0, 1, 2]):
+            np.testing.assert_allclose(out["pre"][k, j], hs[blk + 1][0, s["pre"]].numpy(), atol=2e-4, rtol=1e-3)
+            np.testing.assert_allclose(out["reason"][k, j], hs[blk + 1][0, a:b].mean(0).numpy(), atol=2e-4, rtol=1e-3)

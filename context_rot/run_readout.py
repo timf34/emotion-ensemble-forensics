@@ -30,6 +30,7 @@ def main():
     p.add_argument("--model", default="openai/gpt-oss-120b")
     p.add_argument("--budget-gb", type=float, default=4.0, help="attention scratch per chunk (eager)")
     p.add_argument("--limit", type=int, default=None)
+    p.add_argument("--blocks", type=int, nargs="*", default=None, help="default: the 120b vector layers")
     args = p.parse_args()
     import torch
     from transformers import AutoModelForCausalLM, AutoTokenizer, Mxfp4Config
@@ -49,7 +50,7 @@ def main():
         args.model, dtype=torch.bfloat16, device_map="auto", attn_implementation="eager",
         quantization_config=Mxfp4Config(dequantize=True)).eval()
     print(f"[readout] loaded {args.model} in {time.time() - t0:.0f}s on {torch.cuda.device_count()} GPU(s)", flush=True)
-    reader = Reader(model, ANALYSIS_LAYERS, chunk_budget_bytes=args.budget_gb * 1e9)
+    reader = Reader(model, args.blocks or ANALYSIS_LAYERS, chunk_budget_bytes=args.budget_gb * 1e9)
     log = out / "readout_log.jsonl"
     out.mkdir(parents=True, exist_ok=True)
     for r in todo:

@@ -131,9 +131,13 @@ def build_sequence(tok, raw_msgs: list[dict[str, Any]], reasoning_effort: str = 
 class Reader:
     """Chunked forward over one long sequence, keeping block outputs only where needed."""
 
-    def __init__(self, model, blocks: list[int], chunk_budget_bytes: float = 3e9, max_chunk: int = 2048):
+    def __init__(self, model, blocks: list[int], chunk_budget_bytes: float = 3e9, max_chunk: int = 2048,
+                 single_pass: bool = False):
+        """single_pass: one forward without a KV cache (hybrid models such as Qwen3.5's Gated-DeltaNet
+        layers, whose recurrent state the generic DynamicCache does not carry across chunks)."""
         from eforensics.hooks import find_text_model
 
+        self.single_pass = single_pass
         self.model = model
         self.text = find_text_model(model)
         self.blocks = sorted(blocks)
@@ -162,15 +166,18 @@ class Reader:
         want_pre = {s["pre"]: k for k, s in enumerate(steps)}
         spans = [(k, s["reason"][0], s["reason"][1]) for k, s in enumerate(steps) if s["reason"]]
         dev = self.text.embed_tokens.weight.device
-        cache = DynamicCache(config=self.model.config)
-        C = self.chunk_size(T)
+        cache = None if self.single_pass else DynamicCache(config=self.model.config)
+        C = T if self.single_pass else self.chunk_size(T)
         with torch.inference_mode(), capture_block_outputs(self.model, self.blocks) as st:
             for a in range(0, T, C):
                 b = min(T, a + C)
                 x = torch.tensor([ids[a:b]], device=dev)
                 pos = torch.arange(a, b, device=dev)
-                self.text(input_ids=x, past_key_values=cache, use_cache=True, cache_position=pos,
-                          position_ids=pos[None])
+                if self.single_pass:
+                    self.text(input_ids=x, use_cache=False)
+                else:
+                    self.text(input_ids=x, past_key_values=cache, use_cache=True, cache_position=pos,
+                              position_ids=pos[None])
                 for t in range(a, b):
                     if t in want_pre:
                         k = want_pre[t]
