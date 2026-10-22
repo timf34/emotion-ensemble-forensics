@@ -83,9 +83,65 @@ def env_note(env: str, env_name: str | None = None) -> str:
     return ENV_NOTES.get(f"{env}:{env_name}") or ENV_NOTES.get(env) or f"Environment: {env} ({env_name})."
 
 
+def anchor_steps(evidence: str) -> list[int]:
+    """Step numbers cited in a Docent judge's evidence ("Step 10", "steps 31-56", "Steps 12, 14 and 20")."""
+    out = []
+    for m in re.finditer(r"[Ss]teps?\s+((?:\d+\s*(?:-|–|to|,|and|&)?\s*)+)", evidence or ""):
+        nums = [int(x) for x in re.findall(r"\d+", m.group(1))]
+        rng = re.search(r"(\d+)\s*(?:-|–|to)\s*(\d+)", m.group(1))
+        if rng and int(rng.group(2)) - int(rng.group(1)) <= 6:
+            nums += list(range(int(rng.group(1)), int(rng.group(2)) + 1))
+        out += nums
+    return sorted(set(out))
+
+
+def _fit_steps(parts: list[tuple[int, str]], max_chars: int, anchors: list[int], n_steps: int) -> str:
+    """Drop whole steps (not a blind middle cut) until the text fits: always keep the task setup, the first 3 and
+    last 3 steps and the steps the judge's evidence cites (+-4, since its numbering may be 0- or 1-based), then
+    grow outwards from those steps while there is room."""
+    by = {}
+    for st, txt in parts:
+        by.setdefault(st, []).append(txt)
+    size = {st: sum(len(t) + 2 for t in ts) for st, ts in by.items()}
+    keep = {-1} | set(range(3)) | set(range(max(0, n_steps - 3), n_steps))
+    for a in anchors:
+        keep |= {k for k in range(a - 4, a + 5) if 0 <= k < n_steps}
+    seeds = sorted(keep - {-1})
+    used = sum(size.get(k, 0) for k in keep)
+    if used > max_chars:  # anchors alone are too big: shed the outer ring of each anchor window
+        for d in (4, 3, 2):
+            for a in anchors:
+                for k in (a - d, a + d):
+                    if k in keep and used > max_chars and k not in set(range(3)) | {n_steps - 1}:
+                        keep.discard(k)
+                        used -= size.get(k, 0)
+    dist = lambda k: min(abs(k - s) for s in seeds) if seeds else k
+    for k in sorted((k for k in range(n_steps) if k not in keep), key=dist):
+        if used + size.get(k, 0) > max_chars:
+            continue
+        keep.add(k)
+        used += size.get(k, 0)
+    out, gap = [], []
+    for st in [-1] + list(range(n_steps)):
+        if st in keep:
+            if gap:
+                out.append(f"...[STEPS {gap[0]}-{gap[-1]} ELIDED FOR LENGTH]...")
+                gap = []
+            out += by.get(st, [])
+        else:
+            gap.append(st)
+    if gap:
+        out.append(f"...[STEPS {gap[0]}-{gap[-1]} ELIDED FOR LENGTH]...")
+    text = "\n\n".join(out)
+    return _cut(text, max_chars) if len(text) > max_chars else text
+
+
 def render_docent(msgs: list[dict], max_reason: int = 6000, tool_early: int = 2500, tool_late: int = 600,
-                  max_chars: int = 160_000) -> tuple[str, int]:
-    """Docent (inspect-style) messages -> the same text layout as render()."""
+                  max_chars: int = 160_000, anchors: list[int] | None = None) -> tuple[str, int]:
+    """Docent (inspect-style) messages -> the same text layout as render().
+
+    If anchors (step numbers, e.g. from anchor_steps(judge evidence)) are given and the text is still too long
+    after shrinking, whole steps far from the anchors are elided instead of hard-cutting the middle."""
     parts, step = [], -1
     for x in msgs:
         r = x.get("role")
@@ -101,9 +157,9 @@ def render_docent(msgs: list[dict], max_reason: int = 6000, tool_early: int = 25
             texts.append(str(c))
         text = "\n".join(texts)
         if r == "system":
-            parts.append("=== SYSTEM PROMPT ===\n" + _cut(text, 4000))
+            parts.append((-1, "=== SYSTEM PROMPT ===\n" + _cut(text, 4000)))
         elif r == "user":
-            parts.append("=== USER ===\n" + _cut(text, 4000))
+            parts.append((step if step >= 0 else -1, "=== USER ===\n" + _cut(text, 4000)))
         elif r == "assistant":
             step += 1
             block = [f"=== STEP {step} (assistant) ==="]
@@ -117,15 +173,15 @@ def render_docent(msgs: list[dict], max_reason: int = 6000, tool_early: int = 25
                 cmd = a.get("command") if isinstance(a, dict) else str(a)
                 cmd = cmd if cmd is not None else json.dumps(a)
                 block.append(f"[tool call] {tc.get('function', 'tool')}: " + _cut(cmd, 2500))
-            parts.append("\n".join(block))
+            parts.append((step, "\n".join(block)))
         elif r == "tool":
-            parts.append("[tool output]\n" + _cut(text, tool_early if step < 5 else tool_late))
-    out = "\n\n".join(parts)
+            parts.append((max(step, -1), "[tool output]\n" + _cut(text, tool_early if step < 5 else tool_late)))
+    out = "\n\n".join(t for _, t in parts)
     if len(out) > max_chars:
         if tool_late > 200:
             return render_docent(msgs, max_reason=min(max_reason, 3000), tool_early=1200, tool_late=200,
-                                 max_chars=max_chars)
-        out = _cut(out, max_chars)
+                                 max_chars=max_chars, anchors=anchors)
+        out = _fit_steps(parts, max_chars, anchors or [], step + 1) if anchors is not None else _cut(out, max_chars)
     return out, step + 1
 
 

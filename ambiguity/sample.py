@@ -1,6 +1,8 @@
 """Build the mining sample: local GPT-OSS runs + a stratified slice of the Docent suite corpus.
 
     python -m ambiguity.sample            # writes outputs/ambiguity/sample.jsonl and docent_ids.txt
+    python -m ambiguity.sample --rebuild  # cloud: sample_local.jsonl + Docent rows for the listed ids
+                                          # (data/ambiguity/docent_ids.txt) from the re-pulled meta.jsonl
 
 Docent strata are (model, environment_name). Open-weight models (Kimi K3, GLM 5.3) get more cheated runs,
 since only they can be probed later. Within a stratum we take judge-cheated runs first, then "tough call"
@@ -54,6 +56,30 @@ def local_rows(rng: random.Random) -> list[dict]:
     return rows
 
 
+def docent_row(m: dict) -> dict:
+    ow = m["model"] in OPEN_WEIGHT
+    return {"id": f"docent/{m['id']}", "docent_id": m["id"], "source": "docent",
+            "env": m["environment"], "env_name": m["environment_name"], "model": m["model"],
+            "open_weight": ow, "path": f"outputs/ambiguity/docent/runs/{m['id']}.json",
+            "verdict": ("cheated" if m["cheated"] else "honest") + (" (judge flagged tough call)"
+                                                                     if m.get("tough_call") else ""),
+            "evidence": m.get("evidence") or "", "eval_aware": m.get("eval_aware"),
+            "thinking_share": m.get("thinking_share")}
+
+
+def rebuild_rows(ids_path: Path, local_path: Path) -> list[dict]:
+    """Rows for a fixed id list (the laptop sample), without replaying the seeded draw."""
+    meta = {}
+    for l in open(OUT / "docent" / "meta.jsonl"):
+        m = json.loads(l)
+        meta[m["id"]] = m
+    ids = [l.strip() for l in open(ids_path) if l.strip()]
+    missing = [i for i in ids if i not in meta]
+    if missing:
+        print("not in meta.jsonl:", missing)
+    return [json.loads(l) for l in open(local_path)] + [docent_row(meta[i]) for i in ids if i in meta]
+
+
 def docent_rows(rng: random.Random) -> list[dict]:
     meta = [json.loads(l) for l in open(OUT / "docent" / "meta.jsonl")]
     strata = defaultdict(list)
@@ -71,23 +97,20 @@ def docent_rows(rng: random.Random) -> list[dict]:
         rng.shuffle(ms)
         ch = [m for m in ms if m["cheated"] is True][:n_ch]
         tc = [m for m in ms if m["cheated"] is False and m.get("tough_call") is True][:n_tc]
-        for m in ch + tc:
-            rows.append({"id": f"docent/{m['id']}", "docent_id": m["id"], "source": "docent",
-                         "env": m["environment"], "env_name": m["environment_name"], "model": model,
-                         "open_weight": ow, "path": f"outputs/ambiguity/docent/runs/{m['id']}.json",
-                         "verdict": ("cheated" if m["cheated"] else "honest") + (" (judge flagged tough call)"
-                                                                                  if m.get("tough_call") else ""),
-                         "evidence": m.get("evidence") or "", "eval_aware": m.get("eval_aware"),
-                         "thinking_share": m.get("thinking_share")})
+        rows += [docent_row(m) for m in ch + tc]
     return rows
 
 
 if __name__ == "__main__":
-    rng = random.Random(0)
-    rows = local_rows(rng) + docent_rows(rng)
+    import sys
+    if "--rebuild" in sys.argv:
+        rows = rebuild_rows(ROOT / "data" / "ambiguity" / "docent_ids.txt", ROOT / "data" / "ambiguity" / "sample_local.jsonl")
+    else:
+        rng = random.Random(0)
+        rows = local_rows(rng) + docent_rows(rng)
+        (OUT / "docent_ids.txt").write_text("\n".join(r["docent_id"] for r in rows if r["source"] == "docent"))
     with open(OUT / "sample.jsonl", "w") as f:
         for r in rows:
             f.write(json.dumps(r) + "\n")
-    (OUT / "docent_ids.txt").write_text("\n".join(r["docent_id"] for r in rows if r["source"] == "docent"))
     from collections import Counter
     print(len(rows), Counter((r["model"], r["verdict"].split(" ")[0]) for r in rows))

@@ -22,7 +22,7 @@ import os
 import re
 from pathlib import Path
 
-from ambiguity.render import env_note, load_messages, render, render_docent
+from ambiguity.render import anchor_steps, env_note, load_messages, render, render_docent
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs" / "ambiguity"
@@ -121,7 +121,8 @@ def transcript_for(row: dict) -> tuple[str, int]:
     if row["source"] == "local":
         return render(load_messages(row_path(row)), max_chars=120_000)
     d = json.loads(row_path(row).read_text())
-    return render_docent(d["transcripts"][0]["messages"], max_chars=120_000)
+    return render_docent(d["transcripts"][0]["messages"], max_chars=120_000,
+                         anchors=anchor_steps(row.get("evidence") or ""))
 
 
 def parse_json(s: str) -> dict:
