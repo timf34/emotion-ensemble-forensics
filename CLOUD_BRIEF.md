@@ -18,3 +18,5 @@ Prior results (the full write-up `docs/WRITEUP_GDOC.md` is not in the repo):
    (c) the allow-vs-forbid control (same action tokens, different norm context);
    (d) the palisades rule-restating runs.
 4. Done = `docs/transgression_probe_results.md` plus figures in `docs/figures/`, pushed to this branch, with a 5-line Slack-ready summary for Sen that opens with one sentence of context. No push to `main`, no PR unless Tim asks.
+
+**Tim's decision (22 Oct) on plan decision 2, story writer:** keep GPT-OSS-120B writing its own stories (on-policy), via the OpenRouter API (`openai/gpt-oss-120b`, as `transgression/stories.py` already does), never through our own GPU-hosted copy. The 2,935 texts are already generated and committed. If any stories need adding or regenerating, use OpenRouter. The pod is only for reading activations.
