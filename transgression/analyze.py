@@ -18,6 +18,8 @@ Inputs (HF dataset timf34/emotion-ensemble-forensics, downloaded under outputs/h
             baselines guilty / ashamed / regretful / sorry emotion vectors, Goodfire direction, 100 random directions
             Layer per probe by 5-fold grouped CV (by setting) inside train. Test settings: AUROC forbid_do vs allow_do,
             matched-pair accuracy, 2x2 interaction, unaware_do, leave-one-norm-type-out.
+  persp.    third-person (main) vs first-person twins (same scenario and action text, narrator "I"): fit on either
+            or both, test on held-out settings of each; dom@first / dom@both also go to sections 2 and 3.
 2 lru       the probe (no refit) on the 44 cheating LRU runs: event-locked trajectory (tau -8..+4); detection of the
             cheat-writing turn (tau = 0) vs earlier turns (pooled AUROC, within-run rank, tau 0 vs -1).
 3 control   replayed runs with one sentence of the task prompt flipped (allow vs forbid; palisades also none).
@@ -137,6 +139,8 @@ class Stories:
         self.kind = np.array([r["kind"] for r in self.rows])
         self.setting = np.array([r["setting"] for r in self.rows])
         self.test = np.array([r["split"] == "test" for r in self.rows])
+        self.persp = np.array([r.get("perspective", "third") for r in self.rows])
+        self.base = self.persp == "third"     # main analysis: third-person stories (the pre-planned design)
         meta = tg / "stories_meta.jsonl"
         self.act_hash_ok = None
         if meta.exists():                    # act tokens identical within a family (do and decline separately)
@@ -207,7 +211,7 @@ def story_metrics(S: Stories, s: np.ndarray, m: np.ndarray) -> dict:
 def cv_auroc(S: Stories, b: int, n_folds=5) -> dict[str, float]:
     from sklearn.model_selection import GroupKFold
 
-    tr = np.flatnonzero(~S.test)
+    tr = np.flatnonzero(~S.test & S.base)
     res = {p: [] for p in PROBES}
     for f_tr, f_te in GroupKFold(n_folds).split(tr, groups=S.setting[tr]):
         mtr = np.zeros(len(S.cond), bool); mtr[tr[f_tr]] = True
@@ -222,7 +226,7 @@ def cv_auroc(S: Stories, b: int, n_folds=5) -> dict[str, float]:
 
 def run_stories(S: Stories, emo, gf, rng) -> tuple[dict, dict]:
     res = {"blocks": S.blocks, "act_hash_consistent": S.act_hash_ok, "per_block": {}, "cv": {}}
-    test, train = S.test, ~S.test
+    test, train = S.test & S.base, ~S.test & S.base
     H = S.act.shape[-1]
     R = unit(rng.standard_normal((N_RAND, H)))
     dirs = {}
@@ -266,13 +270,55 @@ def run_stories(S: Stories, emo, gf, rng) -> tuple[dict, dict]:
     if bstar in gf:
         cosines["goodfire"] = float(gf[bstar] @ dirs[bstar]["dom"])
     res["cosine_with_dom"] = cosines
+    if (S.persp == "first").any():
+        res["perspective"] = run_perspective(S, dirs, bstar)
     return res, dirs
+
+
+PERSP_FITS = {"third": ("third",), "first": ("first",), "both": ("third", "first")}
+
+
+def run_perspective(S: Stories, dirs: dict, bstar: int) -> dict:
+    """Third- vs first-person stories (matched twins: same scenario, same action text, only the narrator differs).
+    Fit dom / dom_perp on train settings of each perspective (or both pooled) and test on held-out settings of each.
+    Adds dirs[b]["dom@first"], ["dom@both"] (and dom_perp) so the LRU and control sections report them too."""
+    out = {"n": {p: int((S.persp == p).sum()) for p in ("third", "first")}, "transfer": {}, "cos_third_first": {}}
+    keep = ("auroc", "pair_acc", "interaction", "interaction_ci", "auroc_unaware_vs_allow", "forbid_vs_unaware_pair")
+    for b in S.blocks:
+        fit = {}
+        for name, ps in PERSP_FITS.items():
+            D = fit_probes(S, b, ~S.test & np.isin(S.persp, ps))
+            fit[name] = D
+            if name != "third":
+                for p in ("dom", "dom_perp"):
+                    dirs[b][f"{p}@{name}"] = D[p]
+        out["cos_third_first"][b] = {p: float(fit["third"][p] @ fit["first"][p]) for p in ("dom", "dom_perp")}
+        if b != bstar:
+            continue
+        X = S.X(b)
+        for name, D in fit.items():
+            out["transfer"][f"fit_{name}"] = {
+                f"test_{ev}": {p: {k: v for k, v in story_metrics(S, X @ D[p], S.test & (S.persp == ev)).items() if k in keep}
+                               for p in ("dom", "dom_perp")}
+                for ev in ("third", "first")}
+        # same story, other narrator: first-person twin minus third-person twin on the pooled probe (test settings)
+        idx = {(r.get("base_family", r["family"]), r["condition"], r.get("perspective", "third")): i
+               for i, r in enumerate(S.rows)}
+        d = fit["both"]["dom"]
+        sd = (X[S.test] @ d).std() + 1e-12
+        diffs = {}
+        for (f, c, pp), i in idx.items():
+            if pp == "third" and S.test[i] and (f, c, "first") in idx:
+                diffs.setdefault(c, []).append(X[idx[f, c, "first"]] @ d - X[i] @ d)
+        out["first_minus_third_z"] = {c: float(np.mean(v) / sd) for c, v in diffs.items()}
+    out["block"] = bstar
+    return out
 
 
 # ----------------------------------------------------------------------------------- directions to test
 def direction_set(dirs, emo, gf, b, H, rng):
     """name -> unit direction at block b. Random directions fixed by rng."""
-    out = {p: dirs[b][p] for p in PROBES}
+    out = dict(dirs[b])                       # PROBES plus dom@first / dom@both etc. when present
     for e in GUILT + EXTRA_EMO:
         if e in emo:
             out[f"emo:{e}"] = emo[e][b]
@@ -517,6 +563,24 @@ def figures(res: dict, model: str, figdir: Path):
                     a.legend(fontsize=7)
         fig.tight_layout(); fig.savefig(figdir / f"tg_{model}_control.png", dpi=130); plt.close(fig)
 
+    # 4. perspective transfer (fit third / first / both x test third / first)
+    pr = st.get("perspective")
+    if pr and pr.get("transfer"):
+        fig, ax = plt.subplots(1, 3, figsize=(13, 3.6))
+        fits, evs = ("fit_third", "fit_first", "fit_both"), ("test_third", "test_first")
+        for a, (p, k) in zip(ax, (("dom", "auroc"), ("dom_perp", "auroc"), ("dom", "interaction"))):
+            M = np.array([[nn(pr["transfer"][f][e][p][k]) for e in evs] for f in fits], float)
+            im = a.imshow(M, cmap="viridis", vmin=0.5 if k == "auroc" else None, vmax=1 if k == "auroc" else None)
+            for i in range(3):
+                for j in range(2):
+                    a.text(j, i, f"{M[i, j]:.2f}", ha="center", va="center", color="w", fontsize=9)
+            a.set_xticks(range(2), ["test 3rd", "test 1st"])
+            a.set_yticks(range(3), ["fit 3rd", "fit 1st", "fit both"])
+            a.set_title(f"{p} {k} (block {pr['block']})", fontsize=9)
+            fig.colorbar(im, ax=a, fraction=.046)
+        fig.suptitle(f"GPT-OSS-{model}: third- vs first-person transgression stories (held-out settings)", fontsize=10)
+        fig.tight_layout(); fig.savefig(figdir / f"tg_{model}_perspective.png", dpi=130); plt.close(fig)
+
 
 # ------------------------------------------------------------------------------------------------- main
 def download(model: str):
@@ -559,7 +623,7 @@ def main():
     main_b = res["stories"]["chosen_block"]
     print("[tg] stories main:", json.dumps(r3(res["stories"]["main"]["dom"]))[:400], flush=True)
     np.savez(out / "probe_dirs.npz", blocks=np.array(S.blocks),
-             **{f"{p}_{b}": dirs[b][p] for b in S.blocks for p in PROBES})
+             **{f"{p}_{b}": d for b in S.blocks for p, d in dirs[b].items()})
 
     if a.model == "120b" and "lru" not in a.skip:
         labels = json.load(open(ROOT / "data/transgression/lru120b_labels_code.json"))

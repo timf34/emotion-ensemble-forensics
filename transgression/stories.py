@@ -21,7 +21,8 @@ difference between conditions comes from the context, not the action words. The 
 {forbid, allow} x {do, decline} separates "transgressing knowingly" from "a prohibition is in context".
 
     python -m transgression.stories generate --n-per-cell 2 --out data/transgression/families.jsonl
-    python -m transgression.stories build --families data/transgression/families.jsonl --out data/transgression/texts.jsonl
+    python -m transgression.stories firstperson    # matched first-person twins -> families_1p.jsonl
+    python -m transgression.stories build          # both perspectives -> texts.jsonl
 """
 
 from __future__ import annotations
@@ -210,6 +211,94 @@ async def _generate(cs: list[dict], out: Path, model: str, concurrency: int, max
     print(f"[stories] done: {stats}", flush=True)
 
 
+# ---------------------------------------------------------------------------------------------------------
+# First-person variant. Each third-person family is rewritten segment by segment into first person ("I"),
+# so the scenario, norms and the identical-action-text property carry over exactly, and every first-person
+# story has a matched third-person twin (same base_family, same condition).
+
+FP_KEYS = ["setup", "norm_forbidden", "norm_allowed", "norm_unaware", "action", "decline", "suffix"]
+
+FP_PROMPT = """Rewrite each segment of this short story from third person into FIRST PERSON, narrated by {name}
+("I", "me", "my"), past tense. Change ONLY what the change of perspective requires (pronouns, verb agreement,
+replacing "{name}" with "I"/"me"). Keep every event, detail, other character, name and word choice otherwise
+identical. Do not add thoughts, feelings, reasons or evaluative words that are not in the original. Never write
+the name "{name}" in action, decline or suffix. Each segment must still read naturally on its own and in sequence
+(setup, then one norm segment, then action or decline, then suffix).
+
+Segments (JSON):
+{segments}
+
+Return JSON only, with exactly these keys: {keys}."""
+
+NARRATOR = re.compile(r"\b(I|me|my|myself)\b")
+
+
+def check_fp(fp: dict, fam: dict) -> list[str]:
+    bad = [k for k in FP_KEYS if not isinstance(fp.get(k), str) or not fp[k].strip()]
+    if bad:
+        return [f"missing {bad}"]
+    errs = []
+    for k in ("setup", "action", "decline", "suffix"):
+        m = LEAK.search(fp[k])
+        if m and not LEAK.search(fam[k]):
+            errs.append(f"{k} leaks '{m.group(0)}'")
+    for k in ("action", "decline", "suffix"):
+        if re.search(rf"\b{re.escape(fam['name'])}\b", fp[k]):
+            errs.append(f"{k} still names {fam['name']}")
+    for k in ("setup", "action", "decline"):
+        if not NARRATOR.search(fp[k]):
+            errs.append(f"{k} not first person")
+    for k in FP_KEYS:  # same content: length within 25% of the original
+        a, b = len(fam[k].split()), len(fp[k].split())
+        if not 0.75 * a - 2 <= b <= 1.25 * a + 2:
+            errs.append(f"{k} length {b} vs {a}")
+    return errs
+
+
+async def _firstperson(fams: list[dict], out: Path, model: str, concurrency: int, max_tries: int = 3):
+    from openai import AsyncOpenAI
+
+    client = AsyncOpenAI(base_url="https://openrouter.ai/api/v1", api_key=os.environ["OPENROUTER_API_KEY"],
+                         max_retries=2, timeout=300)
+    done = set()
+    if out.exists():
+        done = {json.loads(l)["base_family"] for l in open(out)}
+    todo = [f for f in fams if f["id"] not in done]
+    print(f"[fp] {len(fams)} families, {len(todo)} to rewrite with {model}", flush=True)
+    sem, lock, stats = asyncio.Semaphore(concurrency), asyncio.Lock(), {"ok": 0, "fail": 0}
+
+    async def one(f):
+        async with sem:
+            segs = json.dumps({k: f[k] for k in FP_KEYS}, ensure_ascii=False, indent=1)
+            prompt = FP_PROMPT.format(name=f["name"], segments=segs, keys=", ".join(FP_KEYS))
+            errs = ["not tried"]
+            for attempt in range(max_tries):
+                try:
+                    r = await client.chat.completions.create(
+                        model=model, messages=[{"role": "user", "content": prompt}], max_tokens=6000,
+                        temperature=0.3, extra_body={"reasoning": {"effort": "low"}})
+                    fp = _parse(r.choices[0].message.content)
+                except Exception as e:
+                    fp = None
+                errs = check_fp(fp, f) if fp else ["unparseable"]
+                if not errs:
+                    rec = {**f, **{k: fp[k].strip() for k in FP_KEYS}, "id": f"{f['id']}-1p",
+                           "base_family": f["id"], "perspective": "first", "fp_writer": model,
+                           "fp_attempt": attempt}
+                    async with lock:
+                        with open(out, "a") as fh:
+                            fh.write(json.dumps(rec) + "\n")
+                        stats["ok"] += 1
+                        if stats["ok"] % 100 == 0:
+                            print(f"[fp] {stats}", flush=True)
+                    return
+            stats["fail"] += 1
+            print(f"[fp] gave up on {f['id']}: {errs}", flush=True)
+
+    await asyncio.gather(*(one(f) for f in todo))
+    print(f"[fp] done: {stats}", flush=True)
+
+
 CONDITIONS = {"forbid_do": ("norm_forbidden", "action"), "allow_do": ("norm_allowed", "action"),
               "unaware_do": ("norm_unaware", "action"), "forbid_decline": ("norm_forbidden", "decline"),
               "allow_decline": ("norm_allowed", "decline")}
@@ -236,7 +325,8 @@ def build(families: list[dict]) -> list[dict]:
                 spans[name] = [a, len(text)]
             rows.append({"id": f"{f['id']}:{cond}", "family": f["id"], "condition": cond, "kind": f["kind"],
                          "setting": f["setting"], "split": split_of(f["setting_idx"]), "text": text,
-                         "spans": spans})
+                         "spans": spans, "perspective": f.get("perspective", "third"),
+                         "base_family": f.get("base_family", f["id"])})
     return rows
 
 
@@ -249,8 +339,15 @@ def main():
     g.add_argument("--model", default="openai/gpt-oss-120b")
     g.add_argument("--concurrency", type=int, default=16)
     g.add_argument("--out", default="data/transgression/families.jsonl")
+    fpp = sub.add_parser("firstperson", help="rewrite every family into first person (matched twins)")
+    fpp.add_argument("--families", default="data/transgression/families.jsonl")
+    fpp.add_argument("--out", default="data/transgression/families_1p.jsonl")
+    fpp.add_argument("--model", default="openai/gpt-oss-120b")
+    fpp.add_argument("--concurrency", type=int, default=24)
+    fpp.add_argument("--limit", type=int, default=None)
     b = sub.add_parser("build")
-    b.add_argument("--families", default="data/transgression/families.jsonl")
+    b.add_argument("--families", nargs="+", default=["data/transgression/families.jsonl",
+                                                     "data/transgression/families_1p.jsonl"])
     b.add_argument("--out", default="data/transgression/texts.jsonl")
     a = ap.parse_args()
     if a.cmd == "generate":
@@ -263,15 +360,26 @@ def main():
         out = Path(a.out)
         out.parent.mkdir(parents=True, exist_ok=True)
         asyncio.run(_generate(cs, out, a.model, a.concurrency))
-    else:
+    elif a.cmd == "firstperson":
+        from dotenv import load_dotenv
+
+        load_dotenv(ROOT / ".env")
         fams = [json.loads(l) for l in open(a.families)]
+        if a.limit:
+            fams = fams[: a.limit]
+        out = Path(a.out)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        asyncio.run(_firstperson(fams, out, a.model, a.concurrency))
+    else:
+        fams = [json.loads(l) for p in a.families if Path(p).exists() for l in open(p)]
         rows = build(fams)
         Path(a.out).parent.mkdir(parents=True, exist_ok=True)
         with open(a.out, "w") as f:
             for r in rows:
                 f.write(json.dumps(r) + "\n")
+        from collections import Counter
         print(f"[build] {len(fams)} families -> {len(rows)} texts "
-              f"({sum(r['split'] == 'test' for r in rows)} test)")
+              f"({sum(r['split'] == 'test' for r in rows)} test; {dict(Counter(r['perspective'] for r in rows))})")
 
 
 if __name__ == "__main__":
