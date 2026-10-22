@@ -28,6 +28,18 @@ are in `docs/transgression_probe_plan.md`; the code is `transgression/`.
 - **Verdict.** We have a clean, held-out, partly knowledge-sensitive transgression direction in stories, but no
   evidence yet that GPT-OSS represents its own cheats this way. The replay test is weak for small effects (see
   caveats), so "no transfer" is not "no knowledge".
+- **Update: token-level readout (same day).** Reading the exact tokens of the shortcut-naming sentence and of the
+  cheat tool call settles the "too coarse" worry:
+  - The allow/forbid difference **is** in the activations at those tokens. A direction fitted on the replays
+    (leave-one-run-out) gets the sign right in 44/44 held-out runs at the sentence and the tool call (layers 8–16).
+  - That direction is **orthogonal to the story probe** (cosine ≤ 0.07; random 95th percentile 0.04). It also doesn't
+    separate the story conditions in reverse (AUROC 0.44–0.56).
+  - The story probes, guilt and Goodfire stay within random directions at these tokens too.
+  - So the failure isn't missing information; the model encodes "I was told not to do this" in agent context
+    differently from how it encodes transgression in stories.
+  - Exploratory: at the shortcut sentence, the forbid prompt shifts negative-valence emotion vectors up (desperate,
+    grief-stricken, tormented, dispirited) and positive ones down, in 90–98% of runs. A few exceed the largest random
+    direction, but there are many comparisons. See "Token-level readout" below.
 
 ## Setup
 
@@ -99,6 +111,70 @@ sentences.
 
 ![](figures/tg_120b_control.png)
 
+## Token-level readout (LRU allow/forbid, GPT-OSS-120B)
+
+`transgression/token_readout.py` (pod) and `transgression/analyze_tokens.py` (local). One 4×H100 job, about 30
+minutes; outputs on HF `context_rot/transgression_gptoss120b_tokens/`. All 44 LRU runs, both conditions. The tokens are
+identical in allow and forbid at every target (checked by token id).
+
+**Targets:**
+- **sentence:** the first reasoning sentence at or before the cheat turn containing "cheat" (fallback: delegating
+  to, calling or bypassing the baseline). For example: "Perhaps we can cheat: Use the baseline extension directly to
+  get speed…". Median about 30 tokens.
+- **action:** the cheat turn's tool-call tokens (up to 3,072; mostly 300–1,500).
+- **action32:** the first 32 tokens of the tool call.
+- **pre:** the generation-prompt token.
+
+**Fixed directions** (score per token; forbid − allow per run, in SD units of token-level variance; p against 100
+random directions). Block 16 is the story probe's layer:
+
+| target | `dom` | `dom_perp` | `dom@first` | guilty | Goodfire | random \|95%\| |
+|---|---|---|---|---|---|---|
+| sentence | 0.023 (p .25) | 0.036 (p .06) | 0.022 (p .27) | 0.013 (p .52) | −0.004 (p .84) | 0.038 |
+| action | 0.001 (p .72) | −0.001 (p .76) | 0.000 (p .89) | 0.001 (p .69) | 0.001 (p .67) | 0.004 |
+| action32 | 0.000 (p .95) | −0.004 (p .38) | −0.001 (p .81) | 0.003 (p .49) | 0.004 (p .45) | 0.008 |
+| pre | −0.021 (p .59) | −0.028 (p .47) | −0.022 (p .58) | 0.032 (p .38) | −0.006 (p .90) | 0.095 |
+
+Across all 17 layers, the largest story-probe effect is still within the random band at that layer. (The last two
+layers overflow float16 for a few directions; those cells are blank.)
+
+**Fitted control:** is the difference there at all? This is a difference-of-means direction of (forbid − allow) span
+means, fitted leave-one-run-out, scoring whether the held-out run's difference has the right sign.
+
+| target | sign accuracy (layer 16) | best layer | sign-flip permutation p | \|forbid − allow\| / \|activation\| |
+|---|---|---|---|---|
+| sentence | 44/44 | 1.00 at layers 8–35 | < 0.005 | 2–4% |
+| action | 44/44 | 1.00 at layers 8–16 | < 0.005 | < 1% |
+| pre | 34/44 | 0.98 at layer 26 | 0.005 | 4–8% |
+
+Cosine of the fitted direction with the story probes at layers 8 / 16 / 26: `dom` −0.04 / 0.05 / −0.02 (sentence),
+−0.13 / 0.01 / 0.01 (action); `rule_text` ≤ 0.14; guilt ≤ 0.05. Random directions reach 0.033–0.037 (95th
+percentile). Goodfire is the only one with some alignment at early layers (0.14–0.17 at layer 8), but its effect at
+those tokens stays within the random band.
+
+**Reverse transfer.** The replay-fitted direction applied to the held-out stories scores 0.44–0.56 AUROC on every
+contrast (forbid_do vs allow_do, forbid_decline vs allow_decline, unaware_do vs allow_do), at layers 8–26, for both
+the sentence- and action-fitted directions.
+
+**Reading.** GPT-OSS does carry the flipped instruction into the moment it names the shortcut and into the cheat call:
+small in norm, but perfectly consistent across runs. It does so in a direction unrelated to the story-trained
+transgression concept, in either direction of transfer. The OOD probe fails because the representations differ, not
+because the information is absent or diluted. The fitted direction itself isn't a "knowledge" probe: it is trained
+on these replays and could simply be tracking the specific flipped sentence.
+
+**Exploratory: emotions at the shortcut sentence.** Of the 42 emotion vectors, the forbid prompt raises
+negative-valence ones and lowers positive ones at the sentence tokens, consistently across runs:
+- layer 16: desperate +0.068 SD in 98% of runs (largest random 0.056);
+- layer 20: grief-stricken +0.13 and heartbroken +0.10 (largest random 0.087);
+- layer 26: dispirited +0.10;
+- happy and content −0.09 at layer 26.
+
+At the tool call, the effects are tiny (miserable, desperate +0.007–0.009 at layer 16, random 95th percentile
+0.0045). This was 42 emotions × several layers, so it needs a pre-specified test (e.g. one valence contrast) on fresh
+runs before any claim. Still, it's the only fixed direction set that moved.
+
+![](figures/tg_120b_tokens.png)
+
 ## Caveats, and why the transfer test is weak
 
 1. **One sentence in 20–40k tokens.** The flipped sentence sits in the task prompt, and our readouts average over
@@ -116,8 +192,9 @@ sentences.
 
 ## Possible next steps
 
-- **Token-level readout** on the LRU replays: the cheat tool call's own tokens and the reasoning sentence that names
-  the shortcut, forbid vs allow. Single GPU, under an hour.
+- ~~Token-level readout~~: done (above). The information is present, but in a different direction from the stories.
+- **Pre-registered valence test:** a single negative-minus-positive emotion contrast at the shortcut sentence, on
+  fresh LRU (and palisades) replays, to check the exploratory emotion result.
 - **Bridge the domain gap:** stories rendered as assistant/agent turns in the harmony format (a user gives a rule, the
   assistant does or doesn't break it, same action text). Train there; test on the replays.
 - **Move to the models where the probe would matter:** the ambiguity search points to Kimi K3 / GLM 5.3 (leaked-tests
@@ -133,5 +210,9 @@ sentences.
 >    Guilt/emotion probes don't capture it (0.63–0.67, higher for *unknowing*).
 > 2. It does **not** transfer to GPT-OSS's own LRU cheats (cheat-turn detection at chance), and in a replay control
 >    (flip one prompt sentence allowed→forbidden, identical cheat tokens) nothing beats random directions.
-> 3. Caveat: turn-averaged readouts over 20–40k tokens; next is token-level reads at the cheat call plus agent-format
->    training stories before trying Kimi/GLM, where the CoT is silent.
+> 3. Token-level follow-up: at the exact "we can cheat: …" sentence and the cheat tool call, the allowed/forbidden
+>    difference *is* there (a direction fitted on the replays gets 44/44 held-out runs), but it's orthogonal to the
+>    story probe and doesn't transfer back to the stories. So the model encodes "I was told not to" differently in
+>    agent context than "she knowingly broke a rule" in stories. Next: agent-format training stories before Kimi/GLM.
+>    (Exploratory: negative-valence emotion vectors rise at that sentence under the forbid prompt; needs a
+>    pre-registered check.)

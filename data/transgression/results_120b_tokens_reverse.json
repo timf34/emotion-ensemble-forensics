@@ -1,0 +1,62 @@
+{
+ "sentence@8": {
+  "forbid_do>allow_do": 0.492,
+  "forbid_decline>allow_decline": 0.498,
+  "unaware_do>allow_do": 0.553,
+  "forbid_do>unaware_do": 0.439
+ },
+ "sentence@12": {
+  "forbid_do>allow_do": 0.51,
+  "forbid_decline>allow_decline": 0.516,
+  "unaware_do>allow_do": 0.53,
+  "forbid_do>unaware_do": 0.478
+ },
+ "sentence@16": {
+  "forbid_do>allow_do": 0.552,
+  "forbid_decline>allow_decline": 0.452,
+  "unaware_do>allow_do": 0.519,
+  "forbid_do>unaware_do": 0.534
+ },
+ "sentence@20": {
+  "forbid_do>allow_do": 0.493,
+  "forbid_decline>allow_decline": 0.442,
+  "unaware_do>allow_do": 0.453,
+  "forbid_do>unaware_do": 0.541
+ },
+ "sentence@26": {
+  "forbid_do>allow_do": 0.475,
+  "forbid_decline>allow_decline": 0.474,
+  "unaware_do>allow_do": 0.461,
+  "forbid_do>unaware_do": 0.514
+ },
+ "action@8": {
+  "forbid_do>allow_do": 0.484,
+  "forbid_decline>allow_decline": 0.49,
+  "unaware_do>allow_do": 0.492,
+  "forbid_do>unaware_do": 0.492
+ },
+ "action@12": {
+  "forbid_do>allow_do": 0.494,
+  "forbid_decline>allow_decline": 0.498,
+  "unaware_do>allow_do": 0.508,
+  "forbid_do>unaware_do": 0.486
+ },
+ "action@16": {
+  "forbid_do>allow_do": 0.503,
+  "forbid_decline>allow_decline": 0.523,
+  "unaware_do>allow_do": 0.541,
+  "forbid_do>unaware_do": 0.46
+ },
+ "action@20": {
+  "forbid_do>allow_do": 0.522,
+  "forbid_decline>allow_decline": 0.546,
+  "unaware_do>allow_do": 0.469,
+  "forbid_do>unaware_do": 0.551
+ },
+ "action@26": {
+  "forbid_do>allow_do": 0.497,
+  "forbid_decline>allow_decline": 0.518,
+  "unaware_do>allow_do": 0.438,
+  "forbid_do>unaware_do": 0.559
+ }
+}

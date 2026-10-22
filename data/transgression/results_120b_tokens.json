@@ -1,0 +1,8096 @@
+{
+ "block": 16,
+ "n_pairs": 44,
+ "fixed": {
+  "sentence": {
+   "n_runs": 44,
+   "n_tokens_median": 24.0,
+   "per_block": {
+    "6": {
+     "dom": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.75
+     },
+     "dom@both": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.86
+     },
+     "dom@first": {
+      "effect": -0.0,
+      "ci": [
+       -0.002,
+       0.002
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.98
+     },
+     "dom_perp": {
+      "effect": -0.007,
+      "ci": [
+       -0.011,
+       -0.003
+      ],
+      "share_pos": 0.182,
+      "p_vs_random": 0.08
+     },
+     "logreg": {
+      "effect": 0.014,
+      "ci": [
+       0.008,
+       0.019
+      ],
+      "share_pos": 0.795,
+      "p_vs_random": 0.0
+     },
+     "rule_text": {
+      "effect": -0.004,
+      "ci": [
+       -0.007,
+       -0.002
+      ],
+      "share_pos": 0.205,
+      "p_vs_random": 0.3
+     },
+     "emo:ashamed": {
+      "effect": -0.002,
+      "ci": [
+       -0.005,
+       0.0
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.57
+     },
+     "emo:calm": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.87
+     },
+     "emo:desperate": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.78
+     },
+     "emo:guilty": {
+      "effect": -0.005,
+      "ci": [
+       -0.007,
+       -0.003
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.24
+     },
+     "emo:nervous": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.002
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.83
+     },
+     "goodfire": {
+      "effect": 0.004,
+      "ci": [
+       0.003,
+       0.006
+      ],
+      "share_pos": 0.773,
+      "p_vs_random": 0.3
+     },
+     "random": {
+      "abs_p95": 0.007,
+      "abs_max": 0.011
+     }
+    },
+    "8": {
+     "dom": {
+      "effect": -0.003,
+      "ci": [
+       -0.007,
+       0.001
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.54
+     },
+     "dom@both": {
+      "effect": -0.005,
+      "ci": [
+       -0.009,
+       -0.001
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.4
+     },
+     "dom@first": {
+      "effect": -0.006,
+      "ci": [
+       -0.01,
+       -0.002
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.25
+     },
+     "dom_perp": {
+      "effect": -0.007,
+      "ci": [
+       -0.012,
+       -0.002
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.19
+     },
+     "logreg": {
+      "effect": 0.008,
+      "ci": [
+       0.005,
+       0.011
+      ],
+      "share_pos": 0.818,
+      "p_vs_random": 0.1
+     },
+     "rule_text": {
+      "effect": -0.01,
+      "ci": [
+       -0.014,
+       -0.006
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.05
+     },
+     "emo:ashamed": {
+      "effect": -0.009,
+      "ci": [
+       -0.014,
+       -0.004
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.05
+     },
+     "emo:calm": {
+      "effect": 0.001,
+      "ci": [
+       -0.003,
+       0.005
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.86
+     },
+     "emo:desperate": {
+      "effect": 0.006,
+      "ci": [
+       0.003,
+       0.01
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.25
+     },
+     "emo:guilty": {
+      "effect": -0.008,
+      "ci": [
+       -0.012,
+       -0.004
+      ],
+      "share_pos": 0.25,
+      "p_vs_random": 0.16
+     },
+     "emo:nervous": {
+      "effect": -0.012,
+      "ci": [
+       -0.016,
+       -0.007
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.01
+     },
+     "goodfire": {
+      "effect": 0.007,
+      "ci": [
+       0.004,
+       0.009
+      ],
+      "share_pos": 0.773,
+      "p_vs_random": 0.22
+     },
+     "random": {
+      "abs_p95": 0.009,
+      "abs_max": 0.013
+     }
+    },
+    "10": {
+     "dom": {
+      "effect": 0.005,
+      "ci": [
+       -0.001,
+       0.01
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.68
+     },
+     "dom@both": {
+      "effect": 0.002,
+      "ci": [
+       -0.003,
+       0.008
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.81
+     },
+     "dom@first": {
+      "effect": 0.0,
+      "ci": [
+       -0.005,
+       0.005
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 1.0
+     },
+     "dom_perp": {
+      "effect": -0.01,
+      "ci": [
+       -0.017,
+       -0.004
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.25
+     },
+     "logreg": {
+      "effect": 0.021,
+      "ci": [
+       0.015,
+       0.027
+      ],
+      "share_pos": 0.864,
+      "p_vs_random": 0.01
+     },
+     "rule_text": {
+      "effect": -0.007,
+      "ci": [
+       -0.011,
+       -0.003
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.44
+     },
+     "emo:ashamed": {
+      "effect": -0.016,
+      "ci": [
+       -0.023,
+       -0.009
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.09
+     },
+     "emo:calm": {
+      "effect": 0.009,
+      "ci": [
+       0.003,
+       0.014
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.32
+     },
+     "emo:desperate": {
+      "effect": 0.008,
+      "ci": [
+       0.002,
+       0.014
+      ],
+      "share_pos": 0.682,
+      "p_vs_random": 0.36
+     },
+     "emo:guilty": {
+      "effect": -0.012,
+      "ci": [
+       -0.019,
+       -0.007
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.14
+     },
+     "emo:nervous": {
+      "effect": -0.013,
+      "ci": [
+       -0.019,
+       -0.007
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.14
+     },
+     "goodfire": {
+      "effect": 0.012,
+      "ci": [
+       0.008,
+       0.015
+      ],
+      "share_pos": 0.864,
+      "p_vs_random": 0.21
+     },
+     "random": {
+      "abs_p95": 0.017,
+      "abs_max": 0.024
+     }
+    },
+    "12": {
+     "dom": {
+      "effect": 0.007,
+      "ci": [
+       0.003,
+       0.012
+      ],
+      "share_pos": 0.682,
+      "p_vs_random": 0.59
+     },
+     "dom@both": {
+      "effect": 0.006,
+      "ci": [
+       0.002,
+       0.011
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.64
+     },
+     "dom@first": {
+      "effect": 0.005,
+      "ci": [
+       0.001,
+       0.01
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.72
+     },
+     "dom_perp": {
+      "effect": -0.013,
+      "ci": [
+       -0.019,
+       -0.007
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.35
+     },
+     "logreg": {
+      "effect": 0.027,
+      "ci": [
+       0.018,
+       0.038
+      ],
+      "share_pos": 0.818,
+      "p_vs_random": 0.04
+     },
+     "rule_text": {
+      "effect": -0.006,
+      "ci": [
+       -0.011,
+       -0.001
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.66
+     },
+     "emo:ashamed": {
+      "effect": -0.003,
+      "ci": [
+       -0.01,
+       0.004
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.87
+     },
+     "emo:calm": {
+      "effect": -0.011,
+      "ci": [
+       -0.02,
+       -0.002
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.44
+     },
+     "emo:desperate": {
+      "effect": 0.003,
+      "ci": [
+       -0.005,
+       0.01
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.87
+     },
+     "emo:guilty": {
+      "effect": -0.001,
+      "ci": [
+       -0.008,
+       0.006
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.95
+     },
+     "emo:nervous": {
+      "effect": -0.012,
+      "ci": [
+       -0.021,
+       -0.004
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.37
+     },
+     "goodfire": {
+      "effect": 0.01,
+      "ci": [
+       0.005,
+       0.014
+      ],
+      "share_pos": 0.841,
+      "p_vs_random": 0.49
+     },
+     "random": {
+      "abs_p95": 0.027,
+      "abs_max": 0.036
+     }
+    },
+    "14": {
+     "dom": {
+      "effect": 0.032,
+      "ci": [
+       0.024,
+       0.04
+      ],
+      "share_pos": 0.909,
+      "p_vs_random": 0.03
+     },
+     "dom@both": {
+      "effect": 0.031,
+      "ci": [
+       0.023,
+       0.04
+      ],
+      "share_pos": 0.909,
+      "p_vs_random": 0.04
+     },
+     "dom@first": {
+      "effect": 0.031,
+      "ci": [
+       0.023,
+       0.039
+      ],
+      "share_pos": 0.886,
+      "p_vs_random": 0.04
+     },
+     "dom_perp": {
+      "effect": 0.033,
+      "ci": [
+       0.023,
+       0.042
+      ],
+      "share_pos": 0.773,
+      "p_vs_random": 0.03
+     },
+     "logreg": {
+      "effect": 0.042,
+      "ci": [
+       0.031,
+       0.054
+      ],
+      "share_pos": 0.864,
+      "p_vs_random": 0.01
+     },
+     "rule_text": {
+      "effect": -0.005,
+      "ci": [
+       -0.01,
+       0.001
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.76
+     },
+     "emo:ashamed": {
+      "effect": -0.009,
+      "ci": [
+       -0.017,
+       -0.001
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.56
+     },
+     "emo:calm": {
+      "effect": -0.01,
+      "ci": [
+       -0.019,
+       -0.002
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.51
+     },
+     "emo:desperate": {
+      "effect": 0.015,
+      "ci": [
+       0.007,
+       0.023
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.35
+     },
+     "emo:guilty": {
+      "effect": 0.005,
+      "ci": [
+       -0.002,
+       0.012
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.77
+     },
+     "emo:nervous": {
+      "effect": 0.003,
+      "ci": [
+       -0.004,
+       0.011
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.86
+     },
+     "goodfire": {
+      "effect": 0.014,
+      "ci": [
+       0.009,
+       0.019
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.36
+     },
+     "random": {
+      "abs_p95": 0.029,
+      "abs_max": 0.051
+     }
+    },
+    "16": {
+     "dom": {
+      "effect": 0.023,
+      "ci": [
+       0.008,
+       0.038
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.25
+     },
+     "dom@both": {
+      "effect": 0.022,
+      "ci": [
+       0.008,
+       0.038
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.25
+     },
+     "dom@first": {
+      "effect": 0.022,
+      "ci": [
+       0.007,
+       0.038
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.27
+     },
+     "dom_perp": {
+      "effect": 0.036,
+      "ci": [
+       0.019,
+       0.053
+      ],
+      "share_pos": 0.75,
+      "p_vs_random": 0.06
+     },
+     "logreg": {
+      "effect": 0.025,
+      "ci": [
+       0.012,
+       0.038
+      ],
+      "share_pos": 0.75,
+      "p_vs_random": 0.2
+     },
+     "rule_text": {
+      "effect": -0.014,
+      "ci": [
+       -0.022,
+       -0.007
+      ],
+      "share_pos": 0.25,
+      "p_vs_random": 0.44
+     },
+     "emo:ashamed": {
+      "effect": -0.011,
+      "ci": [
+       -0.022,
+       0.001
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.55
+     },
+     "emo:calm": {
+      "effect": -0.014,
+      "ci": [
+       -0.025,
+       -0.004
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.47
+     },
+     "emo:desperate": {
+      "effect": 0.068,
+      "ci": [
+       0.055,
+       0.082
+      ],
+      "share_pos": 0.977,
+      "p_vs_random": 0.0
+     },
+     "emo:guilty": {
+      "effect": 0.013,
+      "ci": [
+       0.002,
+       0.024
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.52
+     },
+     "emo:nervous": {
+      "effect": 0.007,
+      "ci": [
+       -0.005,
+       0.017
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.71
+     },
+     "goodfire": {
+      "effect": -0.004,
+      "ci": [
+       -0.011,
+       0.004
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.84
+     },
+     "random": {
+      "abs_p95": 0.038,
+      "abs_max": 0.056
+     }
+    },
+    "18": {
+     "dom": {
+      "effect": -0.002,
+      "ci": [
+       -0.015,
+       0.011
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.99
+     },
+     "dom@both": {
+      "effect": 0.001,
+      "ci": [
+       -0.013,
+       0.014
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.99
+     },
+     "dom@first": {
+      "effect": 0.003,
+      "ci": [
+       -0.01,
+       0.017
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.96
+     },
+     "dom_perp": {
+      "effect": 0.005,
+      "ci": [
+       -0.008,
+       0.019
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.94
+     },
+     "logreg": {
+      "effect": 0.044,
+      "ci": [
+       0.029,
+       0.06
+      ],
+      "share_pos": 0.841,
+      "p_vs_random": 0.14
+     },
+     "rule_text": {
+      "effect": -0.02,
+      "ci": [
+       -0.029,
+       -0.012
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.61
+     },
+     "emo:ashamed": {
+      "effect": -0.041,
+      "ci": [
+       -0.052,
+       -0.03
+      ],
+      "share_pos": 0.136,
+      "p_vs_random": 0.18
+     },
+     "emo:calm": {
+      "effect": 0.02,
+      "ci": [
+       0.007,
+       0.033
+      ],
+      "share_pos": 0.682,
+      "p_vs_random": 0.62
+     },
+     "emo:desperate": {
+      "effect": 0.036,
+      "ci": [
+       0.022,
+       0.052
+      ],
+      "share_pos": 0.773,
+      "p_vs_random": 0.22
+     },
+     "emo:guilty": {
+      "effect": -0.004,
+      "ci": [
+       -0.013,
+       0.004
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.96
+     },
+     "emo:nervous": {
+      "effect": -0.014,
+      "ci": [
+       -0.03,
+       -0.0
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.77
+     },
+     "goodfire": {
+      "effect": -0.007,
+      "ci": [
+       -0.013,
+       0.0
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.91
+     },
+     "random": {
+      "abs_p95": 0.057,
+      "abs_max": 0.075
+     }
+    },
+    "20": {
+     "dom": {
+      "effect": -0.003,
+      "ci": [
+       -0.015,
+       0.009
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.94
+     },
+     "dom@both": {
+      "effect": -0.002,
+      "ci": [
+       -0.014,
+       0.011
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.96
+     },
+     "dom@first": {
+      "effect": -0.001,
+      "ci": [
+       -0.014,
+       0.012
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.99
+     },
+     "dom_perp": {
+      "effect": 0.016,
+      "ci": [
+       0.004,
+       0.029
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.7
+     },
+     "logreg": {
+      "effect": 0.037,
+      "ci": [
+       0.022,
+       0.052
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.35
+     },
+     "rule_text": {
+      "effect": 0.016,
+      "ci": [
+       0.005,
+       0.026
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.72
+     },
+     "emo:ashamed": {
+      "effect": -0.029,
+      "ci": [
+       -0.039,
+       -0.02
+      ],
+      "share_pos": 0.205,
+      "p_vs_random": 0.5
+     },
+     "emo:calm": {
+      "effect": -0.018,
+      "ci": [
+       -0.034,
+       -0.004
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.68
+     },
+     "emo:desperate": {
+      "effect": 0.065,
+      "ci": [
+       0.046,
+       0.086
+      ],
+      "share_pos": 0.886,
+      "p_vs_random": 0.08
+     },
+     "emo:guilty": {
+      "effect": -0.039,
+      "ci": [
+       -0.05,
+       -0.029
+      ],
+      "share_pos": 0.091,
+      "p_vs_random": 0.31
+     },
+     "emo:nervous": {
+      "effect": 0.027,
+      "ci": [
+       0.013,
+       0.04
+      ],
+      "share_pos": 0.705,
+      "p_vs_random": 0.54
+     },
+     "goodfire": {
+      "effect": -0.009,
+      "ci": [
+       -0.014,
+       -0.003
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.85
+     },
+     "random": {
+      "abs_p95": 0.076,
+      "abs_max": 0.087
+     }
+    },
+    "22": {
+     "dom": {
+      "effect": -0.026,
+      "ci": [
+       -0.038,
+       -0.014
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.45
+     },
+     "dom@both": {
+      "effect": -0.026,
+      "ci": [
+       -0.038,
+       -0.014
+      ],
+      "share_pos": 0.25,
+      "p_vs_random": 0.45
+     },
+     "dom@first": {
+      "effect": -0.026,
+      "ci": [
+       -0.038,
+       -0.013
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.45
+     },
+     "dom_perp": {
+      "effect": -0.01,
+      "ci": [
+       -0.02,
+       0.0
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.71
+     },
+     "logreg": {
+      "effect": 0.01,
+      "ci": [
+       -0.005,
+       0.025
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.71
+     },
+     "rule_text": {
+      "effect": 0.007,
+      "ci": [
+       -0.003,
+       0.018
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.83
+     },
+     "emo:ashamed": {
+      "effect": -0.031,
+      "ci": [
+       -0.039,
+       -0.022
+      ],
+      "share_pos": 0.136,
+      "p_vs_random": 0.38
+     },
+     "emo:calm": {
+      "effect": -0.045,
+      "ci": [
+       -0.064,
+       -0.029
+      ],
+      "share_pos": 0.114,
+      "p_vs_random": 0.2
+     },
+     "emo:desperate": {
+      "effect": 0.07,
+      "ci": [
+       0.052,
+       0.09
+      ],
+      "share_pos": 0.977,
+      "p_vs_random": 0.04
+     },
+     "emo:guilty": {
+      "effect": -0.057,
+      "ci": [
+       -0.07,
+       -0.046
+      ],
+      "share_pos": 0.045,
+      "p_vs_random": 0.11
+     },
+     "emo:nervous": {
+      "effect": 0.033,
+      "ci": [
+       0.02,
+       0.046
+      ],
+      "share_pos": 0.841,
+      "p_vs_random": 0.34
+     },
+     "goodfire": {
+      "effect": -0.011,
+      "ci": [
+       -0.017,
+       -0.006
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.7
+     },
+     "random": {
+      "abs_p95": 0.066,
+      "abs_max": 0.089
+     }
+    },
+    "23": {
+     "dom": {
+      "effect": -0.019,
+      "ci": [
+       -0.031,
+       -0.008
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.54
+     },
+     "dom@both": {
+      "effect": -0.02,
+      "ci": [
+       -0.031,
+       -0.008
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.54
+     },
+     "dom@first": {
+      "effect": -0.02,
+      "ci": [
+       -0.032,
+       -0.008
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.53
+     },
+     "dom_perp": {
+      "effect": -0.009,
+      "ci": [
+       -0.019,
+       0.002
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.75
+     },
+     "logreg": {
+      "effect": 0.009,
+      "ci": [
+       -0.005,
+       0.023
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.72
+     },
+     "rule_text": {
+      "effect": 0.017,
+      "ci": [
+       0.006,
+       0.03
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.57
+     },
+     "emo:ashamed": {
+      "effect": -0.031,
+      "ci": [
+       -0.044,
+       -0.019
+      ],
+      "share_pos": 0.182,
+      "p_vs_random": 0.4
+     },
+     "emo:calm": {
+      "effect": -0.036,
+      "ci": [
+       -0.055,
+       -0.02
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.32
+     },
+     "emo:desperate": {
+      "effect": 0.084,
+      "ci": [
+       0.064,
+       0.106
+      ],
+      "share_pos": 0.955,
+      "p_vs_random": 0.03
+     },
+     "emo:guilty": {
+      "effect": -0.039,
+      "ci": [
+       -0.052,
+       -0.027
+      ],
+      "share_pos": 0.091,
+      "p_vs_random": 0.29
+     },
+     "emo:nervous": {
+      "effect": 0.006,
+      "ci": [
+       -0.007,
+       0.019
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.79
+     },
+     "goodfire": {
+      "effect": -0.008,
+      "ci": [
+       -0.013,
+       -0.003
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.76
+     },
+     "random": {
+      "abs_p95": 0.077,
+      "abs_max": 0.112
+     }
+    },
+    "24": {
+     "dom": {
+      "effect": -0.032,
+      "ci": [
+       -0.043,
+       -0.02
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.36
+     },
+     "dom@both": {
+      "effect": -0.031,
+      "ci": [
+       -0.042,
+       -0.019
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.39
+     },
+     "dom@first": {
+      "effect": -0.03,
+      "ci": [
+       -0.042,
+       -0.018
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.41
+     },
+     "dom_perp": {
+      "effect": -0.015,
+      "ci": [
+       -0.024,
+       -0.006
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.61
+     },
+     "logreg": {
+      "effect": 0.017,
+      "ci": [
+       0.004,
+       0.03
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.58
+     },
+     "rule_text": {
+      "effect": 0.006,
+      "ci": [
+       -0.006,
+       0.017
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.83
+     },
+     "emo:ashamed": {
+      "effect": -0.054,
+      "ci": [
+       -0.068,
+       -0.041
+      ],
+      "share_pos": 0.045,
+      "p_vs_random": 0.15
+     },
+     "emo:calm": {
+      "effect": -0.028,
+      "ci": [
+       -0.046,
+       -0.013
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.42
+     },
+     "emo:desperate": {
+      "effect": 0.072,
+      "ci": [
+       0.054,
+       0.093
+      ],
+      "share_pos": 0.955,
+      "p_vs_random": 0.07
+     },
+     "emo:guilty": {
+      "effect": -0.058,
+      "ci": [
+       -0.073,
+       -0.044
+      ],
+      "share_pos": 0.045,
+      "p_vs_random": 0.12
+     },
+     "emo:nervous": {
+      "effect": 0.02,
+      "ci": [
+       0.006,
+       0.034
+      ],
+      "share_pos": 0.682,
+      "p_vs_random": 0.55
+     },
+     "goodfire": {
+      "effect": -0.008,
+      "ci": [
+       -0.013,
+       -0.003
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.8
+     },
+     "random": {
+      "abs_p95": 0.075,
+      "abs_max": 0.116
+     }
+    },
+    "26": {
+     "dom": {
+      "effect": -0.012,
+      "ci": [
+       -0.02,
+       -0.003
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.75
+     },
+     "dom@both": {
+      "effect": -0.011,
+      "ci": [
+       -0.019,
+       -0.003
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.75
+     },
+     "dom@first": {
+      "effect": -0.011,
+      "ci": [
+       -0.019,
+       -0.002
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.76
+     },
+     "dom_perp": {
+      "effect": 0.0,
+      "ci": [
+       -0.009,
+       0.009
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 1.0
+     },
+     "logreg": {
+      "effect": 0.03,
+      "ci": [
+       0.02,
+       0.041
+      ],
+      "share_pos": 0.841,
+      "p_vs_random": 0.42
+     },
+     "rule_text": {
+      "effect": 0.024,
+      "ci": [
+       0.01,
+       0.039
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.52
+     },
+     "emo:ashamed": {
+      "effect": -0.052,
+      "ci": [
+       -0.068,
+       -0.037
+      ],
+      "share_pos": 0.091,
+      "p_vs_random": 0.19
+     },
+     "emo:calm": {
+      "effect": -0.024,
+      "ci": [
+       -0.039,
+       -0.009
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.52
+     },
+     "emo:desperate": {
+      "effect": 0.094,
+      "ci": [
+       0.073,
+       0.117
+      ],
+      "share_pos": 0.955,
+      "p_vs_random": 0.05
+     },
+     "emo:guilty": {
+      "effect": -0.074,
+      "ci": [
+       -0.093,
+       -0.055
+      ],
+      "share_pos": 0.068,
+      "p_vs_random": 0.09
+     },
+     "emo:nervous": {
+      "effect": -0.025,
+      "ci": [
+       -0.041,
+       -0.01
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.5
+     },
+     "goodfire": {
+      "effect": -0.006,
+      "ci": [
+       -0.01,
+       -0.001
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.88
+     },
+     "random": {
+      "abs_p95": 0.091,
+      "abs_max": 0.132
+     }
+    },
+    "28": {
+     "dom": {
+      "effect": -0.018,
+      "ci": [
+       -0.027,
+       -0.009
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.69
+     },
+     "dom@both": {
+      "effect": -0.017,
+      "ci": [
+       -0.026,
+       -0.008
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.73
+     },
+     "dom@first": {
+      "effect": -0.015,
+      "ci": [
+       -0.024,
+       -0.006
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.76
+     },
+     "dom_perp": {
+      "effect": -0.0,
+      "ci": [
+       -0.01,
+       0.009
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 1.0
+     },
+     "logreg": {
+      "effect": 0.05,
+      "ci": [
+       0.035,
+       0.067
+      ],
+      "share_pos": 0.864,
+      "p_vs_random": 0.29
+     },
+     "rule_text": {
+      "effect": 0.031,
+      "ci": [
+       0.017,
+       0.046
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.51
+     },
+     "emo:ashamed": {
+      "effect": 0.019,
+      "ci": [
+       0.007,
+       0.03
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.69
+     },
+     "emo:calm": {
+      "effect": -0.067,
+      "ci": [
+       -0.09,
+       -0.046
+      ],
+      "share_pos": 0.205,
+      "p_vs_random": 0.13
+     },
+     "emo:desperate": {
+      "effect": 0.098,
+      "ci": [
+       0.076,
+       0.122
+      ],
+      "share_pos": 0.977,
+      "p_vs_random": 0.04
+     },
+     "emo:guilty": {
+      "effect": -0.034,
+      "ci": [
+       -0.047,
+       -0.021
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.45
+     },
+     "emo:nervous": {
+      "effect": -0.018,
+      "ci": [
+       -0.036,
+       -0.001
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.7
+     },
+     "goodfire": {
+      "effect": -0.005,
+      "ci": [
+       -0.009,
+       -0.0
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.97
+     },
+     "random": {
+      "abs_p95": 0.088,
+      "abs_max": 0.138
+     }
+    },
+    "30": {
+     "dom": {
+      "effect": -0.025,
+      "ci": [
+       -0.035,
+       -0.015
+      ],
+      "share_pos": 0.182,
+      "p_vs_random": 0.6
+     },
+     "dom@both": {
+      "effect": -0.024,
+      "ci": [
+       -0.034,
+       -0.014
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.64
+     },
+     "dom@first": {
+      "effect": -0.023,
+      "ci": [
+       -0.033,
+       -0.012
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.68
+     },
+     "dom_perp": {
+      "effect": -0.012,
+      "ci": [
+       -0.021,
+       -0.002
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.86
+     },
+     "logreg": {
+      "effect": 0.036,
+      "ci": [
+       0.021,
+       0.054
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.49
+     },
+     "rule_text": {
+      "effect": 0.043,
+      "ci": [
+       0.026,
+       0.061
+      ],
+      "share_pos": 0.773,
+      "p_vs_random": 0.42
+     },
+     "emo:ashamed": {
+      "effect": 0.013,
+      "ci": [
+       0.003,
+       0.024
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.83
+     },
+     "emo:calm": {
+      "effect": -0.091,
+      "ci": [
+       -0.116,
+       -0.067
+      ],
+      "share_pos": 0.091,
+      "p_vs_random": 0.06
+     },
+     "emo:desperate": {
+      "effect": 0.116,
+      "ci": [
+       0.092,
+       0.142
+      ],
+      "share_pos": 0.955,
+      "p_vs_random": 0.03
+     },
+     "emo:guilty": {
+      "effect": -0.047,
+      "ci": [
+       -0.062,
+       -0.032
+      ],
+      "share_pos": 0.114,
+      "p_vs_random": 0.4
+     },
+     "emo:nervous": {
+      "effect": -0.043,
+      "ci": [
+       -0.065,
+       -0.022
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.42
+     },
+     "goodfire": {
+      "effect": -0.001,
+      "ci": [
+       -0.006,
+       0.004
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.99
+     },
+     "random": {
+      "abs_p95": 0.092,
+      "abs_max": 0.139
+     }
+    },
+    "32": {
+     "dom": {
+      "effect": -0.022,
+      "ci": [
+       -0.032,
+       -0.012
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.74
+     },
+     "dom@both": {
+      "effect": -0.022,
+      "ci": [
+       -0.032,
+       -0.012
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.74
+     },
+     "dom@first": {
+      "effect": -0.022,
+      "ci": [
+       -0.033,
+       -0.011
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.74
+     },
+     "dom_perp": {
+      "effect": -0.023,
+      "ci": [
+       -0.034,
+       -0.01
+      ],
+      "share_pos": 0.25,
+      "p_vs_random": 0.73
+     },
+     "logreg": {
+      "effect": 0.029,
+      "ci": [
+       0.014,
+       0.044
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.67
+     },
+     "rule_text": {
+      "effect": 0.045,
+      "ci": [
+       0.029,
+       0.062
+      ],
+      "share_pos": 0.773,
+      "p_vs_random": 0.46
+     },
+     "emo:ashamed": {
+      "effect": 0.011,
+      "ci": [
+       0.002,
+       0.02
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.9
+     },
+     "emo:calm": {
+      "effect": -0.052,
+      "ci": [
+       -0.071,
+       -0.035
+      ],
+      "share_pos": 0.182,
+      "p_vs_random": 0.37
+     },
+     "emo:desperate": {
+      "effect": 0.087,
+      "ci": [
+       0.067,
+       0.108
+      ],
+      "share_pos": 0.955,
+      "p_vs_random": 0.1
+     },
+     "emo:guilty": {
+      "effect": -0.056,
+      "ci": [
+       -0.073,
+       -0.039
+      ],
+      "share_pos": 0.182,
+      "p_vs_random": 0.3
+     },
+     "emo:nervous": {
+      "effect": -0.023,
+      "ci": [
+       -0.045,
+       -0.001
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.73
+     },
+     "goodfire": {
+      "effect": 0.002,
+      "ci": [
+       -0.002,
+       0.007
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.97
+     },
+     "random": {
+      "abs_p95": 0.101,
+      "abs_max": 0.159
+     }
+    },
+    "34": {
+     "dom": {
+      "effect": null,
+      "ci": [
+       null,
+       null
+      ],
+      "share_pos": 0.0,
+      "p_vs_random": 0.0
+     },
+     "dom@both": {
+      "effect": null,
+      "ci": [
+       null,
+       null
+      ],
+      "share_pos": 0.0,
+      "p_vs_random": 0.0
+     },
+     "dom@first": {
+      "effect": -0.007,
+      "ci": [
+       -0.017,
+       0.004
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.86
+     },
+     "dom_perp": {
+      "effect": -0.004,
+      "ci": [
+       -0.017,
+       0.012
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.9
+     },
+     "logreg": {
+      "effect": 0.034,
+      "ci": [
+       0.019,
+       0.051
+      ],
+      "share_pos": 0.682,
+      "p_vs_random": 0.6
+     },
+     "rule_text": {
+      "effect": 0.016,
+      "ci": [
+       0.007,
+       0.027
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.83
+     },
+     "emo:ashamed": {
+      "effect": 0.009,
+      "ci": [
+       -0.002,
+       0.021
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.86
+     },
+     "emo:calm": {
+      "effect": -0.084,
+      "ci": [
+       -0.109,
+       -0.061
+      ],
+      "share_pos": 0.0,
+      "p_vs_random": 0.13
+     },
+     "emo:desperate": {
+      "effect": 0.049,
+      "ci": [
+       0.032,
+       0.066
+      ],
+      "share_pos": 0.864,
+      "p_vs_random": 0.41
+     },
+     "emo:guilty": {
+      "effect": -0.036,
+      "ci": [
+       -0.048,
+       -0.025
+      ],
+      "share_pos": 0.205,
+      "p_vs_random": 0.56
+     },
+     "emo:nervous": {
+      "effect": -0.017,
+      "ci": [
+       -0.035,
+       0.002
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.83
+     },
+     "goodfire": {
+      "effect": null,
+      "ci": [
+       null,
+       null
+      ],
+      "share_pos": 0.0,
+      "p_vs_random": 0.0
+     },
+     "random": {
+      "abs_p95": 0.104,
+      "abs_max": 0.186
+     }
+    },
+    "35": {
+     "dom": {
+      "effect": null,
+      "ci": [
+       null,
+       null
+      ],
+      "share_pos": 0.0,
+      "p_vs_random": 0.0
+     },
+     "dom@both": {
+      "effect": null,
+      "ci": [
+       null,
+       null
+      ],
+      "share_pos": 0.0,
+      "p_vs_random": 0.0
+     },
+     "dom@first": {
+      "effect": -0.006,
+      "ci": [
+       -0.014,
+       0.001
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.88
+     },
+     "dom_perp": {
+      "effect": 0.001,
+      "ci": [
+       -0.008,
+       0.009
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.99
+     },
+     "logreg": {
+      "effect": 0.038,
+      "ci": [
+       0.021,
+       0.056
+      ],
+      "share_pos": 0.75,
+      "p_vs_random": 0.5
+     },
+     "rule_text": {
+      "effect": 0.002,
+      "ci": [
+       -0.006,
+       0.009
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.95
+     },
+     "emo:ashamed": {
+      "effect": -0.007,
+      "ci": [
+       -0.017,
+       0.003
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.86
+     },
+     "emo:calm": {
+      "effect": -0.008,
+      "ci": [
+       -0.02,
+       0.003
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.86
+     },
+     "emo:desperate": {
+      "effect": 0.021,
+      "ci": [
+       0.006,
+       0.036
+      ],
+      "share_pos": 0.705,
+      "p_vs_random": 0.72
+     },
+     "emo:guilty": {
+      "effect": -0.051,
+      "ci": [
+       -0.066,
+       -0.037
+      ],
+      "share_pos": 0.136,
+      "p_vs_random": 0.33
+     },
+     "emo:nervous": {
+      "effect": 0.017,
+      "ci": [
+       0.002,
+       0.033
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.78
+     },
+     "goodfire": {
+      "effect": null,
+      "ci": [
+       null,
+       null
+      ],
+      "share_pos": 0.0,
+      "p_vs_random": 0.0
+     },
+     "random": {
+      "abs_p95": 0.1,
+      "abs_max": 0.19
+     }
+    }
+   }
+  },
+  "action": {
+   "n_runs": 44,
+   "n_tokens_median": 1656.0,
+   "per_block": {
+    "6": {
+     "dom": {
+      "effect": 0.0,
+      "ci": [
+       -0.0,
+       0.001
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.35
+     },
+     "dom@both": {
+      "effect": 0.0,
+      "ci": [
+       -0.0,
+       0.001
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.4
+     },
+     "dom@first": {
+      "effect": 0.0,
+      "ci": [
+       -0.0,
+       0.001
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.44
+     },
+     "dom_perp": {
+      "effect": -0.001,
+      "ci": [
+       -0.001,
+       -0.0
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.02
+     },
+     "logreg": {
+      "effect": 0.001,
+      "ci": [
+       0.0,
+       0.002
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.0
+     },
+     "rule_text": {
+      "effect": -0.0,
+      "ci": [
+       -0.001,
+       0.0
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.42
+     },
+     "emo:ashamed": {
+      "effect": -0.0,
+      "ci": [
+       -0.001,
+       0.0
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.58
+     },
+     "emo:calm": {
+      "effect": 0.0,
+      "ci": [
+       -0.0,
+       0.001
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.53
+     },
+     "emo:desperate": {
+      "effect": -0.0,
+      "ci": [
+       -0.001,
+       0.0
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.55
+     },
+     "emo:guilty": {
+      "effect": -0.0,
+      "ci": [
+       -0.001,
+       0.0
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.44
+     },
+     "emo:nervous": {
+      "effect": -0.001,
+      "ci": [
+       -0.001,
+       -0.0
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.04
+     },
+     "goodfire": {
+      "effect": 0.0,
+      "ci": [
+       -0.0,
+       0.0
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.74
+     },
+     "random": {
+      "abs_p95": 0.001,
+      "abs_max": 0.001
+     }
+    },
+    "8": {
+     "dom": {
+      "effect": -0.001,
+      "ci": [
+       -0.002,
+       -0.001
+      ],
+      "share_pos": 0.182,
+      "p_vs_random": 0.14
+     },
+     "dom@both": {
+      "effect": -0.002,
+      "ci": [
+       -0.002,
+       -0.001
+      ],
+      "share_pos": 0.136,
+      "p_vs_random": 0.05
+     },
+     "dom@first": {
+      "effect": -0.002,
+      "ci": [
+       -0.003,
+       -0.001
+      ],
+      "share_pos": 0.114,
+      "p_vs_random": 0.03
+     },
+     "dom_perp": {
+      "effect": -0.001,
+      "ci": [
+       -0.002,
+       -0.0
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.3
+     },
+     "logreg": {
+      "effect": 0.001,
+      "ci": [
+       -0.0,
+       0.002
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.5
+     },
+     "rule_text": {
+      "effect": -0.001,
+      "ci": [
+       -0.001,
+       -0.0
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.58
+     },
+     "emo:ashamed": {
+      "effect": -0.002,
+      "ci": [
+       -0.003,
+       -0.002
+      ],
+      "share_pos": 0.091,
+      "p_vs_random": 0.0
+     },
+     "emo:calm": {
+      "effect": 0.002,
+      "ci": [
+       0.001,
+       0.002
+      ],
+      "share_pos": 0.795,
+      "p_vs_random": 0.06
+     },
+     "emo:desperate": {
+      "effect": 0.001,
+      "ci": [
+       0.0,
+       0.002
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.21
+     },
+     "emo:guilty": {
+      "effect": -0.001,
+      "ci": [
+       -0.001,
+       -0.0
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.4
+     },
+     "emo:nervous": {
+      "effect": -0.003,
+      "ci": [
+       -0.003,
+       -0.002
+      ],
+      "share_pos": 0.068,
+      "p_vs_random": 0.0
+     },
+     "goodfire": {
+      "effect": 0.001,
+      "ci": [
+       0.001,
+       0.001
+      ],
+      "share_pos": 0.795,
+      "p_vs_random": 0.3
+     },
+     "random": {
+      "abs_p95": 0.002,
+      "abs_max": 0.002
+     }
+    },
+    "10": {
+     "dom": {
+      "effect": -0.0,
+      "ci": [
+       -0.002,
+       0.001
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.88
+     },
+     "dom@both": {
+      "effect": -0.001,
+      "ci": [
+       -0.002,
+       0.0
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.78
+     },
+     "dom@first": {
+      "effect": -0.001,
+      "ci": [
+       -0.002,
+       -0.0
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.65
+     },
+     "dom_perp": {
+      "effect": -0.001,
+      "ci": [
+       -0.002,
+       0.0
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.74
+     },
+     "logreg": {
+      "effect": 0.002,
+      "ci": [
+       0.001,
+       0.003
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.24
+     },
+     "rule_text": {
+      "effect": -0.001,
+      "ci": [
+       -0.002,
+       -0.0
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.65
+     },
+     "emo:ashamed": {
+      "effect": -0.003,
+      "ci": [
+       -0.004,
+       -0.002
+      ],
+      "share_pos": 0.136,
+      "p_vs_random": 0.07
+     },
+     "emo:calm": {
+      "effect": -0.001,
+      "ci": [
+       -0.003,
+       0.0
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.65
+     },
+     "emo:desperate": {
+      "effect": 0.003,
+      "ci": [
+       0.002,
+       0.004
+      ],
+      "share_pos": 0.75,
+      "p_vs_random": 0.1
+     },
+     "emo:guilty": {
+      "effect": -0.002,
+      "ci": [
+       -0.003,
+       -0.0
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.5
+     },
+     "emo:nervous": {
+      "effect": -0.002,
+      "ci": [
+       -0.003,
+       -0.001
+      ],
+      "share_pos": 0.25,
+      "p_vs_random": 0.21
+     },
+     "goodfire": {
+      "effect": 0.003,
+      "ci": [
+       0.002,
+       0.004
+      ],
+      "share_pos": 0.909,
+      "p_vs_random": 0.09
+     },
+     "random": {
+      "abs_p95": 0.004,
+      "abs_max": 0.006
+     }
+    },
+    "12": {
+     "dom": {
+      "effect": -0.001,
+      "ci": [
+       -0.002,
+       0.0
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.8
+     },
+     "dom@both": {
+      "effect": -0.001,
+      "ci": [
+       -0.002,
+       -0.0
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.72
+     },
+     "dom@first": {
+      "effect": -0.001,
+      "ci": [
+       -0.002,
+       -0.0
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.66
+     },
+     "dom_perp": {
+      "effect": -0.002,
+      "ci": [
+       -0.003,
+       -0.001
+      ],
+      "share_pos": 0.205,
+      "p_vs_random": 0.34
+     },
+     "logreg": {
+      "effect": 0.004,
+      "ci": [
+       0.002,
+       0.005
+      ],
+      "share_pos": 0.795,
+      "p_vs_random": 0.13
+     },
+     "rule_text": {
+      "effect": -0.001,
+      "ci": [
+       -0.002,
+       0.0
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.82
+     },
+     "emo:ashamed": {
+      "effect": -0.004,
+      "ci": [
+       -0.006,
+       -0.002
+      ],
+      "share_pos": 0.205,
+      "p_vs_random": 0.11
+     },
+     "emo:calm": {
+      "effect": -0.002,
+      "ci": [
+       -0.004,
+       -0.0
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.51
+     },
+     "emo:desperate": {
+      "effect": 0.004,
+      "ci": [
+       0.002,
+       0.005
+      ],
+      "share_pos": 0.795,
+      "p_vs_random": 0.12
+     },
+     "emo:guilty": {
+      "effect": -0.002,
+      "ci": [
+       -0.004,
+       -0.0
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.48
+     },
+     "emo:nervous": {
+      "effect": -0.005,
+      "ci": [
+       -0.006,
+       -0.003
+      ],
+      "share_pos": 0.205,
+      "p_vs_random": 0.03
+     },
+     "goodfire": {
+      "effect": 0.003,
+      "ci": [
+       0.002,
+       0.003
+      ],
+      "share_pos": 0.773,
+      "p_vs_random": 0.33
+     },
+     "random": {
+      "abs_p95": 0.004,
+      "abs_max": 0.006
+     }
+    },
+    "14": {
+     "dom": {
+      "effect": -0.001,
+      "ci": [
+       -0.003,
+       -0.0
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.55
+     },
+     "dom@both": {
+      "effect": -0.002,
+      "ci": [
+       -0.003,
+       -0.0
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.47
+     },
+     "dom@first": {
+      "effect": -0.002,
+      "ci": [
+       -0.004,
+       -0.001
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.39
+     },
+     "dom_perp": {
+      "effect": -0.004,
+      "ci": [
+       -0.005,
+       -0.002
+      ],
+      "share_pos": 0.227,
+      "p_vs_random": 0.16
+     },
+     "logreg": {
+      "effect": 0.002,
+      "ci": [
+       -0.0,
+       0.004
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.5
+     },
+     "rule_text": {
+      "effect": -0.0,
+      "ci": [
+       -0.001,
+       0.001
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.93
+     },
+     "emo:ashamed": {
+      "effect": -0.004,
+      "ci": [
+       -0.006,
+       -0.003
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.04
+     },
+     "emo:calm": {
+      "effect": -0.004,
+      "ci": [
+       -0.006,
+       -0.001
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.13
+     },
+     "emo:desperate": {
+      "effect": 0.006,
+      "ci": [
+       0.004,
+       0.008
+      ],
+      "share_pos": 0.841,
+      "p_vs_random": 0.02
+     },
+     "emo:guilty": {
+      "effect": -0.003,
+      "ci": [
+       -0.005,
+       -0.001
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.23
+     },
+     "emo:nervous": {
+      "effect": -0.0,
+      "ci": [
+       -0.003,
+       0.002
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.94
+     },
+     "goodfire": {
+      "effect": 0.002,
+      "ci": [
+       0.001,
+       0.003
+      ],
+      "share_pos": 0.705,
+      "p_vs_random": 0.47
+     },
+     "random": {
+      "abs_p95": 0.004,
+      "abs_max": 0.007
+     }
+    },
+    "16": {
+     "dom": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.72
+     },
+     "dom@both": {
+      "effect": 0.0,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.94
+     },
+     "dom@first": {
+      "effect": -0.0,
+      "ci": [
+       -0.003,
+       0.003
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.89
+     },
+     "dom_perp": {
+      "effect": -0.001,
+      "ci": [
+       -0.003,
+       0.002
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.76
+     },
+     "logreg": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.65
+     },
+     "rule_text": {
+      "effect": -0.001,
+      "ci": [
+       -0.002,
+       0.001
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.68
+     },
+     "emo:ashamed": {
+      "effect": -0.002,
+      "ci": [
+       -0.004,
+       0.001
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.44
+     },
+     "emo:calm": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.59
+     },
+     "emo:desperate": {
+      "effect": 0.007,
+      "ci": [
+       0.004,
+       0.009
+      ],
+      "share_pos": 0.795,
+      "p_vs_random": 0.0
+     },
+     "emo:guilty": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.69
+     },
+     "emo:nervous": {
+      "effect": -0.0,
+      "ci": [
+       -0.003,
+       0.002
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.91
+     },
+     "goodfire": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.002
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.67
+     },
+     "random": {
+      "abs_p95": 0.004,
+      "abs_max": 0.006
+     }
+    },
+    "18": {
+     "dom": {
+      "effect": 0.002,
+      "ci": [
+       -0.001,
+       0.005
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.37
+     },
+     "dom@both": {
+      "effect": 0.002,
+      "ci": [
+       -0.001,
+       0.005
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.44
+     },
+     "dom@first": {
+      "effect": 0.002,
+      "ci": [
+       -0.001,
+       0.004
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.51
+     },
+     "dom_perp": {
+      "effect": 0.0,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.98
+     },
+     "logreg": {
+      "effect": 0.004,
+      "ci": [
+       0.001,
+       0.008
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.03
+     },
+     "rule_text": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.64
+     },
+     "emo:ashamed": {
+      "effect": -0.004,
+      "ci": [
+       -0.007,
+       -0.001
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.07
+     },
+     "emo:calm": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.73
+     },
+     "emo:desperate": {
+      "effect": 0.004,
+      "ci": [
+       0.001,
+       0.006
+      ],
+      "share_pos": 0.705,
+      "p_vs_random": 0.11
+     },
+     "emo:guilty": {
+      "effect": -0.002,
+      "ci": [
+       -0.005,
+       0.002
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.51
+     },
+     "emo:nervous": {
+      "effect": 0.004,
+      "ci": [
+       0.001,
+       0.006
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.07
+     },
+     "goodfire": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.7
+     },
+     "random": {
+      "abs_p95": 0.004,
+      "abs_max": 0.008
+     }
+    },
+    "20": {
+     "dom": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.43
+     },
+     "dom@both": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.41
+     },
+     "dom@first": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.682,
+      "p_vs_random": 0.4
+     },
+     "dom_perp": {
+      "effect": 0.0,
+      "ci": [
+       -0.002,
+       0.002
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.94
+     },
+     "logreg": {
+      "effect": 0.005,
+      "ci": [
+       0.002,
+       0.008
+      ],
+      "share_pos": 0.705,
+      "p_vs_random": 0.02
+     },
+     "rule_text": {
+      "effect": 0.002,
+      "ci": [
+       -0.0,
+       0.005
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.18
+     },
+     "emo:ashamed": {
+      "effect": -0.005,
+      "ci": [
+       -0.007,
+       -0.002
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.03
+     },
+     "emo:calm": {
+      "effect": 0.003,
+      "ci": [
+       0.001,
+       0.006
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.08
+     },
+     "emo:desperate": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.77
+     },
+     "emo:guilty": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.001
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.39
+     },
+     "emo:nervous": {
+      "effect": 0.003,
+      "ci": [
+       0.001,
+       0.005
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.11
+     },
+     "goodfire": {
+      "effect": 0.001,
+      "ci": [
+       -0.0,
+       0.003
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.43
+     },
+     "random": {
+      "abs_p95": 0.004,
+      "abs_max": 0.006
+     }
+    },
+    "22": {
+     "dom": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.62
+     },
+     "dom@both": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.59
+     },
+     "dom@first": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.5
+     },
+     "dom_perp": {
+      "effect": 0.0,
+      "ci": [
+       -0.002,
+       0.002
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.91
+     },
+     "logreg": {
+      "effect": 0.004,
+      "ci": [
+       0.0,
+       0.007
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.05
+     },
+     "rule_text": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.63
+     },
+     "emo:ashamed": {
+      "effect": -0.004,
+      "ci": [
+       -0.006,
+       -0.001
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.03
+     },
+     "emo:calm": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.42
+     },
+     "emo:desperate": {
+      "effect": 0.002,
+      "ci": [
+       -0.001,
+       0.005
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.12
+     },
+     "emo:guilty": {
+      "effect": -0.002,
+      "ci": [
+       -0.005,
+       0.0
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.13
+     },
+     "emo:nervous": {
+      "effect": 0.002,
+      "ci": [
+       0.001,
+       0.004
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.12
+     },
+     "goodfire": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.42
+     },
+     "random": {
+      "abs_p95": 0.003,
+      "abs_max": 0.005
+     }
+    },
+    "23": {
+     "dom": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.73
+     },
+     "dom@both": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.71
+     },
+     "dom@first": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.7
+     },
+     "dom_perp": {
+      "effect": 0.0,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.83
+     },
+     "logreg": {
+      "effect": 0.004,
+      "ci": [
+       0.001,
+       0.007
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.02
+     },
+     "rule_text": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.7
+     },
+     "emo:ashamed": {
+      "effect": -0.005,
+      "ci": [
+       -0.008,
+       -0.001
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.0
+     },
+     "emo:calm": {
+      "effect": 0.001,
+      "ci": [
+       -0.003,
+       0.004
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.75
+     },
+     "emo:desperate": {
+      "effect": 0.003,
+      "ci": [
+       0.0,
+       0.006
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.09
+     },
+     "emo:guilty": {
+      "effect": -0.002,
+      "ci": [
+       -0.004,
+       0.001
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.37
+     },
+     "emo:nervous": {
+      "effect": 0.002,
+      "ci": [
+       0.0,
+       0.005
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.19
+     },
+     "goodfire": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.54
+     },
+     "random": {
+      "abs_p95": 0.004,
+      "abs_max": 0.004
+     }
+    },
+    "24": {
+     "dom": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.56
+     },
+     "dom@both": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.55
+     },
+     "dom@first": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.004
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.54
+     },
+     "dom_perp": {
+      "effect": 0.0,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.85
+     },
+     "logreg": {
+      "effect": 0.004,
+      "ci": [
+       0.001,
+       0.007
+      ],
+      "share_pos": 0.682,
+      "p_vs_random": 0.03
+     },
+     "rule_text": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.005
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.44
+     },
+     "emo:ashamed": {
+      "effect": -0.005,
+      "ci": [
+       -0.008,
+       -0.002
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.0
+     },
+     "emo:calm": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.52
+     },
+     "emo:desperate": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.004
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.44
+     },
+     "emo:guilty": {
+      "effect": -0.003,
+      "ci": [
+       -0.006,
+       -0.001
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.04
+     },
+     "emo:nervous": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.55
+     },
+     "goodfire": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.49
+     },
+     "random": {
+      "abs_p95": 0.003,
+      "abs_max": 0.005
+     }
+    },
+    "26": {
+     "dom": {
+      "effect": 0.0,
+      "ci": [
+       -0.003,
+       0.003
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.94
+     },
+     "dom@both": {
+      "effect": 0.0,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.93
+     },
+     "dom@first": {
+      "effect": 0.0,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.88
+     },
+     "dom_perp": {
+      "effect": -0.0,
+      "ci": [
+       -0.003,
+       0.002
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.98
+     },
+     "logreg": {
+      "effect": 0.004,
+      "ci": [
+       0.001,
+       0.008
+      ],
+      "share_pos": 0.773,
+      "p_vs_random": 0.0
+     },
+     "rule_text": {
+      "effect": 0.0,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.88
+     },
+     "emo:ashamed": {
+      "effect": -0.003,
+      "ci": [
+       -0.006,
+       -0.001
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.03
+     },
+     "emo:calm": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.39
+     },
+     "emo:desperate": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.5
+     },
+     "emo:guilty": {
+      "effect": -0.001,
+      "ci": [
+       -0.003,
+       0.001
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.53
+     },
+     "emo:nervous": {
+      "effect": -0.0,
+      "ci": [
+       -0.002,
+       0.002
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 1.0
+     },
+     "goodfire": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.48
+     },
+     "random": {
+      "abs_p95": 0.003,
+      "abs_max": 0.004
+     }
+    },
+    "28": {
+     "dom": {
+      "effect": -0.0,
+      "ci": [
+       -0.004,
+       0.003
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.85
+     },
+     "dom@both": {
+      "effect": -0.0,
+      "ci": [
+       -0.004,
+       0.003
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.87
+     },
+     "dom@first": {
+      "effect": -0.0,
+      "ci": [
+       -0.004,
+       0.003
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.89
+     },
+     "dom_perp": {
+      "effect": -0.0,
+      "ci": [
+       -0.003,
+       0.003
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.86
+     },
+     "logreg": {
+      "effect": 0.003,
+      "ci": [
+       0.0,
+       0.006
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.08
+     },
+     "rule_text": {
+      "effect": 0.0,
+      "ci": [
+       -0.004,
+       0.004
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.98
+     },
+     "emo:ashamed": {
+      "effect": -0.002,
+      "ci": [
+       -0.005,
+       0.001
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.34
+     },
+     "emo:calm": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.004
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.37
+     },
+     "emo:desperate": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.7
+     },
+     "emo:guilty": {
+      "effect": 0.002,
+      "ci": [
+       -0.001,
+       0.005
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.31
+     },
+     "emo:nervous": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.45
+     },
+     "goodfire": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.003
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.4
+     },
+     "random": {
+      "abs_p95": 0.004,
+      "abs_max": 0.005
+     }
+    },
+    "30": {
+     "dom": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.002
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.7
+     },
+     "dom@both": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.002
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.73
+     },
+     "dom@first": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.002
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.75
+     },
+     "dom_perp": {
+      "effect": -0.0,
+      "ci": [
+       -0.003,
+       0.002
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.86
+     },
+     "logreg": {
+      "effect": 0.004,
+      "ci": [
+       0.001,
+       0.007
+      ],
+      "share_pos": 0.705,
+      "p_vs_random": 0.03
+     },
+     "rule_text": {
+      "effect": 0.0,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.91
+     },
+     "emo:ashamed": {
+      "effect": -0.002,
+      "ci": [
+       -0.005,
+       0.001
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.31
+     },
+     "emo:calm": {
+      "effect": 0.0,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.99
+     },
+     "emo:desperate": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.66
+     },
+     "emo:guilty": {
+      "effect": 0.002,
+      "ci": [
+       -0.001,
+       0.005
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.35
+     },
+     "emo:nervous": {
+      "effect": 0.001,
+      "ci": [
+       -0.003,
+       0.004
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.79
+     },
+     "goodfire": {
+      "effect": 0.002,
+      "ci": [
+       -0.0,
+       0.004
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.41
+     },
+     "random": {
+      "abs_p95": 0.004,
+      "abs_max": 0.005
+     }
+    },
+    "32": {
+     "dom": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.002
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.52
+     },
+     "dom@both": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.002
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.52
+     },
+     "dom@first": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.002
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.54
+     },
+     "dom_perp": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.002
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.62
+     },
+     "logreg": {
+      "effect": 0.003,
+      "ci": [
+       -0.001,
+       0.006
+      ],
+      "share_pos": 0.705,
+      "p_vs_random": 0.21
+     },
+     "rule_text": {
+      "effect": 0.0,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.83
+     },
+     "emo:ashamed": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.002
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.55
+     },
+     "emo:calm": {
+      "effect": 0.002,
+      "ci": [
+       -0.001,
+       0.005
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.4
+     },
+     "emo:desperate": {
+      "effect": 0.0,
+      "ci": [
+       -0.003,
+       0.004
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.83
+     },
+     "emo:guilty": {
+      "effect": 0.003,
+      "ci": [
+       -0.0,
+       0.005
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.21
+     },
+     "emo:nervous": {
+      "effect": -0.002,
+      "ci": [
+       -0.006,
+       0.001
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.31
+     },
+     "goodfire": {
+      "effect": 0.002,
+      "ci": [
+       -0.0,
+       0.004
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.43
+     },
+     "random": {
+      "abs_p95": 0.004,
+      "abs_max": 0.006
+     }
+    },
+    "34": {
+     "dom": {
+      "effect": null,
+      "ci": [
+       null,
+       null
+      ],
+      "share_pos": 0.0,
+      "p_vs_random": 0.0
+     },
+     "dom@both": {
+      "effect": null,
+      "ci": [
+       null,
+       null
+      ],
+      "share_pos": 0.0,
+      "p_vs_random": 0.0
+     },
+     "dom@first": {
+      "effect": -0.002,
+      "ci": [
+       -0.006,
+       0.002
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.43
+     },
+     "dom_perp": {
+      "effect": -0.002,
+      "ci": [
+       -0.006,
+       0.001
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.35
+     },
+     "logreg": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.004
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.52
+     },
+     "rule_text": {
+      "effect": -0.0,
+      "ci": [
+       -0.003,
+       0.003
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.85
+     },
+     "emo:ashamed": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.001
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.58
+     },
+     "emo:calm": {
+      "effect": -0.0,
+      "ci": [
+       -0.004,
+       0.003
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.85
+     },
+     "emo:desperate": {
+      "effect": 0.002,
+      "ci": [
+       -0.001,
+       0.006
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.35
+     },
+     "emo:guilty": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.76
+     },
+     "emo:nervous": {
+      "effect": -0.002,
+      "ci": [
+       -0.006,
+       0.001
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.32
+     },
+     "goodfire": {
+      "effect": null,
+      "ci": [
+       null,
+       null
+      ],
+      "share_pos": 0.0,
+      "p_vs_random": 0.0
+     },
+     "random": {
+      "abs_p95": 0.004,
+      "abs_max": 0.007
+     }
+    },
+    "35": {
+     "dom": {
+      "effect": -0.005,
+      "ci": [
+       -0.01,
+       0.0
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.13
+     },
+     "dom@both": {
+      "effect": -0.005,
+      "ci": [
+       -0.01,
+       0.0
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.14
+     },
+     "dom@first": {
+      "effect": -0.005,
+      "ci": [
+       -0.01,
+       0.001
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.14
+     },
+     "dom_perp": {
+      "effect": -0.003,
+      "ci": [
+       -0.005,
+       0.0
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.41
+     },
+     "logreg": {
+      "effect": -0.0,
+      "ci": [
+       -0.003,
+       0.003
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.96
+     },
+     "rule_text": {
+      "effect": -0.003,
+      "ci": [
+       -0.008,
+       0.001
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.27
+     },
+     "emo:ashamed": {
+      "effect": 0.004,
+      "ci": [
+       0.0,
+       0.008
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.23
+     },
+     "emo:calm": {
+      "effect": 0.003,
+      "ci": [
+       0.0,
+       0.006
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.34
+     },
+     "emo:desperate": {
+      "effect": 0.0,
+      "ci": [
+       -0.003,
+       0.003
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.94
+     },
+     "emo:guilty": {
+      "effect": 0.006,
+      "ci": [
+       0.002,
+       0.009
+      ],
+      "share_pos": 0.705,
+      "p_vs_random": 0.03
+     },
+     "emo:nervous": {
+      "effect": 0.003,
+      "ci": [
+       0.0,
+       0.006
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.29
+     },
+     "goodfire": {
+      "effect": null,
+      "ci": [
+       null,
+       null
+      ],
+      "share_pos": 0.0,
+      "p_vs_random": 0.0
+     },
+     "random": {
+      "abs_p95": 0.006,
+      "abs_max": 0.007
+     }
+    }
+   }
+  },
+  "action32": {
+   "n_runs": 44,
+   "n_tokens_median": 32.0,
+   "per_block": {
+    "6": {
+     "dom": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.002
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.59
+     },
+     "dom@both": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.002
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.69
+     },
+     "dom@first": {
+      "effect": 0.0,
+      "ci": [
+       -0.001,
+       0.002
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.85
+     },
+     "dom_perp": {
+      "effect": -0.001,
+      "ci": [
+       -0.003,
+       0.002
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.73
+     },
+     "logreg": {
+      "effect": 0.004,
+      "ci": [
+       0.0,
+       0.007
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.02
+     },
+     "rule_text": {
+      "effect": -0.002,
+      "ci": [
+       -0.004,
+       0.0
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.24
+     },
+     "emo:ashamed": {
+      "effect": -0.001,
+      "ci": [
+       -0.003,
+       0.001
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.66
+     },
+     "emo:calm": {
+      "effect": 0.0,
+      "ci": [
+       -0.002,
+       0.003
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.89
+     },
+     "emo:desperate": {
+      "effect": -0.002,
+      "ci": [
+       -0.006,
+       0.001
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.18
+     },
+     "emo:guilty": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.001
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.48
+     },
+     "emo:nervous": {
+      "effect": -0.0,
+      "ci": [
+       -0.002,
+       0.001
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.91
+     },
+     "goodfire": {
+      "effect": -0.001,
+      "ci": [
+       -0.002,
+       0.0
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.69
+     },
+     "random": {
+      "abs_p95": 0.003,
+      "abs_max": 0.005
+     }
+    },
+    "8": {
+     "dom": {
+      "effect": -0.002,
+      "ci": [
+       -0.004,
+       0.001
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.47
+     },
+     "dom@both": {
+      "effect": -0.002,
+      "ci": [
+       -0.004,
+       0.0
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.41
+     },
+     "dom@first": {
+      "effect": -0.002,
+      "ci": [
+       -0.004,
+       -0.0
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.35
+     },
+     "dom_perp": {
+      "effect": 0.001,
+      "ci": [
+       -0.001,
+       0.004
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.56
+     },
+     "logreg": {
+      "effect": 0.001,
+      "ci": [
+       -0.004,
+       0.006
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.58
+     },
+     "rule_text": {
+      "effect": -0.006,
+      "ci": [
+       -0.009,
+       -0.003
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.01
+     },
+     "emo:ashamed": {
+      "effect": -0.003,
+      "ci": [
+       -0.005,
+       -0.0
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.25
+     },
+     "emo:calm": {
+      "effect": 0.002,
+      "ci": [
+       -0.001,
+       0.005
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.35
+     },
+     "emo:desperate": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.001
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.52
+     },
+     "emo:guilty": {
+      "effect": -0.001,
+      "ci": [
+       -0.004,
+       0.002
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.73
+     },
+     "emo:nervous": {
+      "effect": -0.004,
+      "ci": [
+       -0.006,
+       -0.001
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.09
+     },
+     "goodfire": {
+      "effect": 0.0,
+      "ci": [
+       -0.001,
+       0.002
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.88
+     },
+     "random": {
+      "abs_p95": 0.004,
+      "abs_max": 0.006
+     }
+    },
+    "10": {
+     "dom": {
+      "effect": 0.005,
+      "ci": [
+       -0.001,
+       0.011
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.2
+     },
+     "dom@both": {
+      "effect": 0.005,
+      "ci": [
+       -0.001,
+       0.011
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.25
+     },
+     "dom@first": {
+      "effect": 0.004,
+      "ci": [
+       -0.001,
+       0.01
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.27
+     },
+     "dom_perp": {
+      "effect": 0.005,
+      "ci": [
+       0.001,
+       0.01
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.2
+     },
+     "logreg": {
+      "effect": 0.008,
+      "ci": [
+       0.002,
+       0.014
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.05
+     },
+     "rule_text": {
+      "effect": -0.008,
+      "ci": [
+       -0.013,
+       -0.003
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.04
+     },
+     "emo:ashamed": {
+      "effect": -0.004,
+      "ci": [
+       -0.007,
+       -0.001
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.3
+     },
+     "emo:calm": {
+      "effect": 0.0,
+      "ci": [
+       -0.003,
+       0.004
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.97
+     },
+     "emo:desperate": {
+      "effect": 0.003,
+      "ci": [
+       -0.001,
+       0.007
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.39
+     },
+     "emo:guilty": {
+      "effect": -0.004,
+      "ci": [
+       -0.007,
+       -0.0
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.31
+     },
+     "emo:nervous": {
+      "effect": -0.003,
+      "ci": [
+       -0.007,
+       0.001
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.39
+     },
+     "goodfire": {
+      "effect": 0.003,
+      "ci": [
+       0.001,
+       0.005
+      ],
+      "share_pos": 0.75,
+      "p_vs_random": 0.43
+     },
+     "random": {
+      "abs_p95": 0.008,
+      "abs_max": 0.009
+     }
+    },
+    "12": {
+     "dom": {
+      "effect": 0.004,
+      "ci": [
+       -0.001,
+       0.009
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.38
+     },
+     "dom@both": {
+      "effect": 0.004,
+      "ci": [
+       -0.001,
+       0.009
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.38
+     },
+     "dom@first": {
+      "effect": 0.004,
+      "ci": [
+       -0.001,
+       0.008
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.39
+     },
+     "dom_perp": {
+      "effect": 0.005,
+      "ci": [
+       -0.001,
+       0.013
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.26
+     },
+     "logreg": {
+      "effect": 0.009,
+      "ci": [
+       0.001,
+       0.018
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.06
+     },
+     "rule_text": {
+      "effect": -0.007,
+      "ci": [
+       -0.014,
+       -0.002
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.12
+     },
+     "emo:ashamed": {
+      "effect": -0.005,
+      "ci": [
+       -0.01,
+       -0.001
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.25
+     },
+     "emo:calm": {
+      "effect": 0.004,
+      "ci": [
+       -0.002,
+       0.009
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.38
+     },
+     "emo:desperate": {
+      "effect": -0.001,
+      "ci": [
+       -0.006,
+       0.003
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.81
+     },
+     "emo:guilty": {
+      "effect": -0.005,
+      "ci": [
+       -0.011,
+       0.0
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.23
+     },
+     "emo:nervous": {
+      "effect": 0.002,
+      "ci": [
+       -0.002,
+       0.006
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.7
+     },
+     "goodfire": {
+      "effect": 0.004,
+      "ci": [
+       0.002,
+       0.007
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.36
+     },
+     "random": {
+      "abs_p95": 0.009,
+      "abs_max": 0.012
+     }
+    },
+    "14": {
+     "dom": {
+      "effect": 0.001,
+      "ci": [
+       -0.006,
+       0.009
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.83
+     },
+     "dom@both": {
+      "effect": 0.001,
+      "ci": [
+       -0.006,
+       0.009
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.83
+     },
+     "dom@first": {
+      "effect": 0.001,
+      "ci": [
+       -0.006,
+       0.009
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.83
+     },
+     "dom_perp": {
+      "effect": -0.001,
+      "ci": [
+       -0.007,
+       0.005
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.88
+     },
+     "logreg": {
+      "effect": -0.003,
+      "ci": [
+       -0.013,
+       0.008
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.62
+     },
+     "rule_text": {
+      "effect": -0.005,
+      "ci": [
+       -0.012,
+       0.001
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.3
+     },
+     "emo:ashamed": {
+      "effect": -0.003,
+      "ci": [
+       -0.008,
+       0.003
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.58
+     },
+     "emo:calm": {
+      "effect": -0.003,
+      "ci": [
+       -0.01,
+       0.003
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.49
+     },
+     "emo:desperate": {
+      "effect": -0.005,
+      "ci": [
+       -0.012,
+       0.001
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.38
+     },
+     "emo:guilty": {
+      "effect": -0.003,
+      "ci": [
+       -0.009,
+       0.003
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.56
+     },
+     "emo:nervous": {
+      "effect": 0.004,
+      "ci": [
+       -0.002,
+       0.01
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.43
+     },
+     "goodfire": {
+      "effect": 0.003,
+      "ci": [
+       0.0,
+       0.005
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.6
+     },
+     "random": {
+      "abs_p95": 0.01,
+      "abs_max": 0.018
+     }
+    },
+    "16": {
+     "dom": {
+      "effect": 0.0,
+      "ci": [
+       -0.006,
+       0.006
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.95
+     },
+     "dom@both": {
+      "effect": -0.001,
+      "ci": [
+       -0.007,
+       0.006
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.87
+     },
+     "dom@first": {
+      "effect": -0.001,
+      "ci": [
+       -0.008,
+       0.005
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.81
+     },
+     "dom_perp": {
+      "effect": -0.004,
+      "ci": [
+       -0.01,
+       0.002
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.38
+     },
+     "logreg": {
+      "effect": -0.008,
+      "ci": [
+       -0.019,
+       0.003
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.06
+     },
+     "rule_text": {
+      "effect": -0.002,
+      "ci": [
+       -0.008,
+       0.004
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.66
+     },
+     "emo:ashamed": {
+      "effect": -0.001,
+      "ci": [
+       -0.01,
+       0.01
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.88
+     },
+     "emo:calm": {
+      "effect": -0.001,
+      "ci": [
+       -0.01,
+       0.008
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.86
+     },
+     "emo:desperate": {
+      "effect": -0.005,
+      "ci": [
+       -0.015,
+       0.004
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.26
+     },
+     "emo:guilty": {
+      "effect": 0.003,
+      "ci": [
+       -0.006,
+       0.013
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.49
+     },
+     "emo:nervous": {
+      "effect": 0.001,
+      "ci": [
+       -0.006,
+       0.008
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.87
+     },
+     "goodfire": {
+      "effect": 0.004,
+      "ci": [
+       0.0,
+       0.007
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.45
+     },
+     "random": {
+      "abs_p95": 0.008,
+      "abs_max": 0.012
+     }
+    },
+    "18": {
+     "dom": {
+      "effect": 0.002,
+      "ci": [
+       -0.004,
+       0.008
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.67
+     },
+     "dom@both": {
+      "effect": 0.002,
+      "ci": [
+       -0.004,
+       0.007
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.75
+     },
+     "dom@first": {
+      "effect": 0.001,
+      "ci": [
+       -0.005,
+       0.007
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.82
+     },
+     "dom_perp": {
+      "effect": -0.001,
+      "ci": [
+       -0.007,
+       0.004
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.81
+     },
+     "logreg": {
+      "effect": 0.01,
+      "ci": [
+       0.002,
+       0.018
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.03
+     },
+     "rule_text": {
+      "effect": -0.003,
+      "ci": [
+       -0.01,
+       0.005
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.48
+     },
+     "emo:ashamed": {
+      "effect": -0.003,
+      "ci": [
+       -0.013,
+       0.009
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.55
+     },
+     "emo:calm": {
+      "effect": -0.003,
+      "ci": [
+       -0.011,
+       0.005
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.56
+     },
+     "emo:desperate": {
+      "effect": 0.004,
+      "ci": [
+       -0.006,
+       0.013
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.35
+     },
+     "emo:guilty": {
+      "effect": 0.001,
+      "ci": [
+       -0.009,
+       0.011
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.83
+     },
+     "emo:nervous": {
+      "effect": 0.001,
+      "ci": [
+       -0.008,
+       0.011
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.76
+     },
+     "goodfire": {
+      "effect": 0.002,
+      "ci": [
+       -0.001,
+       0.005
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.73
+     },
+     "random": {
+      "abs_p95": 0.008,
+      "abs_max": 0.016
+     }
+    },
+    "20": {
+     "dom": {
+      "effect": 0.001,
+      "ci": [
+       -0.006,
+       0.008
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.82
+     },
+     "dom@both": {
+      "effect": 0.001,
+      "ci": [
+       -0.006,
+       0.008
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.81
+     },
+     "dom@first": {
+      "effect": 0.001,
+      "ci": [
+       -0.007,
+       0.008
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.81
+     },
+     "dom_perp": {
+      "effect": -0.003,
+      "ci": [
+       -0.01,
+       0.003
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.47
+     },
+     "logreg": {
+      "effect": 0.006,
+      "ci": [
+       -0.003,
+       0.014
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.19
+     },
+     "rule_text": {
+      "effect": 0.003,
+      "ci": [
+       -0.004,
+       0.009
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.59
+     },
+     "emo:ashamed": {
+      "effect": -0.006,
+      "ci": [
+       -0.015,
+       0.003
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.16
+     },
+     "emo:calm": {
+      "effect": 0.007,
+      "ci": [
+       0.001,
+       0.013
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.14
+     },
+     "emo:desperate": {
+      "effect": -0.006,
+      "ci": [
+       -0.013,
+       0.001
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.16
+     },
+     "emo:guilty": {
+      "effect": -0.002,
+      "ci": [
+       -0.009,
+       0.005
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.67
+     },
+     "emo:nervous": {
+      "effect": 0.008,
+      "ci": [
+       -0.002,
+       0.017
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.09
+     },
+     "goodfire": {
+      "effect": 0.002,
+      "ci": [
+       -0.001,
+       0.004
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.71
+     },
+     "random": {
+      "abs_p95": 0.008,
+      "abs_max": 0.011
+     }
+    },
+    "22": {
+     "dom": {
+      "effect": 0.003,
+      "ci": [
+       -0.003,
+       0.009
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.4
+     },
+     "dom@both": {
+      "effect": 0.003,
+      "ci": [
+       -0.004,
+       0.009
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.44
+     },
+     "dom@first": {
+      "effect": 0.002,
+      "ci": [
+       -0.004,
+       0.009
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.51
+     },
+     "dom_perp": {
+      "effect": -0.001,
+      "ci": [
+       -0.006,
+       0.005
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.87
+     },
+     "logreg": {
+      "effect": 0.005,
+      "ci": [
+       -0.005,
+       0.015
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.2
+     },
+     "rule_text": {
+      "effect": 0.003,
+      "ci": [
+       -0.003,
+       0.009
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.31
+     },
+     "emo:ashamed": {
+      "effect": -0.005,
+      "ci": [
+       -0.015,
+       0.004
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.2
+     },
+     "emo:calm": {
+      "effect": -0.001,
+      "ci": [
+       -0.009,
+       0.007
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.76
+     },
+     "emo:desperate": {
+      "effect": 0.002,
+      "ci": [
+       -0.005,
+       0.009
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.68
+     },
+     "emo:guilty": {
+      "effect": -0.002,
+      "ci": [
+       -0.011,
+       0.006
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.64
+     },
+     "emo:nervous": {
+      "effect": 0.01,
+      "ci": [
+       0.001,
+       0.018
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.04
+     },
+     "goodfire": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.004
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.79
+     },
+     "random": {
+      "abs_p95": 0.009,
+      "abs_max": 0.014
+     }
+    },
+    "23": {
+     "dom": {
+      "effect": 0.001,
+      "ci": [
+       -0.005,
+       0.007
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.67
+     },
+     "dom@both": {
+      "effect": 0.001,
+      "ci": [
+       -0.005,
+       0.007
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.77
+     },
+     "dom@first": {
+      "effect": 0.0,
+      "ci": [
+       -0.006,
+       0.006
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.89
+     },
+     "dom_perp": {
+      "effect": 0.001,
+      "ci": [
+       -0.004,
+       0.007
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.66
+     },
+     "logreg": {
+      "effect": 0.006,
+      "ci": [
+       -0.004,
+       0.016
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.16
+     },
+     "rule_text": {
+      "effect": 0.003,
+      "ci": [
+       -0.002,
+       0.007
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.45
+     },
+     "emo:ashamed": {
+      "effect": -0.006,
+      "ci": [
+       -0.014,
+       0.002
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.15
+     },
+     "emo:calm": {
+      "effect": 0.001,
+      "ci": [
+       -0.005,
+       0.007
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.77
+     },
+     "emo:desperate": {
+      "effect": -0.001,
+      "ci": [
+       -0.008,
+       0.006
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.75
+     },
+     "emo:guilty": {
+      "effect": -0.002,
+      "ci": [
+       -0.009,
+       0.005
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.54
+     },
+     "emo:nervous": {
+      "effect": 0.008,
+      "ci": [
+       -0.001,
+       0.016
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.11
+     },
+     "goodfire": {
+      "effect": 0.001,
+      "ci": [
+       -0.003,
+       0.004
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.77
+     },
+     "random": {
+      "abs_p95": 0.01,
+      "abs_max": 0.012
+     }
+    },
+    "24": {
+     "dom": {
+      "effect": -0.003,
+      "ci": [
+       -0.009,
+       0.003
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.42
+     },
+     "dom@both": {
+      "effect": -0.004,
+      "ci": [
+       -0.01,
+       0.003
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.37
+     },
+     "dom@first": {
+      "effect": -0.004,
+      "ci": [
+       -0.01,
+       0.003
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.29
+     },
+     "dom_perp": {
+      "effect": -0.0,
+      "ci": [
+       -0.006,
+       0.005
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.93
+     },
+     "logreg": {
+      "effect": 0.004,
+      "ci": [
+       -0.005,
+       0.013
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.28
+     },
+     "rule_text": {
+      "effect": -0.002,
+      "ci": [
+       -0.007,
+       0.003
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.56
+     },
+     "emo:ashamed": {
+      "effect": -0.007,
+      "ci": [
+       -0.016,
+       0.001
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.1
+     },
+     "emo:calm": {
+      "effect": 0.001,
+      "ci": [
+       -0.004,
+       0.006
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.69
+     },
+     "emo:desperate": {
+      "effect": -0.003,
+      "ci": [
+       -0.01,
+       0.004
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.45
+     },
+     "emo:guilty": {
+      "effect": -0.007,
+      "ci": [
+       -0.016,
+       0.001
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.1
+     },
+     "emo:nervous": {
+      "effect": 0.007,
+      "ci": [
+       0.0,
+       0.014
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.1
+     },
+     "goodfire": {
+      "effect": 0.0,
+      "ci": [
+       -0.003,
+       0.003
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.93
+     },
+     "random": {
+      "abs_p95": 0.008,
+      "abs_max": 0.014
+     }
+    },
+    "26": {
+     "dom": {
+      "effect": 0.001,
+      "ci": [
+       -0.006,
+       0.008
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.85
+     },
+     "dom@both": {
+      "effect": 0.0,
+      "ci": [
+       -0.007,
+       0.008
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.95
+     },
+     "dom@first": {
+      "effect": -0.0,
+      "ci": [
+       -0.008,
+       0.007
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.98
+     },
+     "dom_perp": {
+      "effect": 0.002,
+      "ci": [
+       -0.005,
+       0.009
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.65
+     },
+     "logreg": {
+      "effect": 0.004,
+      "ci": [
+       -0.005,
+       0.013
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.36
+     },
+     "rule_text": {
+      "effect": -0.001,
+      "ci": [
+       -0.008,
+       0.006
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.87
+     },
+     "emo:ashamed": {
+      "effect": 0.004,
+      "ci": [
+       -0.004,
+       0.013
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.4
+     },
+     "emo:calm": {
+      "effect": 0.002,
+      "ci": [
+       -0.004,
+       0.009
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.64
+     },
+     "emo:desperate": {
+      "effect": -0.001,
+      "ci": [
+       -0.008,
+       0.006
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.88
+     },
+     "emo:guilty": {
+      "effect": 0.003,
+      "ci": [
+       -0.004,
+       0.01
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.55
+     },
+     "emo:nervous": {
+      "effect": 0.004,
+      "ci": [
+       -0.005,
+       0.012
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.42
+     },
+     "goodfire": {
+      "effect": 0.0,
+      "ci": [
+       -0.003,
+       0.003
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.95
+     },
+     "random": {
+      "abs_p95": 0.008,
+      "abs_max": 0.016
+     }
+    },
+    "28": {
+     "dom": {
+      "effect": -0.006,
+      "ci": [
+       -0.013,
+       0.002
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.22
+     },
+     "dom@both": {
+      "effect": -0.006,
+      "ci": [
+       -0.014,
+       0.002
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.2
+     },
+     "dom@first": {
+      "effect": -0.006,
+      "ci": [
+       -0.014,
+       0.002
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.18
+     },
+     "dom_perp": {
+      "effect": 0.003,
+      "ci": [
+       -0.004,
+       0.011
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.45
+     },
+     "logreg": {
+      "effect": 0.004,
+      "ci": [
+       -0.007,
+       0.014
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.36
+     },
+     "rule_text": {
+      "effect": -0.007,
+      "ci": [
+       -0.015,
+       0.002
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.17
+     },
+     "emo:ashamed": {
+      "effect": 0.013,
+      "ci": [
+       0.005,
+       0.022
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.01
+     },
+     "emo:calm": {
+      "effect": -0.001,
+      "ci": [
+       -0.008,
+       0.007
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.81
+     },
+     "emo:desperate": {
+      "effect": 0.001,
+      "ci": [
+       -0.005,
+       0.007
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.82
+     },
+     "emo:guilty": {
+      "effect": 0.011,
+      "ci": [
+       0.005,
+       0.018
+      ],
+      "share_pos": 0.75,
+      "p_vs_random": 0.03
+     },
+     "emo:nervous": {
+      "effect": 0.006,
+      "ci": [
+       -0.001,
+       0.014
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.17
+     },
+     "goodfire": {
+      "effect": 0.001,
+      "ci": [
+       -0.002,
+       0.005
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.72
+     },
+     "random": {
+      "abs_p95": 0.009,
+      "abs_max": 0.02
+     }
+    },
+    "30": {
+     "dom": {
+      "effect": 0.0,
+      "ci": [
+       -0.008,
+       0.009
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.97
+     },
+     "dom@both": {
+      "effect": 0.0,
+      "ci": [
+       -0.009,
+       0.009
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.98
+     },
+     "dom@first": {
+      "effect": 0.0,
+      "ci": [
+       -0.009,
+       0.009
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.99
+     },
+     "dom_perp": {
+      "effect": 0.004,
+      "ci": [
+       -0.003,
+       0.012
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.3
+     },
+     "logreg": {
+      "effect": 0.002,
+      "ci": [
+       -0.01,
+       0.014
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.55
+     },
+     "rule_text": {
+      "effect": 0.0,
+      "ci": [
+       -0.008,
+       0.008
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.96
+     },
+     "emo:ashamed": {
+      "effect": 0.015,
+      "ci": [
+       0.005,
+       0.024
+      ],
+      "share_pos": 0.705,
+      "p_vs_random": 0.01
+     },
+     "emo:calm": {
+      "effect": -0.005,
+      "ci": [
+       -0.012,
+       0.003
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.28
+     },
+     "emo:desperate": {
+      "effect": 0.003,
+      "ci": [
+       -0.004,
+       0.011
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.42
+     },
+     "emo:guilty": {
+      "effect": 0.014,
+      "ci": [
+       0.006,
+       0.023
+      ],
+      "share_pos": 0.705,
+      "p_vs_random": 0.01
+     },
+     "emo:nervous": {
+      "effect": 0.005,
+      "ci": [
+       -0.003,
+       0.014
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.28
+     },
+     "goodfire": {
+      "effect": 0.002,
+      "ci": [
+       -0.002,
+       0.005
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.61
+     },
+     "random": {
+      "abs_p95": 0.01,
+      "abs_max": 0.024
+     }
+    },
+    "32": {
+     "dom": {
+      "effect": 0.002,
+      "ci": [
+       -0.006,
+       0.008
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.78
+     },
+     "dom@both": {
+      "effect": 0.002,
+      "ci": [
+       -0.006,
+       0.009
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.77
+     },
+     "dom@first": {
+      "effect": 0.002,
+      "ci": [
+       -0.006,
+       0.009
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.71
+     },
+     "dom_perp": {
+      "effect": 0.003,
+      "ci": [
+       -0.004,
+       0.009
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.52
+     },
+     "logreg": {
+      "effect": 0.006,
+      "ci": [
+       -0.005,
+       0.017
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.24
+     },
+     "rule_text": {
+      "effect": -0.001,
+      "ci": [
+       -0.009,
+       0.006
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.79
+     },
+     "emo:ashamed": {
+      "effect": 0.013,
+      "ci": [
+       0.004,
+       0.022
+      ],
+      "share_pos": 0.75,
+      "p_vs_random": 0.02
+     },
+     "emo:calm": {
+      "effect": -0.006,
+      "ci": [
+       -0.017,
+       0.005
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.21
+     },
+     "emo:desperate": {
+      "effect": 0.003,
+      "ci": [
+       -0.006,
+       0.011
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.49
+     },
+     "emo:guilty": {
+      "effect": 0.011,
+      "ci": [
+       0.004,
+       0.018
+      ],
+      "share_pos": 0.682,
+      "p_vs_random": 0.02
+     },
+     "emo:nervous": {
+      "effect": 0.01,
+      "ci": [
+       0.002,
+       0.018
+      ],
+      "share_pos": 0.682,
+      "p_vs_random": 0.04
+     },
+     "goodfire": {
+      "effect": 0.002,
+      "ci": [
+       -0.003,
+       0.007
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.72
+     },
+     "random": {
+      "abs_p95": 0.009,
+      "abs_max": 0.023
+     }
+    },
+    "34": {
+     "dom": {
+      "effect": -0.002,
+      "ci": [
+       -0.011,
+       0.006
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.68
+     },
+     "dom@both": {
+      "effect": -0.002,
+      "ci": [
+       -0.011,
+       0.006
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.69
+     },
+     "dom@first": {
+      "effect": -0.002,
+      "ci": [
+       -0.01,
+       0.006
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.72
+     },
+     "dom_perp": {
+      "effect": -0.0,
+      "ci": [
+       -0.007,
+       0.006
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.94
+     },
+     "logreg": {
+      "effect": 0.005,
+      "ci": [
+       -0.005,
+       0.015
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.29
+     },
+     "rule_text": {
+      "effect": -0.005,
+      "ci": [
+       -0.013,
+       0.004
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.37
+     },
+     "emo:ashamed": {
+      "effect": 0.008,
+      "ci": [
+       -0.001,
+       0.017
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.09
+     },
+     "emo:calm": {
+      "effect": -0.006,
+      "ci": [
+       -0.015,
+       0.004
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.23
+     },
+     "emo:desperate": {
+      "effect": 0.001,
+      "ci": [
+       -0.008,
+       0.009
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.94
+     },
+     "emo:guilty": {
+      "effect": 0.01,
+      "ci": [
+       -0.0,
+       0.019
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.04
+     },
+     "emo:nervous": {
+      "effect": 0.011,
+      "ci": [
+       0.003,
+       0.019
+      ],
+      "share_pos": 0.682,
+      "p_vs_random": 0.03
+     },
+     "goodfire": {
+      "effect": 0.003,
+      "ci": [
+       -0.003,
+       0.01
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.48
+     },
+     "random": {
+      "abs_p95": 0.009,
+      "abs_max": 0.016
+     }
+    },
+    "35": {
+     "dom": {
+      "effect": -0.005,
+      "ci": [
+       -0.015,
+       0.005
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.33
+     },
+     "dom@both": {
+      "effect": -0.005,
+      "ci": [
+       -0.015,
+       0.005
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.35
+     },
+     "dom@first": {
+      "effect": -0.005,
+      "ci": [
+       -0.015,
+       0.005
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.37
+     },
+     "dom_perp": {
+      "effect": -0.001,
+      "ci": [
+       -0.013,
+       0.01
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.77
+     },
+     "logreg": {
+      "effect": 0.004,
+      "ci": [
+       -0.007,
+       0.015
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.43
+     },
+     "rule_text": {
+      "effect": -0.004,
+      "ci": [
+       -0.014,
+       0.005
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.47
+     },
+     "emo:ashamed": {
+      "effect": 0.005,
+      "ci": [
+       -0.002,
+       0.013
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.34
+     },
+     "emo:calm": {
+      "effect": -0.0,
+      "ci": [
+       -0.009,
+       0.008
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.94
+     },
+     "emo:desperate": {
+      "effect": 0.0,
+      "ci": [
+       -0.01,
+       0.01
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.95
+     },
+     "emo:guilty": {
+      "effect": 0.007,
+      "ci": [
+       -0.003,
+       0.016
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.22
+     },
+     "emo:nervous": {
+      "effect": 0.012,
+      "ci": [
+       0.006,
+       0.019
+      ],
+      "share_pos": 0.705,
+      "p_vs_random": 0.01
+     },
+     "goodfire": {
+      "effect": null,
+      "ci": [
+       null,
+       null
+      ],
+      "share_pos": 0.0,
+      "p_vs_random": 0.0
+     },
+     "random": {
+      "abs_p95": 0.01,
+      "abs_max": 0.013
+     }
+    }
+   }
+  },
+  "pre": {
+   "n_runs": 44,
+   "n_tokens_median": 1.0,
+   "per_block": {
+    "6": {
+     "dom": {
+      "effect": 0.003,
+      "ci": [
+       -0.02,
+       0.025
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.94
+     },
+     "dom@both": {
+      "effect": 0.003,
+      "ci": [
+       -0.023,
+       0.027
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.94
+     },
+     "dom@first": {
+      "effect": 0.002,
+      "ci": [
+       -0.027,
+       0.029
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.95
+     },
+     "dom_perp": {
+      "effect": -0.023,
+      "ci": [
+       -0.085,
+       0.028
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.36
+     },
+     "logreg": {
+      "effect": 0.008,
+      "ci": [
+       -0.03,
+       0.051
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.78
+     },
+     "rule_text": {
+      "effect": -0.041,
+      "ci": [
+       -0.084,
+       -0.004
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.15
+     },
+     "emo:ashamed": {
+      "effect": 0.007,
+      "ci": [
+       -0.015,
+       0.029
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.83
+     },
+     "emo:calm": {
+      "effect": -0.063,
+      "ci": [
+       -0.124,
+       -0.01
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.03
+     },
+     "emo:desperate": {
+      "effect": 0.06,
+      "ci": [
+       0.008,
+       0.125
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.05
+     },
+     "emo:guilty": {
+      "effect": -0.026,
+      "ci": [
+       -0.059,
+       0.007
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.32
+     },
+     "emo:nervous": {
+      "effect": 0.036,
+      "ci": [
+       -0.015,
+       0.097
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.19
+     },
+     "goodfire": {
+      "effect": -0.004,
+      "ci": [
+       -0.035,
+       0.026
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.94
+     },
+     "random": {
+      "abs_p95": 0.06,
+      "abs_max": 0.097
+     }
+    },
+    "8": {
+     "dom": {
+      "effect": 0.015,
+      "ci": [
+       -0.021,
+       0.054
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.56
+     },
+     "dom@both": {
+      "effect": 0.012,
+      "ci": [
+       -0.026,
+       0.053
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.63
+     },
+     "dom@first": {
+      "effect": 0.009,
+      "ci": [
+       -0.033,
+       0.054
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.72
+     },
+     "dom_perp": {
+      "effect": -0.029,
+      "ci": [
+       -0.055,
+       -0.001
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.26
+     },
+     "logreg": {
+      "effect": -0.004,
+      "ci": [
+       -0.028,
+       0.019
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.88
+     },
+     "rule_text": {
+      "effect": -0.032,
+      "ci": [
+       -0.082,
+       0.014
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.23
+     },
+     "emo:ashamed": {
+      "effect": 0.005,
+      "ci": [
+       -0.014,
+       0.026
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.84
+     },
+     "emo:calm": {
+      "effect": -0.046,
+      "ci": [
+       -0.112,
+       0.023
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.1
+     },
+     "emo:desperate": {
+      "effect": 0.022,
+      "ci": [
+       -0.022,
+       0.068
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.39
+     },
+     "emo:guilty": {
+      "effect": -0.012,
+      "ci": [
+       -0.025,
+       0.002
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.63
+     },
+     "emo:nervous": {
+      "effect": 0.008,
+      "ci": [
+       -0.039,
+       0.058
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.74
+     },
+     "goodfire": {
+      "effect": -0.004,
+      "ci": [
+       -0.024,
+       0.016
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.85
+     },
+     "random": {
+      "abs_p95": 0.074,
+      "abs_max": 0.098
+     }
+    },
+    "10": {
+     "dom": {
+      "effect": -0.009,
+      "ci": [
+       -0.046,
+       0.021
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.74
+     },
+     "dom@both": {
+      "effect": -0.011,
+      "ci": [
+       -0.047,
+       0.019
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.7
+     },
+     "dom@first": {
+      "effect": -0.012,
+      "ci": [
+       -0.049,
+       0.017
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.65
+     },
+     "dom_perp": {
+      "effect": -0.044,
+      "ci": [
+       -0.075,
+       -0.014
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.15
+     },
+     "logreg": {
+      "effect": 0.014,
+      "ci": [
+       -0.009,
+       0.036
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.62
+     },
+     "rule_text": {
+      "effect": -0.009,
+      "ci": [
+       -0.037,
+       0.019
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.74
+     },
+     "emo:ashamed": {
+      "effect": 0.002,
+      "ci": [
+       -0.035,
+       0.044
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.94
+     },
+     "emo:calm": {
+      "effect": -0.032,
+      "ci": [
+       -0.095,
+       0.034
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.3
+     },
+     "emo:desperate": {
+      "effect": 0.035,
+      "ci": [
+       -0.003,
+       0.078
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.22
+     },
+     "emo:guilty": {
+      "effect": -0.017,
+      "ci": [
+       -0.057,
+       0.025
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.51
+     },
+     "emo:nervous": {
+      "effect": 0.033,
+      "ci": [
+       -0.003,
+       0.076
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.3
+     },
+     "goodfire": {
+      "effect": -0.01,
+      "ci": [
+       -0.042,
+       0.013
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.71
+     },
+     "random": {
+      "abs_p95": 0.051,
+      "abs_max": 0.094
+     }
+    },
+    "12": {
+     "dom": {
+      "effect": -0.013,
+      "ci": [
+       -0.031,
+       0.003
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.72
+     },
+     "dom@both": {
+      "effect": -0.013,
+      "ci": [
+       -0.031,
+       0.003
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.71
+     },
+     "dom@first": {
+      "effect": -0.013,
+      "ci": [
+       -0.031,
+       0.003
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.71
+     },
+     "dom_perp": {
+      "effect": -0.009,
+      "ci": [
+       -0.044,
+       0.025
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.79
+     },
+     "logreg": {
+      "effect": -0.001,
+      "ci": [
+       -0.025,
+       0.025
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.98
+     },
+     "rule_text": {
+      "effect": -0.022,
+      "ci": [
+       -0.051,
+       0.005
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.51
+     },
+     "emo:ashamed": {
+      "effect": -0.08,
+      "ci": [
+       -0.13,
+       -0.033
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.02
+     },
+     "emo:calm": {
+      "effect": 0.021,
+      "ci": [
+       -0.024,
+       0.062
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.55
+     },
+     "emo:desperate": {
+      "effect": -0.015,
+      "ci": [
+       -0.062,
+       0.03
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.67
+     },
+     "emo:guilty": {
+      "effect": -0.049,
+      "ci": [
+       -0.104,
+       -0.0
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.22
+     },
+     "emo:nervous": {
+      "effect": 0.027,
+      "ci": [
+       -0.01,
+       0.07
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.45
+     },
+     "goodfire": {
+      "effect": -0.003,
+      "ci": [
+       -0.032,
+       0.025
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.93
+     },
+     "random": {
+      "abs_p95": 0.073,
+      "abs_max": 0.092
+     }
+    },
+    "14": {
+     "dom": {
+      "effect": -0.033,
+      "ci": [
+       -0.059,
+       -0.009
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.5
+     },
+     "dom@both": {
+      "effect": -0.034,
+      "ci": [
+       -0.061,
+       -0.01
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.49
+     },
+     "dom@first": {
+      "effect": -0.036,
+      "ci": [
+       -0.064,
+       -0.011
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.46
+     },
+     "dom_perp": {
+      "effect": -0.038,
+      "ci": [
+       -0.079,
+       -0.002
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.46
+     },
+     "logreg": {
+      "effect": -0.043,
+      "ci": [
+       -0.082,
+       -0.008
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.36
+     },
+     "rule_text": {
+      "effect": -0.031,
+      "ci": [
+       -0.057,
+       -0.004
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.52
+     },
+     "emo:ashamed": {
+      "effect": -0.005,
+      "ci": [
+       -0.06,
+       0.052
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.94
+     },
+     "emo:calm": {
+      "effect": -0.081,
+      "ci": [
+       -0.147,
+       -0.021
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.1
+     },
+     "emo:desperate": {
+      "effect": -0.018,
+      "ci": [
+       -0.091,
+       0.048
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.74
+     },
+     "emo:guilty": {
+      "effect": 0.026,
+      "ci": [
+       -0.025,
+       0.079
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.57
+     },
+     "emo:nervous": {
+      "effect": 0.025,
+      "ci": [
+       -0.015,
+       0.066
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.59
+     },
+     "goodfire": {
+      "effect": -0.033,
+      "ci": [
+       -0.078,
+       0.008
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.5
+     },
+     "random": {
+      "abs_p95": 0.095,
+      "abs_max": 0.122
+     }
+    },
+    "16": {
+     "dom": {
+      "effect": -0.021,
+      "ci": [
+       -0.046,
+       0.004
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.59
+     },
+     "dom@both": {
+      "effect": -0.021,
+      "ci": [
+       -0.046,
+       0.004
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.59
+     },
+     "dom@first": {
+      "effect": -0.022,
+      "ci": [
+       -0.047,
+       0.004
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.58
+     },
+     "dom_perp": {
+      "effect": -0.028,
+      "ci": [
+       -0.056,
+       0.001
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.47
+     },
+     "logreg": {
+      "effect": -0.043,
+      "ci": [
+       -0.08,
+       -0.009
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.31
+     },
+     "rule_text": {
+      "effect": -0.031,
+      "ci": [
+       -0.057,
+       -0.008
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.39
+     },
+     "emo:ashamed": {
+      "effect": 0.004,
+      "ci": [
+       -0.031,
+       0.042
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.92
+     },
+     "emo:calm": {
+      "effect": -0.014,
+      "ci": [
+       -0.067,
+       0.036
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.77
+     },
+     "emo:desperate": {
+      "effect": 0.028,
+      "ci": [
+       -0.061,
+       0.12
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.47
+     },
+     "emo:guilty": {
+      "effect": 0.032,
+      "ci": [
+       -0.012,
+       0.077
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.38
+     },
+     "emo:nervous": {
+      "effect": -0.031,
+      "ci": [
+       -0.089,
+       0.024
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.39
+     },
+     "goodfire": {
+      "effect": -0.006,
+      "ci": [
+       -0.035,
+       0.023
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.9
+     },
+     "random": {
+      "abs_p95": 0.095,
+      "abs_max": 0.136
+     }
+    },
+    "18": {
+     "dom": {
+      "effect": -0.007,
+      "ci": [
+       -0.037,
+       0.023
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.84
+     },
+     "dom@both": {
+      "effect": -0.007,
+      "ci": [
+       -0.038,
+       0.024
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.81
+     },
+     "dom@first": {
+      "effect": -0.007,
+      "ci": [
+       -0.039,
+       0.025
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.8
+     },
+     "dom_perp": {
+      "effect": -0.011,
+      "ci": [
+       -0.048,
+       0.028
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.7
+     },
+     "logreg": {
+      "effect": -0.024,
+      "ci": [
+       -0.069,
+       0.022
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.49
+     },
+     "rule_text": {
+      "effect": -0.012,
+      "ci": [
+       -0.034,
+       0.009
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.68
+     },
+     "emo:ashamed": {
+      "effect": 0.169,
+      "ci": [
+       0.087,
+       0.251
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.0
+     },
+     "emo:calm": {
+      "effect": -0.037,
+      "ci": [
+       -0.118,
+       0.041
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.28
+     },
+     "emo:desperate": {
+      "effect": -0.041,
+      "ci": [
+       -0.113,
+       0.04
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.22
+     },
+     "emo:guilty": {
+      "effect": 0.165,
+      "ci": [
+       0.081,
+       0.249
+      ],
+      "share_pos": 0.705,
+      "p_vs_random": 0.0
+     },
+     "emo:nervous": {
+      "effect": -0.008,
+      "ci": [
+       -0.096,
+       0.065
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.78
+     },
+     "goodfire": {
+      "effect": 0.007,
+      "ci": [
+       -0.033,
+       0.046
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.8
+     },
+     "random": {
+      "abs_p95": 0.077,
+      "abs_max": 0.131
+     }
+    },
+    "20": {
+     "dom": {
+      "effect": 0.001,
+      "ci": [
+       -0.028,
+       0.032
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.96
+     },
+     "dom@both": {
+      "effect": 0.002,
+      "ci": [
+       -0.027,
+       0.033
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.95
+     },
+     "dom@first": {
+      "effect": 0.002,
+      "ci": [
+       -0.026,
+       0.034
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.94
+     },
+     "dom_perp": {
+      "effect": 0.011,
+      "ci": [
+       -0.029,
+       0.054
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.86
+     },
+     "logreg": {
+      "effect": -0.021,
+      "ci": [
+       -0.051,
+       0.008
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.78
+     },
+     "rule_text": {
+      "effect": 0.01,
+      "ci": [
+       -0.011,
+       0.032
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.88
+     },
+     "emo:ashamed": {
+      "effect": 0.107,
+      "ci": [
+       0.012,
+       0.218
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.05
+     },
+     "emo:calm": {
+      "effect": -0.016,
+      "ci": [
+       -0.146,
+       0.108
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.8
+     },
+     "emo:desperate": {
+      "effect": -0.098,
+      "ci": [
+       -0.178,
+       -0.015
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.07
+     },
+     "emo:guilty": {
+      "effect": 0.197,
+      "ci": [
+       0.106,
+       0.304
+      ],
+      "share_pos": 0.75,
+      "p_vs_random": 0.0
+     },
+     "emo:nervous": {
+      "effect": -0.006,
+      "ci": [
+       -0.1,
+       0.091
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.91
+     },
+     "goodfire": {
+      "effect": 0.033,
+      "ci": [
+       -0.01,
+       0.075
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.58
+     },
+     "random": {
+      "abs_p95": 0.107,
+      "abs_max": 0.144
+     }
+    },
+    "22": {
+     "dom": {
+      "effect": 0.001,
+      "ci": [
+       -0.031,
+       0.037
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 1.0
+     },
+     "dom@both": {
+      "effect": 0.001,
+      "ci": [
+       -0.031,
+       0.035
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 1.0
+     },
+     "dom@first": {
+      "effect": 0.001,
+      "ci": [
+       -0.031,
+       0.035
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 1.0
+     },
+     "dom_perp": {
+      "effect": 0.037,
+      "ci": [
+       -0.002,
+       0.077
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.67
+     },
+     "logreg": {
+      "effect": 0.004,
+      "ci": [
+       -0.018,
+       0.029
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.99
+     },
+     "rule_text": {
+      "effect": -0.003,
+      "ci": [
+       -0.025,
+       0.02
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.99
+     },
+     "emo:ashamed": {
+      "effect": 0.127,
+      "ci": [
+       0.015,
+       0.251
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.09
+     },
+     "emo:calm": {
+      "effect": -0.086,
+      "ci": [
+       -0.154,
+       -0.019
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.26
+     },
+     "emo:desperate": {
+      "effect": -0.069,
+      "ci": [
+       -0.129,
+       -0.011
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.4
+     },
+     "emo:guilty": {
+      "effect": 0.155,
+      "ci": [
+       0.026,
+       0.293
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.06
+     },
+     "emo:nervous": {
+      "effect": 0.036,
+      "ci": [
+       -0.093,
+       0.153
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.67
+     },
+     "goodfire": {
+      "effect": 0.009,
+      "ci": [
+       -0.042,
+       0.058
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.94
+     },
+     "random": {
+      "abs_p95": 0.161,
+      "abs_max": 0.202
+     }
+    },
+    "23": {
+     "dom": {
+      "effect": -0.026,
+      "ci": [
+       -0.065,
+       0.016
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.75
+     },
+     "dom@both": {
+      "effect": -0.025,
+      "ci": [
+       -0.063,
+       0.016
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.75
+     },
+     "dom@first": {
+      "effect": -0.024,
+      "ci": [
+       -0.061,
+       0.016
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.75
+     },
+     "dom_perp": {
+      "effect": -0.002,
+      "ci": [
+       -0.05,
+       0.046
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.98
+     },
+     "logreg": {
+      "effect": 0.008,
+      "ci": [
+       -0.018,
+       0.033
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.93
+     },
+     "rule_text": {
+      "effect": -0.001,
+      "ci": [
+       -0.022,
+       0.021
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 1.0
+     },
+     "emo:ashamed": {
+      "effect": 0.066,
+      "ci": [
+       -0.046,
+       0.191
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.43
+     },
+     "emo:calm": {
+      "effect": -0.053,
+      "ci": [
+       -0.133,
+       0.033
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.5
+     },
+     "emo:desperate": {
+      "effect": -0.049,
+      "ci": [
+       -0.108,
+       0.008
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.52
+     },
+     "emo:guilty": {
+      "effect": 0.144,
+      "ci": [
+       0.003,
+       0.293
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.05
+     },
+     "emo:nervous": {
+      "effect": 0.027,
+      "ci": [
+       -0.084,
+       0.132
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.75
+     },
+     "goodfire": {
+      "effect": 0.048,
+      "ci": [
+       -0.004,
+       0.099
+      ],
+      "share_pos": 0.705,
+      "p_vs_random": 0.52
+     },
+     "random": {
+      "abs_p95": 0.142,
+      "abs_max": 0.212
+     }
+    },
+    "24": {
+     "dom": {
+      "effect": -0.03,
+      "ci": [
+       -0.106,
+       0.057
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.71
+     },
+     "dom@both": {
+      "effect": -0.027,
+      "ci": [
+       -0.097,
+       0.052
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.74
+     },
+     "dom@first": {
+      "effect": -0.024,
+      "ci": [
+       -0.085,
+       0.045
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.76
+     },
+     "dom_perp": {
+      "effect": 0.001,
+      "ci": [
+       -0.057,
+       0.06
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 1.0
+     },
+     "logreg": {
+      "effect": 0.014,
+      "ci": [
+       -0.013,
+       0.04
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.87
+     },
+     "rule_text": {
+      "effect": -0.013,
+      "ci": [
+       -0.046,
+       0.023
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.87
+     },
+     "emo:ashamed": {
+      "effect": 0.114,
+      "ci": [
+       0.005,
+       0.225
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.15
+     },
+     "emo:calm": {
+      "effect": -0.077,
+      "ci": [
+       -0.155,
+       0.001
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.32
+     },
+     "emo:desperate": {
+      "effect": -0.012,
+      "ci": [
+       -0.073,
+       0.051
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.89
+     },
+     "emo:guilty": {
+      "effect": 0.135,
+      "ci": [
+       0.037,
+       0.231
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.09
+     },
+     "emo:nervous": {
+      "effect": 0.011,
+      "ci": [
+       -0.097,
+       0.112
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.9
+     },
+     "goodfire": {
+      "effect": -0.005,
+      "ci": [
+       -0.055,
+       0.047
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.96
+     },
+     "random": {
+      "abs_p95": 0.156,
+      "abs_max": 0.19
+     }
+    },
+    "26": {
+     "dom": {
+      "effect": -0.072,
+      "ci": [
+       -0.142,
+       -0.002
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.42
+     },
+     "dom@both": {
+      "effect": -0.065,
+      "ci": [
+       -0.126,
+       -0.004
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.47
+     },
+     "dom@first": {
+      "effect": -0.058,
+      "ci": [
+       -0.109,
+       -0.003
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.5
+     },
+     "dom_perp": {
+      "effect": 0.006,
+      "ci": [
+       -0.04,
+       0.049
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.93
+     },
+     "logreg": {
+      "effect": 0.001,
+      "ci": [
+       -0.03,
+       0.031
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 1.0
+     },
+     "rule_text": {
+      "effect": -0.018,
+      "ci": [
+       -0.04,
+       0.008
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.8
+     },
+     "emo:ashamed": {
+      "effect": 0.037,
+      "ci": [
+       -0.113,
+       0.19
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.68
+     },
+     "emo:calm": {
+      "effect": -0.093,
+      "ci": [
+       -0.175,
+       -0.008
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.3
+     },
+     "emo:desperate": {
+      "effect": 0.084,
+      "ci": [
+       -0.021,
+       0.181
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.34
+     },
+     "emo:guilty": {
+      "effect": 0.072,
+      "ci": [
+       -0.029,
+       0.18
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.42
+     },
+     "emo:nervous": {
+      "effect": 0.044,
+      "ci": [
+       -0.054,
+       0.14
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.63
+     },
+     "goodfire": {
+      "effect": -0.005,
+      "ci": [
+       -0.057,
+       0.049
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.93
+     },
+     "random": {
+      "abs_p95": 0.183,
+      "abs_max": 0.222
+     }
+    },
+    "28": {
+     "dom": {
+      "effect": -0.098,
+      "ci": [
+       -0.19,
+       -0.006
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.24
+     },
+     "dom@both": {
+      "effect": -0.087,
+      "ci": [
+       -0.169,
+       -0.007
+      ],
+      "share_pos": 0.295,
+      "p_vs_random": 0.28
+     },
+     "dom@first": {
+      "effect": -0.075,
+      "ci": [
+       -0.146,
+       -0.005
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.38
+     },
+     "dom_perp": {
+      "effect": -0.013,
+      "ci": [
+       -0.052,
+       0.025
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.87
+     },
+     "logreg": {
+      "effect": -0.013,
+      "ci": [
+       -0.045,
+       0.02
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.87
+     },
+     "rule_text": {
+      "effect": -0.043,
+      "ci": [
+       -0.081,
+       -0.002
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.62
+     },
+     "emo:ashamed": {
+      "effect": 0.036,
+      "ci": [
+       -0.063,
+       0.125
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.69
+     },
+     "emo:calm": {
+      "effect": -0.062,
+      "ci": [
+       -0.122,
+       0.001
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.47
+     },
+     "emo:desperate": {
+      "effect": 0.071,
+      "ci": [
+       -0.017,
+       0.155
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.41
+     },
+     "emo:guilty": {
+      "effect": 0.036,
+      "ci": [
+       -0.026,
+       0.099
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.7
+     },
+     "emo:nervous": {
+      "effect": 0.061,
+      "ci": [
+       -0.072,
+       0.188
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.47
+     },
+     "goodfire": {
+      "effect": -0.011,
+      "ci": [
+       -0.066,
+       0.047
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.9
+     },
+     "random": {
+      "abs_p95": 0.179,
+      "abs_max": 0.22
+     }
+    },
+    "30": {
+     "dom": {
+      "effect": -0.135,
+      "ci": [
+       -0.234,
+       -0.041
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.13
+     },
+     "dom@both": {
+      "effect": -0.125,
+      "ci": [
+       -0.216,
+       -0.04
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.16
+     },
+     "dom@first": {
+      "effect": -0.114,
+      "ci": [
+       -0.194,
+       -0.036
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.22
+     },
+     "dom_perp": {
+      "effect": -0.114,
+      "ci": [
+       -0.2,
+       -0.033
+      ],
+      "share_pos": 0.386,
+      "p_vs_random": 0.22
+     },
+     "logreg": {
+      "effect": -0.02,
+      "ci": [
+       -0.056,
+       0.015
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.85
+     },
+     "rule_text": {
+      "effect": -0.023,
+      "ci": [
+       -0.056,
+       0.01
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.81
+     },
+     "emo:ashamed": {
+      "effect": 0.035,
+      "ci": [
+       -0.104,
+       0.179
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.67
+     },
+     "emo:calm": {
+      "effect": -0.088,
+      "ci": [
+       -0.149,
+       -0.029
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.37
+     },
+     "emo:desperate": {
+      "effect": 0.147,
+      "ci": [
+       0.068,
+       0.221
+      ],
+      "share_pos": 0.727,
+      "p_vs_random": 0.1
+     },
+     "emo:guilty": {
+      "effect": 0.051,
+      "ci": [
+       -0.016,
+       0.119
+      ],
+      "share_pos": 0.545,
+      "p_vs_random": 0.57
+     },
+     "emo:nervous": {
+      "effect": 0.089,
+      "ci": [
+       -0.053,
+       0.224
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.36
+     },
+     "goodfire": {
+      "effect": -0.013,
+      "ci": [
+       -0.066,
+       0.042
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.89
+     },
+     "random": {
+      "abs_p95": 0.16,
+      "abs_max": 0.301
+     }
+    },
+    "32": {
+     "dom": {
+      "effect": -0.111,
+      "ci": [
+       -0.198,
+       -0.025
+      ],
+      "share_pos": 0.341,
+      "p_vs_random": 0.23
+     },
+     "dom@both": {
+      "effect": -0.102,
+      "ci": [
+       -0.182,
+       -0.022
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.27
+     },
+     "dom@first": {
+      "effect": -0.09,
+      "ci": [
+       -0.163,
+       -0.018
+      ],
+      "share_pos": 0.364,
+      "p_vs_random": 0.31
+     },
+     "dom_perp": {
+      "effect": -0.157,
+      "ci": [
+       -0.306,
+       -0.023
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.14
+     },
+     "logreg": {
+      "effect": -0.036,
+      "ci": [
+       -0.087,
+       0.011
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.7
+     },
+     "rule_text": {
+      "effect": 0.027,
+      "ci": [
+       -0.005,
+       0.061
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.75
+     },
+     "emo:ashamed": {
+      "effect": -0.021,
+      "ci": [
+       -0.135,
+       0.106
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.79
+     },
+     "emo:calm": {
+      "effect": -0.086,
+      "ci": [
+       -0.137,
+       -0.033
+      ],
+      "share_pos": 0.273,
+      "p_vs_random": 0.33
+     },
+     "emo:desperate": {
+      "effect": 0.134,
+      "ci": [
+       0.053,
+       0.21
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.2
+     },
+     "emo:guilty": {
+      "effect": 0.067,
+      "ci": [
+       -0.009,
+       0.144
+      ],
+      "share_pos": 0.659,
+      "p_vs_random": 0.45
+     },
+     "emo:nervous": {
+      "effect": 0.157,
+      "ci": [
+       0.039,
+       0.275
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.14
+     },
+     "goodfire": {
+      "effect": 0.055,
+      "ci": [
+       -0.017,
+       0.123
+      ],
+      "share_pos": 0.636,
+      "p_vs_random": 0.53
+     },
+     "random": {
+      "abs_p95": 0.205,
+      "abs_max": 0.281
+     }
+    },
+    "34": {
+     "dom": {
+      "effect": -0.004,
+      "ci": [
+       -0.084,
+       0.075
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.95
+     },
+     "dom@both": {
+      "effect": 0.0,
+      "ci": [
+       -0.076,
+       0.075
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.98
+     },
+     "dom@first": {
+      "effect": 0.004,
+      "ci": [
+       -0.067,
+       0.073
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.95
+     },
+     "dom_perp": {
+      "effect": -0.021,
+      "ci": [
+       -0.148,
+       0.103
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.86
+     },
+     "logreg": {
+      "effect": -0.041,
+      "ci": [
+       -0.088,
+       0.004
+      ],
+      "share_pos": 0.318,
+      "p_vs_random": 0.7
+     },
+     "rule_text": {
+      "effect": 0.019,
+      "ci": [
+       -0.029,
+       0.067
+      ],
+      "share_pos": 0.477,
+      "p_vs_random": 0.88
+     },
+     "emo:ashamed": {
+      "effect": -0.07,
+      "ci": [
+       -0.185,
+       0.049
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.47
+     },
+     "emo:calm": {
+      "effect": -0.031,
+      "ci": [
+       -0.1,
+       0.04
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.78
+     },
+     "emo:desperate": {
+      "effect": 0.01,
+      "ci": [
+       -0.069,
+       0.093
+      ],
+      "share_pos": 0.523,
+      "p_vs_random": 0.93
+     },
+     "emo:guilty": {
+      "effect": -0.069,
+      "ci": [
+       -0.177,
+       0.027
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.47
+     },
+     "emo:nervous": {
+      "effect": 0.092,
+      "ci": [
+       0.014,
+       0.172
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.36
+     },
+     "goodfire": {
+      "effect": 0.058,
+      "ci": [
+       -0.01,
+       0.131
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.52
+     },
+     "random": {
+      "abs_p95": 0.202,
+      "abs_max": 0.304
+     }
+    },
+    "35": {
+     "dom": {
+      "effect": 0.109,
+      "ci": [
+       0.027,
+       0.2
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.27
+     },
+     "dom@both": {
+      "effect": 0.109,
+      "ci": [
+       0.027,
+       0.2
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.27
+     },
+     "dom@first": {
+      "effect": 0.108,
+      "ci": [
+       0.027,
+       0.197
+      ],
+      "share_pos": 0.568,
+      "p_vs_random": 0.27
+     },
+     "dom_perp": {
+      "effect": 0.051,
+      "ci": [
+       -0.001,
+       0.107
+      ],
+      "share_pos": 0.591,
+      "p_vs_random": 0.63
+     },
+     "logreg": {
+      "effect": -0.007,
+      "ci": [
+       -0.06,
+       0.046
+      ],
+      "share_pos": 0.455,
+      "p_vs_random": 0.93
+     },
+     "rule_text": {
+      "effect": 0.082,
+      "ci": [
+       -0.008,
+       0.182
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.39
+     },
+     "emo:ashamed": {
+      "effect": -0.027,
+      "ci": [
+       -0.119,
+       0.07
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.75
+     },
+     "emo:calm": {
+      "effect": -0.048,
+      "ci": [
+       -0.178,
+       0.077
+      ],
+      "share_pos": 0.409,
+      "p_vs_random": 0.64
+     },
+     "emo:desperate": {
+      "effect": 0.028,
+      "ci": [
+       -0.086,
+       0.143
+      ],
+      "share_pos": 0.5,
+      "p_vs_random": 0.73
+     },
+     "emo:guilty": {
+      "effect": -0.025,
+      "ci": [
+       -0.102,
+       0.049
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.75
+     },
+     "emo:nervous": {
+      "effect": 0.096,
+      "ci": [
+       0.012,
+       0.174
+      ],
+      "share_pos": 0.614,
+      "p_vs_random": 0.34
+     },
+     "goodfire": {
+      "effect": -0.058,
+      "ci": [
+       -0.141,
+       0.016
+      ],
+      "share_pos": 0.432,
+      "p_vs_random": 0.59
+     },
+     "random": {
+      "abs_p95": 0.175,
+      "abs_max": 0.322
+     }
+    }
+   }
+  }
+ },
+ "fitted": {
+  "sentence": {
+   "6": {
+    "loro_sign_acc": 0.977,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.007,
+    "cos_with_story_dom": 0.019
+   },
+   "8": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.01,
+    "cos_with_story_dom": -0.039
+   },
+   "10": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.014,
+    "cos_with_story_dom": 0.029
+   },
+   "12": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.019,
+    "cos_with_story_dom": 0.039
+   },
+   "14": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.024,
+    "cos_with_story_dom": 0.097
+   },
+   "16": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.029,
+    "cos_with_story_dom": 0.047
+   },
+   "18": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.037,
+    "cos_with_story_dom": -0.003
+   },
+   "20": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.041,
+    "cos_with_story_dom": -0.004
+   },
+   "22": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.039,
+    "cos_with_story_dom": -0.037
+   },
+   "23": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.036,
+    "cos_with_story_dom": -0.028
+   },
+   "24": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.038,
+    "cos_with_story_dom": -0.049
+   },
+   "26": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.036,
+    "cos_with_story_dom": -0.017
+   },
+   "28": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.036,
+    "cos_with_story_dom": -0.03
+   },
+   "30": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.038,
+    "cos_with_story_dom": -0.038
+   },
+   "32": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.033,
+    "cos_with_story_dom": -0.043
+   },
+   "34": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.025,
+    "cos_with_story_dom": -0.02
+   },
+   "35": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.028,
+    "cos_with_story_dom": -0.027
+   }
+  },
+  "action": {
+   "6": {
+    "loro_sign_acc": 0.909,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.002,
+    "cos_with_story_dom": 0.062
+   },
+   "8": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.002,
+    "cos_with_story_dom": -0.132
+   },
+   "10": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.004,
+    "cos_with_story_dom": -0.012
+   },
+   "12": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.005,
+    "cos_with_story_dom": -0.019
+   },
+   "14": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.006,
+    "cos_with_story_dom": -0.026
+   },
+   "16": {
+    "loro_sign_acc": 1.0,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.008,
+    "cos_with_story_dom": 0.011
+   },
+   "18": {
+    "loro_sign_acc": 0.932,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.009,
+    "cos_with_story_dom": 0.035
+   },
+   "20": {
+    "loro_sign_acc": 0.932,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.008,
+    "cos_with_story_dom": 0.028
+   },
+   "22": {
+    "loro_sign_acc": 0.886,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.008,
+    "cos_with_story_dom": 0.02
+   },
+   "23": {
+    "loro_sign_acc": 0.886,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.007,
+    "cos_with_story_dom": 0.021
+   },
+   "24": {
+    "loro_sign_acc": 0.909,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.008,
+    "cos_with_story_dom": 0.036
+   },
+   "26": {
+    "loro_sign_acc": 0.909,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.007,
+    "cos_with_story_dom": 0.007
+   },
+   "28": {
+    "loro_sign_acc": 0.841,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.007,
+    "cos_with_story_dom": -0.012
+   },
+   "30": {
+    "loro_sign_acc": 0.795,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.008,
+    "cos_with_story_dom": -0.04
+   },
+   "32": {
+    "loro_sign_acc": 0.795,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.007,
+    "cos_with_story_dom": -0.078
+   },
+   "34": {
+    "loro_sign_acc": 0.773,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.006,
+    "cos_with_story_dom": -0.14
+   },
+   "35": {
+    "loro_sign_acc": 0.773,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.015,
+    "cos_with_story_dom": -0.282
+   }
+  },
+  "pre": {
+   "6": {
+    "loro_sign_acc": 0.545,
+    "perm_p": 0.38,
+    "rel_diff_norm": 0.021,
+    "cos_with_story_dom": 0.008
+   },
+   "8": {
+    "loro_sign_acc": 0.682,
+    "perm_p": 0.015,
+    "rel_diff_norm": 0.03,
+    "cos_with_story_dom": 0.03
+   },
+   "10": {
+    "loro_sign_acc": 0.773,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.033,
+    "cos_with_story_dom": -0.03
+   },
+   "12": {
+    "loro_sign_acc": 0.795,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.043,
+    "cos_with_story_dom": -0.047
+   },
+   "14": {
+    "loro_sign_acc": 0.909,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.057,
+    "cos_with_story_dom": -0.06
+   },
+   "16": {
+    "loro_sign_acc": 0.773,
+    "perm_p": 0.005,
+    "rel_diff_norm": 0.071,
+    "cos_with_story_dom": -0.039
+   },
+   "18": {
+    "loro_sign_acc": 0.75,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.072,
+    "cos_with_story_dom": -0.012
+   },
+   "20": {
+    "loro_sign_acc": 0.864,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.079,
+    "cos_with_story_dom": 0.001
+   },
+   "22": {
+    "loro_sign_acc": 0.932,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.079,
+    "cos_with_story_dom": 0.001
+   },
+   "23": {
+    "loro_sign_acc": 0.909,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.078,
+    "cos_with_story_dom": -0.028
+   },
+   "24": {
+    "loro_sign_acc": 0.955,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.077,
+    "cos_with_story_dom": -0.021
+   },
+   "26": {
+    "loro_sign_acc": 0.977,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.08,
+    "cos_with_story_dom": -0.048
+   },
+   "28": {
+    "loro_sign_acc": 0.977,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.076,
+    "cos_with_story_dom": -0.057
+   },
+   "30": {
+    "loro_sign_acc": 0.932,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.084,
+    "cos_with_story_dom": -0.087
+   },
+   "32": {
+    "loro_sign_acc": 0.955,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.081,
+    "cos_with_story_dom": -0.065
+   },
+   "34": {
+    "loro_sign_acc": 0.977,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.079,
+    "cos_with_story_dom": -0.003
+   },
+   "35": {
+    "loro_sign_acc": 0.955,
+    "perm_p": 0.0,
+    "rel_diff_norm": 0.09,
+    "cos_with_story_dom": 0.072
+   }
+  }
+ }
+}

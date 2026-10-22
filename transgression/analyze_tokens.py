@@ -43,7 +43,7 @@ def load(tok_dir: Path):
                 if not np.array_equal(A[f"{t}_ids"], F[f"{t}_ids"]):
                     print(f"[tok] {fa.stem} {t}: token ids differ, skipped")
                     continue
-                r[t] = {"A": A[f"{t}_proj"].astype(np.float64), "F": F[f"{t}_proj"].astype(np.float64),
+                r[t] = {"A": A[f"{t}_proj"].astype(np.float32), "F": F[f"{t}_proj"].astype(np.float32),
                         "mA": A[f"{t}_mean"].astype(np.float64), "mF": F[f"{t}_mean"].astype(np.float64)}
         if "action" in r:
             a = r["action"]
