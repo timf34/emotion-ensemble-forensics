@@ -1,0 +1,745 @@
+[
+ {
+  "env": "lru",
+  "run": "run-1",
+  "onset": 18,
+  "n_turns": 21,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-2",
+  "onset": 36,
+  "n_turns": 38,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-3",
+  "onset": 30,
+  "n_turns": 33,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-4",
+  "onset": 25,
+  "n_turns": 28,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-5",
+  "onset": 12,
+  "n_turns": 14,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-6",
+  "onset": 23,
+  "n_turns": 26,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-7",
+  "onset": 8,
+  "n_turns": 11,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-8",
+  "onset": 12,
+  "n_turns": 15,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-9",
+  "onset": 14,
+  "n_turns": 17,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-10",
+  "onset": 10,
+  "n_turns": 13,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-11",
+  "onset": 19,
+  "n_turns": 22,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-12",
+  "onset": 29,
+  "n_turns": 32,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-13",
+  "onset": 15,
+  "n_turns": 18,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-14",
+  "onset": 12,
+  "n_turns": 15,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-15",
+  "onset": 18,
+  "n_turns": 20,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-16",
+  "onset": 18,
+  "n_turns": 21,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-17",
+  "onset": 20,
+  "n_turns": 22,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-18",
+  "onset": 10,
+  "n_turns": 13,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-20",
+  "onset": 14,
+  "n_turns": 17,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-21",
+  "onset": 20,
+  "n_turns": 23,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-22",
+  "onset": 12,
+  "n_turns": 15,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-23",
+  "onset": 15,
+  "n_turns": 17,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-25",
+  "onset": 12,
+  "n_turns": 15,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-27",
+  "onset": 32,
+  "n_turns": 35,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-28",
+  "onset": 27,
+  "n_turns": 29,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-29",
+  "onset": 16,
+  "n_turns": 18,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-31",
+  "onset": 17,
+  "n_turns": 20,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-32",
+  "onset": 29,
+  "n_turns": 32,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-33",
+  "onset": 12,
+  "n_turns": 15,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-34",
+  "onset": 13,
+  "n_turns": 16,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-36",
+  "onset": 12,
+  "n_turns": 15,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-37",
+  "onset": 9,
+  "n_turns": 12,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-38",
+  "onset": 40,
+  "n_turns": 43,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-39",
+  "onset": 17,
+  "n_turns": 20,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-41",
+  "onset": 22,
+  "n_turns": 25,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-42",
+  "onset": 15,
+  "n_turns": 17,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-43",
+  "onset": 47,
+  "n_turns": 50,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-44",
+  "onset": 21,
+  "n_turns": 24,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-45",
+  "onset": 16,
+  "n_turns": 19,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-46",
+  "onset": 28,
+  "n_turns": 31,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-47",
+  "onset": 59,
+  "n_turns": 61,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-48",
+  "onset": 19,
+  "n_turns": 22,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-49",
+  "onset": 8,
+  "n_turns": 11,
+  "states_rule_turns": null
+ },
+ {
+  "env": "lru",
+  "run": "run-50",
+  "onset": 10,
+  "n_turns": 13,
+  "states_rule_turns": null
+ },
+ {
+  "env": "palisades",
+  "run": "run-1",
+  "onset": 4,
+  "n_turns": 7,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-2",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-3",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-4",
+  "onset": 14,
+  "n_turns": 17,
+  "states_rule_turns": [
+   0,
+   10,
+   12
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-5",
+  "onset": 0,
+  "n_turns": 3,
+  "states_rule_turns": []
+ },
+ {
+  "env": "palisades",
+  "run": "run-6",
+  "onset": 0,
+  "n_turns": 3,
+  "states_rule_turns": []
+ },
+ {
+  "env": "palisades",
+  "run": "run-7",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-8",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-9",
+  "onset": 4,
+  "n_turns": 7,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-10",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-11",
+  "onset": 4,
+  "n_turns": 7,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-12",
+  "onset": 6,
+  "n_turns": 9,
+  "states_rule_turns": [
+   0,
+   5
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-13",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": []
+ },
+ {
+  "env": "palisades",
+  "run": "run-14",
+  "onset": 4,
+  "n_turns": 7,
+  "states_rule_turns": []
+ },
+ {
+  "env": "palisades",
+  "run": "run-15",
+  "onset": 6,
+  "n_turns": 9,
+  "states_rule_turns": [
+   0,
+   5
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-16",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-17",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": [
+   0,
+   4
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-18",
+  "onset": 6,
+  "n_turns": 9,
+  "states_rule_turns": [
+   0,
+   5
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-19",
+  "onset": 0,
+  "n_turns": 3,
+  "states_rule_turns": []
+ },
+ {
+  "env": "palisades",
+  "run": "run-20",
+  "onset": 4,
+  "n_turns": 7,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-21",
+  "onset": 7,
+  "n_turns": 10,
+  "states_rule_turns": [
+   0,
+   6
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-22",
+  "onset": 6,
+  "n_turns": 9,
+  "states_rule_turns": [
+   0,
+   5
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-23",
+  "onset": 6,
+  "n_turns": 9,
+  "states_rule_turns": [
+   5
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-24",
+  "onset": 4,
+  "n_turns": 7,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-25",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": [
+   0,
+   4
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-26",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": []
+ },
+ {
+  "env": "palisades",
+  "run": "run-27",
+  "onset": 0,
+  "n_turns": 3,
+  "states_rule_turns": []
+ },
+ {
+  "env": "palisades",
+  "run": "run-28",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-29",
+  "onset": 6,
+  "n_turns": 9,
+  "states_rule_turns": [
+   0,
+   5
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-30",
+  "onset": 6,
+  "n_turns": 9,
+  "states_rule_turns": [
+   0,
+   4,
+   5
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-31",
+  "onset": 7,
+  "n_turns": 10,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-32",
+  "onset": 6,
+  "n_turns": 9,
+  "states_rule_turns": [
+   0,
+   5
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-33",
+  "onset": 0,
+  "n_turns": 3,
+  "states_rule_turns": []
+ },
+ {
+  "env": "palisades",
+  "run": "run-34",
+  "onset": 6,
+  "n_turns": 9,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-35",
+  "onset": 2,
+  "n_turns": 5,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-36",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-37",
+  "onset": 4,
+  "n_turns": 7,
+  "states_rule_turns": [
+   3
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-38",
+  "onset": 0,
+  "n_turns": 3,
+  "states_rule_turns": []
+ },
+ {
+  "env": "palisades",
+  "run": "run-39",
+  "onset": 3,
+  "n_turns": 6,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-40",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": []
+ },
+ {
+  "env": "palisades",
+  "run": "run-42",
+  "onset": 6,
+  "n_turns": 9,
+  "states_rule_turns": [
+   5
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-43",
+  "onset": 6,
+  "n_turns": 9,
+  "states_rule_turns": [
+   0,
+   5
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-44",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-45",
+  "onset": 6,
+  "n_turns": 9,
+  "states_rule_turns": [
+   0,
+   5
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-46",
+  "onset": 4,
+  "n_turns": 7,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-47",
+  "onset": 8,
+  "n_turns": 11,
+  "states_rule_turns": [
+   0,
+   6
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-48",
+  "onset": 5,
+  "n_turns": 8,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-49",
+  "onset": 4,
+  "n_turns": 7,
+  "states_rule_turns": [
+   0
+  ]
+ },
+ {
+  "env": "palisades",
+  "run": "run-50",
+  "onset": 0,
+  "n_turns": 3,
+  "states_rule_turns": []
+ }
+]
