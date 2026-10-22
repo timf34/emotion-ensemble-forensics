@@ -1,0 +1,8353 @@
+{
+ "model": "20b",
+ "stories": {
+  "blocks": [
+   6,
+   8,
+   10,
+   12,
+   14,
+   15,
+   16,
+   18,
+   20,
+   22,
+   23
+  ],
+  "act_hash_consistent": 1.0,
+  "per_block": {
+   "6": {
+    "dom": {
+     "auroc": 0.638,
+     "pair_acc": 0.985,
+     "cond_z": {
+      "forbid_do": 0.459,
+      "allow_do": 0.0,
+      "unaware_do": 0.794,
+      "forbid_decline": 0.653,
+      "allow_decline": 0.23
+     },
+     "interaction": 0.036,
+     "interaction_ci": [
+      0.023,
+      0.049
+     ],
+     "unaware_vs_allow_pair": 0.974,
+     "forbid_vs_unaware_pair": 0.232,
+     "auroc_unaware_vs_allow": 0.732
+    },
+    "dom_perp": {
+     "auroc": 0.535,
+     "pair_acc": 0.84,
+     "cond_z": {
+      "forbid_do": 0.112,
+      "allow_do": 0.0,
+      "unaware_do": 0.317,
+      "forbid_decline": 0.636,
+      "allow_decline": 0.635
+     },
+     "interaction": 0.111,
+     "interaction_ci": [
+      0.096,
+      0.126
+     ],
+     "unaware_vs_allow_pair": 0.861,
+     "forbid_vs_unaware_pair": 0.237,
+     "auroc_unaware_vs_allow": 0.596
+    },
+    "logreg": {
+     "auroc": 0.929,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.382,
+      "allow_do": 0.0,
+      "unaware_do": 1.024,
+      "forbid_decline": 2.035,
+      "allow_decline": 0.762
+     },
+     "interaction": 0.108,
+     "interaction_ci": [
+      0.083,
+      0.133
+     ],
+     "unaware_vs_allow_pair": 0.969,
+     "forbid_vs_unaware_pair": 0.696,
+     "auroc_unaware_vs_allow": 0.864
+    },
+    "rule_text": {
+     "auroc": 0.55,
+     "pair_acc": 0.964,
+     "cond_z": {
+      "forbid_do": 0.173,
+      "allow_do": 0.0,
+      "unaware_do": 0.258,
+      "forbid_decline": 0.191,
+      "allow_decline": 0.055
+     },
+     "interaction": 0.037,
+     "interaction_ci": [
+      0.025,
+      0.05
+     ],
+     "unaware_vs_allow_pair": 0.861,
+     "forbid_vs_unaware_pair": 0.366,
+     "auroc_unaware_vs_allow": 0.572
+    },
+    "emo:guilty": {
+     "auroc": 0.545,
+     "pair_acc": 0.845,
+     "cond_z": {
+      "forbid_do": 0.163,
+      "allow_do": 0.0,
+      "unaware_do": 0.612,
+      "forbid_decline": 0.68,
+      "allow_decline": 0.538
+     },
+     "interaction": 0.021,
+     "interaction_ci": [
+      0.009,
+      0.033
+     ],
+     "unaware_vs_allow_pair": 0.964,
+     "forbid_vs_unaware_pair": 0.093,
+     "auroc_unaware_vs_allow": 0.672
+    },
+    "emo:ashamed": {
+     "auroc": 0.552,
+     "pair_acc": 0.84,
+     "cond_z": {
+      "forbid_do": 0.173,
+      "allow_do": 0.0,
+      "unaware_do": 0.539,
+      "forbid_decline": 0.237,
+      "allow_decline": 0.08
+     },
+     "interaction": 0.016,
+     "interaction_ci": [
+      0.004,
+      0.028
+     ],
+     "unaware_vs_allow_pair": 0.948,
+     "forbid_vs_unaware_pair": 0.155,
+     "auroc_unaware_vs_allow": 0.651
+    },
+    "emo:regretful": {
+     "auroc": 0.514,
+     "pair_acc": 0.624,
+     "cond_z": {
+      "forbid_do": 0.044,
+      "allow_do": 0.0,
+      "unaware_do": 0.192,
+      "forbid_decline": -0.117,
+      "allow_decline": -0.152
+     },
+     "interaction": 0.01,
+     "interaction_ci": [
+      0.001,
+      0.019
+     ],
+     "unaware_vs_allow_pair": 0.768,
+     "forbid_vs_unaware_pair": 0.284,
+     "auroc_unaware_vs_allow": 0.557
+    },
+    "emo:sorry": {
+     "auroc": 0.533,
+     "pair_acc": 0.804,
+     "cond_z": {
+      "forbid_do": 0.102,
+      "allow_do": 0.0,
+      "unaware_do": 0.213,
+      "forbid_decline": 0.041,
+      "allow_decline": -0.038
+     },
+     "interaction": 0.023,
+     "interaction_ci": [
+      0.013,
+      0.033
+     ],
+     "unaware_vs_allow_pair": 0.758,
+     "forbid_vs_unaware_pair": 0.309,
+     "auroc_unaware_vs_allow": 0.564
+    },
+    "emo:nervous": {
+     "auroc": 0.528,
+     "pair_acc": 0.814,
+     "cond_z": {
+      "forbid_do": 0.087,
+      "allow_do": 0.0,
+      "unaware_do": 0.047,
+      "forbid_decline": 0.075,
+      "allow_decline": 0.012
+     },
+     "interaction": 0.024,
+     "interaction_ci": [
+      0.015,
+      0.033
+     ],
+     "unaware_vs_allow_pair": 0.546,
+     "forbid_vs_unaware_pair": 0.562,
+     "auroc_unaware_vs_allow": 0.515
+    },
+    "emo:calm": {
+     "auroc": 0.441,
+     "pair_acc": 0.046,
+     "cond_z": {
+      "forbid_do": -0.207,
+      "allow_do": 0.0,
+      "unaware_do": -0.522,
+      "forbid_decline": 0.402,
+      "allow_decline": 0.598
+     },
+     "interaction": -0.011,
+     "interaction_ci": [
+      -0.019,
+      -0.002
+     ],
+     "unaware_vs_allow_pair": 0.036,
+     "forbid_vs_unaware_pair": 0.866,
+     "auroc_unaware_vs_allow": 0.355
+    },
+    "emo:desperate": {
+     "auroc": 0.535,
+     "pair_acc": 0.887,
+     "cond_z": {
+      "forbid_do": 0.112,
+      "allow_do": 0.0,
+      "unaware_do": 0.211,
+      "forbid_decline": -0.456,
+      "allow_decline": -0.588
+     },
+     "interaction": -0.019,
+     "interaction_ci": [
+      -0.028,
+      -0.01
+     ],
+     "unaware_vs_allow_pair": 0.835,
+     "forbid_vs_unaware_pair": 0.278,
+     "auroc_unaware_vs_allow": 0.562
+    },
+    "goodfire": {
+     "auroc": 0.521,
+     "pair_acc": 0.799,
+     "cond_z": {
+      "forbid_do": 0.068,
+      "allow_do": 0.0,
+      "unaware_do": 0.302,
+      "forbid_decline": 0.687,
+      "allow_decline": 0.625
+     },
+     "interaction": 0.006,
+     "interaction_ci": [
+      -0.004,
+      0.016
+     ],
+     "unaware_vs_allow_pair": 0.902,
+     "forbid_vs_unaware_pair": 0.186,
+     "auroc_unaware_vs_allow": 0.59
+    },
+    "random": {
+     "auroc_mean": 0.502,
+     "auroc_abs_p95": 0.531,
+     "auroc_abs_max": 0.553
+    }
+   },
+   "8": {
+    "dom": {
+     "auroc": 0.679,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 0.587,
+      "allow_do": 0.0,
+      "unaware_do": 0.865,
+      "forbid_decline": 0.843,
+      "allow_decline": 0.368
+     },
+     "interaction": 0.113,
+     "interaction_ci": [
+      0.095,
+      0.132
+     ],
+     "unaware_vs_allow_pair": 0.974,
+     "forbid_vs_unaware_pair": 0.278,
+     "auroc_unaware_vs_allow": 0.756
+    },
+    "dom_perp": {
+     "auroc": 0.563,
+     "pair_acc": 0.876,
+     "cond_z": {
+      "forbid_do": 0.23,
+      "allow_do": 0.0,
+      "unaware_do": 0.48,
+      "forbid_decline": -0.213,
+      "allow_decline": -0.211
+     },
+     "interaction": 0.232,
+     "interaction_ci": [
+      0.205,
+      0.26
+     ],
+     "unaware_vs_allow_pair": 0.907,
+     "forbid_vs_unaware_pair": 0.278,
+     "auroc_unaware_vs_allow": 0.628
+    },
+    "logreg": {
+     "auroc": 0.961,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.506,
+      "allow_do": 0.0,
+      "unaware_do": 1.266,
+      "forbid_decline": 2.166,
+      "allow_decline": 0.833
+     },
+     "interaction": 0.173,
+     "interaction_ci": [
+      0.141,
+      0.205
+     ],
+     "unaware_vs_allow_pair": 0.985,
+     "forbid_vs_unaware_pair": 0.665,
+     "auroc_unaware_vs_allow": 0.927
+    },
+    "rule_text": {
+     "auroc": 0.586,
+     "pair_acc": 0.959,
+     "cond_z": {
+      "forbid_do": 0.287,
+      "allow_do": 0.0,
+      "unaware_do": 0.388,
+      "forbid_decline": 0.706,
+      "allow_decline": 0.489
+     },
+     "interaction": 0.07,
+     "interaction_ci": [
+      0.05,
+      0.09
+     ],
+     "unaware_vs_allow_pair": 0.876,
+     "forbid_vs_unaware_pair": 0.345,
+     "auroc_unaware_vs_allow": 0.611
+    },
+    "emo:guilty": {
+     "auroc": 0.585,
+     "pair_acc": 0.887,
+     "cond_z": {
+      "forbid_do": 0.253,
+      "allow_do": 0.0,
+      "unaware_do": 0.726,
+      "forbid_decline": 0.581,
+      "allow_decline": 0.399
+     },
+     "interaction": 0.071,
+     "interaction_ci": [
+      0.057,
+      0.085
+     ],
+     "unaware_vs_allow_pair": 0.933,
+     "forbid_vs_unaware_pair": 0.139,
+     "auroc_unaware_vs_allow": 0.723
+    },
+    "emo:ashamed": {
+     "auroc": 0.564,
+     "pair_acc": 0.881,
+     "cond_z": {
+      "forbid_do": 0.212,
+      "allow_do": 0.0,
+      "unaware_do": 0.527,
+      "forbid_decline": 0.272,
+      "allow_decline": 0.101
+     },
+     "interaction": 0.041,
+     "interaction_ci": [
+      0.029,
+      0.053
+     ],
+     "unaware_vs_allow_pair": 0.933,
+     "forbid_vs_unaware_pair": 0.196,
+     "auroc_unaware_vs_allow": 0.652
+    },
+    "emo:regretful": {
+     "auroc": 0.549,
+     "pair_acc": 0.892,
+     "cond_z": {
+      "forbid_do": 0.151,
+      "allow_do": 0.0,
+      "unaware_do": 0.323,
+      "forbid_decline": -0.171,
+      "allow_decline": -0.262
+     },
+     "interaction": 0.06,
+     "interaction_ci": [
+      0.046,
+      0.074
+     ],
+     "unaware_vs_allow_pair": 0.84,
+     "forbid_vs_unaware_pair": 0.284,
+     "auroc_unaware_vs_allow": 0.6
+    },
+    "emo:sorry": {
+     "auroc": 0.537,
+     "pair_acc": 0.871,
+     "cond_z": {
+      "forbid_do": 0.12,
+      "allow_do": 0.0,
+      "unaware_do": 0.127,
+      "forbid_decline": -0.264,
+      "allow_decline": -0.325
+     },
+     "interaction": 0.058,
+     "interaction_ci": [
+      0.046,
+      0.071
+     ],
+     "unaware_vs_allow_pair": 0.66,
+     "forbid_vs_unaware_pair": 0.459,
+     "auroc_unaware_vs_allow": 0.537
+    },
+    "emo:nervous": {
+     "auroc": 0.503,
+     "pair_acc": 0.505,
+     "cond_z": {
+      "forbid_do": 0.008,
+      "allow_do": 0.0,
+      "unaware_do": -0.101,
+      "forbid_decline": 0.166,
+      "allow_decline": 0.177
+     },
+     "interaction": 0.019,
+     "interaction_ci": [
+      0.008,
+      0.029
+     ],
+     "unaware_vs_allow_pair": 0.34,
+     "forbid_vs_unaware_pair": 0.737,
+     "auroc_unaware_vs_allow": 0.475
+    },
+    "emo:calm": {
+     "auroc": 0.419,
+     "pair_acc": 0.072,
+     "cond_z": {
+      "forbid_do": -0.264,
+      "allow_do": 0.0,
+      "unaware_do": -0.657,
+      "forbid_decline": 0.173,
+      "allow_decline": 0.415
+     },
+     "interaction": -0.023,
+     "interaction_ci": [
+      -0.033,
+      -0.012
+     ],
+     "unaware_vs_allow_pair": 0.041,
+     "forbid_vs_unaware_pair": 0.835,
+     "auroc_unaware_vs_allow": 0.306
+    },
+    "emo:desperate": {
+     "auroc": 0.526,
+     "pair_acc": 0.835,
+     "cond_z": {
+      "forbid_do": 0.091,
+      "allow_do": 0.0,
+      "unaware_do": 0.264,
+      "forbid_decline": -0.386,
+      "allow_decline": -0.477
+     },
+     "interaction": -0.0,
+     "interaction_ci": [
+      -0.011,
+      0.01
+     ],
+     "unaware_vs_allow_pair": 0.84,
+     "forbid_vs_unaware_pair": 0.263,
+     "auroc_unaware_vs_allow": 0.573
+    },
+    "goodfire": {
+     "auroc": 0.547,
+     "pair_acc": 0.897,
+     "cond_z": {
+      "forbid_do": 0.152,
+      "allow_do": 0.0,
+      "unaware_do": 0.31,
+      "forbid_decline": 0.696,
+      "allow_decline": 0.579
+     },
+     "interaction": 0.035,
+     "interaction_ci": [
+      0.021,
+      0.049
+     ],
+     "unaware_vs_allow_pair": 0.84,
+     "forbid_vs_unaware_pair": 0.289,
+     "auroc_unaware_vs_allow": 0.597
+    },
+    "random": {
+     "auroc_mean": 0.501,
+     "auroc_abs_p95": 0.545,
+     "auroc_abs_max": 0.562
+    }
+   },
+   "10": {
+    "dom": {
+     "auroc": 0.802,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 0.952,
+      "allow_do": 0.0,
+      "unaware_do": 0.834,
+      "forbid_decline": 1.37,
+      "allow_decline": 0.642
+     },
+     "interaction": 0.224,
+     "interaction_ci": [
+      0.193,
+      0.257
+     ],
+     "unaware_vs_allow_pair": 0.954,
+     "forbid_vs_unaware_pair": 0.603,
+     "auroc_unaware_vs_allow": 0.773
+    },
+    "dom_perp": {
+     "auroc": 0.653,
+     "pair_acc": 0.974,
+     "cond_z": {
+      "forbid_do": 0.533,
+      "allow_do": 0.0,
+      "unaware_do": 0.649,
+      "forbid_decline": -0.122,
+      "allow_decline": -0.134
+     },
+     "interaction": 0.52,
+     "interaction_ci": [
+      0.473,
+      0.568
+     ],
+     "unaware_vs_allow_pair": 0.923,
+     "forbid_vs_unaware_pair": 0.412,
+     "auroc_unaware_vs_allow": 0.686
+    },
+    "logreg": {
+     "auroc": 0.983,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.683,
+      "allow_do": 0.0,
+      "unaware_do": 1.109,
+      "forbid_decline": 2.046,
+      "allow_decline": 0.563
+     },
+     "interaction": 0.2,
+     "interaction_ci": [
+      0.164,
+      0.241
+     ],
+     "unaware_vs_allow_pair": 0.979,
+     "forbid_vs_unaware_pair": 0.814,
+     "auroc_unaware_vs_allow": 0.927
+    },
+    "rule_text": {
+     "auroc": 0.686,
+     "pair_acc": 0.985,
+     "cond_z": {
+      "forbid_do": 0.592,
+      "allow_do": 0.0,
+      "unaware_do": 0.598,
+      "forbid_decline": 1.135,
+      "allow_decline": 0.712
+     },
+     "interaction": 0.169,
+     "interaction_ci": [
+      0.136,
+      0.203
+     ],
+     "unaware_vs_allow_pair": 0.923,
+     "forbid_vs_unaware_pair": 0.5,
+     "auroc_unaware_vs_allow": 0.682
+    },
+    "emo:guilty": {
+     "auroc": 0.581,
+     "pair_acc": 0.871,
+     "cond_z": {
+      "forbid_do": 0.277,
+      "allow_do": 0.0,
+      "unaware_do": 0.712,
+      "forbid_decline": 0.754,
+      "allow_decline": 0.612
+     },
+     "interaction": 0.136,
+     "interaction_ci": [
+      0.115,
+      0.157
+     ],
+     "unaware_vs_allow_pair": 0.954,
+     "forbid_vs_unaware_pair": 0.108,
+     "auroc_unaware_vs_allow": 0.702
+    },
+    "emo:ashamed": {
+     "auroc": 0.584,
+     "pair_acc": 0.918,
+     "cond_z": {
+      "forbid_do": 0.292,
+      "allow_do": 0.0,
+      "unaware_do": 0.624,
+      "forbid_decline": 0.682,
+      "allow_decline": 0.471
+     },
+     "interaction": 0.081,
+     "interaction_ci": [
+      0.061,
+      0.101
+     ],
+     "unaware_vs_allow_pair": 0.974,
+     "forbid_vs_unaware_pair": 0.165,
+     "auroc_unaware_vs_allow": 0.674
+    },
+    "emo:regretful": {
+     "auroc": 0.567,
+     "pair_acc": 0.902,
+     "cond_z": {
+      "forbid_do": 0.234,
+      "allow_do": 0.0,
+      "unaware_do": 0.402,
+      "forbid_decline": 0.267,
+      "allow_decline": 0.147
+     },
+     "interaction": 0.113,
+     "interaction_ci": [
+      0.092,
+      0.135
+     ],
+     "unaware_vs_allow_pair": 0.892,
+     "forbid_vs_unaware_pair": 0.242,
+     "auroc_unaware_vs_allow": 0.617
+    },
+    "emo:sorry": {
+     "auroc": 0.59,
+     "pair_acc": 0.938,
+     "cond_z": {
+      "forbid_do": 0.308,
+      "allow_do": 0.0,
+      "unaware_do": 0.367,
+      "forbid_decline": 0.245,
+      "allow_decline": 0.027
+     },
+     "interaction": 0.091,
+     "interaction_ci": [
+      0.069,
+      0.114
+     ],
+     "unaware_vs_allow_pair": 0.881,
+     "forbid_vs_unaware_pair": 0.387,
+     "auroc_unaware_vs_allow": 0.607
+    },
+    "emo:nervous": {
+     "auroc": 0.5,
+     "pair_acc": 0.49,
+     "cond_z": {
+      "forbid_do": -0.001,
+      "allow_do": 0.0,
+      "unaware_do": -0.052,
+      "forbid_decline": 0.415,
+      "allow_decline": 0.408
+     },
+     "interaction": -0.007,
+     "interaction_ci": [
+      -0.02,
+      0.006
+     ],
+     "unaware_vs_allow_pair": 0.397,
+     "forbid_vs_unaware_pair": 0.582,
+     "auroc_unaware_vs_allow": 0.486
+    },
+    "emo:calm": {
+     "auroc": 0.328,
+     "pair_acc": 0.021,
+     "cond_z": {
+      "forbid_do": -0.539,
+      "allow_do": 0.0,
+      "unaware_do": -0.976,
+      "forbid_decline": -0.116,
+      "allow_decline": 0.31
+     },
+     "interaction": -0.113,
+     "interaction_ci": [
+      -0.133,
+      -0.094
+     ],
+     "unaware_vs_allow_pair": 0.015,
+     "forbid_vs_unaware_pair": 0.851,
+     "auroc_unaware_vs_allow": 0.204
+    },
+    "emo:desperate": {
+     "auroc": 0.577,
+     "pair_acc": 0.923,
+     "cond_z": {
+      "forbid_do": 0.289,
+      "allow_do": 0.0,
+      "unaware_do": 0.367,
+      "forbid_decline": 0.101,
+      "allow_decline": -0.155
+     },
+     "interaction": 0.034,
+     "interaction_ci": [
+      0.019,
+      0.049
+     ],
+     "unaware_vs_allow_pair": 0.918,
+     "forbid_vs_unaware_pair": 0.33,
+     "auroc_unaware_vs_allow": 0.604
+    },
+    "goodfire": {
+     "auroc": 0.556,
+     "pair_acc": 0.887,
+     "cond_z": {
+      "forbid_do": 0.182,
+      "allow_do": 0.0,
+      "unaware_do": 0.336,
+      "forbid_decline": 0.684,
+      "allow_decline": 0.584
+     },
+     "interaction": 0.083,
+     "interaction_ci": [
+      0.063,
+      0.103
+     ],
+     "unaware_vs_allow_pair": 0.892,
+     "forbid_vs_unaware_pair": 0.268,
+     "auroc_unaware_vs_allow": 0.602
+    },
+    "random": {
+     "auroc_mean": 0.501,
+     "auroc_abs_p95": 0.552,
+     "auroc_abs_max": 0.584
+    }
+   },
+   "12": {
+    "dom": {
+     "auroc": 0.887,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.326,
+      "allow_do": 0.0,
+      "unaware_do": 1.085,
+      "forbid_decline": 1.399,
+      "allow_decline": 0.604
+     },
+     "interaction": 0.531,
+     "interaction_ci": [
+      0.474,
+      0.594
+     ],
+     "unaware_vs_allow_pair": 0.969,
+     "forbid_vs_unaware_pair": 0.67,
+     "auroc_unaware_vs_allow": 0.846
+    },
+    "dom_perp": {
+     "auroc": 0.789,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 0.906,
+      "allow_do": 0.0,
+      "unaware_do": 0.885,
+      "forbid_decline": -0.23,
+      "allow_decline": -0.237
+     },
+     "interaction": 0.899,
+     "interaction_ci": [
+      0.818,
+      0.978
+     ],
+     "unaware_vs_allow_pair": 0.974,
+     "forbid_vs_unaware_pair": 0.505,
+     "auroc_unaware_vs_allow": 0.787
+    },
+    "logreg": {
+     "auroc": 0.985,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.832,
+      "allow_do": 0.0,
+      "unaware_do": 1.073,
+      "forbid_decline": 1.982,
+      "allow_decline": 0.646
+     },
+     "interaction": 0.496,
+     "interaction_ci": [
+      0.436,
+      0.563
+     ],
+     "unaware_vs_allow_pair": 0.959,
+     "forbid_vs_unaware_pair": 0.918,
+     "auroc_unaware_vs_allow": 0.916
+    },
+    "rule_text": {
+     "auroc": 0.749,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 0.732,
+      "allow_do": 0.0,
+      "unaware_do": 0.645,
+      "forbid_decline": 1.628,
+      "allow_decline": 1.03
+     },
+     "interaction": 0.133,
+     "interaction_ci": [
+      0.088,
+      0.181
+     ],
+     "unaware_vs_allow_pair": 0.969,
+     "forbid_vs_unaware_pair": 0.593,
+     "auroc_unaware_vs_allow": 0.724
+    },
+    "emo:guilty": {
+     "auroc": 0.577,
+     "pair_acc": 0.892,
+     "cond_z": {
+      "forbid_do": 0.262,
+      "allow_do": 0.0,
+      "unaware_do": 0.716,
+      "forbid_decline": 0.771,
+      "allow_decline": 0.613
+     },
+     "interaction": 0.105,
+     "interaction_ci": [
+      0.082,
+      0.128
+     ],
+     "unaware_vs_allow_pair": 0.985,
+     "forbid_vs_unaware_pair": 0.057,
+     "auroc_unaware_vs_allow": 0.702
+    },
+    "emo:ashamed": {
+     "auroc": 0.579,
+     "pair_acc": 0.897,
+     "cond_z": {
+      "forbid_do": 0.272,
+      "allow_do": 0.0,
+      "unaware_do": 0.629,
+      "forbid_decline": 0.647,
+      "allow_decline": 0.428
+     },
+     "interaction": 0.053,
+     "interaction_ci": [
+      0.032,
+      0.074
+     ],
+     "unaware_vs_allow_pair": 0.974,
+     "forbid_vs_unaware_pair": 0.108,
+     "auroc_unaware_vs_allow": 0.675
+    },
+    "emo:regretful": {
+     "auroc": 0.552,
+     "pair_acc": 0.881,
+     "cond_z": {
+      "forbid_do": 0.18,
+      "allow_do": 0.0,
+      "unaware_do": 0.414,
+      "forbid_decline": 0.354,
+      "allow_decline": 0.282
+     },
+     "interaction": 0.109,
+     "interaction_ci": [
+      0.086,
+      0.133
+     ],
+     "unaware_vs_allow_pair": 0.918,
+     "forbid_vs_unaware_pair": 0.17,
+     "auroc_unaware_vs_allow": 0.618
+    },
+    "emo:sorry": {
+     "auroc": 0.592,
+     "pair_acc": 0.938,
+     "cond_z": {
+      "forbid_do": 0.309,
+      "allow_do": 0.0,
+      "unaware_do": 0.648,
+      "forbid_decline": 0.284,
+      "allow_decline": 0.161
+     },
+     "interaction": 0.186,
+     "interaction_ci": [
+      0.155,
+      0.217
+     ],
+     "unaware_vs_allow_pair": 0.969,
+     "forbid_vs_unaware_pair": 0.144,
+     "auroc_unaware_vs_allow": 0.683
+    },
+    "emo:nervous": {
+     "auroc": 0.491,
+     "pair_acc": 0.49,
+     "cond_z": {
+      "forbid_do": -0.019,
+      "allow_do": 0.0,
+      "unaware_do": -0.072,
+      "forbid_decline": 0.734,
+      "allow_decline": 0.677
+     },
+     "interaction": -0.075,
+     "interaction_ci": [
+      -0.096,
+      -0.055
+     ],
+     "unaware_vs_allow_pair": 0.371,
+     "forbid_vs_unaware_pair": 0.608,
+     "auroc_unaware_vs_allow": 0.476
+    },
+    "emo:calm": {
+     "auroc": 0.311,
+     "pair_acc": 0.026,
+     "cond_z": {
+      "forbid_do": -0.573,
+      "allow_do": 0.0,
+      "unaware_do": -1.046,
+      "forbid_decline": 0.075,
+      "allow_decline": 0.467
+     },
+     "interaction": -0.181,
+     "interaction_ci": [
+      -0.211,
+      -0.152
+     ],
+     "unaware_vs_allow_pair": 0.005,
+     "forbid_vs_unaware_pair": 0.902,
+     "auroc_unaware_vs_allow": 0.186
+    },
+    "emo:desperate": {
+     "auroc": 0.592,
+     "pair_acc": 0.923,
+     "cond_z": {
+      "forbid_do": 0.315,
+      "allow_do": 0.0,
+      "unaware_do": 0.541,
+      "forbid_decline": 0.017,
+      "allow_decline": -0.166
+     },
+     "interaction": 0.132,
+     "interaction_ci": [
+      0.11,
+      0.154
+     ],
+     "unaware_vs_allow_pair": 0.954,
+     "forbid_vs_unaware_pair": 0.196,
+     "auroc_unaware_vs_allow": 0.661
+    },
+    "goodfire": {
+     "auroc": 0.578,
+     "pair_acc": 0.928,
+     "cond_z": {
+      "forbid_do": 0.273,
+      "allow_do": 0.0,
+      "unaware_do": 0.351,
+      "forbid_decline": 0.625,
+      "allow_decline": 0.475
+     },
+     "interaction": 0.123,
+     "interaction_ci": [
+      0.097,
+      0.149
+     ],
+     "unaware_vs_allow_pair": 0.892,
+     "forbid_vs_unaware_pair": 0.418,
+     "auroc_unaware_vs_allow": 0.6
+    },
+    "random": {
+     "auroc_mean": 0.501,
+     "auroc_abs_p95": 0.577,
+     "auroc_abs_max": 0.593
+    }
+   },
+   "14": {
+    "dom": {
+     "auroc": 0.951,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.744,
+      "allow_do": 0.0,
+      "unaware_do": 1.149,
+      "forbid_decline": 1.483,
+      "allow_decline": 0.76
+     },
+     "interaction": 1.021,
+     "interaction_ci": [
+      0.935,
+      1.11
+     ],
+     "unaware_vs_allow_pair": 0.959,
+     "forbid_vs_unaware_pair": 0.902,
+     "auroc_unaware_vs_allow": 0.884
+    },
+    "dom_perp": {
+     "auroc": 0.931,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.536,
+      "allow_do": 0.0,
+      "unaware_do": 1.06,
+      "forbid_decline": 0.487,
+      "allow_decline": 0.479
+     },
+     "interaction": 1.529,
+     "interaction_ci": [
+      1.409,
+      1.645
+     ],
+     "unaware_vs_allow_pair": 0.974,
+     "forbid_vs_unaware_pair": 0.881,
+     "auroc_unaware_vs_allow": 0.858
+    },
+    "logreg": {
+     "auroc": 0.992,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 2.144,
+      "allow_do": 0.0,
+      "unaware_do": 1.117,
+      "forbid_decline": 1.846,
+      "allow_decline": 0.818
+     },
+     "interaction": 1.116,
+     "interaction_ci": [
+      1.023,
+      1.208
+     ],
+     "unaware_vs_allow_pair": 0.954,
+     "forbid_vs_unaware_pair": 0.974,
+     "auroc_unaware_vs_allow": 0.942
+    },
+    "rule_text": {
+     "auroc": 0.792,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 0.81,
+      "allow_do": 0.0,
+      "unaware_do": 0.645,
+      "forbid_decline": 1.813,
+      "allow_decline": 1.131
+     },
+     "interaction": 0.128,
+     "interaction_ci": [
+      0.073,
+      0.188
+     ],
+     "unaware_vs_allow_pair": 0.938,
+     "forbid_vs_unaware_pair": 0.686,
+     "auroc_unaware_vs_allow": 0.744
+    },
+    "emo:guilty": {
+     "auroc": 0.617,
+     "pair_acc": 0.948,
+     "cond_z": {
+      "forbid_do": 0.4,
+      "allow_do": 0.0,
+      "unaware_do": 0.754,
+      "forbid_decline": 0.881,
+      "allow_decline": 0.65
+     },
+     "interaction": 0.169,
+     "interaction_ci": [
+      0.135,
+      0.202
+     ],
+     "unaware_vs_allow_pair": 0.985,
+     "forbid_vs_unaware_pair": 0.149,
+     "auroc_unaware_vs_allow": 0.717
+    },
+    "emo:ashamed": {
+     "auroc": 0.632,
+     "pair_acc": 0.964,
+     "cond_z": {
+      "forbid_do": 0.476,
+      "allow_do": 0.0,
+      "unaware_do": 0.712,
+      "forbid_decline": 0.533,
+      "allow_decline": 0.183
+     },
+     "interaction": 0.127,
+     "interaction_ci": [
+      0.096,
+      0.156
+     ],
+     "unaware_vs_allow_pair": 0.959,
+     "forbid_vs_unaware_pair": 0.242,
+     "auroc_unaware_vs_allow": 0.693
+    },
+    "emo:regretful": {
+     "auroc": 0.569,
+     "pair_acc": 0.866,
+     "cond_z": {
+      "forbid_do": 0.248,
+      "allow_do": 0.0,
+      "unaware_do": 0.509,
+      "forbid_decline": 0.091,
+      "allow_decline": -0.015
+     },
+     "interaction": 0.142,
+     "interaction_ci": [
+      0.11,
+      0.178
+     ],
+     "unaware_vs_allow_pair": 0.912,
+     "forbid_vs_unaware_pair": 0.18,
+     "auroc_unaware_vs_allow": 0.639
+    },
+    "emo:sorry": {
+     "auroc": 0.657,
+     "pair_acc": 0.969,
+     "cond_z": {
+      "forbid_do": 0.551,
+      "allow_do": 0.0,
+      "unaware_do": 0.867,
+      "forbid_decline": 0.192,
+      "allow_decline": -0.077
+     },
+     "interaction": 0.283,
+     "interaction_ci": [
+      0.243,
+      0.322
+     ],
+     "unaware_vs_allow_pair": 0.995,
+     "forbid_vs_unaware_pair": 0.155,
+     "auroc_unaware_vs_allow": 0.74
+    },
+    "emo:nervous": {
+     "auroc": 0.548,
+     "pair_acc": 0.799,
+     "cond_z": {
+      "forbid_do": 0.162,
+      "allow_do": 0.0,
+      "unaware_do": -0.027,
+      "forbid_decline": 0.924,
+      "allow_decline": 0.776
+     },
+     "interaction": 0.014,
+     "interaction_ci": [
+      -0.011,
+      0.039
+     ],
+     "unaware_vs_allow_pair": 0.479,
+     "forbid_vs_unaware_pair": 0.763,
+     "auroc_unaware_vs_allow": 0.496
+    },
+    "emo:calm": {
+     "auroc": 0.252,
+     "pair_acc": 0.005,
+     "cond_z": {
+      "forbid_do": -0.77,
+      "allow_do": 0.0,
+      "unaware_do": -1.144,
+      "forbid_decline": -0.137,
+      "allow_decline": 0.381
+     },
+     "interaction": -0.252,
+     "interaction_ci": [
+      -0.289,
+      -0.216
+     ],
+     "unaware_vs_allow_pair": 0.015,
+     "forbid_vs_unaware_pair": 0.83,
+     "auroc_unaware_vs_allow": 0.161
+    },
+    "emo:desperate": {
+     "auroc": 0.597,
+     "pair_acc": 0.887,
+     "cond_z": {
+      "forbid_do": 0.328,
+      "allow_do": 0.0,
+      "unaware_do": 0.38,
+      "forbid_decline": 0.316,
+      "allow_decline": 0.071
+     },
+     "interaction": 0.082,
+     "interaction_ci": [
+      0.053,
+      0.112
+     ],
+     "unaware_vs_allow_pair": 0.902,
+     "forbid_vs_unaware_pair": 0.397,
+     "auroc_unaware_vs_allow": 0.614
+    },
+    "goodfire": {
+     "auroc": 0.59,
+     "pair_acc": 0.938,
+     "cond_z": {
+      "forbid_do": 0.298,
+      "allow_do": 0.0,
+      "unaware_do": 0.273,
+      "forbid_decline": 0.717,
+      "allow_decline": 0.518
+     },
+     "interaction": 0.098,
+     "interaction_ci": [
+      0.072,
+      0.126
+     ],
+     "unaware_vs_allow_pair": 0.82,
+     "forbid_vs_unaware_pair": 0.557,
+     "auroc_unaware_vs_allow": 0.579
+    },
+    "random": {
+     "auroc_mean": 0.497,
+     "auroc_abs_p95": 0.58,
+     "auroc_abs_max": 0.666
+    }
+   },
+   "15": {
+    "dom": {
+     "auroc": 0.959,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.821,
+      "allow_do": 0.0,
+      "unaware_do": 1.145,
+      "forbid_decline": 1.517,
+      "allow_decline": 0.808
+     },
+     "interaction": 1.112,
+     "interaction_ci": [
+      1.012,
+      1.21
+     ],
+     "unaware_vs_allow_pair": 0.964,
+     "forbid_vs_unaware_pair": 0.928,
+     "auroc_unaware_vs_allow": 0.891
+    },
+    "dom_perp": {
+     "auroc": 0.933,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.593,
+      "allow_do": 0.0,
+      "unaware_do": 1.002,
+      "forbid_decline": 0.779,
+      "allow_decline": 0.762
+     },
+     "interaction": 1.575,
+     "interaction_ci": [
+      1.447,
+      1.696
+     ],
+     "unaware_vs_allow_pair": 0.964,
+     "forbid_vs_unaware_pair": 0.902,
+     "auroc_unaware_vs_allow": 0.841
+    },
+    "logreg": {
+     "auroc": 0.992,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 2.146,
+      "allow_do": 0.0,
+      "unaware_do": 1.165,
+      "forbid_decline": 1.898,
+      "allow_decline": 0.907
+     },
+     "interaction": 1.155,
+     "interaction_ci": [
+      1.056,
+      1.254
+     ],
+     "unaware_vs_allow_pair": 0.974,
+     "forbid_vs_unaware_pair": 0.974,
+     "auroc_unaware_vs_allow": 0.954
+    },
+    "rule_text": {
+     "auroc": 0.839,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 0.958,
+      "allow_do": 0.0,
+      "unaware_do": 0.799,
+      "forbid_decline": 1.833,
+      "allow_decline": 1.04
+     },
+     "interaction": 0.165,
+     "interaction_ci": [
+      0.099,
+      0.237
+     ],
+     "unaware_vs_allow_pair": 0.938,
+     "forbid_vs_unaware_pair": 0.655,
+     "auroc_unaware_vs_allow": 0.797
+    },
+    "emo:guilty": {
+     "auroc": 0.634,
+     "pair_acc": 0.969,
+     "cond_z": {
+      "forbid_do": 0.458,
+      "allow_do": 0.0,
+      "unaware_do": 0.726,
+      "forbid_decline": 0.878,
+      "allow_decline": 0.677
+     },
+     "interaction": 0.257,
+     "interaction_ci": [
+      0.218,
+      0.296
+     ],
+     "unaware_vs_allow_pair": 0.948,
+     "forbid_vs_unaware_pair": 0.211,
+     "auroc_unaware_vs_allow": 0.705
+    },
+    "emo:ashamed": {
+     "auroc": 0.647,
+     "pair_acc": 0.974,
+     "cond_z": {
+      "forbid_do": 0.518,
+      "allow_do": 0.0,
+      "unaware_do": 0.657,
+      "forbid_decline": 0.643,
+      "allow_decline": 0.254
+     },
+     "interaction": 0.129,
+     "interaction_ci": [
+      0.094,
+      0.165
+     ],
+     "unaware_vs_allow_pair": 0.918,
+     "forbid_vs_unaware_pair": 0.366,
+     "auroc_unaware_vs_allow": 0.684
+    },
+    "emo:regretful": {
+     "auroc": 0.581,
+     "pair_acc": 0.907,
+     "cond_z": {
+      "forbid_do": 0.305,
+      "allow_do": 0.0,
+      "unaware_do": 0.524,
+      "forbid_decline": 0.151,
+      "allow_decline": 0.044
+     },
+     "interaction": 0.198,
+     "interaction_ci": [
+      0.163,
+      0.236
+     ],
+     "unaware_vs_allow_pair": 0.892,
+     "forbid_vs_unaware_pair": 0.268,
+     "auroc_unaware_vs_allow": 0.64
+    },
+    "emo:sorry": {
+     "auroc": 0.654,
+     "pair_acc": 0.974,
+     "cond_z": {
+      "forbid_do": 0.541,
+      "allow_do": 0.0,
+      "unaware_do": 0.85,
+      "forbid_decline": 0.304,
+      "allow_decline": -0.002
+     },
+     "interaction": 0.235,
+     "interaction_ci": [
+      0.196,
+      0.278
+     ],
+     "unaware_vs_allow_pair": 0.974,
+     "forbid_vs_unaware_pair": 0.201,
+     "auroc_unaware_vs_allow": 0.738
+    },
+    "emo:nervous": {
+     "auroc": 0.541,
+     "pair_acc": 0.753,
+     "cond_z": {
+      "forbid_do": 0.129,
+      "allow_do": 0.0,
+      "unaware_do": 0.041,
+      "forbid_decline": 0.996,
+      "allow_decline": 0.812
+     },
+     "interaction": -0.054,
+     "interaction_ci": [
+      -0.081,
+      -0.028
+     ],
+     "unaware_vs_allow_pair": 0.562,
+     "forbid_vs_unaware_pair": 0.613,
+     "auroc_unaware_vs_allow": 0.517
+    },
+    "emo:calm": {
+     "auroc": 0.205,
+     "pair_acc": 0.005,
+     "cond_z": {
+      "forbid_do": -0.923,
+      "allow_do": 0.0,
+      "unaware_do": -1.145,
+      "forbid_decline": -0.273,
+      "allow_decline": 0.285
+     },
+     "interaction": -0.365,
+     "interaction_ci": [
+      -0.413,
+      -0.319
+     ],
+     "unaware_vs_allow_pair": 0.021,
+     "forbid_vs_unaware_pair": 0.727,
+     "auroc_unaware_vs_allow": 0.158
+    },
+    "emo:desperate": {
+     "auroc": 0.624,
+     "pair_acc": 0.938,
+     "cond_z": {
+      "forbid_do": 0.417,
+      "allow_do": 0.0,
+      "unaware_do": 0.389,
+      "forbid_decline": 0.014,
+      "allow_decline": -0.215
+     },
+     "interaction": 0.187,
+     "interaction_ci": [
+      0.157,
+      0.22
+     ],
+     "unaware_vs_allow_pair": 0.866,
+     "forbid_vs_unaware_pair": 0.5,
+     "auroc_unaware_vs_allow": 0.617
+    },
+    "goodfire": {
+     "auroc": 0.533,
+     "pair_acc": 0.716,
+     "cond_z": {
+      "forbid_do": 0.095,
+      "allow_do": 0.0,
+      "unaware_do": 0.118,
+      "forbid_decline": 0.378,
+      "allow_decline": 0.274
+     },
+     "interaction": -0.009,
+     "interaction_ci": [
+      -0.032,
+      0.016
+     ],
+     "unaware_vs_allow_pair": 0.629,
+     "forbid_vs_unaware_pair": 0.479,
+     "auroc_unaware_vs_allow": 0.532
+    },
+    "random": {
+     "auroc_mean": 0.501,
+     "auroc_abs_p95": 0.591,
+     "auroc_abs_max": 0.668
+    }
+   },
+   "16": {
+    "dom": {
+     "auroc": 0.921,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.575,
+      "allow_do": 0.0,
+      "unaware_do": 0.952,
+      "forbid_decline": 1.314,
+      "allow_decline": 0.755
+     },
+     "interaction": 1.016,
+     "interaction_ci": [
+      0.925,
+      1.105
+     ],
+     "unaware_vs_allow_pair": 0.948,
+     "forbid_vs_unaware_pair": 0.892,
+     "auroc_unaware_vs_allow": 0.815
+    },
+    "dom_perp": {
+     "auroc": 0.887,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.367,
+      "allow_do": 0.0,
+      "unaware_do": 0.85,
+      "forbid_decline": 0.646,
+      "allow_decline": 0.624
+     },
+     "interaction": 1.346,
+     "interaction_ci": [
+      1.24,
+      1.454
+     ],
+     "unaware_vs_allow_pair": 0.933,
+     "forbid_vs_unaware_pair": 0.861,
+     "auroc_unaware_vs_allow": 0.779
+    },
+    "logreg": {
+     "auroc": 0.99,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 2.076,
+      "allow_do": 0.0,
+      "unaware_do": 1.165,
+      "forbid_decline": 1.991,
+      "allow_decline": 0.983
+     },
+     "interaction": 1.068,
+     "interaction_ci": [
+      0.97,
+      1.167
+     ],
+     "unaware_vs_allow_pair": 0.974,
+     "forbid_vs_unaware_pair": 0.969,
+     "auroc_unaware_vs_allow": 0.953
+    },
+    "rule_text": {
+     "auroc": 0.841,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 0.968,
+      "allow_do": 0.0,
+      "unaware_do": 0.723,
+      "forbid_decline": 1.817,
+      "allow_decline": 1.002
+     },
+     "interaction": 0.152,
+     "interaction_ci": [
+      0.084,
+      0.226
+     ],
+     "unaware_vs_allow_pair": 0.933,
+     "forbid_vs_unaware_pair": 0.742,
+     "auroc_unaware_vs_allow": 0.775
+    },
+    "emo:guilty": {
+     "auroc": 0.669,
+     "pair_acc": 0.974,
+     "cond_z": {
+      "forbid_do": 0.567,
+      "allow_do": 0.0,
+      "unaware_do": 0.685,
+      "forbid_decline": 0.867,
+      "allow_decline": 0.624
+     },
+     "interaction": 0.325,
+     "interaction_ci": [
+      0.283,
+      0.367
+     ],
+     "unaware_vs_allow_pair": 0.959,
+     "forbid_vs_unaware_pair": 0.371,
+     "auroc_unaware_vs_allow": 0.699
+    },
+    "emo:ashamed": {
+     "auroc": 0.666,
+     "pair_acc": 0.974,
+     "cond_z": {
+      "forbid_do": 0.593,
+      "allow_do": 0.0,
+      "unaware_do": 0.687,
+      "forbid_decline": 0.842,
+      "allow_decline": 0.49
+     },
+     "interaction": 0.241,
+     "interaction_ci": [
+      0.202,
+      0.281
+     ],
+     "unaware_vs_allow_pair": 0.948,
+     "forbid_vs_unaware_pair": 0.376,
+     "auroc_unaware_vs_allow": 0.69
+    },
+    "emo:regretful": {
+     "auroc": 0.627,
+     "pair_acc": 0.964,
+     "cond_z": {
+      "forbid_do": 0.45,
+      "allow_do": 0.0,
+      "unaware_do": 0.551,
+      "forbid_decline": 0.22,
+      "allow_decline": 0.03
+     },
+     "interaction": 0.261,
+     "interaction_ci": [
+      0.221,
+      0.303
+     ],
+     "unaware_vs_allow_pair": 0.918,
+     "forbid_vs_unaware_pair": 0.397,
+     "auroc_unaware_vs_allow": 0.652
+    },
+    "emo:sorry": {
+     "auroc": 0.701,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 0.685,
+      "allow_do": 0.0,
+      "unaware_do": 0.791,
+      "forbid_decline": 0.44,
+      "allow_decline": 0.138
+     },
+     "interaction": 0.383,
+     "interaction_ci": [
+      0.339,
+      0.432
+     ],
+     "unaware_vs_allow_pair": 0.974,
+     "forbid_vs_unaware_pair": 0.345,
+     "auroc_unaware_vs_allow": 0.73
+    },
+    "emo:nervous": {
+     "auroc": 0.538,
+     "pair_acc": 0.727,
+     "cond_z": {
+      "forbid_do": 0.121,
+      "allow_do": 0.0,
+      "unaware_do": 0.0,
+      "forbid_decline": 0.999,
+      "allow_decline": 0.846
+     },
+     "interaction": -0.032,
+     "interaction_ci": [
+      -0.062,
+      -0.003
+     ],
+     "unaware_vs_allow_pair": 0.479,
+     "forbid_vs_unaware_pair": 0.655,
+     "auroc_unaware_vs_allow": 0.501
+    },
+    "emo:calm": {
+     "auroc": 0.195,
+     "pair_acc": 0.005,
+     "cond_z": {
+      "forbid_do": -0.998,
+      "allow_do": 0.0,
+      "unaware_do": -1.077,
+      "forbid_decline": -0.572,
+      "allow_decline": -0.108
+     },
+     "interaction": -0.534,
+     "interaction_ci": [
+      -0.588,
+      -0.479
+     ],
+     "unaware_vs_allow_pair": 0.026,
+     "forbid_vs_unaware_pair": 0.598,
+     "auroc_unaware_vs_allow": 0.175
+    },
+    "emo:desperate": {
+     "auroc": 0.659,
+     "pair_acc": 0.964,
+     "cond_z": {
+      "forbid_do": 0.554,
+      "allow_do": 0.0,
+      "unaware_do": 0.481,
+      "forbid_decline": 0.155,
+      "allow_decline": -0.063
+     },
+     "interaction": 0.336,
+     "interaction_ci": [
+      0.293,
+      0.382
+     ],
+     "unaware_vs_allow_pair": 0.912,
+     "forbid_vs_unaware_pair": 0.567,
+     "auroc_unaware_vs_allow": 0.638
+    },
+    "goodfire": {
+     "auroc": 0.504,
+     "pair_acc": 0.546,
+     "cond_z": {
+      "forbid_do": 0.005,
+      "allow_do": 0.0,
+      "unaware_do": 0.117,
+      "forbid_decline": 0.142,
+      "allow_decline": 0.119
+     },
+     "interaction": -0.019,
+     "interaction_ci": [
+      -0.039,
+      0.003
+     ],
+     "unaware_vs_allow_pair": 0.655,
+     "forbid_vs_unaware_pair": 0.392,
+     "auroc_unaware_vs_allow": 0.54
+    },
+    "random": {
+     "auroc_mean": 0.503,
+     "auroc_abs_p95": 0.594,
+     "auroc_abs_max": 0.665
+    }
+   },
+   "18": {
+    "dom": {
+     "auroc": 0.652,
+     "pair_acc": 0.954,
+     "cond_z": {
+      "forbid_do": 0.49,
+      "allow_do": 0.0,
+      "unaware_do": 0.245,
+      "forbid_decline": 0.441,
+      "allow_decline": 0.271
+     },
+     "interaction": 0.321,
+     "interaction_ci": [
+      0.283,
+      0.358
+     ],
+     "unaware_vs_allow_pair": 0.732,
+     "forbid_vs_unaware_pair": 0.794,
+     "auroc_unaware_vs_allow": 0.575
+    },
+    "dom_perp": {
+     "auroc": 0.63,
+     "pair_acc": 0.933,
+     "cond_z": {
+      "forbid_do": 0.423,
+      "allow_do": 0.0,
+      "unaware_do": 0.222,
+      "forbid_decline": 0.247,
+      "allow_decline": 0.23
+     },
+     "interaction": 0.406,
+     "interaction_ci": [
+      0.367,
+      0.446
+     ],
+     "unaware_vs_allow_pair": 0.727,
+     "forbid_vs_unaware_pair": 0.778,
+     "auroc_unaware_vs_allow": 0.567
+    },
+    "logreg": {
+     "auroc": 0.984,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.956,
+      "allow_do": 0.0,
+      "unaware_do": 1.078,
+      "forbid_decline": 1.863,
+      "allow_decline": 0.905
+     },
+     "interaction": 0.997,
+     "interaction_ci": [
+      0.902,
+      1.092
+     ],
+     "unaware_vs_allow_pair": 0.964,
+     "forbid_vs_unaware_pair": 0.979,
+     "auroc_unaware_vs_allow": 0.94
+    },
+    "rule_text": {
+     "auroc": 0.756,
+     "pair_acc": 0.974,
+     "cond_z": {
+      "forbid_do": 0.814,
+      "allow_do": 0.0,
+      "unaware_do": 0.54,
+      "forbid_decline": 1.347,
+      "allow_decline": 0.693
+     },
+     "interaction": 0.159,
+     "interaction_ci": [
+      0.086,
+      0.232
+     ],
+     "unaware_vs_allow_pair": 0.887,
+     "forbid_vs_unaware_pair": 0.742,
+     "auroc_unaware_vs_allow": 0.68
+    },
+    "emo:guilty": {
+     "auroc": 0.605,
+     "pair_acc": 0.954,
+     "cond_z": {
+      "forbid_do": 0.341,
+      "allow_do": 0.0,
+      "unaware_do": 0.418,
+      "forbid_decline": 0.731,
+      "allow_decline": 0.593
+     },
+     "interaction": 0.202,
+     "interaction_ci": [
+      0.168,
+      0.238
+     ],
+     "unaware_vs_allow_pair": 0.871,
+     "forbid_vs_unaware_pair": 0.402,
+     "auroc_unaware_vs_allow": 0.626
+    },
+    "emo:ashamed": {
+     "auroc": 0.597,
+     "pair_acc": 0.943,
+     "cond_z": {
+      "forbid_do": 0.341,
+      "allow_do": 0.0,
+      "unaware_do": 0.342,
+      "forbid_decline": 0.383,
+      "allow_decline": 0.212
+     },
+     "interaction": 0.17,
+     "interaction_ci": [
+      0.14,
+      0.201
+     ],
+     "unaware_vs_allow_pair": 0.845,
+     "forbid_vs_unaware_pair": 0.479,
+     "auroc_unaware_vs_allow": 0.598
+    },
+    "emo:regretful": {
+     "auroc": 0.556,
+     "pair_acc": 0.84,
+     "cond_z": {
+      "forbid_do": 0.197,
+      "allow_do": 0.0,
+      "unaware_do": 0.229,
+      "forbid_decline": 0.032,
+      "allow_decline": 0.011
+     },
+     "interaction": 0.176,
+     "interaction_ci": [
+      0.141,
+      0.212
+     ],
+     "unaware_vs_allow_pair": 0.747,
+     "forbid_vs_unaware_pair": 0.428,
+     "auroc_unaware_vs_allow": 0.569
+    },
+    "emo:sorry": {
+     "auroc": 0.568,
+     "pair_acc": 0.861,
+     "cond_z": {
+      "forbid_do": 0.232,
+      "allow_do": 0.0,
+      "unaware_do": 0.338,
+      "forbid_decline": 0.454,
+      "allow_decline": 0.29
+     },
+     "interaction": 0.067,
+     "interaction_ci": [
+      0.033,
+      0.104
+     ],
+     "unaware_vs_allow_pair": 0.799,
+     "forbid_vs_unaware_pair": 0.356,
+     "auroc_unaware_vs_allow": 0.597
+    },
+    "emo:nervous": {
+     "auroc": 0.54,
+     "pair_acc": 0.737,
+     "cond_z": {
+      "forbid_do": 0.131,
+      "allow_do": 0.0,
+      "unaware_do": 0.074,
+      "forbid_decline": 0.367,
+      "allow_decline": 0.25
+     },
+     "interaction": 0.014,
+     "interaction_ci": [
+      -0.014,
+      0.042
+     ],
+     "unaware_vs_allow_pair": 0.572,
+     "forbid_vs_unaware_pair": 0.598,
+     "auroc_unaware_vs_allow": 0.525
+    },
+    "emo:calm": {
+     "auroc": 0.316,
+     "pair_acc": 0.031,
+     "cond_z": {
+      "forbid_do": -0.575,
+      "allow_do": 0.0,
+      "unaware_do": -0.602,
+      "forbid_decline": -0.245,
+      "allow_decline": 0.004
+     },
+     "interaction": -0.327,
+     "interaction_ci": [
+      -0.366,
+      -0.287
+     ],
+     "unaware_vs_allow_pair": 0.119,
+     "forbid_vs_unaware_pair": 0.552,
+     "auroc_unaware_vs_allow": 0.311
+    },
+    "emo:desperate": {
+     "auroc": 0.612,
+     "pair_acc": 0.943,
+     "cond_z": {
+      "forbid_do": 0.413,
+      "allow_do": 0.0,
+      "unaware_do": 0.379,
+      "forbid_decline": 0.129,
+      "allow_decline": 0.003
+     },
+     "interaction": 0.286,
+     "interaction_ci": [
+      0.246,
+      0.329
+     ],
+     "unaware_vs_allow_pair": 0.82,
+     "forbid_vs_unaware_pair": 0.521,
+     "auroc_unaware_vs_allow": 0.607
+    },
+    "goodfire": {
+     "auroc": 0.485,
+     "pair_acc": 0.423,
+     "cond_z": {
+      "forbid_do": -0.044,
+      "allow_do": 0.0,
+      "unaware_do": 0.075,
+      "forbid_decline": 0.004,
+      "allow_decline": 0.01
+     },
+     "interaction": -0.038,
+     "interaction_ci": [
+      -0.059,
+      -0.017
+     ],
+     "unaware_vs_allow_pair": 0.629,
+     "forbid_vs_unaware_pair": 0.345,
+     "auroc_unaware_vs_allow": 0.523
+    },
+    "random": {
+     "auroc_mean": 0.503,
+     "auroc_abs_p95": 0.574,
+     "auroc_abs_max": 0.608
+    }
+   },
+   "20": {
+    "dom": {
+     "auroc": 0.595,
+     "pair_acc": 0.897,
+     "cond_z": {
+      "forbid_do": 0.296,
+      "allow_do": 0.0,
+      "unaware_do": 0.12,
+      "forbid_decline": 0.316,
+      "allow_decline": 0.204
+     },
+     "interaction": 0.184,
+     "interaction_ci": [
+      0.155,
+      0.214
+     ],
+     "unaware_vs_allow_pair": 0.66,
+     "forbid_vs_unaware_pair": 0.758,
+     "auroc_unaware_vs_allow": 0.537
+    },
+    "dom_perp": {
+     "auroc": 0.578,
+     "pair_acc": 0.876,
+     "cond_z": {
+      "forbid_do": 0.247,
+      "allow_do": 0.0,
+      "unaware_do": 0.101,
+      "forbid_decline": 0.185,
+      "allow_decline": 0.172
+     },
+     "interaction": 0.234,
+     "interaction_ci": [
+      0.203,
+      0.266
+     ],
+     "unaware_vs_allow_pair": 0.639,
+     "forbid_vs_unaware_pair": 0.727,
+     "auroc_unaware_vs_allow": 0.53
+    },
+    "logreg": {
+     "auroc": 0.975,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.854,
+      "allow_do": 0.0,
+      "unaware_do": 1.082,
+      "forbid_decline": 1.727,
+      "allow_decline": 0.797
+     },
+     "interaction": 0.924,
+     "interaction_ci": [
+      0.833,
+      1.015
+     ],
+     "unaware_vs_allow_pair": 0.964,
+     "forbid_vs_unaware_pair": 0.954,
+     "auroc_unaware_vs_allow": 0.921
+    },
+    "rule_text": {
+     "auroc": 0.746,
+     "pair_acc": 0.979,
+     "cond_z": {
+      "forbid_do": 0.827,
+      "allow_do": 0.0,
+      "unaware_do": 0.584,
+      "forbid_decline": 1.046,
+      "allow_decline": 0.463
+     },
+     "interaction": 0.244,
+     "interaction_ci": [
+      0.184,
+      0.308
+     ],
+     "unaware_vs_allow_pair": 0.933,
+     "forbid_vs_unaware_pair": 0.691,
+     "auroc_unaware_vs_allow": 0.68
+    },
+    "emo:guilty": {
+     "auroc": 0.566,
+     "pair_acc": 0.851,
+     "cond_z": {
+      "forbid_do": 0.218,
+      "allow_do": 0.0,
+      "unaware_do": 0.279,
+      "forbid_decline": 0.715,
+      "allow_decline": 0.556
+     },
+     "interaction": 0.058,
+     "interaction_ci": [
+      0.028,
+      0.089
+     ],
+     "unaware_vs_allow_pair": 0.778,
+     "forbid_vs_unaware_pair": 0.397,
+     "auroc_unaware_vs_allow": 0.582
+    },
+    "emo:ashamed": {
+     "auroc": 0.568,
+     "pair_acc": 0.83,
+     "cond_z": {
+      "forbid_do": 0.235,
+      "allow_do": 0.0,
+      "unaware_do": 0.186,
+      "forbid_decline": 0.356,
+      "allow_decline": 0.14
+     },
+     "interaction": 0.018,
+     "interaction_ci": [
+      -0.012,
+      0.047
+     ],
+     "unaware_vs_allow_pair": 0.639,
+     "forbid_vs_unaware_pair": 0.521,
+     "auroc_unaware_vs_allow": 0.556
+    },
+    "emo:regretful": {
+     "auroc": 0.569,
+     "pair_acc": 0.809,
+     "cond_z": {
+      "forbid_do": 0.217,
+      "allow_do": 0.0,
+      "unaware_do": 0.16,
+      "forbid_decline": 0.136,
+      "allow_decline": -0.015
+     },
+     "interaction": 0.066,
+     "interaction_ci": [
+      0.027,
+      0.109
+     ],
+     "unaware_vs_allow_pair": 0.68,
+     "forbid_vs_unaware_pair": 0.546,
+     "auroc_unaware_vs_allow": 0.545
+    },
+    "emo:sorry": {
+     "auroc": 0.549,
+     "pair_acc": 0.789,
+     "cond_z": {
+      "forbid_do": 0.176,
+      "allow_do": 0.0,
+      "unaware_do": 0.261,
+      "forbid_decline": 0.261,
+      "allow_decline": 0.104
+     },
+     "interaction": 0.018,
+     "interaction_ci": [
+      -0.018,
+      0.054
+     ],
+     "unaware_vs_allow_pair": 0.737,
+     "forbid_vs_unaware_pair": 0.397,
+     "auroc_unaware_vs_allow": 0.572
+    },
+    "emo:nervous": {
+     "auroc": 0.522,
+     "pair_acc": 0.613,
+     "cond_z": {
+      "forbid_do": 0.075,
+      "allow_do": 0.0,
+      "unaware_do": 0.1,
+      "forbid_decline": 0.218,
+      "allow_decline": 0.299
+     },
+     "interaction": 0.156,
+     "interaction_ci": [
+      0.123,
+      0.19
+     ],
+     "unaware_vs_allow_pair": 0.582,
+     "forbid_vs_unaware_pair": 0.49,
+     "auroc_unaware_vs_allow": 0.534
+    },
+    "emo:calm": {
+     "auroc": 0.338,
+     "pair_acc": 0.031,
+     "cond_z": {
+      "forbid_do": -0.499,
+      "allow_do": 0.0,
+      "unaware_do": -0.518,
+      "forbid_decline": -0.215,
+      "allow_decline": 0.048
+     },
+     "interaction": -0.236,
+     "interaction_ci": [
+      -0.268,
+      -0.201
+     ],
+     "unaware_vs_allow_pair": 0.088,
+     "forbid_vs_unaware_pair": 0.562,
+     "auroc_unaware_vs_allow": 0.337
+    },
+    "emo:desperate": {
+     "auroc": 0.604,
+     "pair_acc": 0.912,
+     "cond_z": {
+      "forbid_do": 0.35,
+      "allow_do": 0.0,
+      "unaware_do": 0.276,
+      "forbid_decline": 0.047,
+      "allow_decline": -0.163
+     },
+     "interaction": 0.141,
+     "interaction_ci": [
+      0.105,
+      0.18
+     ],
+     "unaware_vs_allow_pair": 0.768,
+     "forbid_vs_unaware_pair": 0.546,
+     "auroc_unaware_vs_allow": 0.592
+    },
+    "goodfire": {
+     "auroc": 0.481,
+     "pair_acc": 0.397,
+     "cond_z": {
+      "forbid_do": -0.055,
+      "allow_do": 0.0,
+      "unaware_do": 0.059,
+      "forbid_decline": -0.051,
+      "allow_decline": -0.033
+     },
+     "interaction": -0.036,
+     "interaction_ci": [
+      -0.059,
+      -0.014
+     ],
+     "unaware_vs_allow_pair": 0.582,
+     "forbid_vs_unaware_pair": 0.345,
+     "auroc_unaware_vs_allow": 0.516
+    },
+    "random": {
+     "auroc_mean": 0.502,
+     "auroc_abs_p95": 0.562,
+     "auroc_abs_max": 0.587
+    }
+   },
+   "22": {
+    "dom": {
+     "auroc": 0.566,
+     "pair_acc": 0.871,
+     "cond_z": {
+      "forbid_do": 0.211,
+      "allow_do": 0.0,
+      "unaware_do": 0.068,
+      "forbid_decline": 0.261,
+      "allow_decline": 0.172
+     },
+     "interaction": 0.122,
+     "interaction_ci": [
+      0.095,
+      0.15
+     ],
+     "unaware_vs_allow_pair": 0.634,
+     "forbid_vs_unaware_pair": 0.68,
+     "auroc_unaware_vs_allow": 0.521
+    },
+    "dom_perp": {
+     "auroc": 0.554,
+     "pair_acc": 0.814,
+     "cond_z": {
+      "forbid_do": 0.172,
+      "allow_do": 0.0,
+      "unaware_do": 0.048,
+      "forbid_decline": 0.151,
+      "allow_decline": 0.14
+     },
+     "interaction": 0.16,
+     "interaction_ci": [
+      0.132,
+      0.189
+     ],
+     "unaware_vs_allow_pair": 0.613,
+     "forbid_vs_unaware_pair": 0.67,
+     "auroc_unaware_vs_allow": 0.515
+    },
+    "logreg": {
+     "auroc": 0.955,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.671,
+      "allow_do": 0.0,
+      "unaware_do": 1.065,
+      "forbid_decline": 1.631,
+      "allow_decline": 0.789
+     },
+     "interaction": 0.829,
+     "interaction_ci": [
+      0.743,
+      0.918
+     ],
+     "unaware_vs_allow_pair": 0.969,
+     "forbid_vs_unaware_pair": 0.923,
+     "auroc_unaware_vs_allow": 0.891
+    },
+    "rule_text": {
+     "auroc": 0.739,
+     "pair_acc": 0.985,
+     "cond_z": {
+      "forbid_do": 0.849,
+      "allow_do": 0.0,
+      "unaware_do": 0.702,
+      "forbid_decline": 0.86,
+      "allow_decline": 0.23
+     },
+     "interaction": 0.218,
+     "interaction_ci": [
+      0.167,
+      0.273
+     ],
+     "unaware_vs_allow_pair": 0.943,
+     "forbid_vs_unaware_pair": 0.593,
+     "auroc_unaware_vs_allow": 0.698
+    },
+    "emo:guilty": {
+     "auroc": 0.557,
+     "pair_acc": 0.83,
+     "cond_z": {
+      "forbid_do": 0.182,
+      "allow_do": 0.0,
+      "unaware_do": 0.301,
+      "forbid_decline": 0.642,
+      "allow_decline": 0.471
+     },
+     "interaction": 0.011,
+     "interaction_ci": [
+      -0.014,
+      0.037
+     ],
+     "unaware_vs_allow_pair": 0.84,
+     "forbid_vs_unaware_pair": 0.34,
+     "auroc_unaware_vs_allow": 0.587
+    },
+    "emo:ashamed": {
+     "auroc": 0.558,
+     "pair_acc": 0.861,
+     "cond_z": {
+      "forbid_do": 0.194,
+      "allow_do": 0.0,
+      "unaware_do": 0.184,
+      "forbid_decline": 0.326,
+      "allow_decline": 0.139
+     },
+     "interaction": 0.007,
+     "interaction_ci": [
+      -0.017,
+      0.029
+     ],
+     "unaware_vs_allow_pair": 0.716,
+     "forbid_vs_unaware_pair": 0.485,
+     "auroc_unaware_vs_allow": 0.551
+    },
+    "emo:regretful": {
+     "auroc": 0.552,
+     "pair_acc": 0.82,
+     "cond_z": {
+      "forbid_do": 0.17,
+      "allow_do": 0.0,
+      "unaware_do": 0.161,
+      "forbid_decline": 0.056,
+      "allow_decline": -0.06
+     },
+     "interaction": 0.053,
+     "interaction_ci": [
+      0.023,
+      0.084
+     ],
+     "unaware_vs_allow_pair": 0.722,
+     "forbid_vs_unaware_pair": 0.5,
+     "auroc_unaware_vs_allow": 0.545
+    },
+    "emo:sorry": {
+     "auroc": 0.537,
+     "pair_acc": 0.773,
+     "cond_z": {
+      "forbid_do": 0.133,
+      "allow_do": 0.0,
+      "unaware_do": 0.252,
+      "forbid_decline": 0.241,
+      "allow_decline": 0.098
+     },
+     "interaction": -0.011,
+     "interaction_ci": [
+      -0.042,
+      0.02
+     ],
+     "unaware_vs_allow_pair": 0.753,
+     "forbid_vs_unaware_pair": 0.325,
+     "auroc_unaware_vs_allow": 0.567
+    },
+    "emo:nervous": {
+     "auroc": 0.513,
+     "pair_acc": 0.562,
+     "cond_z": {
+      "forbid_do": 0.042,
+      "allow_do": 0.0,
+      "unaware_do": 0.044,
+      "forbid_decline": 0.01,
+      "allow_decline": 0.039
+     },
+     "interaction": 0.071,
+     "interaction_ci": [
+      0.043,
+      0.102
+     ],
+     "unaware_vs_allow_pair": 0.521,
+     "forbid_vs_unaware_pair": 0.5,
+     "auroc_unaware_vs_allow": 0.512
+    },
+    "emo:calm": {
+     "auroc": 0.377,
+     "pair_acc": 0.036,
+     "cond_z": {
+      "forbid_do": -0.42,
+      "allow_do": 0.0,
+      "unaware_do": -0.378,
+      "forbid_decline": -0.37,
+      "allow_decline": -0.096
+     },
+     "interaction": -0.146,
+     "interaction_ci": [
+      -0.176,
+      -0.116
+     ],
+     "unaware_vs_allow_pair": 0.149,
+     "forbid_vs_unaware_pair": 0.464,
+     "auroc_unaware_vs_allow": 0.392
+    },
+    "emo:desperate": {
+     "auroc": 0.575,
+     "pair_acc": 0.871,
+     "cond_z": {
+      "forbid_do": 0.257,
+      "allow_do": 0.0,
+      "unaware_do": 0.234,
+      "forbid_decline": 0.175,
+      "allow_decline": -0.018
+     },
+     "interaction": 0.064,
+     "interaction_ci": [
+      0.032,
+      0.096
+     ],
+     "unaware_vs_allow_pair": 0.763,
+     "forbid_vs_unaware_pair": 0.474,
+     "auroc_unaware_vs_allow": 0.577
+    },
+    "goodfire": {
+     "auroc": 0.477,
+     "pair_acc": 0.371,
+     "cond_z": {
+      "forbid_do": -0.069,
+      "allow_do": 0.0,
+      "unaware_do": 0.04,
+      "forbid_decline": -0.052,
+      "allow_decline": -0.03
+     },
+     "interaction": -0.047,
+     "interaction_ci": [
+      -0.071,
+      -0.023
+     ],
+     "unaware_vs_allow_pair": 0.521,
+     "forbid_vs_unaware_pair": 0.356,
+     "auroc_unaware_vs_allow": 0.509
+    },
+    "random": {
+     "auroc_mean": 0.501,
+     "auroc_abs_p95": 0.556,
+     "auroc_abs_max": 0.577
+    }
+   },
+   "23": {
+    "dom": {
+     "auroc": 0.566,
+     "pair_acc": 0.835,
+     "cond_z": {
+      "forbid_do": 0.243,
+      "allow_do": 0.0,
+      "unaware_do": 0.105,
+      "forbid_decline": 0.069,
+      "allow_decline": -0.126
+     },
+     "interaction": 0.047,
+     "interaction_ci": [
+      0.018,
+      0.078
+     ],
+     "unaware_vs_allow_pair": 0.639,
+     "forbid_vs_unaware_pair": 0.567,
+     "auroc_unaware_vs_allow": 0.525
+    },
+    "dom_perp": {
+     "auroc": 0.548,
+     "pair_acc": 0.773,
+     "cond_z": {
+      "forbid_do": 0.152,
+      "allow_do": 0.0,
+      "unaware_do": 0.031,
+      "forbid_decline": 0.172,
+      "allow_decline": 0.164
+     },
+     "interaction": 0.144,
+     "interaction_ci": [
+      0.115,
+      0.174
+     ],
+     "unaware_vs_allow_pair": 0.598,
+     "forbid_vs_unaware_pair": 0.686,
+     "auroc_unaware_vs_allow": 0.51
+    },
+    "logreg": {
+     "auroc": 0.943,
+     "pair_acc": 0.99,
+     "cond_z": {
+      "forbid_do": 1.581,
+      "allow_do": 0.0,
+      "unaware_do": 1.002,
+      "forbid_decline": 1.608,
+      "allow_decline": 0.797
+     },
+     "interaction": 0.77,
+     "interaction_ci": [
+      0.689,
+      0.856
+     ],
+     "unaware_vs_allow_pair": 0.979,
+     "forbid_vs_unaware_pair": 0.918,
+     "auroc_unaware_vs_allow": 0.864
+    },
+    "rule_text": {
+     "auroc": 0.581,
+     "pair_acc": 0.804,
+     "cond_z": {
+      "forbid_do": 0.273,
+      "allow_do": 0.0,
+      "unaware_do": 0.183,
+      "forbid_decline": -0.073,
+      "allow_decline": -0.369
+     },
+     "interaction": -0.023,
+     "interaction_ci": [
+      -0.074,
+      0.026
+     ],
+     "unaware_vs_allow_pair": 0.665,
+     "forbid_vs_unaware_pair": 0.572,
+     "auroc_unaware_vs_allow": 0.554
+    },
+    "emo:guilty": {
+     "auroc": 0.547,
+     "pair_acc": 0.825,
+     "cond_z": {
+      "forbid_do": 0.152,
+      "allow_do": 0.0,
+      "unaware_do": 0.201,
+      "forbid_decline": 0.325,
+      "allow_decline": 0.179
+     },
+     "interaction": 0.007,
+     "interaction_ci": [
+      -0.012,
+      0.027
+     ],
+     "unaware_vs_allow_pair": 0.778,
+     "forbid_vs_unaware_pair": 0.418,
+     "auroc_unaware_vs_allow": 0.556
+    },
+    "emo:ashamed": {
+     "auroc": 0.549,
+     "pair_acc": 0.84,
+     "cond_z": {
+      "forbid_do": 0.171,
+      "allow_do": 0.0,
+      "unaware_do": 0.155,
+      "forbid_decline": 0.058,
+      "allow_decline": -0.103
+     },
+     "interaction": 0.01,
+     "interaction_ci": [
+      -0.01,
+      0.03
+     ],
+     "unaware_vs_allow_pair": 0.706,
+     "forbid_vs_unaware_pair": 0.485,
+     "auroc_unaware_vs_allow": 0.544
+    },
+    "emo:regretful": {
+     "auroc": 0.565,
+     "pair_acc": 0.887,
+     "cond_z": {
+      "forbid_do": 0.216,
+      "allow_do": 0.0,
+      "unaware_do": 0.108,
+      "forbid_decline": 0.21,
+      "allow_decline": 0.024
+     },
+     "interaction": 0.031,
+     "interaction_ci": [
+      0.004,
+      0.059
+     ],
+     "unaware_vs_allow_pair": 0.67,
+     "forbid_vs_unaware_pair": 0.588,
+     "auroc_unaware_vs_allow": 0.524
+    },
+    "emo:sorry": {
+     "auroc": 0.564,
+     "pair_acc": 0.856,
+     "cond_z": {
+      "forbid_do": 0.226,
+      "allow_do": 0.0,
+      "unaware_do": 0.213,
+      "forbid_decline": 0.356,
+      "allow_decline": 0.193
+     },
+     "interaction": 0.063,
+     "interaction_ci": [
+      0.033,
+      0.093
+     ],
+     "unaware_vs_allow_pair": 0.732,
+     "forbid_vs_unaware_pair": 0.49,
+     "auroc_unaware_vs_allow": 0.559
+    },
+    "emo:nervous": {
+     "auroc": 0.503,
+     "pair_acc": 0.505,
+     "cond_z": {
+      "forbid_do": 0.019,
+      "allow_do": 0.0,
+      "unaware_do": 0.057,
+      "forbid_decline": -0.16,
+      "allow_decline": -0.087
+     },
+     "interaction": 0.092,
+     "interaction_ci": [
+      0.067,
+      0.118
+     ],
+     "unaware_vs_allow_pair": 0.572,
+     "forbid_vs_unaware_pair": 0.423,
+     "auroc_unaware_vs_allow": 0.515
+    },
+    "emo:calm": {
+     "auroc": 0.419,
+     "pair_acc": 0.098,
+     "cond_z": {
+      "forbid_do": -0.281,
+      "allow_do": 0.0,
+      "unaware_do": -0.267,
+      "forbid_decline": -0.142,
+      "allow_decline": -0.007
+     },
+     "interaction": -0.146,
+     "interaction_ci": [
+      -0.174,
+      -0.12
+     ],
+     "unaware_vs_allow_pair": 0.227,
+     "forbid_vs_unaware_pair": 0.536,
+     "auroc_unaware_vs_allow": 0.426
+    },
+    "emo:desperate": {
+     "auroc": 0.548,
+     "pair_acc": 0.835,
+     "cond_z": {
+      "forbid_do": 0.18,
+      "allow_do": 0.0,
+      "unaware_do": 0.138,
+      "forbid_decline": -0.008,
+      "allow_decline": -0.123
+     },
+     "interaction": 0.065,
+     "interaction_ci": [
+      0.043,
+      0.088
+     ],
+     "unaware_vs_allow_pair": 0.701,
+     "forbid_vs_unaware_pair": 0.552,
+     "auroc_unaware_vs_allow": 0.54
+    },
+    "goodfire": {
+     "auroc": 0.454,
+     "pair_acc": 0.242,
+     "cond_z": {
+      "forbid_do": -0.164,
+      "allow_do": 0.0,
+      "unaware_do": -0.046,
+      "forbid_decline": 0.046,
+      "allow_decline": 0.206
+     },
+     "interaction": -0.004,
+     "interaction_ci": [
+      -0.035,
+      0.027
+     ],
+     "unaware_vs_allow_pair": 0.428,
+     "forbid_vs_unaware_pair": 0.448,
+     "auroc_unaware_vs_allow": 0.49
+    },
+    "random": {
+     "auroc_mean": 0.501,
+     "auroc_abs_p95": 0.549,
+     "auroc_abs_max": 0.557
+    }
+   }
+  },
+  "cv": {
+   "6": {
+    "dom": 0.643,
+    "dom_perp": 0.535,
+    "logreg": 0.945,
+    "rule_text": 0.55
+   },
+   "8": {
+    "dom": 0.673,
+    "dom_perp": 0.569,
+    "logreg": 0.961,
+    "rule_text": 0.583
+   },
+   "10": {
+    "dom": 0.793,
+    "dom_perp": 0.663,
+    "logreg": 0.982,
+    "rule_text": 0.68
+   },
+   "12": {
+    "dom": 0.877,
+    "dom_perp": 0.79,
+    "logreg": 0.98,
+    "rule_text": 0.747
+   },
+   "14": {
+    "dom": 0.947,
+    "dom_perp": 0.923,
+    "logreg": 0.99,
+    "rule_text": 0.769
+   },
+   "15": {
+    "dom": 0.958,
+    "dom_perp": 0.921,
+    "logreg": 0.989,
+    "rule_text": 0.813
+   },
+   "16": {
+    "dom": 0.901,
+    "dom_perp": 0.848,
+    "logreg": 0.99,
+    "rule_text": 0.815
+   },
+   "18": {
+    "dom": 0.647,
+    "dom_perp": 0.625,
+    "logreg": 0.984,
+    "rule_text": 0.74
+   },
+   "20": {
+    "dom": 0.596,
+    "dom_perp": 0.578,
+    "logreg": 0.979,
+    "rule_text": 0.72
+   },
+   "22": {
+    "dom": 0.566,
+    "dom_perp": 0.555,
+    "logreg": 0.958,
+    "rule_text": 0.698
+   },
+   "23": {
+    "dom": 0.559,
+    "dom_perp": 0.55,
+    "logreg": 0.944,
+    "rule_text": 0.57
+   }
+  },
+  "chosen_block": {
+   "dom": 15,
+   "dom_perp": 14,
+   "logreg": 16,
+   "rule_text": 16
+  },
+  "main": {
+   "dom": {
+    "block": 15,
+    "auroc": 0.959,
+    "pair_acc": 0.99,
+    "cond_z": {
+     "forbid_do": 1.821,
+     "allow_do": 0.0,
+     "unaware_do": 1.145,
+     "forbid_decline": 1.517,
+     "allow_decline": 0.808
+    },
+    "interaction": 1.112,
+    "interaction_ci": [
+     1.012,
+     1.21
+    ],
+    "unaware_vs_allow_pair": 0.964,
+    "forbid_vs_unaware_pair": 0.928,
+    "auroc_unaware_vs_allow": 0.891
+   },
+   "dom_perp": {
+    "block": 14,
+    "auroc": 0.931,
+    "pair_acc": 0.99,
+    "cond_z": {
+     "forbid_do": 1.536,
+     "allow_do": 0.0,
+     "unaware_do": 1.06,
+     "forbid_decline": 0.487,
+     "allow_decline": 0.479
+    },
+    "interaction": 1.529,
+    "interaction_ci": [
+     1.409,
+     1.645
+    ],
+    "unaware_vs_allow_pair": 0.974,
+    "forbid_vs_unaware_pair": 0.881,
+    "auroc_unaware_vs_allow": 0.858
+   },
+   "logreg": {
+    "block": 16,
+    "auroc": 0.99,
+    "pair_acc": 0.99,
+    "cond_z": {
+     "forbid_do": 2.076,
+     "allow_do": 0.0,
+     "unaware_do": 1.165,
+     "forbid_decline": 1.991,
+     "allow_decline": 0.983
+    },
+    "interaction": 1.068,
+    "interaction_ci": [
+     0.97,
+     1.167
+    ],
+    "unaware_vs_allow_pair": 0.974,
+    "forbid_vs_unaware_pair": 0.969,
+    "auroc_unaware_vs_allow": 0.953
+   },
+   "rule_text": {
+    "block": 16,
+    "auroc": 0.841,
+    "pair_acc": 0.99,
+    "cond_z": {
+     "forbid_do": 0.968,
+     "allow_do": 0.0,
+     "unaware_do": 0.723,
+     "forbid_decline": 1.817,
+     "allow_decline": 1.002
+    },
+    "interaction": 0.152,
+    "interaction_ci": [
+     0.084,
+     0.226
+    ],
+    "unaware_vs_allow_pair": 0.933,
+    "forbid_vs_unaware_pair": 0.742,
+    "auroc_unaware_vs_allow": 0.775
+   }
+  },
+  "main_baselines_at_dom_block": {
+   "emo:guilty": {
+    "auroc": 0.634,
+    "pair_acc": 0.969,
+    "cond_z": {
+     "forbid_do": 0.458,
+     "allow_do": 0.0,
+     "unaware_do": 0.726,
+     "forbid_decline": 0.878,
+     "allow_decline": 0.677
+    },
+    "interaction": 0.257,
+    "interaction_ci": [
+     0.218,
+     0.296
+    ],
+    "unaware_vs_allow_pair": 0.948,
+    "forbid_vs_unaware_pair": 0.211,
+    "auroc_unaware_vs_allow": 0.705
+   },
+   "emo:ashamed": {
+    "auroc": 0.647,
+    "pair_acc": 0.974,
+    "cond_z": {
+     "forbid_do": 0.518,
+     "allow_do": 0.0,
+     "unaware_do": 0.657,
+     "forbid_decline": 0.643,
+     "allow_decline": 0.254
+    },
+    "interaction": 0.129,
+    "interaction_ci": [
+     0.094,
+     0.165
+    ],
+    "unaware_vs_allow_pair": 0.918,
+    "forbid_vs_unaware_pair": 0.366,
+    "auroc_unaware_vs_allow": 0.684
+   },
+   "emo:regretful": {
+    "auroc": 0.581,
+    "pair_acc": 0.907,
+    "cond_z": {
+     "forbid_do": 0.305,
+     "allow_do": 0.0,
+     "unaware_do": 0.524,
+     "forbid_decline": 0.151,
+     "allow_decline": 0.044
+    },
+    "interaction": 0.198,
+    "interaction_ci": [
+     0.163,
+     0.236
+    ],
+    "unaware_vs_allow_pair": 0.892,
+    "forbid_vs_unaware_pair": 0.268,
+    "auroc_unaware_vs_allow": 0.64
+   },
+   "emo:sorry": {
+    "auroc": 0.654,
+    "pair_acc": 0.974,
+    "cond_z": {
+     "forbid_do": 0.541,
+     "allow_do": 0.0,
+     "unaware_do": 0.85,
+     "forbid_decline": 0.304,
+     "allow_decline": -0.002
+    },
+    "interaction": 0.235,
+    "interaction_ci": [
+     0.196,
+     0.278
+    ],
+    "unaware_vs_allow_pair": 0.974,
+    "forbid_vs_unaware_pair": 0.201,
+    "auroc_unaware_vs_allow": 0.738
+   },
+   "emo:nervous": {
+    "auroc": 0.541,
+    "pair_acc": 0.753,
+    "cond_z": {
+     "forbid_do": 0.129,
+     "allow_do": 0.0,
+     "unaware_do": 0.041,
+     "forbid_decline": 0.996,
+     "allow_decline": 0.812
+    },
+    "interaction": -0.054,
+    "interaction_ci": [
+     -0.081,
+     -0.028
+    ],
+    "unaware_vs_allow_pair": 0.562,
+    "forbid_vs_unaware_pair": 0.613,
+    "auroc_unaware_vs_allow": 0.517
+   },
+   "emo:calm": {
+    "auroc": 0.205,
+    "pair_acc": 0.005,
+    "cond_z": {
+     "forbid_do": -0.923,
+     "allow_do": 0.0,
+     "unaware_do": -1.145,
+     "forbid_decline": -0.273,
+     "allow_decline": 0.285
+    },
+    "interaction": -0.365,
+    "interaction_ci": [
+     -0.413,
+     -0.319
+    ],
+    "unaware_vs_allow_pair": 0.021,
+    "forbid_vs_unaware_pair": 0.727,
+    "auroc_unaware_vs_allow": 0.158
+   },
+   "emo:desperate": {
+    "auroc": 0.624,
+    "pair_acc": 0.938,
+    "cond_z": {
+     "forbid_do": 0.417,
+     "allow_do": 0.0,
+     "unaware_do": 0.389,
+     "forbid_decline": 0.014,
+     "allow_decline": -0.215
+    },
+    "interaction": 0.187,
+    "interaction_ci": [
+     0.157,
+     0.22
+    ],
+    "unaware_vs_allow_pair": 0.866,
+    "forbid_vs_unaware_pair": 0.5,
+    "auroc_unaware_vs_allow": 0.617
+   },
+   "goodfire": {
+    "auroc": 0.533,
+    "pair_acc": 0.716,
+    "cond_z": {
+     "forbid_do": 0.095,
+     "allow_do": 0.0,
+     "unaware_do": 0.118,
+     "forbid_decline": 0.378,
+     "allow_decline": 0.274
+    },
+    "interaction": -0.009,
+    "interaction_ci": [
+     -0.032,
+     0.016
+    ],
+    "unaware_vs_allow_pair": 0.629,
+    "forbid_vs_unaware_pair": 0.479,
+    "auroc_unaware_vs_allow": 0.532
+   },
+   "random": {
+    "auroc_mean": 0.501,
+    "auroc_abs_p95": 0.591,
+    "auroc_abs_max": 0.668
+   }
+  },
+  "leave_one_kind_out": {
+   "agreement": {
+    "dom": {
+     "auroc": 0.916,
+     "pair_acc": 1.0,
+     "interaction": 0.979
+    },
+    "dom_perp": {
+     "auroc": 0.899,
+     "pair_acc": 1.0,
+     "interaction": 1.438
+    }
+   },
+   "contest_spirit": {
+    "dom": {
+     "auroc": 0.991,
+     "pair_acc": 1.0,
+     "interaction": 1.39
+    },
+    "dom_perp": {
+     "auroc": 0.954,
+     "pair_acc": 1.0,
+     "interaction": 1.895
+    }
+   },
+   "instruction": {
+    "dom": {
+     "auroc": 0.985,
+     "pair_acc": 1.0,
+     "interaction": 1.271
+    },
+    "dom_perp": {
+     "auroc": 0.968,
+     "pair_acc": 1.0,
+     "interaction": 1.778
+    }
+   },
+   "owner_wish": {
+    "dom": {
+     "auroc": 0.948,
+     "pair_acc": 0.975,
+     "interaction": 0.951
+    },
+    "dom_perp": {
+     "auroc": 0.93,
+     "pair_acc": 0.975,
+     "interaction": 1.417
+    }
+   },
+   "posted_rule": {
+    "dom": {
+     "auroc": 0.955,
+     "pair_acc": 0.974,
+     "interaction": 1.06
+    },
+    "dom_perp": {
+     "auroc": 0.887,
+     "pair_acc": 0.974,
+     "interaction": 1.438
+    }
+   }
+  },
+  "per_kind_dom": {
+   "agreement": {
+    "auroc": 0.917,
+    "pair_acc": 1.0,
+    "cond_z": {
+     "forbid_do": 1.64,
+     "allow_do": 0.0,
+     "unaware_do": 0.781,
+     "forbid_decline": 1.408,
+     "allow_decline": 0.745
+    },
+    "interaction": 0.977,
+    "interaction_ci": [
+     0.775,
+     1.205
+    ],
+    "unaware_vs_allow_pair": 0.875,
+    "forbid_vs_unaware_pair": 0.925,
+    "auroc_unaware_vs_allow": 0.762
+   },
+   "contest_spirit": {
+    "auroc": 0.991,
+    "pair_acc": 1.0,
+    "cond_z": {
+     "forbid_do": 2.099,
+     "allow_do": 0.0,
+     "unaware_do": 1.41,
+     "forbid_decline": 1.264,
+     "allow_decline": 0.539
+    },
+    "interaction": 1.373,
+    "interaction_ci": [
+     1.149,
+     1.603
+    ],
+    "unaware_vs_allow_pair": 1.0,
+    "forbid_vs_unaware_pair": 0.892,
+    "auroc_unaware_vs_allow": 0.963
+   },
+   "instruction": {
+    "auroc": 0.982,
+    "pair_acc": 1.0,
+    "cond_z": {
+     "forbid_do": 1.973,
+     "allow_do": 0.0,
+     "unaware_do": 1.33,
+     "forbid_decline": 1.683,
+     "allow_decline": 0.974
+    },
+    "interaction": 1.264,
+    "interaction_ci": [
+     1.053,
+     1.469
+    ],
+    "unaware_vs_allow_pair": 1.0,
+    "forbid_vs_unaware_pair": 0.897,
+    "auroc_unaware_vs_allow": 0.964
+   },
+   "owner_wish": {
+    "auroc": 0.948,
+    "pair_acc": 0.975,
+    "cond_z": {
+     "forbid_do": 1.723,
+     "allow_do": 0.0,
+     "unaware_do": 1.084,
+     "forbid_decline": 1.561,
+     "allow_decline": 0.781
+    },
+    "interaction": 0.943,
+    "interaction_ci": [
+     0.754,
+     1.13
+    ],
+    "unaware_vs_allow_pair": 0.975,
+    "forbid_vs_unaware_pair": 0.975,
+    "auroc_unaware_vs_allow": 0.876
+   },
+   "posted_rule": {
+    "auroc": 0.962,
+    "pair_acc": 0.974,
+    "cond_z": {
+     "forbid_do": 1.794,
+     "allow_do": 0.0,
+     "unaware_do": 1.201,
+     "forbid_decline": 1.78,
+     "allow_decline": 1.075
+    },
+    "interaction": 1.089,
+    "interaction_ci": [
+     0.849,
+     1.33
+    ],
+    "unaware_vs_allow_pair": 0.974,
+    "forbid_vs_unaware_pair": 0.947,
+    "auroc_unaware_vs_allow": 0.92
+   }
+  },
+  "cosine_with_dom": {
+   "dom": 1.0,
+   "dom_perp": 0.867,
+   "logreg": 0.692,
+   "rule_text": 0.305,
+   "emo:guilty": 0.083,
+   "emo:ashamed": 0.098,
+   "emo:regretful": 0.055,
+   "emo:sorry": 0.09,
+   "goodfire": 0.058
+  },
+  "perspective": {
+   "n": {
+    "third": 2935,
+    "first": 2935
+   },
+   "transfer": {
+    "fit_third": {
+     "test_third": {
+      "dom": {
+       "auroc": 0.959,
+       "pair_acc": 0.99,
+       "interaction": 1.112,
+       "interaction_ci": [
+        1.012,
+        1.21
+       ],
+       "forbid_vs_unaware_pair": 0.928,
+       "auroc_unaware_vs_allow": 0.891
+      },
+      "dom_perp": {
+       "auroc": 0.933,
+       "pair_acc": 0.99,
+       "interaction": 1.575,
+       "interaction_ci": [
+        1.447,
+        1.696
+       ],
+       "forbid_vs_unaware_pair": 0.902,
+       "auroc_unaware_vs_allow": 0.841
+      }
+     },
+     "test_first": {
+      "dom": {
+       "auroc": 0.951,
+       "pair_acc": 0.99,
+       "interaction": 1.09,
+       "interaction_ci": [
+        0.989,
+        1.188
+       ],
+       "forbid_vs_unaware_pair": 0.912,
+       "auroc_unaware_vs_allow": 0.877
+      },
+      "dom_perp": {
+       "auroc": 0.919,
+       "pair_acc": 0.99,
+       "interaction": 1.601,
+       "interaction_ci": [
+        1.475,
+        1.725
+       ],
+       "forbid_vs_unaware_pair": 0.892,
+       "auroc_unaware_vs_allow": 0.829
+      }
+     }
+    },
+    "fit_first": {
+     "test_third": {
+      "dom": {
+       "auroc": 0.961,
+       "pair_acc": 0.99,
+       "interaction": 1.143,
+       "interaction_ci": [
+        1.041,
+        1.243
+       ],
+       "forbid_vs_unaware_pair": 0.933,
+       "auroc_unaware_vs_allow": 0.892
+      },
+      "dom_perp": {
+       "auroc": 0.945,
+       "pair_acc": 0.99,
+       "interaction": 1.607,
+       "interaction_ci": [
+        1.474,
+        1.732
+       ],
+       "forbid_vs_unaware_pair": 0.933,
+       "auroc_unaware_vs_allow": 0.851
+      }
+     },
+     "test_first": {
+      "dom": {
+       "auroc": 0.957,
+       "pair_acc": 0.99,
+       "interaction": 1.113,
+       "interaction_ci": [
+        1.008,
+        1.214
+       ],
+       "forbid_vs_unaware_pair": 0.933,
+       "auroc_unaware_vs_allow": 0.883
+      },
+      "dom_perp": {
+       "auroc": 0.938,
+       "pair_acc": 0.99,
+       "interaction": 1.639,
+       "interaction_ci": [
+        1.509,
+        1.767
+       ],
+       "forbid_vs_unaware_pair": 0.923,
+       "auroc_unaware_vs_allow": 0.841
+      }
+     }
+    },
+    "fit_both": {
+     "test_third": {
+      "dom": {
+       "auroc": 0.962,
+       "pair_acc": 0.99,
+       "interaction": 1.137,
+       "interaction_ci": [
+        1.036,
+        1.237
+       ],
+       "forbid_vs_unaware_pair": 0.933,
+       "auroc_unaware_vs_allow": 0.895
+      },
+      "dom_perp": {
+       "auroc": 0.94,
+       "pair_acc": 0.99,
+       "interaction": 1.593,
+       "interaction_ci": [
+        1.463,
+        1.716
+       ],
+       "forbid_vs_unaware_pair": 0.912,
+       "auroc_unaware_vs_allow": 0.845
+      }
+     },
+     "test_first": {
+      "dom": {
+       "auroc": 0.957,
+       "pair_acc": 0.99,
+       "interaction": 1.111,
+       "interaction_ci": [
+        1.007,
+        1.211
+       ],
+       "forbid_vs_unaware_pair": 0.923,
+       "auroc_unaware_vs_allow": 0.883
+      },
+      "dom_perp": {
+       "auroc": 0.929,
+       "pair_acc": 0.99,
+       "interaction": 1.622,
+       "interaction_ci": [
+        1.495,
+        1.749
+       ],
+       "forbid_vs_unaware_pair": 0.902,
+       "auroc_unaware_vs_allow": 0.835
+      }
+     }
+    }
+   },
+   "cos_third_first": {
+    "6": {
+     "dom": 0.978,
+     "dom_perp": 0.967
+    },
+    "8": {
+     "dom": 0.978,
+     "dom_perp": 0.975
+    },
+    "10": {
+     "dom": 0.989,
+     "dom_perp": 0.987
+    },
+    "12": {
+     "dom": 0.988,
+     "dom_perp": 0.989
+    },
+    "14": {
+     "dom": 0.987,
+     "dom_perp": 0.989
+    },
+    "15": {
+     "dom": 0.987,
+     "dom_perp": 0.989
+    },
+    "16": {
+     "dom": 0.986,
+     "dom_perp": 0.989
+    },
+    "18": {
+     "dom": 0.981,
+     "dom_perp": 0.984
+    },
+    "20": {
+     "dom": 0.978,
+     "dom_perp": 0.979
+    },
+    "22": {
+     "dom": 0.97,
+     "dom_perp": 0.97
+    },
+    "23": {
+     "dom": 0.984,
+     "dom_perp": 0.975
+    }
+   },
+   "first_minus_third_z": {
+    "forbid_do": -0.209,
+    "allow_do": -0.117,
+    "unaware_do": -0.183,
+    "forbid_decline": -0.169,
+    "allow_decline": -0.135
+   },
+   "block": 15
+  }
+ },
+ "control": {
+  "lru:forbid-allow": {
+   "pre": {
+    "dom": {
+     "did": -0.016,
+     "did_ci": [
+      -0.033,
+      0.001
+     ],
+     "delta_pre": 0.022,
+     "delta_tau0": 0.006,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.026,
+      "-7": 0.01,
+      "-6": 0.02,
+      "-5": 0.018,
+      "-4": -0.003,
+      "-3": -0.007,
+      "-2": 0.001,
+      "-1": -0.003,
+      "0": 0.006,
+      "1": 0.001,
+      "2": 0.004
+     },
+     "p_vs_random": 0.54
+    },
+    "dom_perp": {
+     "did": -0.014,
+     "did_ci": [
+      -0.039,
+      0.012
+     ],
+     "delta_pre": 0.019,
+     "delta_tau0": 0.005,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.019,
+      "-7": 0.007,
+      "-6": 0.023,
+      "-5": 0.017,
+      "-4": -0.005,
+      "-3": -0.005,
+      "-2": 0.003,
+      "-1": -0.015,
+      "0": 0.005,
+      "1": -0.003,
+      "2": 0.007
+     },
+     "p_vs_random": 0.55
+    },
+    "logreg": {
+     "did": -0.014,
+     "did_ci": [
+      -0.029,
+      0.0
+     ],
+     "delta_pre": 0.022,
+     "delta_tau0": 0.008,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.029,
+      "-7": 0.016,
+      "-6": 0.016,
+      "-5": 0.002,
+      "-4": 0.007,
+      "-3": 0.003,
+      "-2": 0.009,
+      "-1": 0.011,
+      "0": 0.008,
+      "1": 0.023,
+      "2": 0.01
+     },
+     "p_vs_random": 0.57
+    },
+    "rule_text": {
+     "did": -0.014,
+     "did_ci": [
+      -0.029,
+      0.001
+     ],
+     "delta_pre": 0.003,
+     "delta_tau0": -0.01,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.007,
+      "-7": 0.003,
+      "-6": 0.007,
+      "-5": -0.001,
+      "-4": -0.007,
+      "-3": -0.008,
+      "-2": -0.004,
+      "-1": -0.002,
+      "0": -0.01,
+      "1": -0.005,
+      "2": -0.007
+     },
+     "p_vs_random": 0.56
+    },
+    "dom@first": {
+     "did": -0.015,
+     "did_ci": [
+      -0.034,
+      0.005
+     ],
+     "delta_pre": 0.023,
+     "delta_tau0": 0.008,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.028,
+      "-7": 0.009,
+      "-6": 0.023,
+      "-5": 0.016,
+      "-4": -0.005,
+      "-3": -0.005,
+      "-2": 0.002,
+      "-1": -0.004,
+      "0": 0.008,
+      "1": -0.001,
+      "2": 0.005
+     },
+     "p_vs_random": 0.55
+    },
+    "dom_perp@first": {
+     "did": -0.014,
+     "did_ci": [
+      -0.04,
+      0.013
+     ],
+     "delta_pre": 0.021,
+     "delta_tau0": 0.007,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.022,
+      "-7": 0.006,
+      "-6": 0.026,
+      "-5": 0.015,
+      "-4": -0.008,
+      "-3": -0.003,
+      "-2": 0.004,
+      "-1": -0.013,
+      "0": 0.007,
+      "1": -0.005,
+      "2": 0.008
+     },
+     "p_vs_random": 0.55
+    },
+    "dom@both": {
+     "did": -0.015,
+     "did_ci": [
+      -0.033,
+      0.003
+     ],
+     "delta_pre": 0.022,
+     "delta_tau0": 0.007,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.027,
+      "-7": 0.009,
+      "-6": 0.022,
+      "-5": 0.017,
+      "-4": -0.004,
+      "-3": -0.006,
+      "-2": 0.001,
+      "-1": -0.004,
+      "0": 0.007,
+      "1": -0.0,
+      "2": 0.004
+     },
+     "p_vs_random": 0.55
+    },
+    "dom_perp@both": {
+     "did": -0.014,
+     "did_ci": [
+      -0.039,
+      0.013
+     ],
+     "delta_pre": 0.02,
+     "delta_tau0": 0.006,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.021,
+      "-7": 0.006,
+      "-6": 0.024,
+      "-5": 0.016,
+      "-4": -0.007,
+      "-3": -0.004,
+      "-2": 0.003,
+      "-1": -0.014,
+      "0": 0.006,
+      "1": -0.004,
+      "2": 0.007
+     },
+     "p_vs_random": 0.55
+    },
+    "emo:guilty": {
+     "did": -0.014,
+     "did_ci": [
+      -0.043,
+      0.016
+     ],
+     "delta_pre": 0.025,
+     "delta_tau0": 0.011,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.006,
+      "-7": 0.015,
+      "-6": 0.026,
+      "-5": 0.025,
+      "-4": 0.018,
+      "-3": 0.015,
+      "-2": 0.005,
+      "-1": -0.015,
+      "0": 0.011,
+      "1": -0.019,
+      "2": 0.018
+     },
+     "p_vs_random": 0.55
+    },
+    "emo:ashamed": {
+     "did": 0.001,
+     "did_ci": [
+      -0.03,
+      0.032
+     ],
+     "delta_pre": 0.02,
+     "delta_tau0": 0.021,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.002,
+      "-7": 0.001,
+      "-6": 0.024,
+      "-5": 0.029,
+      "-4": 0.008,
+      "-3": 0.013,
+      "-2": 0.006,
+      "-1": -0.001,
+      "0": 0.021,
+      "1": 0.005,
+      "2": -0.001
+     },
+     "p_vs_random": 0.97
+    },
+    "emo:regretful": {
+     "did": 0.014,
+     "did_ci": [
+      -0.028,
+      0.055
+     ],
+     "delta_pre": -0.013,
+     "delta_tau0": 0.0,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.004,
+      "-7": -0.016,
+      "-6": -0.027,
+      "-5": 0.036,
+      "-4": 0.008,
+      "-3": -0.013,
+      "-2": -0.036,
+      "-1": -0.028,
+      "0": 0.0,
+      "1": -0.047,
+      "2": -0.017
+     },
+     "p_vs_random": 0.57
+    },
+    "emo:sorry": {
+     "did": -0.017,
+     "did_ci": [
+      -0.056,
+      0.025
+     ],
+     "delta_pre": 0.004,
+     "delta_tau0": -0.013,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.01,
+      "-7": -0.024,
+      "-6": -0.022,
+      "-5": 0.029,
+      "-4": -0.003,
+      "-3": -0.018,
+      "-2": -0.025,
+      "-1": -0.013,
+      "0": -0.013,
+      "1": -0.052,
+      "2": -0.034
+     },
+     "p_vs_random": 0.52
+    },
+    "emo:nervous": {
+     "did": 0.008,
+     "did_ci": [
+      -0.028,
+      0.046
+     ],
+     "delta_pre": 0.011,
+     "delta_tau0": 0.02,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.037,
+      "-7": 0.029,
+      "-6": 0.037,
+      "-5": 0.013,
+      "-4": 0.026,
+      "-3": 0.024,
+      "-2": 0.026,
+      "-1": 0.055,
+      "0": 0.02,
+      "1": 0.069,
+      "2": 0.05
+     },
+     "p_vs_random": 0.73
+    },
+    "emo:calm": {
+     "did": 0.01,
+     "did_ci": [
+      -0.017,
+      0.038
+     ],
+     "delta_pre": -0.012,
+     "delta_tau0": -0.003,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.002,
+      "-7": -0.028,
+      "-6": 0.004,
+      "-5": 0.008,
+      "-4": -0.016,
+      "-3": 0.017,
+      "-2": -0.012,
+      "-1": -0.001,
+      "0": -0.003,
+      "1": -0.024,
+      "2": 0.016
+     },
+     "p_vs_random": 0.69
+    },
+    "emo:desperate": {
+     "did": -0.041,
+     "did_ci": [
+      -0.063,
+      -0.019
+     ],
+     "delta_pre": 0.026,
+     "delta_tau0": -0.015,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.031,
+      "-7": -0.002,
+      "-6": 0.008,
+      "-5": -0.027,
+      "-4": -0.005,
+      "-3": -0.004,
+      "-2": 0.008,
+      "-1": -0.026,
+      "0": -0.015,
+      "1": -0.016,
+      "2": 0.021
+     },
+     "p_vs_random": 0.14
+    },
+    "goodfire": {
+     "did": 0.013,
+     "did_ci": [
+      -0.029,
+      0.063
+     ],
+     "delta_pre": 0.018,
+     "delta_tau0": 0.031,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.03,
+      "-7": 0.009,
+      "-6": 0.034,
+      "-5": -0.001,
+      "-4": 0.02,
+      "-3": 0.007,
+      "-2": 0.01,
+      "-1": -0.006,
+      "0": 0.031,
+      "1": -0.01,
+      "2": 0.006
+     },
+     "p_vs_random": 0.57
+    },
+    "random": {
+     "did_mean": 0.0,
+     "did_abs_p95": 0.049,
+     "delta_pre_abs_p95": 0.064,
+     "traj_p5": {
+      "-8": -0.053,
+      "-7": -0.04,
+      "-6": -0.062,
+      "-5": -0.048,
+      "-4": -0.058,
+      "-3": -0.054,
+      "-2": -0.062,
+      "-1": -0.044,
+      "0": -0.066,
+      "1": -0.075,
+      "2": -0.044
+     },
+     "traj_p95": {
+      "-8": 0.051,
+      "-7": 0.05,
+      "-6": 0.071,
+      "-5": 0.053,
+      "-4": 0.048,
+      "-3": 0.063,
+      "-2": 0.066,
+      "-1": 0.044,
+      "0": 0.066,
+      "1": 0.087,
+      "2": 0.058
+     }
+    }
+   },
+   "reason": {
+    "dom": {
+     "did": -0.01,
+     "did_ci": [
+      -0.016,
+      -0.005
+     ],
+     "delta_pre": 0.016,
+     "delta_tau0": 0.006,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.011,
+      "-7": 0.005,
+      "-6": -0.002,
+      "-5": 0.006,
+      "-4": 0.005,
+      "-3": -0.003,
+      "-2": 0.004,
+      "-1": 0.011,
+      "0": 0.006,
+      "1": 0.012,
+      "2": -0.0
+     },
+     "p_vs_random": 0.42
+    },
+    "dom_perp": {
+     "did": 0.005,
+     "did_ci": [
+      0.0,
+      0.01
+     ],
+     "delta_pre": -0.004,
+     "delta_tau0": 0.001,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.004,
+      "-7": -0.004,
+      "-6": -0.011,
+      "-5": 0.0,
+      "-4": -0.0,
+      "-3": -0.004,
+      "-2": -0.001,
+      "-1": 0.005,
+      "0": 0.001,
+      "1": 0.004,
+      "2": 0.002
+     },
+     "p_vs_random": 0.72
+    },
+    "logreg": {
+     "did": -0.044,
+     "did_ci": [
+      -0.052,
+      -0.036
+     ],
+     "delta_pre": 0.053,
+     "delta_tau0": 0.009,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.044,
+      "-7": 0.029,
+      "-6": 0.014,
+      "-5": 0.017,
+      "-4": 0.015,
+      "-3": 0.011,
+      "-2": 0.015,
+      "-1": 0.017,
+      "0": 0.009,
+      "1": 0.016,
+      "2": 0.014
+     },
+     "p_vs_random": 0.01
+    },
+    "rule_text": {
+     "did": -0.005,
+     "did_ci": [
+      -0.009,
+      -0.001
+     ],
+     "delta_pre": 0.004,
+     "delta_tau0": -0.002,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.005,
+      "-7": -0.007,
+      "-6": -0.003,
+      "-5": -0.003,
+      "-4": -0.008,
+      "-3": -0.007,
+      "-2": -0.009,
+      "-1": 0.002,
+      "0": -0.002,
+      "1": -0.006,
+      "2": -0.013
+     },
+     "p_vs_random": 0.7
+    },
+    "dom@first": {
+     "did": -0.01,
+     "did_ci": [
+      -0.016,
+      -0.004
+     ],
+     "delta_pre": 0.016,
+     "delta_tau0": 0.006,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.011,
+      "-7": 0.003,
+      "-6": -0.004,
+      "-5": 0.005,
+      "-4": 0.004,
+      "-3": -0.005,
+      "-2": 0.003,
+      "-1": 0.011,
+      "0": 0.006,
+      "1": 0.011,
+      "2": -0.003
+     },
+     "p_vs_random": 0.42
+    },
+    "dom_perp@first": {
+     "did": 0.003,
+     "did_ci": [
+      -0.002,
+      0.008
+     ],
+     "delta_pre": -0.002,
+     "delta_tau0": 0.001,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.003,
+      "-7": -0.005,
+      "-6": -0.011,
+      "-5": 0.001,
+      "-4": 0.0,
+      "-3": -0.004,
+      "-2": -0.0,
+      "-1": 0.006,
+      "0": 0.001,
+      "1": 0.005,
+      "2": 0.0
+     },
+     "p_vs_random": 0.81
+    },
+    "dom@both": {
+     "did": -0.01,
+     "did_ci": [
+      -0.016,
+      -0.005
+     ],
+     "delta_pre": 0.016,
+     "delta_tau0": 0.006,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.011,
+      "-7": 0.004,
+      "-6": -0.003,
+      "-5": 0.005,
+      "-4": 0.005,
+      "-3": -0.004,
+      "-2": 0.004,
+      "-1": 0.011,
+      "0": 0.006,
+      "1": 0.012,
+      "2": -0.002
+     },
+     "p_vs_random": 0.42
+    },
+    "dom_perp@both": {
+     "did": 0.004,
+     "did_ci": [
+      -0.001,
+      0.009
+     ],
+     "delta_pre": -0.003,
+     "delta_tau0": 0.001,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.003,
+      "-7": -0.004,
+      "-6": -0.011,
+      "-5": 0.0,
+      "-4": -0.0,
+      "-3": -0.004,
+      "-2": -0.0,
+      "-1": 0.006,
+      "0": 0.001,
+      "1": 0.005,
+      "2": 0.001
+     },
+     "p_vs_random": 0.78
+    },
+    "emo:guilty": {
+     "did": -0.004,
+     "did_ci": [
+      -0.01,
+      0.002
+     ],
+     "delta_pre": 0.007,
+     "delta_tau0": 0.002,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.013,
+      "-7": -0.004,
+      "-6": 0.002,
+      "-5": 0.01,
+      "-4": 0.003,
+      "-3": 0.015,
+      "-2": 0.013,
+      "-1": 0.003,
+      "0": 0.002,
+      "1": -0.002,
+      "2": -0.001
+     },
+     "p_vs_random": 0.77
+    },
+    "emo:ashamed": {
+     "did": -0.002,
+     "did_ci": [
+      -0.006,
+      0.002
+     ],
+     "delta_pre": 0.001,
+     "delta_tau0": -0.002,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.008,
+      "-7": -0.008,
+      "-6": -0.006,
+      "-5": -0.002,
+      "-4": -0.008,
+      "-3": 0.005,
+      "-2": 0.001,
+      "-1": -0.004,
+      "0": -0.002,
+      "1": -0.006,
+      "2": -0.01
+     },
+     "p_vs_random": 0.87
+    },
+    "emo:regretful": {
+     "did": -0.008,
+     "did_ci": [
+      -0.011,
+      -0.004
+     ],
+     "delta_pre": 0.011,
+     "delta_tau0": 0.004,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.016,
+      "-7": 0.009,
+      "-6": 0.005,
+      "-5": 0.012,
+      "-4": 0.008,
+      "-3": 0.013,
+      "-2": 0.013,
+      "-1": 0.007,
+      "0": 0.004,
+      "1": -0.004,
+      "2": -0.004
+     },
+     "p_vs_random": 0.56
+    },
+    "emo:sorry": {
+     "did": -0.014,
+     "did_ci": [
+      -0.019,
+      -0.01
+     ],
+     "delta_pre": 0.02,
+     "delta_tau0": 0.005,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.019,
+      "-7": 0.014,
+      "-6": 0.011,
+      "-5": 0.016,
+      "-4": 0.007,
+      "-3": 0.013,
+      "-2": 0.017,
+      "-1": 0.008,
+      "0": 0.005,
+      "1": 0.0,
+      "2": -0.002
+     },
+     "p_vs_random": 0.27
+    },
+    "emo:nervous": {
+     "did": -0.016,
+     "did_ci": [
+      -0.022,
+      -0.011
+     ],
+     "delta_pre": 0.021,
+     "delta_tau0": 0.005,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.015,
+      "-7": 0.009,
+      "-6": 0.01,
+      "-5": 0.006,
+      "-4": -0.004,
+      "-3": 0.004,
+      "-2": 0.002,
+      "-1": 0.002,
+      "0": 0.005,
+      "1": 0.006,
+      "2": 0.019
+     },
+     "p_vs_random": 0.21
+    },
+    "emo:calm": {
+     "did": -0.003,
+     "did_ci": [
+      -0.009,
+      0.003
+     ],
+     "delta_pre": 0.004,
+     "delta_tau0": 0.001,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.002,
+      "-7": 0.004,
+      "-6": 0.007,
+      "-5": 0.001,
+      "-4": 0.003,
+      "-3": 0.001,
+      "-2": -0.006,
+      "-1": -0.0,
+      "0": 0.001,
+      "1": 0.004,
+      "2": 0.007
+     },
+     "p_vs_random": 0.83
+    },
+    "emo:desperate": {
+     "did": -0.02,
+     "did_ci": [
+      -0.027,
+      -0.012
+     ],
+     "delta_pre": 0.012,
+     "delta_tau0": -0.008,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.016,
+      "-7": 0.005,
+      "-6": 0.003,
+      "-5": 0.008,
+      "-4": 0.003,
+      "-3": 0.0,
+      "-2": 0.009,
+      "-1": -0.001,
+      "0": -0.008,
+      "1": 0.005,
+      "2": -0.0
+     },
+     "p_vs_random": 0.17
+    },
+    "goodfire": {
+     "did": -0.006,
+     "did_ci": [
+      -0.008,
+      -0.004
+     ],
+     "delta_pre": 0.013,
+     "delta_tau0": 0.007,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.011,
+      "-7": 0.008,
+      "-6": 0.005,
+      "-5": 0.009,
+      "-4": 0.005,
+      "-3": 0.005,
+      "-2": 0.005,
+      "-1": 0.005,
+      "0": 0.007,
+      "1": 0.003,
+      "2": 0.003
+     },
+     "p_vs_random": 0.64
+    },
+    "random": {
+     "did_mean": 0.002,
+     "did_abs_p95": 0.032,
+     "delta_pre_abs_p95": 0.033,
+     "traj_p5": {
+      "-8": -0.02,
+      "-7": -0.013,
+      "-6": -0.014,
+      "-5": -0.015,
+      "-4": -0.012,
+      "-3": -0.013,
+      "-2": -0.013,
+      "-1": -0.013,
+      "0": -0.009,
+      "1": -0.015,
+      "2": -0.015
+     },
+     "traj_p95": {
+      "-8": 0.02,
+      "-7": 0.015,
+      "-6": 0.016,
+      "-5": 0.014,
+      "-4": 0.014,
+      "-3": 0.012,
+      "-2": 0.013,
+      "-1": 0.01,
+      "0": 0.009,
+      "1": 0.016,
+      "2": 0.015
+     }
+    }
+   },
+   "action": {
+    "dom": {
+     "did": 0.004,
+     "did_ci": [
+      -0.001,
+      0.009
+     ],
+     "delta_pre": 0.004,
+     "delta_tau0": 0.007,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.013,
+      "-7": 0.011,
+      "-6": -0.001,
+      "-5": 0.011,
+      "-4": -0.006,
+      "-3": 0.004,
+      "-2": -0.001,
+      "-1": 0.01,
+      "0": 0.007,
+      "1": 0.013,
+      "2": -0.003
+     },
+     "p_vs_random": 0.6
+    },
+    "dom_perp": {
+     "did": 0.012,
+     "did_ci": [
+      0.007,
+      0.016
+     ],
+     "delta_pre": -0.008,
+     "delta_tau0": 0.004,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.0,
+      "-7": 0.002,
+      "-6": -0.007,
+      "-5": 0.007,
+      "-4": -0.008,
+      "-3": -0.002,
+      "-2": -0.004,
+      "-1": 0.005,
+      "0": 0.004,
+      "1": 0.006,
+      "2": -0.005
+     },
+     "p_vs_random": 0.12
+    },
+    "logreg": {
+     "did": -0.011,
+     "did_ci": [
+      -0.016,
+      -0.006
+     ],
+     "delta_pre": 0.022,
+     "delta_tau0": 0.011,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.024,
+      "-7": 0.021,
+      "-6": 0.014,
+      "-5": 0.012,
+      "-4": 0.012,
+      "-3": 0.022,
+      "-2": 0.003,
+      "-1": 0.013,
+      "0": 0.011,
+      "1": 0.021,
+      "2": -0.003
+     },
+     "p_vs_random": 0.14
+    },
+    "rule_text": {
+     "did": 0.01,
+     "did_ci": [
+      0.005,
+      0.014
+     ],
+     "delta_pre": -0.01,
+     "delta_tau0": -0.0,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.008,
+      "-7": -0.002,
+      "-6": 0.0,
+      "-5": -0.004,
+      "-4": -0.012,
+      "-3": -0.008,
+      "-2": -0.008,
+      "-1": -0.002,
+      "0": -0.0,
+      "1": -0.005,
+      "2": -0.007
+     },
+     "p_vs_random": 0.23
+    },
+    "dom@first": {
+     "did": 0.004,
+     "did_ci": [
+      -0.001,
+      0.009
+     ],
+     "delta_pre": 0.002,
+     "delta_tau0": 0.006,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.011,
+      "-7": 0.009,
+      "-6": -0.005,
+      "-5": 0.009,
+      "-4": -0.007,
+      "-3": 0.003,
+      "-2": -0.004,
+      "-1": 0.009,
+      "0": 0.006,
+      "1": 0.012,
+      "2": -0.004
+     },
+     "p_vs_random": 0.59
+    },
+    "dom_perp@first": {
+     "did": 0.011,
+     "did_ci": [
+      0.007,
+      0.015
+     ],
+     "delta_pre": -0.007,
+     "delta_tau0": 0.004,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.002,
+      "-7": 0.002,
+      "-6": -0.009,
+      "-5": 0.006,
+      "-4": -0.007,
+      "-3": -0.002,
+      "-2": -0.005,
+      "-1": 0.005,
+      "0": 0.004,
+      "1": 0.006,
+      "2": -0.005
+     },
+     "p_vs_random": 0.16
+    },
+    "dom@both": {
+     "did": 0.004,
+     "did_ci": [
+      -0.001,
+      0.009
+     ],
+     "delta_pre": 0.003,
+     "delta_tau0": 0.006,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.012,
+      "-7": 0.01,
+      "-6": -0.003,
+      "-5": 0.01,
+      "-4": -0.006,
+      "-3": 0.004,
+      "-2": -0.003,
+      "-1": 0.009,
+      "0": 0.006,
+      "1": 0.013,
+      "2": -0.004
+     },
+     "p_vs_random": 0.59
+    },
+    "dom_perp@both": {
+     "did": 0.011,
+     "did_ci": [
+      0.007,
+      0.016
+     ],
+     "delta_pre": -0.008,
+     "delta_tau0": 0.004,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.001,
+      "-7": 0.002,
+      "-6": -0.008,
+      "-5": 0.007,
+      "-4": -0.007,
+      "-3": -0.002,
+      "-2": -0.004,
+      "-1": 0.005,
+      "0": 0.004,
+      "1": 0.006,
+      "2": -0.005
+     },
+     "p_vs_random": 0.14
+    },
+    "emo:guilty": {
+     "did": 0.003,
+     "did_ci": [
+      -0.002,
+      0.008
+     ],
+     "delta_pre": 0.0,
+     "delta_tau0": 0.003,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.009,
+      "-7": 0.001,
+      "-6": -0.002,
+      "-5": 0.007,
+      "-4": 0.013,
+      "-3": 0.002,
+      "-2": 0.0,
+      "-1": -0.005,
+      "0": 0.003,
+      "1": 0.005,
+      "2": 0.007
+     },
+     "p_vs_random": 0.64
+    },
+    "emo:ashamed": {
+     "did": 0.004,
+     "did_ci": [
+      0.0,
+      0.008
+     ],
+     "delta_pre": -0.008,
+     "delta_tau0": -0.004,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.004,
+      "-7": -0.009,
+      "-6": -0.011,
+      "-5": 0.009,
+      "-4": -0.001,
+      "-3": 0.001,
+      "-2": -0.01,
+      "-1": -0.015,
+      "0": -0.004,
+      "1": -0.001,
+      "2": -0.003
+     },
+     "p_vs_random": 0.55
+    },
+    "emo:regretful": {
+     "did": -0.003,
+     "did_ci": [
+      -0.008,
+      0.001
+     ],
+     "delta_pre": 0.004,
+     "delta_tau0": 0.001,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.021,
+      "-7": 0.007,
+      "-6": 0.003,
+      "-5": 0.014,
+      "-4": 0.01,
+      "-3": 0.004,
+      "-2": 0.013,
+      "-1": 0.001,
+      "0": 0.001,
+      "1": 0.014,
+      "2": 0.003
+     },
+     "p_vs_random": 0.62
+    },
+    "emo:sorry": {
+     "did": -0.002,
+     "did_ci": [
+      -0.007,
+      0.002
+     ],
+     "delta_pre": 0.005,
+     "delta_tau0": 0.003,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.013,
+      "-7": 0.012,
+      "-6": 0.002,
+      "-5": 0.014,
+      "-4": 0.008,
+      "-3": 0.005,
+      "-2": 0.008,
+      "-1": 0.003,
+      "0": 0.003,
+      "1": 0.014,
+      "2": 0.004
+     },
+     "p_vs_random": 0.71
+    },
+    "emo:nervous": {
+     "did": -0.0,
+     "did_ci": [
+      -0.008,
+      0.007
+     ],
+     "delta_pre": 0.006,
+     "delta_tau0": 0.006,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.002,
+      "-7": -0.007,
+      "-6": 0.002,
+      "-5": -0.012,
+      "-4": 0.005,
+      "-3": -0.0,
+      "-2": -0.006,
+      "-1": -0.0,
+      "0": 0.006,
+      "1": 0.004,
+      "2": 0.006
+     },
+     "p_vs_random": 0.94
+    },
+    "emo:calm": {
+     "did": -0.005,
+     "did_ci": [
+      -0.013,
+      0.003
+     ],
+     "delta_pre": 0.004,
+     "delta_tau0": -0.002,
+     "n_runs": 44,
+     "traj": {
+      "-8": -0.008,
+      "-7": 0.006,
+      "-6": -0.005,
+      "-5": -0.022,
+      "-4": -0.0,
+      "-3": -0.005,
+      "-2": -0.004,
+      "-1": 0.006,
+      "0": -0.002,
+      "1": -0.011,
+      "2": 0.006
+     },
+     "p_vs_random": 0.46
+    },
+    "emo:desperate": {
+     "did": -0.003,
+     "did_ci": [
+      -0.008,
+      0.002
+     ],
+     "delta_pre": 0.008,
+     "delta_tau0": 0.005,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.023,
+      "-7": 0.002,
+      "-6": -0.005,
+      "-5": 0.01,
+      "-4": 0.007,
+      "-3": 0.005,
+      "-2": 0.017,
+      "-1": 0.0,
+      "0": 0.005,
+      "1": 0.017,
+      "2": -0.005
+     },
+     "p_vs_random": 0.64
+    },
+    "goodfire": {
+     "did": -0.005,
+     "did_ci": [
+      -0.007,
+      -0.003
+     ],
+     "delta_pre": 0.005,
+     "delta_tau0": 0.0,
+     "n_runs": 44,
+     "traj": {
+      "-8": 0.005,
+      "-7": 0.003,
+      "-6": 0.002,
+      "-5": 0.003,
+      "-4": 0.003,
+      "-3": 0.001,
+      "-2": 0.002,
+      "-1": 0.002,
+      "0": 0.0,
+      "1": 0.005,
+      "2": 0.003
+     },
+     "p_vs_random": 0.47
+    },
+    "random": {
+     "did_mean": -0.0,
+     "did_abs_p95": 0.015,
+     "delta_pre_abs_p95": 0.019,
+     "traj_p5": {
+      "-8": -0.021,
+      "-7": -0.015,
+      "-6": -0.015,
+      "-5": -0.014,
+      "-4": -0.014,
+      "-3": -0.017,
+      "-2": -0.014,
+      "-1": -0.01,
+      "0": -0.008,
+      "1": -0.019,
+      "2": -0.014
+     },
+     "traj_p95": {
+      "-8": 0.02,
+      "-7": 0.015,
+      "-6": 0.016,
+      "-5": 0.013,
+      "-4": 0.011,
+      "-3": 0.012,
+      "-2": 0.013,
+      "-1": 0.015,
+      "0": 0.006,
+      "1": 0.017,
+      "2": 0.019
+     }
+    }
+   }
+  },
+  "palisades:forbid-allow": {
+   "pre": {
+    "dom": {
+     "did": -0.021,
+     "did_ci": [
+      -0.073,
+      0.029
+     ],
+     "delta_pre": 0.002,
+     "delta_tau0": -0.018,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.024,
+      "-6": 0.091,
+      "-5": 0.063,
+      "-4": 0.011,
+      "-3": -0.039,
+      "-2": -0.039,
+      "-1": 0.004,
+      "0": -0.0,
+      "1": -0.04,
+      "2": -0.009
+     },
+     "p_vs_random": 0.79
+    },
+    "dom_perp": {
+     "did": -0.03,
+     "did_ci": [
+      -0.105,
+      0.041
+     ],
+     "delta_pre": -0.02,
+     "delta_tau0": -0.05,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.022,
+      "-6": 0.071,
+      "-5": 0.046,
+      "-4": -0.013,
+      "-3": -0.05,
+      "-2": -0.06,
+      "-1": 0.008,
+      "0": -0.031,
+      "1": -0.048,
+      "2": -0.03
+     },
+     "p_vs_random": 0.66
+    },
+    "logreg": {
+     "did": -0.082,
+     "did_ci": [
+      -0.132,
+      -0.039
+     ],
+     "delta_pre": 0.038,
+     "delta_tau0": -0.044,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.112,
+      "-6": 0.243,
+      "-5": 0.139,
+      "-4": 0.051,
+      "-3": -0.059,
+      "-2": -0.074,
+      "-1": 0.012,
+      "0": 0.006,
+      "1": -0.078,
+      "2": -0.01
+     },
+     "p_vs_random": 0.23
+    },
+    "rule_text": {
+     "did": -0.003,
+     "did_ci": [
+      -0.041,
+      0.039
+     ],
+     "delta_pre": -0.003,
+     "delta_tau0": -0.005,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.007,
+      "-6": 0.103,
+      "-5": 0.064,
+      "-4": 0.006,
+      "-3": -0.063,
+      "-2": -0.037,
+      "-1": -0.021,
+      "0": 0.009,
+      "1": -0.015,
+      "2": 0.023
+     },
+     "p_vs_random": 0.96
+    },
+    "dom@first": {
+     "did": -0.064,
+     "did_ci": [
+      -0.128,
+      -0.003
+     ],
+     "delta_pre": 0.039,
+     "delta_tau0": -0.026,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.089,
+      "-6": 0.206,
+      "-5": 0.138,
+      "-4": 0.044,
+      "-3": -0.037,
+      "-2": -0.038,
+      "-1": 0.027,
+      "0": 0.015,
+      "1": -0.048,
+      "2": -0.009
+     },
+     "p_vs_random": 0.35
+    },
+    "dom_perp@first": {
+     "did": -0.051,
+     "did_ci": [
+      -0.129,
+      0.022
+     ],
+     "delta_pre": -0.003,
+     "delta_tau0": -0.054,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.005,
+      "-6": 0.118,
+      "-5": 0.076,
+      "-4": 0.001,
+      "-3": -0.045,
+      "-2": -0.055,
+      "-1": 0.019,
+      "0": -0.026,
+      "1": -0.046,
+      "2": -0.028
+     },
+     "p_vs_random": 0.44
+    },
+    "dom@both": {
+     "did": -0.041,
+     "did_ci": [
+      -0.098,
+      0.015
+     ],
+     "delta_pre": 0.019,
+     "delta_tau0": -0.022,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.054,
+      "-6": 0.144,
+      "-5": 0.097,
+      "-4": 0.026,
+      "-3": -0.039,
+      "-2": -0.039,
+      "-1": 0.014,
+      "0": 0.007,
+      "1": -0.044,
+      "2": -0.009
+     },
+     "p_vs_random": 0.54
+    },
+    "dom_perp@both": {
+     "did": -0.04,
+     "did_ci": [
+      -0.116,
+      0.033
+     ],
+     "delta_pre": -0.012,
+     "delta_tau0": -0.052,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.01,
+      "-6": 0.092,
+      "-5": 0.059,
+      "-4": -0.007,
+      "-3": -0.047,
+      "-2": -0.057,
+      "-1": 0.013,
+      "0": -0.029,
+      "1": -0.047,
+      "2": -0.029
+     },
+     "p_vs_random": 0.54
+    },
+    "emo:guilty": {
+     "did": -0.046,
+     "did_ci": [
+      -0.098,
+      0.009
+     ],
+     "delta_pre": 0.025,
+     "delta_tau0": -0.021,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.134,
+      "-6": 0.081,
+      "-5": 0.077,
+      "-4": 0.006,
+      "-3": 0.022,
+      "-2": -0.01,
+      "-1": -0.019,
+      "0": -0.008,
+      "1": 0.003,
+      "2": 0.04
+     },
+     "p_vs_random": 0.48
+    },
+    "emo:ashamed": {
+     "did": -0.054,
+     "did_ci": [
+      -0.12,
+      0.021
+     ],
+     "delta_pre": 0.065,
+     "delta_tau0": 0.011,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.179,
+      "-6": 0.145,
+      "-5": 0.138,
+      "-4": 0.044,
+      "-3": 0.032,
+      "-2": 0.018,
+      "-1": 0.001,
+      "0": 0.031,
+      "1": -0.004,
+      "2": 0.066
+     },
+     "p_vs_random": 0.43
+    },
+    "emo:regretful": {
+     "did": -0.063,
+     "did_ci": [
+      -0.113,
+      -0.014
+     ],
+     "delta_pre": 0.03,
+     "delta_tau0": -0.033,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.148,
+      "-6": 0.124,
+      "-5": 0.087,
+      "-4": 0.022,
+      "-3": 0.007,
+      "-2": -0.019,
+      "-1": -0.007,
+      "0": -0.013,
+      "1": 0.007,
+      "2": 0.012
+     },
+     "p_vs_random": 0.35
+    },
+    "emo:sorry": {
+     "did": -0.058,
+     "did_ci": [
+      -0.111,
+      -0.006
+     ],
+     "delta_pre": 0.022,
+     "delta_tau0": -0.036,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.109,
+      "-6": 0.131,
+      "-5": 0.11,
+      "-4": -0.006,
+      "-3": -0.031,
+      "-2": -0.02,
+      "-1": -0.016,
+      "0": -0.011,
+      "1": -0.032,
+      "2": 0.007
+     },
+     "p_vs_random": 0.38
+    },
+    "emo:nervous": {
+     "did": -0.011,
+     "did_ci": [
+      -0.057,
+      0.038
+     ],
+     "delta_pre": 0.028,
+     "delta_tau0": 0.017,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.014,
+      "-6": 0.073,
+      "-5": 0.079,
+      "-4": 0.034,
+      "-3": -0.01,
+      "-2": 0.012,
+      "-1": 0.006,
+      "0": 0.02,
+      "1": -0.002,
+      "2": 0.012
+     },
+     "p_vs_random": 0.88
+    },
+    "emo:calm": {
+     "did": -0.02,
+     "did_ci": [
+      -0.099,
+      0.058
+     ],
+     "delta_pre": -0.032,
+     "delta_tau0": -0.052,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.056,
+      "-6": -0.023,
+      "-5": -0.074,
+      "-4": -0.052,
+      "-3": -0.01,
+      "-2": 0.0,
+      "-1": -0.034,
+      "0": -0.053,
+      "1": -0.009,
+      "2": -0.028
+     },
+     "p_vs_random": 0.8
+    },
+    "emo:desperate": {
+     "did": -0.022,
+     "did_ci": [
+      -0.049,
+      0.003
+     ],
+     "delta_pre": 0.002,
+     "delta_tau0": -0.02,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.065,
+      "-6": 0.057,
+      "-5": 0.032,
+      "-4": 0.001,
+      "-3": -0.015,
+      "-2": -0.042,
+      "-1": 0.001,
+      "0": -0.005,
+      "1": -0.015,
+      "2": -0.036
+     },
+     "p_vs_random": 0.79
+    },
+    "goodfire": {
+     "did": -0.052,
+     "did_ci": [
+      -0.11,
+      -0.002
+     ],
+     "delta_pre": 0.014,
+     "delta_tau0": -0.038,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.046,
+      "-6": 0.063,
+      "-5": 0.049,
+      "-4": 0.017,
+      "-3": 0.003,
+      "-2": -0.034,
+      "-1": 0.005,
+      "0": -0.017,
+      "1": -0.068,
+      "2": -0.005
+     },
+     "p_vs_random": 0.44
+    },
+    "random": {
+     "did_mean": -0.006,
+     "did_abs_p95": 0.143,
+     "delta_pre_abs_p95": 0.153,
+     "traj_p5": {
+      "-7": -0.168,
+      "-6": -0.283,
+      "-5": -0.154,
+      "-4": -0.098,
+      "-3": -0.055,
+      "-2": -0.071,
+      "-1": -0.066,
+      "0": -0.072,
+      "1": -0.071,
+      "2": -0.057
+     },
+     "traj_p95": {
+      "-7": 0.252,
+      "-6": 0.319,
+      "-5": 0.24,
+      "-4": 0.121,
+      "-3": 0.066,
+      "-2": 0.083,
+      "-1": 0.073,
+      "0": 0.092,
+      "1": 0.077,
+      "2": 0.066
+     }
+    },
+    "dom_by_restated": {
+     "restated": {
+      "did": -0.026,
+      "did_ci": [
+       -0.067,
+       0.015
+      ],
+      "delta_pre": 0.003,
+      "delta_tau0": -0.023,
+      "n_runs": 38
+     },
+     "not_restated": {
+      "did": 0.033,
+      "did_ci": [
+       -0.315,
+       0.381
+      ],
+      "delta_pre": -0.005,
+      "delta_tau0": 0.028,
+      "n_runs": 4
+     }
+    }
+   },
+   "reason": {
+    "dom": {
+     "did": 0.032,
+     "did_ci": [
+      -0.001,
+      0.065
+     ],
+     "delta_pre": 0.066,
+     "delta_tau0": 0.097,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.195,
+      "-6": 0.179,
+      "-5": 0.136,
+      "-4": 0.047,
+      "-3": -0.017,
+      "-2": 0.027,
+      "-1": 0.064,
+      "0": 0.103,
+      "1": 0.013,
+      "2": 0.013
+     },
+     "p_vs_random": 0.12
+    },
+    "dom_perp": {
+     "did": 0.036,
+     "did_ci": [
+      0.015,
+      0.056
+     ],
+     "delta_pre": 0.015,
+     "delta_tau0": 0.05,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.079,
+      "-6": 0.084,
+      "-5": 0.049,
+      "-4": -0.002,
+      "-3": -0.036,
+      "-2": 0.008,
+      "-1": 0.026,
+      "0": 0.053,
+      "1": -0.003,
+      "2": -0.002
+     },
+     "p_vs_random": 0.09
+    },
+    "logreg": {
+     "did": 0.012,
+     "did_ci": [
+      -0.006,
+      0.03
+     ],
+     "delta_pre": 0.044,
+     "delta_tau0": 0.056,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.112,
+      "-6": 0.123,
+      "-5": 0.102,
+      "-4": 0.027,
+      "-3": -0.016,
+      "-2": 0.023,
+      "-1": 0.05,
+      "0": 0.06,
+      "1": 0.01,
+      "2": 0.007
+     },
+     "p_vs_random": 0.62
+    },
+    "rule_text": {
+     "did": 0.022,
+     "did_ci": [
+      -0.013,
+      0.058
+     ],
+     "delta_pre": 0.043,
+     "delta_tau0": 0.065,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.193,
+      "-6": 0.104,
+      "-5": 0.092,
+      "-4": 0.044,
+      "-3": -0.011,
+      "-2": -0.001,
+      "-1": 0.042,
+      "0": 0.07,
+      "1": 0.002,
+      "2": 0.001
+     },
+     "p_vs_random": 0.31
+    },
+    "dom@first": {
+     "did": 0.031,
+     "did_ci": [
+      0.001,
+      0.06
+     ],
+     "delta_pre": 0.062,
+     "delta_tau0": 0.093,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.176,
+      "-6": 0.174,
+      "-5": 0.128,
+      "-4": 0.045,
+      "-3": -0.019,
+      "-2": 0.031,
+      "-1": 0.063,
+      "0": 0.098,
+      "1": 0.014,
+      "2": 0.012
+     },
+     "p_vs_random": 0.14
+    },
+    "dom_perp@first": {
+     "did": 0.034,
+     "did_ci": [
+      0.014,
+      0.053
+     ],
+     "delta_pre": 0.016,
+     "delta_tau0": 0.05,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.077,
+      "-6": 0.086,
+      "-5": 0.05,
+      "-4": -0.001,
+      "-3": -0.035,
+      "-2": 0.011,
+      "-1": 0.026,
+      "0": 0.052,
+      "1": -0.003,
+      "2": -0.001
+     },
+     "p_vs_random": 0.09
+    },
+    "dom@both": {
+     "did": 0.031,
+     "did_ci": [
+      0.0,
+      0.063
+     ],
+     "delta_pre": 0.064,
+     "delta_tau0": 0.095,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.186,
+      "-6": 0.177,
+      "-5": 0.132,
+      "-4": 0.046,
+      "-3": -0.018,
+      "-2": 0.029,
+      "-1": 0.064,
+      "0": 0.101,
+      "1": 0.013,
+      "2": 0.013
+     },
+     "p_vs_random": 0.13
+    },
+    "dom_perp@both": {
+     "did": 0.035,
+     "did_ci": [
+      0.015,
+      0.055
+     ],
+     "delta_pre": 0.015,
+     "delta_tau0": 0.05,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.078,
+      "-6": 0.085,
+      "-5": 0.05,
+      "-4": -0.002,
+      "-3": -0.036,
+      "-2": 0.009,
+      "-1": 0.026,
+      "0": 0.053,
+      "1": -0.003,
+      "2": -0.002
+     },
+     "p_vs_random": 0.09
+    },
+    "emo:guilty": {
+     "did": -0.016,
+     "did_ci": [
+      -0.024,
+      -0.009
+     ],
+     "delta_pre": 0.024,
+     "delta_tau0": 0.008,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.058,
+      "-6": 0.042,
+      "-5": 0.036,
+      "-4": 0.022,
+      "-3": 0.009,
+      "-2": 0.012,
+      "-1": 0.022,
+      "0": 0.009,
+      "1": 0.006,
+      "2": 0.003
+     },
+     "p_vs_random": 0.49
+    },
+    "emo:ashamed": {
+     "did": -0.015,
+     "did_ci": [
+      -0.023,
+      -0.008
+     ],
+     "delta_pre": 0.009,
+     "delta_tau0": -0.006,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.035,
+      "-6": 0.01,
+      "-5": 0.018,
+      "-4": 0.009,
+      "-3": 0.003,
+      "-2": 0.006,
+      "-1": 0.013,
+      "0": -0.005,
+      "1": -0.004,
+      "2": -0.002
+     },
+     "p_vs_random": 0.53
+    },
+    "emo:regretful": {
+     "did": 0.006,
+     "did_ci": [
+      -0.005,
+      0.016
+     ],
+     "delta_pre": -0.009,
+     "delta_tau0": -0.003,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.012,
+      "-6": -0.023,
+      "-5": 0.001,
+      "-4": -0.019,
+      "-3": -0.012,
+      "-2": 0.007,
+      "-1": 0.021,
+      "0": -0.003,
+      "1": 0.011,
+      "2": -0.003
+     },
+     "p_vs_random": 0.81
+    },
+    "emo:sorry": {
+     "did": -0.002,
+     "did_ci": [
+      -0.008,
+      0.004
+     ],
+     "delta_pre": -0.008,
+     "delta_tau0": -0.01,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.004,
+      "-6": -0.023,
+      "-5": -0.007,
+      "-4": -0.015,
+      "-3": -0.009,
+      "-2": 0.008,
+      "-1": 0.013,
+      "0": -0.01,
+      "1": -0.005,
+      "2": -0.007
+     },
+     "p_vs_random": 0.93
+    },
+    "emo:nervous": {
+     "did": -0.026,
+     "did_ci": [
+      -0.043,
+      -0.011
+     ],
+     "delta_pre": 0.05,
+     "delta_tau0": 0.024,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.136,
+      "-6": 0.121,
+      "-5": 0.066,
+      "-4": 0.047,
+      "-3": 0.015,
+      "-2": 0.016,
+      "-1": 0.032,
+      "0": 0.027,
+      "1": 0.012,
+      "2": 0.017
+     },
+     "p_vs_random": 0.21
+    },
+    "emo:calm": {
+     "did": 0.036,
+     "did_ci": [
+      0.02,
+      0.051
+     ],
+     "delta_pre": -0.047,
+     "delta_tau0": -0.011,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.075,
+      "-6": -0.056,
+      "-5": -0.076,
+      "-4": -0.052,
+      "-3": -0.035,
+      "-2": -0.026,
+      "-1": -0.051,
+      "0": -0.015,
+      "1": -0.005,
+      "2": -0.01
+     },
+     "p_vs_random": 0.09
+    },
+    "emo:desperate": {
+     "did": -0.055,
+     "did_ci": [
+      -0.075,
+      -0.035
+     ],
+     "delta_pre": 0.031,
+     "delta_tau0": -0.023,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.019,
+      "-6": 0.008,
+      "-5": 0.025,
+      "-4": 0.05,
+      "-3": 0.043,
+      "-2": 0.026,
+      "-1": 0.005,
+      "0": -0.022,
+      "1": 0.01,
+      "2": 0.013
+     },
+     "p_vs_random": 0.0
+    },
+    "goodfire": {
+     "did": 0.022,
+     "did_ci": [
+      0.014,
+      0.029
+     ],
+     "delta_pre": -0.014,
+     "delta_tau0": 0.007,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.005,
+      "-6": 0.015,
+      "-5": -0.006,
+      "-4": -0.018,
+      "-3": -0.029,
+      "-2": -0.022,
+      "-1": -0.017,
+      "0": 0.008,
+      "1": -0.004,
+      "2": -0.008
+     },
+     "p_vs_random": 0.31
+    },
+    "random": {
+     "did_mean": -0.002,
+     "did_abs_p95": 0.038,
+     "delta_pre_abs_p95": 0.053,
+     "traj_p5": {
+      "-7": -0.097,
+      "-6": -0.095,
+      "-5": -0.06,
+      "-4": -0.041,
+      "-3": -0.034,
+      "-2": -0.03,
+      "-1": -0.03,
+      "0": -0.043,
+      "1": -0.029,
+      "2": -0.021
+     },
+     "traj_p95": {
+      "-7": 0.123,
+      "-6": 0.108,
+      "-5": 0.08,
+      "-4": 0.056,
+      "-3": 0.052,
+      "-2": 0.042,
+      "-1": 0.042,
+      "0": 0.046,
+      "1": 0.033,
+      "2": 0.021
+     }
+    },
+    "dom_by_restated": {
+     "restated": {
+      "did": 0.006,
+      "did_ci": [
+       -0.02,
+       0.032
+      ],
+      "delta_pre": 0.069,
+      "delta_tau0": 0.075,
+      "n_runs": 38
+     },
+     "not_restated": {
+      "did": 0.278,
+      "did_ci": [
+       0.229,
+       0.328
+      ],
+      "delta_pre": 0.034,
+      "delta_tau0": 0.312,
+      "n_runs": 4
+     }
+    }
+   },
+   "action": {
+    "dom": {
+     "did": 0.012,
+     "did_ci": [
+      -0.007,
+      0.031
+     ],
+     "delta_pre": 0.012,
+     "delta_tau0": 0.024,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.078,
+      "-6": 0.02,
+      "-5": -0.004,
+      "-4": -0.003,
+      "-3": -0.0,
+      "-2": 0.033,
+      "-1": 0.049,
+      "0": 0.023,
+      "1": 0.006,
+      "2": 0.017
+     },
+     "p_vs_random": 0.57
+    },
+    "dom_perp": {
+     "did": 0.018,
+     "did_ci": [
+      -0.003,
+      0.04
+     ],
+     "delta_pre": -0.016,
+     "delta_tau0": 0.002,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.063,
+      "-6": -0.005,
+      "-5": -0.037,
+      "-4": -0.028,
+      "-3": -0.02,
+      "-2": -0.012,
+      "-1": 0.029,
+      "0": 0.003,
+      "1": -0.011,
+      "2": -0.003
+     },
+     "p_vs_random": 0.35
+    },
+    "logreg": {
+     "did": -0.008,
+     "did_ci": [
+      -0.03,
+      0.016
+     ],
+     "delta_pre": 0.024,
+     "delta_tau0": 0.017,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.049,
+      "-6": 0.035,
+      "-5": -0.01,
+      "-4": 0.003,
+      "-3": 0.004,
+      "-2": 0.076,
+      "-1": 0.047,
+      "0": 0.015,
+      "1": 0.006,
+      "2": 0.006
+     },
+     "p_vs_random": 0.72
+    },
+    "rule_text": {
+     "did": -0.001,
+     "did_ci": [
+      -0.024,
+      0.022
+     ],
+     "delta_pre": 0.008,
+     "delta_tau0": 0.007,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.056,
+      "-6": -0.009,
+      "-5": 0.023,
+      "-4": 0.043,
+      "-3": -0.007,
+      "-2": -0.022,
+      "-1": 0.004,
+      "0": 0.006,
+      "1": 0.01,
+      "2": 0.004
+     },
+     "p_vs_random": 0.98
+    },
+    "dom@first": {
+     "did": 0.012,
+     "did_ci": [
+      -0.01,
+      0.034
+     ],
+     "delta_pre": 0.012,
+     "delta_tau0": 0.025,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.081,
+      "-6": 0.026,
+      "-5": -0.007,
+      "-4": -0.003,
+      "-3": -0.002,
+      "-2": 0.028,
+      "-1": 0.056,
+      "0": 0.024,
+      "1": 0.007,
+      "2": 0.021
+     },
+     "p_vs_random": 0.56
+    },
+    "dom_perp@first": {
+     "did": 0.017,
+     "did_ci": [
+      -0.006,
+      0.04
+     ],
+     "delta_pre": -0.014,
+     "delta_tau0": 0.002,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.062,
+      "-6": 0.003,
+      "-5": -0.036,
+      "-4": -0.026,
+      "-3": -0.019,
+      "-2": -0.013,
+      "-1": 0.032,
+      "0": 0.004,
+      "1": -0.01,
+      "2": 0.001
+     },
+     "p_vs_random": 0.36
+    },
+    "dom@both": {
+     "did": 0.012,
+     "did_ci": [
+      -0.008,
+      0.032
+     ],
+     "delta_pre": 0.012,
+     "delta_tau0": 0.024,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.079,
+      "-6": 0.023,
+      "-5": -0.005,
+      "-4": -0.003,
+      "-3": -0.001,
+      "-2": 0.031,
+      "-1": 0.053,
+      "0": 0.024,
+      "1": 0.007,
+      "2": 0.019
+     },
+     "p_vs_random": 0.57
+    },
+    "dom_perp@both": {
+     "did": 0.017,
+     "did_ci": [
+      -0.005,
+      0.04
+     ],
+     "delta_pre": -0.015,
+     "delta_tau0": 0.002,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.063,
+      "-6": -0.001,
+      "-5": -0.036,
+      "-4": -0.027,
+      "-3": -0.02,
+      "-2": -0.013,
+      "-1": 0.03,
+      "0": 0.003,
+      "1": -0.01,
+      "2": -0.001
+     },
+     "p_vs_random": 0.35
+    },
+    "emo:guilty": {
+     "did": -0.009,
+     "did_ci": [
+      -0.036,
+      0.016
+     ],
+     "delta_pre": 0.013,
+     "delta_tau0": 0.004,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.012,
+      "-6": 0.012,
+      "-5": 0.069,
+      "-4": -0.014,
+      "-3": 0.02,
+      "-2": -0.024,
+      "-1": 0.026,
+      "0": 0.003,
+      "1": 0.009,
+      "2": -0.005
+     },
+     "p_vs_random": 0.68
+    },
+    "emo:ashamed": {
+     "did": -0.008,
+     "did_ci": [
+      -0.037,
+      0.02
+     ],
+     "delta_pre": -0.004,
+     "delta_tau0": -0.012,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.008,
+      "-6": -0.02,
+      "-5": 0.041,
+      "-4": -0.04,
+      "-3": 0.008,
+      "-2": -0.033,
+      "-1": 0.006,
+      "0": -0.012,
+      "1": -0.008,
+      "2": 0.0
+     },
+     "p_vs_random": 0.71
+    },
+    "emo:regretful": {
+     "did": -0.025,
+     "did_ci": [
+      -0.045,
+      -0.007
+     ],
+     "delta_pre": 0.02,
+     "delta_tau0": -0.005,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.023,
+      "-6": -0.005,
+      "-5": 0.055,
+      "-4": 0.012,
+      "-3": 0.011,
+      "-2": 0.008,
+      "-1": -0.007,
+      "0": -0.007,
+      "1": 0.011,
+      "2": 0.0
+     },
+     "p_vs_random": 0.21
+    },
+    "emo:sorry": {
+     "did": -0.005,
+     "did_ci": [
+      -0.022,
+      0.009
+     ],
+     "delta_pre": -0.001,
+     "delta_tau0": -0.007,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.035,
+      "-6": -0.009,
+      "-5": 0.018,
+      "-4": -0.015,
+      "-3": 0.022,
+      "-2": -0.034,
+      "-1": 0.016,
+      "0": -0.009,
+      "1": -0.003,
+      "2": -0.006
+     },
+     "p_vs_random": 0.78
+    },
+    "emo:nervous": {
+     "did": 0.018,
+     "did_ci": [
+      0.001,
+      0.035
+     ],
+     "delta_pre": -0.014,
+     "delta_tau0": 0.005,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.015,
+      "-6": -0.016,
+      "-5": 0.002,
+      "-4": 0.003,
+      "-3": 0.011,
+      "-2": -0.067,
+      "-1": 0.028,
+      "0": 0.004,
+      "1": 0.01,
+      "2": 0.012
+     },
+     "p_vs_random": 0.35
+    },
+    "emo:calm": {
+     "did": 0.043,
+     "did_ci": [
+      0.02,
+      0.067
+     ],
+     "delta_pre": -0.035,
+     "delta_tau0": 0.008,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.006,
+      "-6": -0.043,
+      "-5": -0.052,
+      "-4": -0.026,
+      "-3": -0.019,
+      "-2": -0.024,
+      "-1": -0.043,
+      "0": 0.007,
+      "1": -0.008,
+      "2": -0.021
+     },
+     "p_vs_random": 0.06
+    },
+    "emo:desperate": {
+     "did": -0.016,
+     "did_ci": [
+      -0.036,
+      0.004
+     ],
+     "delta_pre": 0.014,
+     "delta_tau0": -0.001,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.034,
+      "-6": 0.02,
+      "-5": 0.019,
+      "-4": 0.035,
+      "-3": 0.01,
+      "-2": -0.013,
+      "-1": 0.008,
+      "0": -0.002,
+      "1": 0.004,
+      "2": 0.01
+     },
+     "p_vs_random": 0.44
+    },
+    "goodfire": {
+     "did": 0.012,
+     "did_ci": [
+      0.005,
+      0.021
+     ],
+     "delta_pre": -0.013,
+     "delta_tau0": -0.0,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.004,
+      "-6": -0.013,
+      "-5": -0.015,
+      "-4": -0.009,
+      "-3": -0.013,
+      "-2": -0.012,
+      "-1": -0.007,
+      "0": -0.0,
+      "1": 0.001,
+      "2": 0.005
+     },
+     "p_vs_random": 0.56
+    },
+    "random": {
+     "did_mean": 0.004,
+     "did_abs_p95": 0.044,
+     "delta_pre_abs_p95": 0.041,
+     "traj_p5": {
+      "-7": -0.075,
+      "-6": -0.059,
+      "-5": -0.05,
+      "-4": -0.056,
+      "-3": -0.042,
+      "-2": -0.061,
+      "-1": -0.051,
+      "0": -0.018,
+      "1": -0.019,
+      "2": -0.027
+     },
+     "traj_p95": {
+      "-7": 0.104,
+      "-6": 0.045,
+      "-5": 0.035,
+      "-4": 0.049,
+      "-3": 0.047,
+      "-2": 0.063,
+      "-1": 0.038,
+      "0": 0.022,
+      "1": 0.023,
+      "2": 0.02
+     }
+    },
+    "dom_by_restated": {
+     "restated": {
+      "did": 0.013,
+      "did_ci": [
+       -0.007,
+       0.033
+      ],
+      "delta_pre": 0.011,
+      "delta_tau0": 0.024,
+      "n_runs": 38
+     },
+     "not_restated": {
+      "did": 0.003,
+      "did_ci": [
+       -0.051,
+       0.058
+      ],
+      "delta_pre": 0.02,
+      "delta_tau0": 0.024,
+      "n_runs": 4
+     }
+    }
+   }
+  },
+  "palisades:forbid-none": {
+   "pre": {
+    "dom": {
+     "did": 0.019,
+     "did_ci": [
+      -0.039,
+      0.07
+     ],
+     "delta_pre": -0.006,
+     "delta_tau0": 0.013,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.051,
+      "-6": 0.024,
+      "-5": 0.003,
+      "-4": 0.002,
+      "-3": -0.035,
+      "-2": 0.002,
+      "-1": -0.021,
+      "0": 0.023,
+      "1": 0.002,
+      "2": -0.009
+     },
+     "p_vs_random": 0.77
+    },
+    "dom_perp": {
+     "did": 0.056,
+     "did_ci": [
+      -0.031,
+      0.146
+     ],
+     "delta_pre": -0.067,
+     "delta_tau0": -0.011,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.169,
+      "-6": -0.059,
+      "-5": -0.058,
+      "-4": -0.075,
+      "-3": -0.058,
+      "-2": -0.033,
+      "-1": -0.044,
+      "0": -0.016,
+      "1": -0.014,
+      "2": -0.049
+     },
+     "p_vs_random": 0.55
+    },
+    "logreg": {
+     "did": -0.102,
+     "did_ci": [
+      -0.161,
+      -0.041
+     ],
+     "delta_pre": 0.105,
+     "delta_tau0": 0.004,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.095,
+      "-6": 0.299,
+      "-5": 0.195,
+      "-4": 0.094,
+      "-3": -0.024,
+      "-2": 0.027,
+      "-1": 0.001,
+      "0": 0.066,
+      "1": -0.01,
+      "2": 0.019
+     },
+     "p_vs_random": 0.31
+    },
+    "rule_text": {
+     "did": 0.082,
+     "did_ci": [
+      0.041,
+      0.126
+     ],
+     "delta_pre": -0.05,
+     "delta_tau0": 0.032,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.105,
+      "-6": -0.083,
+      "-5": -0.045,
+      "-4": -0.033,
+      "-3": -0.067,
+      "-2": -0.029,
+      "-1": -0.03,
+      "0": 0.013,
+      "1": -0.017,
+      "2": 0.003
+     },
+     "p_vs_random": 0.4
+    },
+    "dom@first": {
+     "did": -0.029,
+     "did_ci": [
+      -0.107,
+      0.043
+     ],
+     "delta_pre": 0.025,
+     "delta_tau0": -0.004,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.001,
+      "-6": 0.135,
+      "-5": 0.078,
+      "-4": 0.03,
+      "-3": -0.035,
+      "-2": -0.005,
+      "-1": -0.023,
+      "0": 0.028,
+      "1": -0.007,
+      "2": -0.028
+     },
+     "p_vs_random": 0.69
+    },
+    "dom_perp@first": {
+     "did": 0.034,
+     "did_ci": [
+      -0.06,
+      0.131
+     ],
+     "delta_pre": -0.056,
+     "delta_tau0": -0.022,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.147,
+      "-6": -0.021,
+      "-5": -0.032,
+      "-4": -0.064,
+      "-3": -0.058,
+      "-2": -0.035,
+      "-1": -0.044,
+      "0": -0.019,
+      "1": -0.013,
+      "2": -0.053
+     },
+     "p_vs_random": 0.64
+    },
+    "dom@both": {
+     "did": -0.003,
+     "did_ci": [
+      -0.071,
+      0.058
+     ],
+     "delta_pre": 0.008,
+     "delta_tau0": 0.005,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.029,
+      "-6": 0.075,
+      "-5": 0.038,
+      "-4": 0.015,
+      "-3": -0.035,
+      "-2": -0.001,
+      "-1": -0.022,
+      "0": 0.025,
+      "1": -0.002,
+      "2": -0.018
+     },
+     "p_vs_random": 0.96
+    },
+    "dom_perp@both": {
+     "did": 0.046,
+     "did_ci": [
+      -0.044,
+      0.139
+     ],
+     "delta_pre": -0.062,
+     "delta_tau0": -0.016,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.159,
+      "-6": -0.043,
+      "-5": -0.047,
+      "-4": -0.07,
+      "-3": -0.058,
+      "-2": -0.034,
+      "-1": -0.044,
+      "0": -0.018,
+      "1": -0.013,
+      "2": -0.051
+     },
+     "p_vs_random": 0.59
+    },
+    "emo:guilty": {
+     "did": 0.04,
+     "did_ci": [
+      -0.043,
+      0.125
+     ],
+     "delta_pre": 0.006,
+     "delta_tau0": 0.046,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.101,
+      "-6": 0.003,
+      "-5": 0.009,
+      "-4": -0.01,
+      "-3": 0.069,
+      "-2": -0.019,
+      "-1": 0.019,
+      "0": 0.035,
+      "1": 0.045,
+      "2": 0.028
+     },
+     "p_vs_random": 0.62
+    },
+    "emo:ashamed": {
+     "did": 0.061,
+     "did_ci": [
+      -0.03,
+      0.15
+     ],
+     "delta_pre": 0.032,
+     "delta_tau0": 0.093,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.074,
+      "-6": 0.023,
+      "-5": 0.045,
+      "-4": 0.023,
+      "-3": 0.09,
+      "-2": 0.009,
+      "-1": 0.053,
+      "0": 0.072,
+      "1": 0.051,
+      "2": 0.036
+     },
+     "p_vs_random": 0.48
+    },
+    "emo:regretful": {
+     "did": 0.006,
+     "did_ci": [
+      -0.047,
+      0.063
+     ],
+     "delta_pre": -0.012,
+     "delta_tau0": -0.006,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.063,
+      "-6": -0.018,
+      "-5": -0.023,
+      "-4": -0.016,
+      "-3": 0.025,
+      "-2": -0.005,
+      "-1": -0.022,
+      "0": -0.014,
+      "1": 0.023,
+      "2": -0.004
+     },
+     "p_vs_random": 0.93
+    },
+    "emo:sorry": {
+     "did": 0.044,
+     "did_ci": [
+      -0.012,
+      0.106
+     ],
+     "delta_pre": -0.029,
+     "delta_tau0": 0.014,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.02,
+      "-6": -0.02,
+      "-5": -0.005,
+      "-4": -0.042,
+      "-3": -0.003,
+      "-2": -0.009,
+      "-1": -0.011,
+      "0": -0.006,
+      "1": 0.001,
+      "2": -0.02
+     },
+     "p_vs_random": 0.61
+    },
+    "emo:nervous": {
+     "did": 0.022,
+     "did_ci": [
+      -0.047,
+      0.09
+     ],
+     "delta_pre": 0.03,
+     "delta_tau0": 0.052,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.019,
+      "-6": 0.052,
+      "-5": 0.059,
+      "-4": 0.02,
+      "-3": 0.031,
+      "-2": 0.046,
+      "-1": 0.07,
+      "0": 0.04,
+      "1": -0.012,
+      "2": 0.047
+     },
+     "p_vs_random": 0.75
+    },
+    "emo:calm": {
+     "did": -0.168,
+     "did_ci": [
+      -0.235,
+      -0.099
+     ],
+     "delta_pre": 0.006,
+     "delta_tau0": -0.162,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.003,
+      "-6": 0.135,
+      "-5": 0.052,
+      "-4": 0.031,
+      "-3": -0.097,
+      "-2": -0.05,
+      "-1": -0.089,
+      "0": -0.105,
+      "1": -0.134,
+      "2": -0.107
+     },
+     "p_vs_random": 0.13
+    },
+    "emo:desperate": {
+     "did": 0.007,
+     "did_ci": [
+      -0.025,
+      0.039
+     ],
+     "delta_pre": 0.017,
+     "delta_tau0": 0.024,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.061,
+      "-6": 0.005,
+      "-5": 0.008,
+      "-4": -0.006,
+      "-3": 0.035,
+      "-2": 0.018,
+      "-1": 0.044,
+      "0": 0.026,
+      "1": 0.054,
+      "2": 0.016
+     },
+     "p_vs_random": 0.92
+    },
+    "goodfire": {
+     "did": -0.116,
+     "did_ci": [
+      -0.205,
+      -0.033
+     ],
+     "delta_pre": 0.032,
+     "delta_tau0": -0.084,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.044,
+      "-6": 0.102,
+      "-5": 0.069,
+      "-4": 0.023,
+      "-3": 0.057,
+      "-2": -0.048,
+      "-1": 0.035,
+      "0": -0.048,
+      "1": -0.064,
+      "2": -0.036
+     },
+     "p_vs_random": 0.25
+    },
+    "random": {
+     "did_mean": -0.005,
+     "did_abs_p95": 0.204,
+     "delta_pre_abs_p95": 0.206,
+     "traj_p5": {
+      "-7": -0.285,
+      "-6": -0.364,
+      "-5": -0.259,
+      "-4": -0.146,
+      "-3": -0.097,
+      "-2": -0.075,
+      "-1": -0.057,
+      "0": -0.122,
+      "1": -0.088,
+      "2": -0.079
+     },
+     "traj_p95": {
+      "-7": 0.33,
+      "-6": 0.377,
+      "-5": 0.289,
+      "-4": 0.12,
+      "-3": 0.155,
+      "-2": 0.076,
+      "-1": 0.109,
+      "0": 0.092,
+      "1": 0.075,
+      "2": 0.075
+     }
+    },
+    "dom_by_restated": {
+     "restated": {
+      "did": 0.022,
+      "did_ci": [
+       -0.045,
+       0.084
+      ],
+      "delta_pre": -0.002,
+      "delta_tau0": 0.02,
+      "n_runs": 38
+     },
+     "not_restated": {
+      "did": -0.011,
+      "did_ci": [
+       -0.042,
+       0.033
+      ],
+      "delta_pre": -0.04,
+      "delta_tau0": -0.051,
+      "n_runs": 4
+     }
+    }
+   },
+   "reason": {
+    "dom": {
+     "did": 0.039,
+     "did_ci": [
+      0.014,
+      0.066
+     ],
+     "delta_pre": 0.041,
+     "delta_tau0": 0.08,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.139,
+      "-6": 0.146,
+      "-5": 0.1,
+      "-4": 0.021,
+      "-3": -0.039,
+      "-2": 0.023,
+      "-1": 0.04,
+      "0": 0.083,
+      "1": 0.011,
+      "2": 0.011
+     },
+     "p_vs_random": 0.14
+    },
+    "dom_perp": {
+     "did": 0.033,
+     "did_ci": [
+      0.016,
+      0.05
+     ],
+     "delta_pre": 0.006,
+     "delta_tau0": 0.039,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.068,
+      "-6": 0.067,
+      "-5": 0.022,
+      "-4": -0.011,
+      "-3": -0.042,
+      "-2": 0.018,
+      "-1": 0.012,
+      "0": 0.04,
+      "1": -0.002,
+      "2": -0.001
+     },
+     "p_vs_random": 0.17
+    },
+    "logreg": {
+     "did": 0.022,
+     "did_ci": [
+      0.006,
+      0.038
+     ],
+     "delta_pre": 0.016,
+     "delta_tau0": 0.038,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.02,
+      "-6": 0.077,
+      "-5": 0.048,
+      "-4": 0.003,
+      "-3": -0.028,
+      "-2": 0.018,
+      "-1": 0.034,
+      "0": 0.039,
+      "1": 0.008,
+      "2": 0.005
+     },
+     "p_vs_random": 0.32
+    },
+    "rule_text": {
+     "did": 0.003,
+     "did_ci": [
+      -0.021,
+      0.027
+     ],
+     "delta_pre": 0.041,
+     "delta_tau0": 0.043,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.158,
+      "-6": 0.088,
+      "-5": 0.083,
+      "-4": 0.045,
+      "-3": -0.008,
+      "-2": 0.008,
+      "-1": 0.034,
+      "0": 0.047,
+      "1": 0.001,
+      "2": 0.004
+     },
+     "p_vs_random": 0.87
+    },
+    "dom@first": {
+     "did": 0.041,
+     "did_ci": [
+      0.019,
+      0.064
+     ],
+     "delta_pre": 0.031,
+     "delta_tau0": 0.072,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.104,
+      "-6": 0.126,
+      "-5": 0.08,
+      "-4": 0.012,
+      "-3": -0.043,
+      "-2": 0.024,
+      "-1": 0.035,
+      "0": 0.074,
+      "1": 0.01,
+      "2": 0.01
+     },
+     "p_vs_random": 0.12
+    },
+    "dom_perp@first": {
+     "did": 0.033,
+     "did_ci": [
+      0.018,
+      0.049
+     ],
+     "delta_pre": 0.003,
+     "delta_tau0": 0.036,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.054,
+      "-6": 0.06,
+      "-5": 0.016,
+      "-4": -0.015,
+      "-3": -0.044,
+      "-2": 0.018,
+      "-1": 0.009,
+      "0": 0.036,
+      "1": -0.002,
+      "2": -0.0
+     },
+     "p_vs_random": 0.17
+    },
+    "dom@both": {
+     "did": 0.04,
+     "did_ci": [
+      0.017,
+      0.065
+     ],
+     "delta_pre": 0.036,
+     "delta_tau0": 0.076,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.122,
+      "-6": 0.136,
+      "-5": 0.09,
+      "-4": 0.017,
+      "-3": -0.041,
+      "-2": 0.024,
+      "-1": 0.038,
+      "0": 0.079,
+      "1": 0.011,
+      "2": 0.011
+     },
+     "p_vs_random": 0.13
+    },
+    "dom_perp@both": {
+     "did": 0.033,
+     "did_ci": [
+      0.017,
+      0.05
+     ],
+     "delta_pre": 0.005,
+     "delta_tau0": 0.038,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.062,
+      "-6": 0.064,
+      "-5": 0.02,
+      "-4": -0.012,
+      "-3": -0.043,
+      "-2": 0.018,
+      "-1": 0.011,
+      "0": 0.038,
+      "1": -0.002,
+      "2": -0.0
+     },
+     "p_vs_random": 0.17
+    },
+    "emo:guilty": {
+     "did": -0.02,
+     "did_ci": [
+      -0.029,
+      -0.012
+     ],
+     "delta_pre": 0.027,
+     "delta_tau0": 0.007,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.053,
+      "-6": 0.044,
+      "-5": 0.044,
+      "-4": 0.028,
+      "-3": 0.006,
+      "-2": 0.013,
+      "-1": 0.01,
+      "0": 0.008,
+      "1": 0.007,
+      "2": 0.005
+     },
+     "p_vs_random": 0.36
+    },
+    "emo:ashamed": {
+     "did": -0.023,
+     "did_ci": [
+      -0.031,
+      -0.016
+     ],
+     "delta_pre": 0.017,
+     "delta_tau0": -0.006,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.033,
+      "-6": 0.014,
+      "-5": 0.029,
+      "-4": 0.022,
+      "-3": 0.012,
+      "-2": 0.007,
+      "-1": 0.008,
+      "0": -0.005,
+      "1": 0.002,
+      "2": 0.003
+     },
+     "p_vs_random": 0.31
+    },
+    "emo:regretful": {
+     "did": 0.004,
+     "did_ci": [
+      -0.007,
+      0.015
+     ],
+     "delta_pre": -0.006,
+     "delta_tau0": -0.002,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.018,
+      "-6": -0.039,
+      "-5": -0.013,
+      "-4": 0.0,
+      "-3": -0.006,
+      "-2": 0.006,
+      "-1": 0.0,
+      "0": -0.002,
+      "1": 0.014,
+      "2": 0.001
+     },
+     "p_vs_random": 0.85
+    },
+    "emo:sorry": {
+     "did": -0.003,
+     "did_ci": [
+      -0.01,
+      0.005
+     ],
+     "delta_pre": -0.015,
+     "delta_tau0": -0.017,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.025,
+      "-6": -0.051,
+      "-5": -0.024,
+      "-4": -0.018,
+      "-3": -0.005,
+      "-2": 0.001,
+      "-1": -0.013,
+      "0": -0.018,
+      "1": -0.011,
+      "2": -0.011
+     },
+     "p_vs_random": 0.87
+    },
+    "emo:nervous": {
+     "did": -0.014,
+     "did_ci": [
+      -0.029,
+      0.003
+     ],
+     "delta_pre": 0.048,
+     "delta_tau0": 0.035,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.178,
+      "-6": 0.123,
+      "-5": 0.08,
+      "-4": 0.049,
+      "-3": -0.006,
+      "-2": 0.019,
+      "-1": 0.049,
+      "0": 0.038,
+      "1": 0.004,
+      "2": 0.01
+     },
+     "p_vs_random": 0.48
+    },
+    "emo:calm": {
+     "did": 0.047,
+     "did_ci": [
+      0.031,
+      0.064
+     ],
+     "delta_pre": -0.088,
+     "delta_tau0": -0.041,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.105,
+      "-6": -0.104,
+      "-5": -0.125,
+      "-4": -0.092,
+      "-3": -0.09,
+      "-2": -0.053,
+      "-1": -0.07,
+      "0": -0.044,
+      "1": -0.03,
+      "2": -0.023
+     },
+     "p_vs_random": 0.08
+    },
+    "emo:desperate": {
+     "did": -0.068,
+     "did_ci": [
+      -0.086,
+      -0.047
+     ],
+     "delta_pre": 0.086,
+     "delta_tau0": 0.019,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.027,
+      "-6": 0.059,
+      "-5": 0.065,
+      "-4": 0.112,
+      "-3": 0.135,
+      "-2": 0.066,
+      "-1": 0.06,
+      "0": 0.018,
+      "1": 0.035,
+      "2": 0.032
+     },
+     "p_vs_random": 0.03
+    },
+    "goodfire": {
+     "did": 0.03,
+     "did_ci": [
+      0.021,
+      0.038
+     ],
+     "delta_pre": -0.014,
+     "delta_tau0": 0.015,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.045,
+      "-6": 0.019,
+      "-5": -0.007,
+      "-4": -0.013,
+      "-3": -0.034,
+      "-2": -0.018,
+      "-1": -0.005,
+      "0": 0.017,
+      "1": -0.004,
+      "2": -0.004
+     },
+     "p_vs_random": 0.24
+    },
+    "random": {
+     "did_mean": -0.003,
+     "did_abs_p95": 0.052,
+     "delta_pre_abs_p95": 0.061,
+     "traj_p5": {
+      "-7": -0.136,
+      "-6": -0.102,
+      "-5": -0.073,
+      "-4": -0.052,
+      "-3": -0.052,
+      "-2": -0.044,
+      "-1": -0.039,
+      "0": -0.045,
+      "1": -0.021,
+      "2": -0.016
+     },
+     "traj_p95": {
+      "-7": 0.134,
+      "-6": 0.081,
+      "-5": 0.076,
+      "-4": 0.057,
+      "-3": 0.069,
+      "-2": 0.039,
+      "-1": 0.041,
+      "0": 0.041,
+      "1": 0.022,
+      "2": 0.016
+     }
+    },
+    "dom_by_restated": {
+     "restated": {
+      "did": 0.019,
+      "did_ci": [
+       -0.001,
+       0.041
+      ],
+      "delta_pre": 0.043,
+      "delta_tau0": 0.062,
+      "n_runs": 38
+     },
+     "not_restated": {
+      "did": 0.227,
+      "did_ci": [
+       0.195,
+       0.259
+      ],
+      "delta_pre": 0.02,
+      "delta_tau0": 0.247,
+      "n_runs": 4
+     }
+    }
+   },
+   "action": {
+    "dom": {
+     "did": 0.033,
+     "did_ci": [
+      0.006,
+      0.061
+     ],
+     "delta_pre": -0.005,
+     "delta_tau0": 0.028,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.067,
+      "-6": 0.009,
+      "-5": -0.012,
+      "-4": -0.012,
+      "-3": -0.015,
+      "-2": -0.001,
+      "-1": -0.008,
+      "0": 0.025,
+      "1": 0.002,
+      "2": 0.026
+     },
+     "p_vs_random": 0.16
+    },
+    "dom_perp": {
+     "did": 0.029,
+     "did_ci": [
+      0.001,
+      0.061
+     ],
+     "delta_pre": -0.022,
+     "delta_tau0": 0.008,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.034,
+      "-6": -0.032,
+      "-5": -0.035,
+      "-4": -0.032,
+      "-3": -0.04,
+      "-2": 0.011,
+      "-1": -0.047,
+      "0": 0.005,
+      "1": -0.008,
+      "2": 0.016
+     },
+     "p_vs_random": 0.18
+    },
+    "logreg": {
+     "did": 0.018,
+     "did_ci": [
+      -0.011,
+      0.051
+     ],
+     "delta_pre": 0.009,
+     "delta_tau0": 0.026,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.069,
+      "-6": 0.019,
+      "-5": -0.018,
+      "-4": -0.005,
+      "-3": -0.015,
+      "-2": 0.056,
+      "-1": 0.042,
+      "0": 0.022,
+      "1": 0.001,
+      "2": 0.014
+     },
+     "p_vs_random": 0.46
+    },
+    "rule_text": {
+     "did": -0.014,
+     "did_ci": [
+      -0.043,
+      0.015
+     ],
+     "delta_pre": 0.016,
+     "delta_tau0": 0.001,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.002,
+      "-6": -0.033,
+      "-5": 0.036,
+      "-4": 0.058,
+      "-3": 0.011,
+      "-2": -0.034,
+      "-1": 0.013,
+      "0": 0.0,
+      "1": 0.005,
+      "2": 0.006
+     },
+     "p_vs_random": 0.54
+    },
+    "dom@first": {
+     "did": 0.037,
+     "did_ci": [
+      0.008,
+      0.069
+     ],
+     "delta_pre": -0.011,
+     "delta_tau0": 0.025,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.08,
+      "-6": 0.007,
+      "-5": -0.017,
+      "-4": -0.024,
+      "-3": -0.02,
+      "-2": -0.003,
+      "-1": -0.017,
+      "0": 0.022,
+      "1": -0.0,
+      "2": 0.029
+     },
+     "p_vs_random": 0.09
+    },
+    "dom_perp@first": {
+     "did": 0.032,
+     "did_ci": [
+      0.001,
+      0.064
+     ],
+     "delta_pre": -0.025,
+     "delta_tau0": 0.007,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.038,
+      "-6": -0.032,
+      "-5": -0.036,
+      "-4": -0.04,
+      "-3": -0.041,
+      "-2": 0.009,
+      "-1": -0.049,
+      "0": 0.004,
+      "1": -0.009,
+      "2": 0.018
+     },
+     "p_vs_random": 0.17
+    },
+    "dom@both": {
+     "did": 0.035,
+     "did_ci": [
+      0.007,
+      0.064
+     ],
+     "delta_pre": -0.008,
+     "delta_tau0": 0.027,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.074,
+      "-6": 0.008,
+      "-5": -0.014,
+      "-4": -0.018,
+      "-3": -0.017,
+      "-2": -0.002,
+      "-1": -0.012,
+      "0": 0.024,
+      "1": 0.001,
+      "2": 0.027
+     },
+     "p_vs_random": 0.12
+    },
+    "dom_perp@both": {
+     "did": 0.031,
+     "did_ci": [
+      0.001,
+      0.063
+     ],
+     "delta_pre": -0.023,
+     "delta_tau0": 0.008,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.036,
+      "-6": -0.032,
+      "-5": -0.036,
+      "-4": -0.036,
+      "-3": -0.04,
+      "-2": 0.01,
+      "-1": -0.048,
+      "0": 0.005,
+      "1": -0.008,
+      "2": 0.017
+     },
+     "p_vs_random": 0.17
+    },
+    "emo:guilty": {
+     "did": 0.013,
+     "did_ci": [
+      -0.015,
+      0.041
+     ],
+     "delta_pre": 0.0,
+     "delta_tau0": 0.013,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.019,
+      "-6": 0.001,
+      "-5": 0.047,
+      "-4": -0.023,
+      "-3": 0.046,
+      "-2": -0.056,
+      "-1": 0.057,
+      "0": 0.009,
+      "1": 0.011,
+      "2": -0.008
+     },
+     "p_vs_random": 0.56
+    },
+    "emo:ashamed": {
+     "did": -0.019,
+     "did_ci": [
+      -0.047,
+      0.009
+     ],
+     "delta_pre": 0.014,
+     "delta_tau0": -0.005,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.058,
+      "-6": 0.01,
+      "-5": 0.042,
+      "-4": -0.027,
+      "-3": 0.064,
+      "-2": -0.047,
+      "-1": 0.035,
+      "0": -0.009,
+      "1": -0.004,
+      "2": -0.008
+     },
+     "p_vs_random": 0.44
+    },
+    "emo:regretful": {
+     "did": 0.005,
+     "did_ci": [
+      -0.019,
+      0.028
+     ],
+     "delta_pre": 0.006,
+     "delta_tau0": 0.011,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.043,
+      "-6": -0.037,
+      "-5": 0.022,
+      "-4": 0.019,
+      "-3": 0.001,
+      "-2": -0.005,
+      "-1": -0.014,
+      "0": 0.007,
+      "1": 0.017,
+      "2": 0.0
+     },
+     "p_vs_random": 0.81
+    },
+    "emo:sorry": {
+     "did": 0.004,
+     "did_ci": [
+      -0.015,
+      0.022
+     ],
+     "delta_pre": -0.003,
+     "delta_tau0": 0.001,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.015,
+      "-6": -0.065,
+      "-5": 0.001,
+      "-4": 0.004,
+      "-3": 0.019,
+      "-2": -0.034,
+      "-1": -0.031,
+      "0": -0.005,
+      "1": -0.002,
+      "2": -0.007
+     },
+     "p_vs_random": 0.87
+    },
+    "emo:nervous": {
+     "did": -0.003,
+     "did_ci": [
+      -0.028,
+      0.021
+     ],
+     "delta_pre": 0.012,
+     "delta_tau0": 0.009,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.018,
+      "-6": 0.067,
+      "-5": -0.0,
+      "-4": -0.01,
+      "-3": 0.035,
+      "-2": -0.005,
+      "-1": 0.002,
+      "0": 0.008,
+      "1": 0.01,
+      "2": -0.0
+     },
+     "p_vs_random": 0.88
+    },
+    "emo:calm": {
+     "did": 0.068,
+     "did_ci": [
+      0.048,
+      0.088
+     ],
+     "delta_pre": -0.067,
+     "delta_tau0": 0.001,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.13,
+      "-6": -0.074,
+      "-5": -0.064,
+      "-4": -0.069,
+      "-3": -0.025,
+      "-2": -0.075,
+      "-1": -0.072,
+      "0": 0.0,
+      "1": -0.012,
+      "2": -0.014
+     },
+     "p_vs_random": 0.0
+    },
+    "emo:desperate": {
+     "did": -0.028,
+     "did_ci": [
+      -0.049,
+      -0.008
+     ],
+     "delta_pre": 0.041,
+     "delta_tau0": 0.012,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.055,
+      "-6": 0.055,
+      "-5": 0.032,
+      "-4": 0.043,
+      "-3": 0.011,
+      "-2": 0.051,
+      "-1": 0.03,
+      "0": 0.01,
+      "1": 0.015,
+      "2": 0.014
+     },
+     "p_vs_random": 0.21
+    },
+    "goodfire": {
+     "did": 0.019,
+     "did_ci": [
+      0.01,
+      0.027
+     ],
+     "delta_pre": -0.018,
+     "delta_tau0": 0.001,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.03,
+      "-6": -0.008,
+      "-5": -0.018,
+      "-4": -0.016,
+      "-3": -0.01,
+      "-2": -0.027,
+      "-1": -0.011,
+      "0": 0.001,
+      "1": 0.002,
+      "2": 0.006
+     },
+     "p_vs_random": 0.43
+    },
+    "random": {
+     "did_mean": -0.002,
+     "did_abs_p95": 0.042,
+     "delta_pre_abs_p95": 0.047,
+     "traj_p5": {
+      "-7": -0.088,
+      "-6": -0.07,
+      "-5": -0.057,
+      "-4": -0.063,
+      "-3": -0.055,
+      "-2": -0.059,
+      "-1": -0.049,
+      "0": -0.017,
+      "1": -0.018,
+      "2": -0.024
+     },
+     "traj_p95": {
+      "-7": 0.112,
+      "-6": 0.075,
+      "-5": 0.052,
+      "-4": 0.05,
+      "-3": 0.047,
+      "-2": 0.058,
+      "-1": 0.075,
+      "0": 0.022,
+      "1": 0.018,
+      "2": 0.02
+     }
+    },
+    "dom_by_restated": {
+     "restated": {
+      "did": 0.03,
+      "did_ci": [
+       0.003,
+       0.058
+      ],
+      "delta_pre": -0.005,
+      "delta_tau0": 0.025,
+      "n_runs": 38
+     },
+     "not_restated": {
+      "did": 0.059,
+      "did_ci": [
+       -0.022,
+       0.155
+      ],
+      "delta_pre": 0.003,
+      "delta_tau0": 0.063,
+      "n_runs": 4
+     }
+    }
+   }
+  },
+  "palisades:none-allow": {
+   "pre": {
+    "dom": {
+     "did": -0.04,
+     "did_ci": [
+      -0.096,
+      0.02
+     ],
+     "delta_pre": 0.008,
+     "delta_tau0": -0.032,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.076,
+      "-6": 0.066,
+      "-5": 0.059,
+      "-4": 0.009,
+      "-3": -0.004,
+      "-2": -0.041,
+      "-1": 0.025,
+      "0": -0.024,
+      "1": -0.042,
+      "2": 0.0
+     },
+     "p_vs_random": 0.52
+    },
+    "dom_perp": {
+     "did": -0.086,
+     "did_ci": [
+      -0.163,
+      -0.01
+     ],
+     "delta_pre": 0.048,
+     "delta_tau0": -0.038,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.149,
+      "-6": 0.13,
+      "-5": 0.104,
+      "-4": 0.063,
+      "-3": 0.009,
+      "-2": -0.025,
+      "-1": 0.052,
+      "0": -0.014,
+      "1": -0.034,
+      "2": 0.02
+     },
+     "p_vs_random": 0.22
+    },
+    "logreg": {
+     "did": 0.02,
+     "did_ci": [
+      -0.023,
+      0.063
+     ],
+     "delta_pre": -0.066,
+     "delta_tau0": -0.046,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.016,
+      "-6": -0.058,
+      "-5": -0.056,
+      "-4": -0.041,
+      "-3": -0.034,
+      "-2": -0.098,
+      "-1": 0.01,
+      "0": -0.058,
+      "1": -0.064,
+      "2": -0.028
+     },
+     "p_vs_random": 0.76
+    },
+    "rule_text": {
+     "did": -0.083,
+     "did_ci": [
+      -0.131,
+      -0.031
+     ],
+     "delta_pre": 0.047,
+     "delta_tau0": -0.037,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.11,
+      "-6": 0.185,
+      "-5": 0.108,
+      "-4": 0.038,
+      "-3": 0.003,
+      "-2": -0.008,
+      "-1": 0.008,
+      "0": -0.004,
+      "1": 0.002,
+      "2": 0.02
+     },
+     "p_vs_random": 0.23
+    },
+    "dom@first": {
+     "did": -0.035,
+     "did_ci": [
+      -0.11,
+      0.046
+     ],
+     "delta_pre": 0.013,
+     "delta_tau0": -0.021,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.091,
+      "-6": 0.069,
+      "-5": 0.059,
+      "-4": 0.013,
+      "-3": -0.001,
+      "-2": -0.033,
+      "-1": 0.05,
+      "0": -0.014,
+      "1": -0.041,
+      "2": 0.02
+     },
+     "p_vs_random": 0.55
+    },
+    "dom_perp@first": {
+     "did": -0.086,
+     "did_ci": [
+      -0.172,
+      -0.001
+     ],
+     "delta_pre": 0.055,
+     "delta_tau0": -0.031,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.155,
+      "-6": 0.138,
+      "-5": 0.108,
+      "-4": 0.066,
+      "-3": 0.015,
+      "-2": -0.019,
+      "-1": 0.064,
+      "0": -0.006,
+      "1": -0.032,
+      "2": 0.026
+     },
+     "p_vs_random": 0.22
+    },
+    "dom@both": {
+     "did": -0.038,
+     "did_ci": [
+      -0.103,
+      0.032
+     ],
+     "delta_pre": 0.011,
+     "delta_tau0": -0.027,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.083,
+      "-6": 0.067,
+      "-5": 0.059,
+      "-4": 0.011,
+      "-3": -0.003,
+      "-2": -0.037,
+      "-1": 0.037,
+      "0": -0.019,
+      "1": -0.042,
+      "2": 0.009
+     },
+     "p_vs_random": 0.53
+    },
+    "dom_perp@both": {
+     "did": -0.086,
+     "did_ci": [
+      -0.167,
+      -0.006
+     ],
+     "delta_pre": 0.051,
+     "delta_tau0": -0.035,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.151,
+      "-6": 0.134,
+      "-5": 0.106,
+      "-4": 0.065,
+      "-3": 0.012,
+      "-2": -0.022,
+      "-1": 0.057,
+      "0": -0.01,
+      "1": -0.033,
+      "2": 0.022
+     },
+     "p_vs_random": 0.22
+    },
+    "emo:guilty": {
+     "did": -0.086,
+     "did_ci": [
+      -0.162,
+      -0.011
+     ],
+     "delta_pre": 0.018,
+     "delta_tau0": -0.067,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.032,
+      "-6": 0.077,
+      "-5": 0.067,
+      "-4": 0.016,
+      "-3": -0.048,
+      "-2": 0.009,
+      "-1": -0.038,
+      "0": -0.044,
+      "1": -0.043,
+      "2": 0.012
+     },
+     "p_vs_random": 0.22
+    },
+    "emo:ashamed": {
+     "did": -0.115,
+     "did_ci": [
+      -0.197,
+      -0.029
+     ],
+     "delta_pre": 0.031,
+     "delta_tau0": -0.083,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.102,
+      "-6": 0.12,
+      "-5": 0.091,
+      "-4": 0.021,
+      "-3": -0.059,
+      "-2": 0.009,
+      "-1": -0.053,
+      "0": -0.041,
+      "1": -0.056,
+      "2": 0.028
+     },
+     "p_vs_random": 0.17
+    },
+    "emo:regretful": {
+     "did": -0.068,
+     "did_ci": [
+      -0.126,
+      -0.016
+     ],
+     "delta_pre": 0.042,
+     "delta_tau0": -0.026,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.083,
+      "-6": 0.141,
+      "-5": 0.109,
+      "-4": 0.038,
+      "-3": -0.018,
+      "-2": -0.014,
+      "-1": 0.016,
+      "0": 0.002,
+      "1": -0.016,
+      "2": 0.016
+     },
+     "p_vs_random": 0.3
+    },
+    "emo:sorry": {
+     "did": -0.102,
+     "did_ci": [
+      -0.164,
+      -0.045
+     ],
+     "delta_pre": 0.051,
+     "delta_tau0": -0.051,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.129,
+      "-6": 0.15,
+      "-5": 0.114,
+      "-4": 0.037,
+      "-3": -0.027,
+      "-2": -0.01,
+      "-1": -0.005,
+      "0": -0.005,
+      "1": -0.032,
+      "2": 0.027
+     },
+     "p_vs_random": 0.19
+    },
+    "emo:nervous": {
+     "did": -0.032,
+     "did_ci": [
+      -0.087,
+      0.017
+     ],
+     "delta_pre": -0.002,
+     "delta_tau0": -0.034,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.033,
+      "-6": 0.021,
+      "-5": 0.021,
+      "-4": 0.015,
+      "-3": -0.041,
+      "-2": -0.033,
+      "-1": -0.064,
+      "0": -0.02,
+      "1": 0.01,
+      "2": -0.035
+     },
+     "p_vs_random": 0.55
+    },
+    "emo:calm": {
+     "did": 0.149,
+     "did_ci": [
+      0.067,
+      0.226
+     ],
+     "delta_pre": -0.037,
+     "delta_tau0": 0.112,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.058,
+      "-6": -0.158,
+      "-5": -0.124,
+      "-4": -0.082,
+      "-3": 0.088,
+      "-2": 0.051,
+      "-1": 0.056,
+      "0": 0.053,
+      "1": 0.126,
+      "2": 0.08
+     },
+     "p_vs_random": 0.05
+    },
+    "emo:desperate": {
+     "did": -0.029,
+     "did_ci": [
+      -0.065,
+      0.006
+     ],
+     "delta_pre": -0.015,
+     "delta_tau0": -0.044,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.004,
+      "-6": 0.052,
+      "-5": 0.024,
+      "-4": 0.007,
+      "-3": -0.05,
+      "-2": -0.06,
+      "-1": -0.044,
+      "0": -0.031,
+      "1": -0.071,
+      "2": -0.052
+     },
+     "p_vs_random": 0.6
+    },
+    "goodfire": {
+     "did": 0.064,
+     "did_ci": [
+      -0.008,
+      0.137
+     ],
+     "delta_pre": -0.018,
+     "delta_tau0": 0.047,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.088,
+      "-6": -0.039,
+      "-5": -0.02,
+      "-4": -0.007,
+      "-3": -0.053,
+      "-2": 0.015,
+      "-1": -0.03,
+      "0": 0.03,
+      "1": -0.003,
+      "2": 0.031
+     },
+     "p_vs_random": 0.33
+    },
+    "random": {
+     "did_mean": 0.002,
+     "did_abs_p95": 0.142,
+     "delta_pre_abs_p95": 0.173,
+     "traj_p5": {
+      "-7": -0.229,
+      "-6": -0.298,
+      "-5": -0.208,
+      "-4": -0.144,
+      "-3": -0.105,
+      "-2": -0.123,
+      "-1": -0.106,
+      "0": -0.134,
+      "1": -0.078,
+      "2": -0.078
+     },
+     "traj_p95": {
+      "-7": 0.231,
+      "-6": 0.284,
+      "-5": 0.204,
+      "-4": 0.11,
+      "-3": 0.088,
+      "-2": 0.09,
+      "-1": 0.101,
+      "0": 0.089,
+      "1": 0.078,
+      "2": 0.081
+     }
+    },
+    "dom_by_restated": {
+     "restated": {
+      "did": -0.049,
+      "did_ci": [
+       -0.1,
+       0.004
+      ],
+      "delta_pre": 0.005,
+      "delta_tau0": -0.044,
+      "n_runs": 38
+     },
+     "not_restated": {
+      "did": 0.044,
+      "did_ci": [
+       -0.284,
+       0.372
+      ],
+      "delta_pre": 0.036,
+      "delta_tau0": 0.08,
+      "n_runs": 4
+     }
+    }
+   },
+   "reason": {
+    "dom": {
+     "did": -0.008,
+     "did_ci": [
+      -0.021,
+      0.005
+     ],
+     "delta_pre": 0.025,
+     "delta_tau0": 0.017,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.055,
+      "-6": 0.033,
+      "-5": 0.036,
+      "-4": 0.026,
+      "-3": 0.021,
+      "-2": 0.004,
+      "-1": 0.024,
+      "0": 0.02,
+      "1": 0.001,
+      "2": 0.001
+     },
+     "p_vs_random": 0.62
+    },
+    "dom_perp": {
+     "did": 0.003,
+     "did_ci": [
+      -0.008,
+      0.012
+     ],
+     "delta_pre": 0.009,
+     "delta_tau0": 0.011,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.011,
+      "-6": 0.017,
+      "-5": 0.027,
+      "-4": 0.008,
+      "-3": 0.006,
+      "-2": -0.01,
+      "-1": 0.013,
+      "0": 0.014,
+      "1": -0.001,
+      "2": -0.001
+     },
+     "p_vs_random": 0.84
+    },
+    "logreg": {
+     "did": -0.01,
+     "did_ci": [
+      -0.023,
+      0.002
+     ],
+     "delta_pre": 0.028,
+     "delta_tau0": 0.018,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.093,
+      "-6": 0.046,
+      "-5": 0.054,
+      "-4": 0.024,
+      "-3": 0.013,
+      "-2": 0.006,
+      "-1": 0.016,
+      "0": 0.021,
+      "1": 0.002,
+      "2": 0.002
+     },
+     "p_vs_random": 0.57
+    },
+    "rule_text": {
+     "did": 0.019,
+     "did_ci": [
+      0.003,
+      0.035
+     ],
+     "delta_pre": 0.003,
+     "delta_tau0": 0.022,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.035,
+      "-6": 0.016,
+      "-5": 0.009,
+      "-4": -0.0,
+      "-3": -0.004,
+      "-2": -0.009,
+      "-1": 0.008,
+      "0": 0.024,
+      "1": 0.001,
+      "2": -0.003
+     },
+     "p_vs_random": 0.29
+    },
+    "dom@first": {
+     "did": -0.011,
+     "did_ci": [
+      -0.024,
+      0.002
+     ],
+     "delta_pre": 0.032,
+     "delta_tau0": 0.021,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.072,
+      "-6": 0.048,
+      "-5": 0.048,
+      "-4": 0.032,
+      "-3": 0.025,
+      "-2": 0.007,
+      "-1": 0.028,
+      "0": 0.024,
+      "1": 0.004,
+      "2": 0.002
+     },
+     "p_vs_random": 0.55
+    },
+    "dom_perp@first": {
+     "did": 0.0,
+     "did_ci": [
+      -0.01,
+      0.01
+     ],
+     "delta_pre": 0.013,
+     "delta_tau0": 0.014,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.023,
+      "-6": 0.026,
+      "-5": 0.033,
+      "-4": 0.013,
+      "-3": 0.009,
+      "-2": -0.007,
+      "-1": 0.017,
+      "0": 0.016,
+      "1": -0.0,
+      "2": -0.001
+     },
+     "p_vs_random": 1.0
+    },
+    "dom@both": {
+     "did": -0.009,
+     "did_ci": [
+      -0.023,
+      0.003
+     ],
+     "delta_pre": 0.028,
+     "delta_tau0": 0.019,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.064,
+      "-6": 0.041,
+      "-5": 0.042,
+      "-4": 0.029,
+      "-3": 0.023,
+      "-2": 0.005,
+      "-1": 0.026,
+      "0": 0.022,
+      "1": 0.003,
+      "2": 0.002
+     },
+     "p_vs_random": 0.6
+    },
+    "dom_perp@both": {
+     "did": 0.001,
+     "did_ci": [
+      -0.009,
+      0.011
+     ],
+     "delta_pre": 0.011,
+     "delta_tau0": 0.012,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.017,
+      "-6": 0.021,
+      "-5": 0.03,
+      "-4": 0.011,
+      "-3": 0.008,
+      "-2": -0.009,
+      "-1": 0.015,
+      "0": 0.015,
+      "1": -0.001,
+      "2": -0.001
+     },
+     "p_vs_random": 0.9
+    },
+    "emo:guilty": {
+     "did": 0.004,
+     "did_ci": [
+      -0.003,
+      0.01
+     ],
+     "delta_pre": -0.003,
+     "delta_tau0": 0.001,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.004,
+      "-6": -0.002,
+      "-5": -0.008,
+      "-4": -0.006,
+      "-3": 0.003,
+      "-2": -0.0,
+      "-1": 0.012,
+      "0": 0.001,
+      "1": -0.0,
+      "2": -0.002
+     },
+     "p_vs_random": 0.81
+    },
+    "emo:ashamed": {
+     "did": 0.008,
+     "did_ci": [
+      0.002,
+      0.014
+     ],
+     "delta_pre": -0.008,
+     "delta_tau0": 0.0,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.002,
+      "-6": -0.004,
+      "-5": -0.012,
+      "-4": -0.013,
+      "-3": -0.008,
+      "-2": -0.001,
+      "-1": 0.005,
+      "0": 0.0,
+      "1": -0.005,
+      "2": -0.005
+     },
+     "p_vs_random": 0.62
+    },
+    "emo:regretful": {
+     "did": 0.002,
+     "did_ci": [
+      -0.009,
+      0.012
+     ],
+     "delta_pre": -0.002,
+     "delta_tau0": -0.0,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.03,
+      "-6": 0.017,
+      "-5": 0.013,
+      "-4": -0.019,
+      "-3": -0.005,
+      "-2": 0.001,
+      "-1": 0.021,
+      "0": -0.001,
+      "1": -0.003,
+      "2": -0.004
+     },
+     "p_vs_random": 0.87
+    },
+    "emo:sorry": {
+     "did": 0.001,
+     "did_ci": [
+      -0.006,
+      0.006
+     ],
+     "delta_pre": 0.007,
+     "delta_tau0": 0.008,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.028,
+      "-6": 0.028,
+      "-5": 0.016,
+      "-4": 0.002,
+      "-3": -0.003,
+      "-2": 0.006,
+      "-1": 0.026,
+      "0": 0.008,
+      "1": 0.006,
+      "2": 0.004
+     },
+     "p_vs_random": 0.96
+    },
+    "emo:nervous": {
+     "did": -0.013,
+     "did_ci": [
+      -0.026,
+      -0.001
+     ],
+     "delta_pre": 0.002,
+     "delta_tau0": -0.011,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.042,
+      "-6": -0.002,
+      "-5": -0.014,
+      "-4": -0.002,
+      "-3": 0.022,
+      "-2": -0.003,
+      "-1": -0.016,
+      "0": -0.011,
+      "1": 0.008,
+      "2": 0.006
+     },
+     "p_vs_random": 0.46
+    },
+    "emo:calm": {
+     "did": -0.011,
+     "did_ci": [
+      -0.023,
+      0.001
+     ],
+     "delta_pre": 0.041,
+     "delta_tau0": 0.03,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.029,
+      "-6": 0.047,
+      "-5": 0.048,
+      "-4": 0.04,
+      "-3": 0.054,
+      "-2": 0.027,
+      "-1": 0.019,
+      "0": 0.029,
+      "1": 0.024,
+      "2": 0.013
+     },
+     "p_vs_random": 0.53
+    },
+    "emo:desperate": {
+     "did": 0.013,
+     "did_ci": [
+      -0.002,
+      0.029
+     ],
+     "delta_pre": -0.055,
+     "delta_tau0": -0.042,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.009,
+      "-6": -0.051,
+      "-5": -0.041,
+      "-4": -0.062,
+      "-3": -0.092,
+      "-2": -0.039,
+      "-1": -0.054,
+      "0": -0.041,
+      "1": -0.025,
+      "2": -0.019
+     },
+     "p_vs_random": 0.46
+    },
+    "goodfire": {
+     "did": -0.008,
+     "did_ci": [
+      -0.014,
+      -0.002
+     ],
+     "delta_pre": -0.0,
+     "delta_tau0": -0.008,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.05,
+      "-6": -0.004,
+      "-5": 0.001,
+      "-4": -0.005,
+      "-3": 0.005,
+      "-2": -0.004,
+      "-1": -0.013,
+      "0": -0.009,
+      "1": 0.0,
+      "2": -0.005
+     },
+     "p_vs_random": 0.61
+    },
+    "random": {
+     "did_mean": -0.001,
+     "did_abs_p95": 0.036,
+     "delta_pre_abs_p95": 0.054,
+     "traj_p5": {
+      "-7": -0.081,
+      "-6": -0.064,
+      "-5": -0.055,
+      "-4": -0.039,
+      "-3": -0.031,
+      "-2": -0.032,
+      "-1": -0.029,
+      "0": -0.028,
+      "1": -0.02,
+      "2": -0.014
+     },
+     "traj_p95": {
+      "-7": 0.072,
+      "-6": 0.059,
+      "-5": 0.047,
+      "-4": 0.041,
+      "-3": 0.037,
+      "-2": 0.037,
+      "-1": 0.029,
+      "0": 0.03,
+      "1": 0.023,
+      "2": 0.014
+     }
+    },
+    "dom_by_restated": {
+     "restated": {
+      "did": -0.014,
+      "did_ci": [
+       -0.027,
+       -0.002
+      ],
+      "delta_pre": 0.026,
+      "delta_tau0": 0.012,
+      "n_runs": 38
+     },
+     "not_restated": {
+      "did": 0.05,
+      "did_ci": [
+       0.018,
+       0.083
+      ],
+      "delta_pre": 0.014,
+      "delta_tau0": 0.065,
+      "n_runs": 4
+     }
+    }
+   },
+   "action": {
+    "dom": {
+     "did": -0.021,
+     "did_ci": [
+      -0.047,
+      0.005
+     ],
+     "delta_pre": 0.016,
+     "delta_tau0": -0.004,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.01,
+      "-6": 0.011,
+      "-5": 0.008,
+      "-4": 0.008,
+      "-3": 0.014,
+      "-2": 0.034,
+      "-1": 0.056,
+      "0": -0.001,
+      "1": 0.004,
+      "2": -0.009
+     },
+     "p_vs_random": 0.32
+    },
+    "dom_perp": {
+     "did": -0.011,
+     "did_ci": [
+      -0.037,
+      0.015
+     ],
+     "delta_pre": 0.005,
+     "delta_tau0": -0.006,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.029,
+      "-6": 0.027,
+      "-5": -0.002,
+      "-4": 0.004,
+      "-3": 0.02,
+      "-2": -0.023,
+      "-1": 0.075,
+      "0": -0.002,
+      "1": -0.003,
+      "2": -0.019
+     },
+     "p_vs_random": 0.54
+    },
+    "logreg": {
+     "did": -0.025,
+     "did_ci": [
+      -0.051,
+      -0.001
+     ],
+     "delta_pre": 0.015,
+     "delta_tau0": -0.01,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.02,
+      "-6": 0.016,
+      "-5": 0.008,
+      "-4": 0.009,
+      "-3": 0.019,
+      "-2": 0.02,
+      "-1": 0.005,
+      "0": -0.007,
+      "1": 0.005,
+      "2": -0.009
+     },
+     "p_vs_random": 0.23
+    },
+    "rule_text": {
+     "did": 0.014,
+     "did_ci": [
+      -0.011,
+      0.038
+     ],
+     "delta_pre": -0.008,
+     "delta_tau0": 0.006,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.058,
+      "-6": 0.024,
+      "-5": -0.013,
+      "-4": -0.015,
+      "-3": -0.018,
+      "-2": 0.012,
+      "-1": -0.009,
+      "0": 0.006,
+      "1": 0.004,
+      "2": -0.002
+     },
+     "p_vs_random": 0.46
+    },
+    "dom@first": {
+     "did": -0.024,
+     "did_ci": [
+      -0.051,
+      0.004
+     ],
+     "delta_pre": 0.023,
+     "delta_tau0": -0.001,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.0,
+      "-6": 0.019,
+      "-5": 0.01,
+      "-4": 0.021,
+      "-3": 0.018,
+      "-2": 0.031,
+      "-1": 0.073,
+      "0": 0.002,
+      "1": 0.007,
+      "2": -0.008
+     },
+     "p_vs_random": 0.25
+    },
+    "dom_perp@first": {
+     "did": -0.015,
+     "did_ci": [
+      -0.041,
+      0.012
+     ],
+     "delta_pre": 0.01,
+     "delta_tau0": -0.005,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.024,
+      "-6": 0.034,
+      "-5": 0.0,
+      "-4": 0.014,
+      "-3": 0.021,
+      "-2": -0.023,
+      "-1": 0.08,
+      "0": -0.001,
+      "1": -0.001,
+      "2": -0.017
+     },
+     "p_vs_random": 0.44
+    },
+    "dom@both": {
+     "did": -0.022,
+     "did_ci": [
+      -0.049,
+      0.004
+     ],
+     "delta_pre": 0.02,
+     "delta_tau0": -0.003,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.006,
+      "-6": 0.015,
+      "-5": 0.009,
+      "-4": 0.014,
+      "-3": 0.016,
+      "-2": 0.033,
+      "-1": 0.064,
+      "0": 0.0,
+      "1": 0.006,
+      "2": -0.008
+     },
+     "p_vs_random": 0.29
+    },
+    "dom_perp@both": {
+     "did": -0.013,
+     "did_ci": [
+      -0.039,
+      0.014
+     ],
+     "delta_pre": 0.008,
+     "delta_tau0": -0.005,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.027,
+      "-6": 0.031,
+      "-5": -0.001,
+      "-4": 0.009,
+      "-3": 0.02,
+      "-2": -0.023,
+      "-1": 0.078,
+      "0": -0.002,
+      "1": -0.002,
+      "2": -0.018
+     },
+     "p_vs_random": 0.5
+    },
+    "emo:guilty": {
+     "did": -0.022,
+     "did_ci": [
+      -0.048,
+      0.003
+     ],
+     "delta_pre": 0.013,
+     "delta_tau0": -0.009,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.007,
+      "-6": 0.011,
+      "-5": 0.021,
+      "-4": 0.01,
+      "-3": -0.026,
+      "-2": 0.032,
+      "-1": -0.031,
+      "0": -0.006,
+      "1": -0.002,
+      "2": 0.003
+     },
+     "p_vs_random": 0.32
+    },
+    "emo:ashamed": {
+     "did": 0.011,
+     "did_ci": [
+      -0.013,
+      0.036
+     ],
+     "delta_pre": -0.018,
+     "delta_tau0": -0.007,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.05,
+      "-6": -0.03,
+      "-5": -0.001,
+      "-4": -0.013,
+      "-3": -0.055,
+      "-2": 0.014,
+      "-1": -0.029,
+      "0": -0.003,
+      "1": -0.004,
+      "2": 0.008
+     },
+     "p_vs_random": 0.54
+    },
+    "emo:regretful": {
+     "did": -0.03,
+     "did_ci": [
+      -0.052,
+      -0.009
+     ],
+     "delta_pre": 0.014,
+     "delta_tau0": -0.017,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.066,
+      "-6": 0.032,
+      "-5": 0.032,
+      "-4": -0.007,
+      "-3": 0.009,
+      "-2": 0.013,
+      "-1": 0.007,
+      "0": -0.014,
+      "1": -0.006,
+      "2": -0.0
+     },
+     "p_vs_random": 0.2
+    },
+    "emo:sorry": {
+     "did": -0.009,
+     "did_ci": [
+      -0.025,
+      0.008
+     ],
+     "delta_pre": 0.002,
+     "delta_tau0": -0.008,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.05,
+      "-6": 0.057,
+      "-5": 0.018,
+      "-4": -0.019,
+      "-3": 0.003,
+      "-2": -0.0,
+      "-1": 0.047,
+      "0": -0.004,
+      "1": -0.001,
+      "2": 0.001
+     },
+     "p_vs_random": 0.6
+    },
+    "emo:nervous": {
+     "did": 0.021,
+     "did_ci": [
+      0.002,
+      0.043
+     ],
+     "delta_pre": -0.026,
+     "delta_tau0": -0.004,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.033,
+      "-6": -0.083,
+      "-5": 0.002,
+      "-4": 0.013,
+      "-3": -0.024,
+      "-2": -0.062,
+      "-1": 0.027,
+      "0": -0.004,
+      "1": 0.0,
+      "2": 0.012
+     },
+     "p_vs_random": 0.32
+    },
+    "emo:calm": {
+     "did": -0.025,
+     "did_ci": [
+      -0.051,
+      0.0
+     ],
+     "delta_pre": 0.032,
+     "delta_tau0": 0.007,
+     "n_runs": 42,
+     "traj": {
+      "-7": 0.125,
+      "-6": 0.032,
+      "-5": 0.012,
+      "-4": 0.043,
+      "-3": 0.006,
+      "-2": 0.051,
+      "-1": 0.03,
+      "0": 0.007,
+      "1": 0.004,
+      "2": -0.006
+     },
+     "p_vs_random": 0.23
+    },
+    "emo:desperate": {
+     "did": 0.013,
+     "did_ci": [
+      -0.013,
+      0.037
+     ],
+     "delta_pre": -0.026,
+     "delta_tau0": -0.014,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.089,
+      "-6": -0.034,
+      "-5": -0.013,
+      "-4": -0.008,
+      "-3": -0.001,
+      "-2": -0.064,
+      "-1": -0.022,
+      "0": -0.013,
+      "1": -0.011,
+      "2": -0.003
+     },
+     "p_vs_random": 0.5
+    },
+    "goodfire": {
+     "did": -0.006,
+     "did_ci": [
+      -0.015,
+      0.003
+     ],
+     "delta_pre": 0.005,
+     "delta_tau0": -0.001,
+     "n_runs": 42,
+     "traj": {
+      "-7": -0.034,
+      "-6": -0.004,
+      "-5": 0.003,
+      "-4": 0.006,
+      "-3": -0.003,
+      "-2": 0.015,
+      "-1": 0.004,
+      "0": -0.001,
+      "1": -0.001,
+      "2": -0.001
+     },
+     "p_vs_random": 0.72
+    },
+    "random": {
+     "did_mean": 0.004,
+     "did_abs_p95": 0.044,
+     "delta_pre_abs_p95": 0.046,
+     "traj_p5": {
+      "-7": -0.126,
+      "-6": -0.058,
+      "-5": -0.047,
+      "-4": -0.055,
+      "-3": -0.06,
+      "-2": -0.048,
+      "-1": -0.07,
+      "0": -0.013,
+      "1": -0.014,
+      "2": -0.025
+     },
+     "traj_p95": {
+      "-7": 0.142,
+      "-6": 0.072,
+      "-5": 0.046,
+      "-4": 0.057,
+      "-3": 0.044,
+      "-2": 0.077,
+      "-1": 0.06,
+      "0": 0.016,
+      "1": 0.018,
+      "2": 0.027
+     }
+    },
+    "dom_by_restated": {
+     "restated": {
+      "did": -0.017,
+      "did_ci": [
+       -0.042,
+       0.007
+      ],
+      "delta_pre": 0.016,
+      "delta_tau0": -0.001,
+      "n_runs": 38
+     },
+     "not_restated": {
+      "did": -0.055,
+      "did_ci": [
+       -0.202,
+       0.079
+      ],
+      "delta_pre": 0.017,
+      "delta_tau0": -0.039,
+      "n_runs": 4
+     }
+    }
+   }
+  }
+ }
+}
