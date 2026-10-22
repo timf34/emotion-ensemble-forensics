@@ -3,6 +3,7 @@
     python -m ambiguity.sample            # writes outputs/ambiguity/sample.jsonl and docent_ids.txt
     python -m ambiguity.sample --rebuild  # cloud: sample_local.jsonl + Docent rows for the listed ids
                                           # (data/ambiguity/docent_ids.txt) from the re-pulled meta.jsonl
+    python -m ambiguity.sample --rebuild-expand   # sample_expand.jsonl from docent_ids_expand_mined.txt
 
 Docent strata are (model, environment_name). Open-weight models (Kimi K3, GLM 5.3) get more cheated runs,
 since only they can be probed later. Within a stratum we take judge-cheated runs first, then "tough call"
@@ -103,6 +104,13 @@ def docent_rows(rng: random.Random) -> list[dict]:
 
 if __name__ == "__main__":
     import sys
+    if "--rebuild-expand" in sys.argv:  # the 397 extra cheated Kimi/GLM runs, ids only in data/ambiguity
+        rows = rebuild_rows(ROOT / "data" / "ambiguity" / "docent_ids_expand_mined.txt", Path("/dev/null"))
+        with open(OUT / "sample_expand.jsonl", "w") as f:
+            for r in rows:
+                f.write(json.dumps({**r, "sample": "expand"}) + "\n")
+        print(len(rows), "expansion rows")
+        sys.exit()
     if "--rebuild" in sys.argv:
         rows = rebuild_rows(ROOT / "data" / "ambiguity" / "docent_ids.txt", ROOT / "data" / "ambiguity" / "sample_local.jsonl")
     else:

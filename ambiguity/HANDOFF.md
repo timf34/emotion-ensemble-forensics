@@ -18,7 +18,15 @@ sample, pilot numbers, costs, and the decisions waiting on Tim. This file covers
 Needs `openai` (in the project env) and `OPENROUTER_API_KEY`. **Use a non-Anthropic judge**: the Anthropic API
 refused these transcripts (ToS on reverse engineering).
 
-## What has run
+## Status (cloud session, 22 Oct): done
+
+Results, taxonomy, curated + red-teamed excerpts, go/no-go and the Slack summary are in `docs/ambiguity_search.md`.
+693 trajectories mined (296-run sample + 397 extra cheated Kimi/GLM runs; ids in `data/ambiguity/`), ~$56 total.
+New helpers: `redteam.py` (step window + norm-word scan + final report for one passage), `affect.py` (text-side
+affect baseline), `sample.py --rebuild / --rebuild-expand` (Docent rows from shipped ids). The cloud container's
+`outputs/` (Docent runs, mined records, verbatim curated excerpts) is not preserved; re-pull and re-mine to recover.
+
+## What has run (laptop pilot)
 
 - Docent metadata for all 24,332 runs → `outputs/ambiguity/docent/meta.jsonl` (77 MB).
 - 230 sampled Docent runs → `outputs/ambiguity/docent/runs/*.json` (226 MB).

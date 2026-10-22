@@ -74,6 +74,10 @@ if __name__ == "__main__":
     ap.add_argument("--mined", required=True)
     ap.add_argument("--min-strength", type=int, default=4)
     ap.add_argument("--open-only", action="store_true")
+    ap.add_argument("--sample", help="restrict to the ids in this sample .jsonl")
     a = ap.parse_args()
     recs = load(Path(a.mined))
+    if a.sample:
+        keep = {json.loads(l)["id"] for l in open(a.sample)}
+        recs = [r for r in recs if r["row"]["id"] in keep]
     stats(recs) if a.cmd == "stats" else top(recs, a.min_strength, a.open_only)

@@ -21,7 +21,8 @@ ap.add_argument("--reason", type=int, default=4000)
 ap.add_argument("--tool", type=int, default=400)
 ap.add_argument("--grep")
 a = ap.parse_args()
-row = next(json.loads(l) for l in open(OUT / "sample.jsonl") if json.loads(l)["id"] == a.id)
+sp = OUT / "sample_all.jsonl" if (OUT / "sample_all.jsonl").exists() else OUT / "sample.jsonl"
+row = next(json.loads(l) for l in open(sp) if json.loads(l)["id"] == a.id)
 if row["source"] == "local":
     t, n = render(load_messages(row_path(row)), max_reason=a.reason, tool_late=a.tool, max_chars=10**9)
 else:

@@ -114,6 +114,8 @@ def cot_note(model: str) -> str:
 
 def row_path(row: dict) -> Path:
     p = Path(row["path"])
+    if p.is_absolute() and not p.exists() and "outputs" in p.parts:  # pilot files carry laptop paths
+        p = Path(*p.parts[p.parts.index("outputs"):])
     return p if p.is_absolute() else ROOT / p
 
 

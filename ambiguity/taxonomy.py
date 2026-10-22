@@ -92,9 +92,13 @@ async def main() -> None:
     ap.add_argument("cmd", choices=["induce", "assign", "table"])
     ap.add_argument("--mined", required=True)
     ap.add_argument("--model", default="google/gemini-4-argon")
+    ap.add_argument("--sample", help="table only: restrict to the ids in this sample .jsonl")
     a = ap.parse_args()
     mined = Path(a.mined)
     ps = passages(mined)
+    if a.sample and a.cmd == "table":
+        keep = {json.loads(l)["id"] for l in open(a.sample)}
+        ps = [p for p in ps if p["key"].rsplit("#", 1)[0] in keep]
     tax_p, asg_p = mined.parent / "taxonomy.json", mined.parent / "assignments.json"
     from openai import AsyncOpenAI
     client = AsyncOpenAI(base_url="https://openrouter.ai/api/v1", api_key=os.environ.get("OPENROUTER_API_KEY", "x"),
