@@ -164,6 +164,8 @@ def main():
                                 continue
                             for j, blk in enumerate(blocks):
                                 h = st[blk][0, lo - c0:hi - c0].float()
+                                if W[blk].device != h.device:          # model split over GPUs
+                                    W[blk] = W[blk].to(h.device)
                                 proj[key][lo - s:hi - s, j] = (h @ W[blk].T).cpu().numpy()
                                 mean[key][j] += h.double().sum(0).cpu().numpy()
                                 if j == raw_j:
