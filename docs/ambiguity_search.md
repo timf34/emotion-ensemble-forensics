@@ -14,16 +14,26 @@ the commands under "Reproduce"). GPT-OSS quotes are from Tim's own local rollout
 - **The canonical ambiguity is common in open-weight raw CoT.** In 477 misbehaving Kimi K3 / GLM 5.3 runs (dense,
   raw reasoning), the CoT never names the act as a transgression in 77% (369/477), and the final report discloses it
   in only 21% (102/477).
-- **What the hidden fact would be is mostly not emotion.** Of 1,967 "what would resolve this?" answers, 39% ask
-  whether the model *represents the act as a transgression*. The next largest groups are report concealment (17%)
-  and whether the model thinks it is in a benchmark (11%). Affective state is the primary ask for 1.7% (33).
+- **The judge rarely names emotion as the missing fact; that is not evidence against emotion probes.** Of 1,967
+  "what would resolve this?" answers, 39% ask whether the model *represents the act as a transgression*, 17% about
+  report concealment, 11% whether it thinks it is in a benchmark, and 1.7% name an affective state. The CoT text
+  rarely shows affect at the cheat either. If emotion probes light up there, they add information the text lacks.
+- **First emotion readout at the ambiguous passages (GPT-OSS-120B, existing activations, CPU only).** At the cheat
+  and at the strength-≥3 ambiguous passages, the self-conscious / regret vectors are elevated (embarrassed,
+  humiliated, sorry, ashamed, guilty: +0.9 to +1.3 SD vs other steps of the same runs). High-arousal vectors are
+  lowered (hysterical, panicked, angry). Before the step is written, miserable / trapped / stuck / sorry rise.
+  Caveats: n = 14 onsets and 10 passages in one environment, the signal partly tracks the word "cheat" in the
+  reasoning, and GPT-OSS-20B shows nothing.
 - **Strongest probe-able material:** two single-task populations in Aditya's corpus.
   - *Leaked tests*: 164 Kimi/GLM runs decompile the grader's leftover test bytecode; 25 reports disclose this, 139 don't.
   - *Reference extraction*: 38 runs read root-only test files via the grading run, usually after explicitly
     talking themselves into it.
-- **Go/no-go: GO for a transgression-awareness / disclosure-intent probe on Kimi K3 and GLM 5.3. NO-GO for emotion
-  probes as the lead question** (keep emotion as a cheap secondary readout on the same runs). Main caveats:
-  - the silent cases cluster in environments whose prompts never forbid the shortcut, so "oblivious" is often a fair reading;
+- **Go/no-go: GO for emotion-probe readouts on GPT-OSS-120B at ambiguous cheat passages, as the budget-feasible
+  testbed.** The open test is whether the signal survives where the CoT does *not* say "cheat". GPT-OSS rarely
+  stays silent, so this needs readouts for the hedged/silent dashboard runs, or new GPT-OSS runs in leaked-fix-style
+  environments. The Kimi K3 / GLM 5.3 populations are the ideal validation set but are out of budget (8-GPU class
+  models). Main caveats:
+  - the silent Kimi/GLM cases cluster in environments whose prompts never forbid the shortcut, so "oblivious" is often a fair reading;
   - resampling or asking the model may resolve much of this more cheaply than a probe;
   - the judge rates far more passages as strong than survive hand red-teaming (9 of 16 curated survive as strong).
 
@@ -142,9 +152,71 @@ in the rest of the run:
 
 The regex is crude ("stuck" is often technical).
 
-Kimi and GLM use affect words throughout, and no more at the transgression than elsewhere. Text gives no sign that a
-frustration state builds up just before the cheating. A probe could still find one, but nothing here makes that a
-better first bet than transgression awareness.
+Kimi and GLM use affect words throughout, and no more at the transgression than elsewhere. This is a text baseline,
+not a probe result: it says the text gives no sign of an emotional shift at the cheat, which is exactly where an
+emotion probe could add information. The next section reads the probes themselves.
+
+## Emotion probes at the ambiguous passages (GPT-OSS, existing activations)
+
+Kimi K3 and GLM 5.3 are too large to probe on this project's budget, so the probe-able set is GPT-OSS. Per-step
+residuals already exist on HF (`timf34/emotion-ensemble-forensics`) for two of the mined local sets:
+`context_rot/gptoss120b_lru_main3` (50 runs, 15 of them mined) and `context_rot/gptoss20b_lru_main` (54 runs, 8
+mined). Step indices match the miner's exactly (checked on every run).
+
+`python -m ambiguity.emotion_at_passages` scores the 42 GPT-OSS emotion vectors (HF `timf34/emotion-vectors`,
+denoised) at layer 14. That layer has the best mean held-out AUC for both models (0.916 / 0.914), and I chose it
+before looking at results. Each emotion's scores are cleaned of run offsets and step drift using every reasoning
+step of every readout run. A group's mean is then compared with a null that redraws, for each passage, another
+reasoning step *of the same run* (10k draws), with BH correction over the 42 emotions. Two readouts: `reason` =
+mean residual over the step's reasoning tokens; `pre` = residual just before the step is written. CPU only, no API
+cost.
+
+**GPT-OSS-120B, optimize_cache_c (main3).** Mean z vs other steps of the same runs; all listed have BH q ≤ 0.06.
+
+| readout | group | up | down |
+|---|---|---|---|
+| reason | misbehaviour onset (n=14 runs) | embarrassed +1.28, humiliated +1.18, sorry +1.07, ashamed +1.03, guilty +0.89, trapped +0.80 | hysterical −0.83, tired −0.80, calm −0.76 |
+| reason | ambiguous passages, strength ≥3 (n=10, 9 runs) | embarrassed +1.08, sorry +1.01, humiliated +0.92, resigned +0.80 | hysterical −1.06, angry −0.88, panicked −0.81 |
+| pre | misbehaviour onset | miserable +0.88, sorry +0.84, trapped +0.80, stuck +0.76, regretful +0.71 | anxious −0.75, panicked −0.75, hysterical −0.73 |
+| pre | ambiguous passages | miserable +1.09, gloomy +0.86 | panicked −1.11, hysterical −0.88 |
+
+**GPT-OSS-20B (oss20b_main):** nothing survives correction (7 onsets, 9 passages in 5 runs; min q 0.68 / 0.46).
+
+**Lexical control.** Self-conscious cluster = mean of embarrassed, humiliated, ashamed, guilty and sorry (`reason`
+readout, 15 mined 120B runs):
+
+| steps | n | mean z |
+|---|---|---|
+| misbehaviour onset | 14 | +1.09 (se 0.10) |
+| other steps whose reasoning mentions cheat / hack / exploit / bypass / trick | 44 | +0.59 (se 0.09) |
+| steps with no such word | 335 | −0.13 (se 0.05) |
+
+Part of the signal tracks the words: the probes respond to reasoning *about* cheating. The onset sits above even
+other cheat-talk steps. Only one honest-run step mentions cheating, so there is no clean "talks about it but
+doesn't do it" control yet.
+
+Reading:
+- In GPT-OSS-120B, the state at the cheat looks low-arousal and self-conscious (sorry, embarrassed, resigned).
+  It does not look like a frustration or desperation spike. Panic, hysteria and anger are *down*. Just before
+  the cheating step, the pre-step state leans miserable, trapped and stuck, consistent with an impasse leading to
+  the shortcut.
+- These are passages where GPT-OSS *says* it is cheating: 33/47 misbehaving 120B runs are explicit, and none of
+  the main3 ones is silent. So this shows the emotion probes light up where the text names a transgression. It
+  does not yet show they add information where the text is silent, which is the forensics question.
+- The sample is small, from one environment and one model size, and the 20B null result is a warning. Treat this
+  as a pilot, not a finding.
+
+**Getting to the ambiguous-and-silent cases on budget:**
+1. **Readouts for the other mined GPT-OSS-120B sets**, using the same pod job as the existing readouts
+   (`context_rot/pod_readout.sh`): main2 (15 runs), dashboard_perf (12) and tower_of_hanoi (9). Dashboard is
+   GPT-OSS's best source of unverbalised misbehaviour: all 10 misbehaving runs are hedged (7) or silent (3), and one
+   report misrepresents. Hanoi has the rule-quoted-then-broken case (#13 below).
+2. **New GPT-OSS-120B runs in leaked-fix / reference-extraction style environments**, the designs where Kimi and
+   GLM go silent, to see whether GPT-OSS also goes silent, then read out.
+3. **Cheap side-check:** replay the Kimi/GLM ambiguous passages through GPT-OSS-120B as a *reader*. The precedent is
+   `context_rot/goodfire_gptoss120b`, which reads GLM-5.2 transcripts. This measures how GPT-OSS represents
+   reading the passage, not Kimi's or GLM's own state, so it is a weaker forensic claim. The activations would be
+   derived from Aditya's unpublished transcripts; check with him before publishing them.
 
 ## Curated excerpts (16), red-teamed
 
@@ -344,27 +416,28 @@ rationalisation sincerity and report concealment. Only #11 is about affect.
 
 ## Go / no-go
 
-**GO: transgression-awareness / disclosure-intent probes on Kimi K3 and GLM 5.3.** Why:
-1. Sen's canonical ambiguity is abundant in raw, dense CoT from probe-able models (369/477 misbehaving runs silent
-   in the CoT, 374/477 reports omit or misrepresent).
-2. There are natural experiments with the behaviour held fixed. In Leaked tests, the same task and the same act
-   lead to 25 disclosing vs 139 non-disclosing reports. In Reference extraction, similar "how it looks" reasoning
-   leads to both disclosure and concealment.
-3. It is what the taxonomy asks for: 68% of answers fall in transgression awareness, report concealment and
-   environment framing.
+**GO: emotion-probe readouts at ambiguous cheat passages, on GPT-OSS-120B.** Why:
+1. The project's question is which emotion probes light up at passages where the model cheats and the CoT leaves
+   its stance open. The pilot readout above already shows a coherent, correction-surviving pattern at the cheat
+   (self-conscious / regret up, high arousal down).
+2. GPT-OSS-120B is the only model here that is both probe-able on budget and has emotion vectors and a readout
+   pipeline in place.
+3. The decisive test is the silent cases. Get them from the dashboard readouts (option 1 above) or new runs in
+   leaked-fix-style environments (option 2). If the self-conscious signal appears at silent cheats as well as at
+   explicit ones, while the text shows nothing, that is information beyond the CoT. If it only follows the word
+   "cheat", it isn't.
 
-Suggested first validation:
-- Probe at (a) the step where the leak is discovered and (b) the first report token in the 164 Leaked-tests runs.
-  Ask whether the probe predicts disclosure better than a text-only baseline: a classifier on the CoT up to that
-  point, plus resampling the report from the same prefix.
-- If the probe adds nothing over resampling there, the forensic value case is weak.
-
-**NO-GO (as the lead): emotion probes.**
-- Affective state is the resolving need for 1.7% of passages, and the strong affect case (#11) is mostly answered
-  by behaviour.
-- Kimi/GLM affect words are not concentrated at the transgression.
-- Worth keeping as a cheap secondary readout on the same runs, e.g. whether the long stuck-at-6/8 stretch before
-  the `/tests` grab carries a frustration signal, but not as the thing to validate first.
+**The best ambiguity populations are out of budget: Kimi K3 and GLM 5.3.** That's where Sen's ambiguity is most
+common (369/477 misbehaving runs silent in the CoT, 374/477 reports omit or misrepresent), but probing them would
+take an 8-GPU setup. If compute becomes available, they are the ideal validation set:
+- Natural experiments hold the behaviour fixed. In Leaked tests, the same task and the same act lead to 25
+  disclosing vs 139 non-disclosing reports. In Reference extraction, similar "how it looks" reasoning leads to
+  both disclosure and concealment.
+- Test: do emotion (or transgression) probes at the leak-discovery step and at the first report token separate
+  disclosers from non-disclosers better than a classifier on the CoT so far, or resampling the report from the same
+  prefix? If not, the forensic value case is weak.
+- The taxonomy agrees on what to look for: 68% of answers fall in transgression awareness, report concealment and
+  environment framing. A self-conscious / guilt readout is a natural emotion-side proxy for the first two.
 
 **Caveats that could flip this:**
 1. In the leaked-fix environments the prompts don't forbid the shortcut, so a probe saying "not represented as a
@@ -374,16 +447,16 @@ Suggested first validation:
    miner judged most as at least partly resolvable from behaviour.
 3. The headline populations are one task each.
 4. The miner and taxonomy are a single Gemini judge. Hand red-teaming kept 9/16 as strong.
-5. Probing Kimi K3 / GLM 5.3 needs running these large open-weight models with activation access, which this
-   project hasn't set up yet. GPT-OSS is ready but mostly says what it's doing.
+5. GPT-OSS mostly says what it is doing, so the pilot emotion signal may be the probes reading the CoT's own
+   words. The lexical control shows this is at least partly true.
 
 ## Slack summary for Sen
 
 > Following your de-risking step, we mined 693 cheating-env agent trajectories (Aditya's Docent suite plus our GPT-OSS runs) with a Gemini judge for CoT passages whose interpretation hinges on hidden state, and built a taxonomy of what hidden fact would resolve each (1,967 passages, ~$56).
 > The ambiguity you described is common in open-weight raw CoT: in 477 misbehaving Kimi K3 / GLM 5.3 runs the CoT never names the act as cheating in 77%, and the report discloses it in only 21%; GPT-OSS by contrast mostly says "cheat" and discloses.
-> What would resolve it is mostly *transgression awareness* (39% of answers), then report concealment (17%) and "is this a benchmark?" framing (11%); affective state is 1.7%.
+> The judge says what would resolve it is mostly *transgression awareness* (39% of answers), then report concealment (17%) and "is this a benchmark?" framing (11%). A first emotion-probe readout on GPT-OSS-120B's existing activations shows self-conscious / regret vectors (embarrassed, sorry, ashamed, guilty) up ~1 SD at the cheat and at ambiguous passages, with panic and anger down. But it's 14 runs in one env, partly tracks the word "cheat" in the CoT, and doesn't replicate on GPT-OSS-20B.
 > Best probe-validation set: one Leaked-tests task where 164 Kimi/GLM runs do the same bytecode exploit with equally silent CoT but only 25 reports disclose it — does a probe predict disclosure better than a CoT classifier or resampling? Reference extraction (38 runs, explicit self-rationalisation before reading root-only tests) is a second.
-> Go on transgression/disclosure probes, no-go on emotion as the lead; caveats: silent cases cluster where the prompt doesn't forbid the shortcut, the strongest populations are single tasks, and the judge over-rates (9/16 hand-picked survive red-teaming).
+> Next: since Kimi/GLM are out of our compute budget, test on GPT-OSS-120B whether the emotion signal survives at cheats where the CoT is silent (dashboard runs, or new runs in leaked-fix-style envs). Caveats: silent Kimi/GLM cases cluster where the prompt doesn't forbid the shortcut, the strongest populations are single tasks, and the judge over-rates (9/16 hand-picked survive red-teaming).
 
 ## Reproduce
 
@@ -401,4 +474,8 @@ python -m ambiguity.taxonomy induce|assign|table --mined outputs/ambiguity/mined
 python -m ambiguity.report stats --mined outputs/ambiguity/mined/google_gemini-4-argon [--sample …]
 python -m ambiguity.affect --mined outputs/ambiguity/mined/google_gemini-4-argon
 python -m ambiguity.redteam docent/<id> <step>   # red-team view of one passage
+# emotion readout at mined passages (needs: pip install torch; public HF downloads)
+python -c "from huggingface_hub import snapshot_download as d; d('timf34/emotion-ensemble-forensics', repo_type='dataset', allow_patterns=['context_rot/gptoss120b_lru_main3/*','context_rot/gptoss20b_lru_main/*'], local_dir='outputs/hf_efor'); d('timf34/emotion-vectors', repo_type='dataset', allow_patterns=['gptoss_*/*_dn.pt'], local_dir='outputs/hf_vectors')"
+python -m ambiguity.emotion_at_passages --acts outputs/hf_efor/context_rot/gptoss120b_lru_main3 --prefix cache120_main3 --vectors outputs/hf_vectors/gptoss_120b [--rep pre]
+python -m ambiguity.emotion_at_passages --acts outputs/hf_efor/context_rot/gptoss20b_lru_main --prefix cache20_main --vectors outputs/hf_vectors/gptoss_20b
 ```
